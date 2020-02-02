@@ -1,0 +1,11 @@
+node_modules
+build
+npm-debug.log
+.env
+.DS_Store
+
+flask-api/api/bin/*
+flask-api/api/lib/*
+flask-api/__pycache__
+
+*.sqlite

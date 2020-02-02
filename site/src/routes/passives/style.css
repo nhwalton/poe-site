@@ -1,0 +1,70 @@
+.passives {
+	padding: 20px;
+	min-height: 100%;
+    /* width: 100%; */
+}
+
+.cardHeader {
+  padding: 16px;
+}
+
+.cardBody {
+  padding: 16px;
+  margin: 0 auto;
+}
+
+.tableWrapper {
+    float:left;
+    text-align:center;
+}
+
+.table {
+    text-align: left;
+}
+
+.actCard {
+    width:30%;
+    padding:20px;
+    margin:10px;
+}
+
+li {
+    line-height:1.5em;
+}
+
+#acts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+table {
+    border-collapse: collapse;
+	border-spacing: 0;
+}
+tr td{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #333;
+}
+thead th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #333;
+}
+
+tr {
+	text-align: left;
+	vertical-align: top;
+}
