@@ -33,15 +33,15 @@ const Gems = ({ gemDetails }) => {
     return (
         <div>
             <li class="passives" style="list-style-type:none;" >
-            <img data-rh data-vendor="`${gemDetails.vendor}`" src={'../../assets/gems/' + gemDetails.gem_name + '.png'}/> {gemDetails.gem_name}
+            <img data-rh data-vendor={gemDetails.vendor} data-mission={gemDetails.mission} src={'../../assets/gems/' + gemDetails.gem_name + '.png'}/> {gemDetails.gem_name}
             </li>
-            <li class="passives" style="list-style-type:none;">
+            {/* <li class="passives" style="list-style-type:none;">
             Vendor: {gemDetails.vendor}
             </li>
             <li class="passives" style="list-style-type:none;">
             Required Mission: {gemDetails.mission}
             </li>
-            <br></br>
+            <br></br> */}
         </div>
     );
   };
@@ -59,12 +59,6 @@ const ActCard = ({ data }) => {
           <Trials trial={trial} />
         ))}
         <h3>Gems</h3>
-        <ReactHint
-            position="right"
-            autoPosition
-            events
-            onRenderContent={(target) => (<div><p>`Vendor ${target.vendor}`</p></div>)}
-        />
         {data.gems.map(details => (
           <Gems gemDetails={details} />
         ))}
@@ -85,6 +79,16 @@ export default class Passives extends Component {
         this.setState({response: json})
     }
 
+    renderTooltip = (target) => {
+      const vendor = target.dataset.vendor
+      const mission = target.dataset.mission
+      return (
+        <div>
+          <p>Vendor: {vendor}</p>
+          <p>Required Mission: {mission}</p>
+        </div>)
+    }
+
     render({},{response}) {
         console.log("response", response)
         return(
@@ -95,6 +99,12 @@ export default class Passives extends Component {
                     <Button class={style.buildButton} raised ripple onClick={() => { this.asyncCall() }}>Build</Button>
                 </div>
                 <div id={style.acts}>
+                    <ReactHint
+                        position="right"
+                        autoPosition
+                        events
+                        onRenderContent = {this.renderTooltip}
+                    />
                     {response.map(data => (
                     <ActCard data={data} />
                     ))}
