@@ -16,3 +16,14 @@ source api/bin/activate
 pip install -r requirements.txt
 python api.py
 ```
+
+## Build images
+
+```bash
+cd flask-api
+docker build -t flask-api .
+cd ../site
+docker build -t site .
+cd ..
+docker-compose up -d
+```
