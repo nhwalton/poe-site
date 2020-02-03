@@ -32,39 +32,20 @@ li {
     line-height:1.5em;
 }
 
+#pobInput {
+    float:left;
+    display:flex;
+    position:relative;
+    align-items:center;
+}
+
 #acts {
+    float:left;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-table {
-    border-collapse: collapse;
-	border-spacing: 0;
-}
-tr td{
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    padding: 10px;
-    border-style: solid;
-    border-width: 1px;
-    overflow: hidden;
-    word-break: normal;
-    border-color: #333;
-}
-thead th {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    padding: 10px;
-    border-style: solid;
-    border-width: 1px;
-    overflow: hidden;
-    word-break: normal;
-    border-color: #333;
-}
-
-tr {
-	text-align: left;
-	vertical-align: top;
+.buildButton {
+    margin:15px;
 }

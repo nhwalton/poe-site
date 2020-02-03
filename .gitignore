@@ -9,3 +9,4 @@ flask-api/api/lib/*
 flask-api/__pycache__
 
 *.sqlite
+flask-api/.vscode/*
