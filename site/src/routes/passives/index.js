@@ -7,6 +7,10 @@ import 'preact-material-components/TextField/style.css';
 import 'preact-material-components/Card/style.css';
 import 'preact-material-components/Button/style.css';
 import style from './style';
+import 'react-hint/css/index.css'
+
+import ReactHintFactory from 'react-hint'
+const ReactHint = ReactHintFactory({createElement: h, Component})
 
 const Quests = ({ quest }) => {
     return (
@@ -29,7 +33,7 @@ const Gems = ({ gemDetails }) => {
     return (
         <div>
             <li class="passives" style="list-style-type:none;" >
-            <img src={'../../assets/gems/' + gemDetails.gem_name + '.png'}/> {gemDetails.gem_name}
+            <img data-rh data-vendor="`${gemDetails.vendor}`" src={'../../assets/gems/' + gemDetails.gem_name + '.png'}/> {gemDetails.gem_name}
             </li>
             <li class="passives" style="list-style-type:none;">
             Vendor: {gemDetails.vendor}
@@ -55,6 +59,12 @@ const ActCard = ({ data }) => {
           <Trials trial={trial} />
         ))}
         <h3>Gems</h3>
+        <ReactHint
+            position="right"
+            autoPosition
+            events
+            onRenderContent={(target) => (<div><p>`Vendor ${target.vendor}`</p></div>)}
+        />
         {data.gems.map(details => (
           <Gems gemDetails={details} />
         ))}
@@ -89,7 +99,6 @@ export default class Passives extends Component {
                     <ActCard data={data} />
                     ))}
                 </div>
-                {/* https://pastebin.com/raw/xaTuiHwH */}
 			</div>
 		);
 	}
