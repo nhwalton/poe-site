@@ -7,6 +7,10 @@ import 'preact-material-components/TextField/style.css';
 import 'preact-material-components/Card/style.css';
 import 'preact-material-components/Button/style.css';
 import style from './style';
+import 'react-hint/css/index.css'
+
+import ReactHintFactory from 'react-hint'
+const ReactHint = ReactHintFactory({createElement: h, Component})
 
 const Quests = ({ quest }) => {
     return (
@@ -27,17 +31,14 @@ const Trials = ({ trial }) => {
 
 const Gems = ({ gemDetails }) => {
     return (
-        <div>
-            <li class="passives" style="list-style-type:none;" >
-            <img src={'../../assets/gems/' + gemDetails.gem_name + '.png'}/> {gemDetails.gem_name}
-            </li>
-            <li class="passives" style="list-style-type:none;">
-            Vendor: {gemDetails.vendor}
-            </li>
-            <li class="passives" style="list-style-type:none;">
-            Required Mission: {gemDetails.mission}
-            </li>
-            <br></br>
+        <div style="width:20%;">
+            <img 
+                data-rh data-vendor={gemDetails.vendor}
+                data-mission={gemDetails.mission}
+                data-name={gemDetails.gem_name}
+                data-level={gemDetails.level}
+                src={'../../assets/gems/' + gemDetails.gem_name + '.png'}
+                style="max-width:100%;"/>
         </div>
     );
   };
@@ -55,9 +56,11 @@ const ActCard = ({ data }) => {
           <Trials trial={trial} />
         ))}
         <h3>Gems</h3>
+        <div class={style.gemWrapper}>
         {data.gems.map(details => (
           <Gems gemDetails={details} />
         ))}
+        </div>
       </Card>
     );
   };
@@ -71,14 +74,35 @@ export default class Passives extends Component {
         let value = document.getElementById('build').value//'xaTuiHwH'
         const response = await fetch('http://localhost:5000/api/gems?pastebin='.concat(value));
         const json = await response.json();
-        console.log("component",json)
+        // console.log("component",json)
         this.setState({response: json})
     }
 
+    renderTooltip = (target) => {
+        const vendor = target.dataset.vendor
+        const mission = target.dataset.mission
+        const gemName = target.dataset.name
+        const level = target.dataset.level
+        return (
+            <div class="mdc-card elevated">
+            <h2>{gemName}</h2>
+            <span>Level to: {level}</span>
+            <span>Vendor: {vendor}</span>
+            <span>Required Mission: {mission}</span>
+            </div>
+        );
+    };
+
     render({},{response}) {
-        console.log("response", response)
+        // console.log("response", response)
         return(
             <div class={`${style.passives} page`}>
+                <ReactHint
+                    position="right"
+                    autoPosition
+                    events
+                    onRenderContent = {this.renderTooltip}
+                />
                 <h1>Passive and Trial Locations</h1>
                 <div id={style.pobInput}>
                     <TextField id="build" label="Pastebin" outlined helperText="Enter POB Pastebin" value=""/>
@@ -89,7 +113,6 @@ export default class Passives extends Component {
                     <ActCard data={data} />
                     ))}
                 </div>
-                {/* https://pastebin.com/raw/xaTuiHwH */}
 			</div>
 		);
 	}

@@ -56,6 +56,42 @@ body {
 	color: #fff;
 }
 
+.mdc-card.elevated {
+  padding:0px 20px 25px;
+  background-color: #fff;
+  color: #222;
+  box-shadow: 0px 6px 4px -2px rgba(0, 0, 0, 0.2), 0px 4px 8px 0px rgba(0, 0, 0, 0.14), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.mdc-theme--dark .elevated {
+  background-color: #555;
+  color: #fff;
+  }
+
 #app .page {
   padding-top: 56px;
+}
+
+.react-hint--top:after {
+	top: auto;
+	border-bottom: none;
+	border-top-color: #555 !important;
+}
+
+.react-hint--left:after {
+	left: auto;
+	border-right: none;
+	border-left-color: #555 !important;
+}
+
+.react-hint--right:after {
+	right: auto;
+	border-left: none;
+	border-right-color: #555 !important;
+}
+
+.react-hint--bottom:after {
+	bottom: auto;
+	border-top: none;
+	border-bottom-color: #555 !important;
 }

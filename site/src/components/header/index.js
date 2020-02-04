@@ -35,6 +35,7 @@ export default class Header extends Component {
 	goHome = this.linkTo('/');
 	goToMyProfile = this.linkTo('/profile');
 	goToPassives = this.linkTo('/passives');
+	goToSyndicate = this.linkTo('/syndicate');
 
 	toggleDarkTheme = () => {
 		this.setState(
@@ -82,6 +83,10 @@ export default class Header extends Component {
 						<Drawer.DrawerItem selected={props.selectedRoute === '/passives'} onClick={this.goToPassives}>
 							<List.ItemGraphic>account_circle</List.ItemGraphic>
 							Passives
+						</Drawer.DrawerItem>
+						<Drawer.DrawerItem selected={props.selectedRoute === '/syndicate'} onClick={this.goToSyndicate}>
+							<List.ItemGraphic>account_circle</List.ItemGraphic>
+							Syndicate
 						</Drawer.DrawerItem>
 					</Drawer.DrawerContent>
 				</Drawer>
