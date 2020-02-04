@@ -7,7 +7,8 @@ import 'preact-material-components/TextField/style.css';
 import 'preact-material-components/Card/style.css';
 import 'preact-material-components/Button/style.css';
 import style from './style';
-import 'react-hint/css/index.css'
+import 'react-hint/css/index.css';
+import defaultResponse from './passives_with_gems.json';
 
 import ReactHintFactory from 'react-hint'
 const ReactHint = ReactHintFactory({createElement: h, Component})
@@ -67,8 +68,8 @@ const ActCard = ({ data }) => {
   };
 
 export default class Passives extends Component {
-	state = {
-        response: require('./passives_with_gems.json')
+	  state = {
+        response: defaultResponse
     };
 
     async asyncCall() {
