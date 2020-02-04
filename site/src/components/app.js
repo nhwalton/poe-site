@@ -6,6 +6,7 @@ import Home from '../routes/home';
 import Profile from '../routes/profile';
 import NotFound from '../routes/404';
 import Passives from '../routes/passives';
+import Syndicate from '../routes/syndicate';
 // import Home from 'async!../routes/home';
 // import Profile from 'async!../routes/profile';
 
@@ -29,6 +30,7 @@ export default class App extends Component {
 					<Profile path="/profile/" user="me" />
 					<Profile path="/profile/:user" />
 					<Passives path="/passives" />
+					<Syndicate path="/syndicate" />
 					<NotFound default />
 				</Router>
 			</div>

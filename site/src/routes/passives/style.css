@@ -23,7 +23,7 @@
 }
 
 .actCard {
-    width:30%;
+    width:18%;
     padding:20px;
     margin:10px;
 }
@@ -50,65 +50,15 @@ li {
     margin:15px;
 }
 
-.react-hint {
-	padding: 5px;
-	position: absolute;
-	z-index: 9999;
-	cursor: default;
-	animation: .5s fadeIn;
+.gemWrapper {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: left space-around;
 }
 
-.react-hint__content {
-	padding: 10px;
-	border-radius: 5px;
-	background: #000;
-	color: #fff;
-}
-
-.react-hint:after {
-	content: '';
-	width: 0;
-	height: 0;
-	margin: auto;
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	border: 5px solid transparent;
-}
-
-.react-hint--top:after {
-	top: auto;
-	border-bottom: none;
-	border-top-color: #000;
-}
-
-.react-hint--left:after {
-	left: auto;
-	border-right: none;
-	border-left-color: #000;
-}
-
-.react-hint--right:after {
-	right: auto;
-	border-left: none;
-	border-right-color: #000;
-}
-
-.react-hint--bottom:after {
-	bottom: auto;
-	border-top: none;
-	border-bottom-color: #000;
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
+.hintWrapper {
+    background-color:#555;
+    padding:5px 20px;
+    border-radius: 2px;
+    box-shadow:0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
