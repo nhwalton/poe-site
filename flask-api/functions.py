@@ -65,7 +65,7 @@ def _parse_skills(xml_skills):
     # parse skills and the supported gems
     for skill in xml_skills:
         for gem in skill:
-            gems.append(gem.attrib['nameSpec'])
+            gems.append({'name':gem.attrib['nameSpec'],'level':gem.attrib['level']})
     return gems
  
 def return_info(pastebin):

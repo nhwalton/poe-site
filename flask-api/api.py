@@ -49,6 +49,7 @@ def gems():
         pastebin = request.args['pastebin']
         if pastebin != '':
             gems, class_name = return_info(pastebin)
+            gems = pd.DataFrame(gems).drop_duplicates().to_dict('r')
         else:
             pass
     else:
@@ -69,16 +70,20 @@ def gems():
 
             for gem in gems:
 
-                call = """ SELECT *
+                gem_name = gem['name']
+                gem_level = gem['level']
+
+                call = """ SELECT * 
                             FROM gems
                             WHERE class_name = "{}"
                             AND gem = "{}"
-                        """.format(class_name, gem)
+                        """.format(class_name, gem_name)
 
                 cur.execute(call)
 
                 rows = cur.fetchall()
-                print("\n\n\n",rows,"\n\n\n")
+                print(gem_name, gem_level)
+
                 earliest = None
 
                 for row in rows:
@@ -86,8 +91,8 @@ def gems():
                         continue
                     elif earliest == None:
                         earliest = row
-                    print(row[0], earliest[0])
                     if row[0] < earliest[0]:
+                        print(row[0], earliest[0])
                         earliest = row
 
                 if earliest == None:
@@ -97,7 +102,8 @@ def gems():
                         "act":earliest[0],
                         "vendor":earliest[1],
                         "gem_name":earliest[2],
-                        "mission":earliest[4]
+                        "mission":earliest[4],
+                        "level":gem_level
                         }
 
                 for each in data:
@@ -106,10 +112,7 @@ def gems():
                         break
                     else:
                         continue
-
-    print("\n\n\n",gems,"\n\n\n")
-    print("\n\n\n",class_name,"\n\n\n")
-    # dict_of_gems = { i : gems[i] for i in range(0, len(gems) ) }
+    
     return (jsonify(data))
 
 CORS(app.run(host="0.0.0.0",port=5000))
