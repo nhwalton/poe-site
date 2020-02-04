@@ -18,7 +18,7 @@ gem_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'gem_availab
 passives_path = path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'passives_with_gems.json')
 
 
-memory_uri = 'file:database?mode=memory&cache=shared.sqlite'
+memory_uri = 'file::memory:?cache=shared'
 
 conn = sqlite3.connect(memory_uri)
 cur = conn.cursor()
@@ -94,7 +94,7 @@ def gems():
                     if row[0] < earliest[0]:
                         print(row[0], earliest[0])
                         earliest = row
-                
+
                 if earliest == None:
                     continue
                 else:
@@ -115,4 +115,4 @@ def gems():
     
     return (jsonify(data))
 
-CORS(app.run())
+CORS(app.run(host="0.0.0.0",port=5000))

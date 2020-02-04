@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  site:
+    image: site:latest
+    ports: ["8080:8080"]
+
+  flask-api:
+    image: flask-api:latest
+    ports: ["5000:5000"]
+    restart: "unless-stopped"
