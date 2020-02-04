@@ -4,23 +4,47 @@ import 'preact-material-components/Card/style.css';
 import 'preact-material-components/Button/style.css';
 import style from './style';
 
+const RowCell = ({ cellData }) => {
+    return (
+		<div class={
+			[style.row,
+				(cellData.class == "" ? "" :
+					(cellData.class == "green" ? style.green :
+						(cellData.class == "yellow" ? style.yellow : style.red)
+					)
+				)]
+				.join(' ')}>
+			<img 
+				style="max-width:100%;"
+				src={'../../assets/syndicate/' + cellData.image + '.png'}
+				/>
+		</div>
+    );
+};
+
+const TableRow = ({ row }) => {
+    return (
+		<div class={style.rowWrapper}>
+			{row.cells.map(cell => (
+			<RowCell cellData={cell} />
+			))}
+		</div>
+    );
+};
+
 export default class Syndicate extends Component {
-	render() {
+	state = {
+        syndicateJson: require('./table.json')
+    };
+	render({},{syndicateJson}) {
 		return (
 			<div class={`${style.syndicate} page`}>
 				<h1>Syndicate route</h1>
-				<Card>
-					<div class={style.cardHeader}>
-						<h2 class=" mdc-typography--title">Syndicate card</h2>
-						<div class=" mdc-typography--caption">Welcome to Syndicate route</div>
-					</div>
-					<div class={style.cardBody}>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-					</div>
-					<Card.Actions>
-						<Card.ActionButton>OKAY</Card.ActionButton>
-					</Card.Actions>
-				</Card>
+				<div>
+                    {syndicateJson.map(row => (
+                    	<TableRow row={row} />
+                    ))}
+                </div>
 			</div>
 		);
 	}
