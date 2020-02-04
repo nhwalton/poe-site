@@ -38,7 +38,8 @@ const Gems = ({ gemDetails }) => {
                 data-name={gemDetails.gem_name}
                 data-level={gemDetails.level}
                 src={'../../assets/gems/' + gemDetails.gem_name + '.png'}
-                style="max-width:100%;"/>
+                style="max-width:100%;"
+                />
         </div>
     );
   };

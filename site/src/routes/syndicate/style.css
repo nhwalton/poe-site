@@ -11,3 +11,26 @@
 .cardBody {
   padding: 16px;
 }
+
+.rowWrapper {
+	display:flex;
+}
+
+.row {
+
+}
+
+.green {
+	background-color:#336633;
+    box-shadow: inset .2em .2em #477a47;
+}
+
+.red {
+	background-color: #9b3232;
+    box-shadow: inset .2em .2em #af4646;
+}
+
+.yellow {
+	background-color:#cc9900;
+    box-shadow: inset .2em .2em #e0ad14;
+}
