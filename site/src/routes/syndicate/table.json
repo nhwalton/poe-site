@@ -1,7 +1,5 @@
-[
-    {
-    "row":"headers",
-    "cells": [    
+{
+    "headers":[    
         {
             "title":"#logo",
             "image":"POE-Syndicate_01",
@@ -92,11 +90,8 @@
             "image":"POE-Syndicate_18",
             "class":"green"
         }
-    ]
-},
-    {
-    "row":"transportation",
-    "cells": [    
+    ],
+    "transportation":[    
         {
             "title":"#transportation",
             "image":"POE-Syndicate_19",
@@ -187,11 +182,8 @@
             "image":"POE-Syndicate_36",
             "class":""
         }
-    ]
-},
-    {
-    "row":"fortification",
-    "cells": [    
+    ],
+    "fortification":[    
         {
             "title":"#fortification",
             "image":"POE-Syndicate_37",
@@ -282,11 +274,8 @@
             "image":"POE-Syndicate_54",
             "class":"yellow"
         }
-    ]
-},
-    {
-    "row":"research",
-    "cells": [    
+    ],
+    "research":[    
     {
             "title":"#research",
             "image":"POE-Syndicate_55",
@@ -377,11 +366,8 @@
             "image":"POE-Syndicate_72",
             "class":""
         }
-    ]
-},
-    {
-    "row":"intervention",
-    "cells": [    
+    ],
+    "intervention":[    
         {
             "title":"#intervention",
             "image":"POE-Syndicate_73",
@@ -474,4 +460,3 @@
         }
     ]
 }
-]
