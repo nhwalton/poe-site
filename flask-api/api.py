@@ -1,14 +1,15 @@
 import csv
 import json
 import os
+import re
 import sqlite3
 import sys
 
 import flask
 import pandas as pd
 from flask import jsonify, request, send_file
-
 from flask_cors import CORS, cross_origin
+
 from functions import return_info
 
 app = flask.Flask(__name__)
@@ -48,12 +49,28 @@ def gems():
     if 'pastebin' in request.args:
         pastebin = request.args['pastebin']
         if pastebin != '':
-            gems, class_name = return_info(pastebin)
+            try:
+                regex = r"(?:pastebin.com\/)([A-Za-z0-9]*)"
+                match = re.findall(regex, pastebin)
+                print(match)
+                if (match != []) & (match != ['']) :
+                    pastebin_code = match[0]
+                else:
+                    return jsonify("Error: Not a valid pastebin link.")
+            except:
+                return jsonify("Error: Not a valid pastebin link.")
+            try:
+                returned = return_info(pastebin_code)
+                print(returned)
+            except:
+                return jsonify("Error processing pastebin. Are you sure it's a POE build?")
+
+            gems, class_name = returned
             gems = pd.DataFrame(gems).drop_duplicates().to_dict('r')
         else:
             pass
     else:
-        return "Error: No pastebin field provided. Please specify a pastebin."
+        return jsonify("Error: No pastebin field provided. Please specify a pastebin.")
 
     gem_details = []
 
