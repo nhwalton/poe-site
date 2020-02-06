@@ -56,7 +56,7 @@ export default class Header extends Component {
 	render(props) {
 		console.log("route",props.selectedRoute);
 		return (
-			<div>
+			<div class={`${style.header}`}>
 				<TopAppBar className="topappbar">
 					<TopAppBar.Row>
 						<TopAppBar.Section align-start>
@@ -65,27 +65,28 @@ export default class Header extends Component {
 							</TopAppBar.Icon>
 							<TopAppBar.Title>POE Hub</TopAppBar.Title>
 						</TopAppBar.Section>
-						<TopAppBar.Section align-end shrink-to-fit onClick={this.openSettings}>
+						{/* <TopAppBar.Section align-end shrink-to-fit onClick={this.openSettings}>
 							<TopAppBar.Icon>settings</TopAppBar.Icon>
-						</TopAppBar.Section>
+						</TopAppBar.Section> */}
 					</TopAppBar.Row>
 				</TopAppBar>
 				<Drawer modal ref={this.drawerRef}>
 					<Drawer.DrawerContent>
 						<Drawer.DrawerItem selected={props.selectedRoute === '/'} onClick={this.goHome}>
-							<List.ItemGraphic>home</List.ItemGraphic>
+							<img src="../../assets/Exalted_Orb.png" />
 							Home
 						</Drawer.DrawerItem>
 						<Drawer.DrawerItem selected={props.selectedRoute === '/profile'} onClick={this.goToMyProfile}>
-							<List.ItemGraphic>exposure_plus_1</List.ItemGraphic>
+							<img src="../../assets/Chaos_Orb.png" />
 							Profile
 						</Drawer.DrawerItem>
 						<Drawer.DrawerItem selected={props.selectedRoute === '/passives'} onClick={this.goToPassives}>
-							<List.ItemGraphic>account_circle</List.ItemGraphic>
+							<img src="../../assets/Mirror_of_Kalandra.png" />
 							Passives
 						</Drawer.DrawerItem>
 						<Drawer.DrawerItem selected={props.selectedRoute === '/syndicate'} onClick={this.goToSyndicate}>
-							<List.ItemGraphic>account_circle</List.ItemGraphic>
+							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
+							<img src="../../assets/Divine_Orb.png" />
 							Syndicate
 						</Drawer.DrawerItem>
 					</Drawer.DrawerContent>

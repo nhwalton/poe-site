@@ -22,7 +22,7 @@ const RowCell = (props) => {
 	let localClass = localStorage.getItem(cellTitle)
 	
 	if (localClass != null) {
-		console.log(cellTitle, localClass)
+		// console.log(cellTitle, localClass)
 		var useName = localClass
 	} else {
 		var useName = props.cellData.class
@@ -43,13 +43,13 @@ const RowCell = (props) => {
 	// }
 
 	const handleClick = () => {
-		let newColor = (className == "row" ? "green" :
+		let newColor = (className == "default" ? "green" :
 							(className == "green" ? "yellow" :
-							(className == "yellow" ? "red" : "row"
+							(className == "yellow" ? "red" : "default"
 							)))
 		localStorage.setItem(cellTitle, newColor)
 		props.cellData.class = newColor
-		console.log(newColor)
+		// console.log(newColor)
 		newClassName(newColor)};
 
     return (
@@ -99,13 +99,16 @@ const Syndicate = () => {
 	}
 
 	return (
-		<div class={`${style.syndicate} page`}>
-			{console.log("render body")}
-			{console.log(syndicate)}
-			<h1>Syndicate route</h1>
-			<Button onClick={() => resetColors()}>Reset</Button>
-			<Button onClick={() => getState()}>Check State</Button>
-			<div>
+		<div class={`${style.syndicate}`}>
+			{/* {console.log("render body")}
+			{console.log(syndicate)} */}
+			<div class={style.resetWrapper}>
+				<div class={style.titleWrapper}><h1>Syndicate Cheat Sheet</h1></div>
+				<div class={style.buttonWrapper}>
+					<Button class={style.resetButton} raised ripple onClick={() => resetColors()}>Reset</Button>
+				</div>
+			</div>
+			<div class={style.tableWrapper}>
 				{Object.keys(syndicate).map(function(key) {
 					return (
 						<TableRow row={syndicate[key]} rowName={key}/>

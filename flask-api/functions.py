@@ -34,8 +34,8 @@ def decode_base64_and_inflate(b64string):
     try:
         decoded_data = base64.b64decode(b64string)
         return zlib.decompress(decoded_data)
-    except zlib.error as err:
-        raise (f"ZLib Error in paste: err={err}. Data={b64string}")
+    except ValueError as err:
+        raise ValueError(f"ZLib Error in paste: err={err}. Data={b64string}")
     except ValueError as err:
         raise ValueError(f"Value Error in paste: err={err}")
  
@@ -69,11 +69,13 @@ def _parse_skills(xml_skills):
     return gems
  
 def return_info(pastebin):
-    raw = get_as_xml(pastebin)
-    
-    xml = decode_to_xml(raw)
-    
-    gems = _parse_skills(xml.find('Skills'))
-    class_name = xml.find('Build').attrib['className']
-    
-    return(gems,class_name)
+    try:
+        raw = get_as_xml(pastebin)
+        
+        xml = decode_to_xml(raw)
+        
+        gems = _parse_skills(xml.find('Skills'))
+        class_name = xml.find('Build').attrib['className']
+        return(gems,class_name)
+    except:
+        raise(Exception("Error processing pastebin. Are you sure it's a POE build?"))
