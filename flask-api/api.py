@@ -132,4 +132,4 @@ def gems():
     
     return (jsonify(data))
 
-CORS(app.run(host="0.0.0.0",port=5000))
+CORS(app.run(host="0.0.0.0",port=6000))

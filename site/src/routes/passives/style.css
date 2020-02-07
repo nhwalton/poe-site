@@ -89,6 +89,13 @@ label, input, button {
     display:flex;
     flex-wrap:wrap;
     justify-content: left space-around;
+    margin-right:-10px;
+}
+
+.gemWrapper > div > img {
+    max-width:50px;
+    max-height:50px;
+    padding-right:10px;
 }
 
 .hintWrapper {

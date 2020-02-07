@@ -2,7 +2,6 @@ import Preact, { h, Component, useState, useEffect } from 'preact';
 
 import Button from 'preact-material-components/Button';
 import Card from 'preact-material-components/Card';
-import TextField from 'preact-material-components/TextField';
 import 'preact-material-components/TextField/style.css';
 import 'preact-material-components/Card/style.css';
 import 'preact-material-components/Button/style.css';
@@ -32,7 +31,7 @@ const Trials = ({ trial }) => {
 
 const Gems = ({ gemDetails }) => {
     return (
-        <div style="width:20%;">
+        <div>
             <img 
                 data-rh data-vendor={gemDetails.vendor}
                 data-mission={gemDetails.mission}
@@ -73,8 +72,8 @@ export default class Passives extends Component {
     };
 
     async asyncCall() {
-        let value = document.getElementById('build').value//'xaTuiHwH'
-        const response = await fetch('http://localhost:5000/api/gems?pastebin='.concat(value));
+        let value = document.getElementById('build').value
+        const response = await fetch('/api/gems?pastebin='.concat(value));
         const json = await response.json();
         console.log(json)
         console.log(typeof json)
@@ -101,7 +100,6 @@ export default class Passives extends Component {
     };
 
     render({},{response}) {
-        // console.log("response", response)
         return(
             <div class={`${style.passives}`}>
                 <ReactHint
@@ -113,10 +111,8 @@ export default class Passives extends Component {
                 <h1>Passive and Trial Locations</h1>
                 <div id={style.pobInput}>
                     <div class={style.formGroup}>
-                        {/* <span>Pastebin</span> */}
                         <input id="build" class={style.formField} type="text" placeholder="http://pastebin.com/XYZ" />
                     </div>
-                    {/* <TextField id="build" label="Pastebin" outlined value=""/> */}
                     <Button class={style.buildButton} raised ripple onClick={() => { this.asyncCall() }}>Submit</Button>
                 </div>
                 <div id={style.acts}>
