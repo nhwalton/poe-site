@@ -6,16 +6,7 @@ import 'preact-material-components/Card/style.css';
 import 'preact-material-components/Button/style.css';
 import style from './style';
 import defaultJson from './table.json';
-
-// const handleClick = (e, props) => {
-// 	console.log(props.cellData)
-// 	let newColor = (props.cellData.class == "row" ? "green" :
-// 								(props.cellData.class == "green" ? "yellow" :
-// 								(props.cellData.class == "yellow" ? "red" : "row"
-// 								)))
-// 	newClassName(newColor)
-// 	// return(props.cellData.class)
-// };
+import useIfMounted from '../../components/ifMounted';
 
 const RowCell = (props) => {
 	let cellTitle = props.cellData.title
@@ -29,6 +20,8 @@ const RowCell = (props) => {
 	}
 
 	const [className, newClassName] = useState(useName);
+
+	const ifMounted = useIfMounted();
 
 	if (className != props.cellData.class && localClass == null) {
 		newClassName(props.cellData.class)
@@ -50,7 +43,8 @@ const RowCell = (props) => {
 		localStorage.setItem(cellTitle, newColor)
 		props.cellData.class = newColor
 		// console.log(newColor)
-		newClassName(newColor)};
+		ifMounted(() => newClassName(newColor));
+	}
 
     return (
 		<div
@@ -84,19 +78,20 @@ const TableRow = ({ row , rowName }) => {
 const Syndicate = () => {
 
 	let initialJson = JSON.parse(JSON.stringify(defaultJson));
-
 	const [syndicate, setSyndicate] = useState(initialJson);
+
+	const ifMounted = useIfMounted();
 
 	// console.log(defaultJson.headers)
 
 	const resetColors = () => {
 		let resetJson = JSON.parse(JSON.stringify(defaultJson));
-		setSyndicate(resetJson);
+		ifMounted(() => setSyndicate(resetJson));
 		localStorage.clear();
 	}
 
-	const getState = () => {
-	}
+	// const getState = () => {
+	// }
 
 	return (
 		<div class={`${style.syndicate}`}>

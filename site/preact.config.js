@@ -1,4 +1,4 @@
-import asyncPlugin from 'preact-cli-plugin-fast-async';
+// import asyncPlugin from 'preact-cli-plugin-fast-async';
 
 export default (config, env, helpers) => {
     if (env.dev) {
@@ -10,7 +10,7 @@ export default (config, env, helpers) => {
             }
             ];
     }
-    if (env.isProd) {   
-        asyncPlugin(config);
-    }
+    // if (env.isProd) {   
+    //     asyncPlugin(config);
+    // }
 }

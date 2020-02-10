@@ -5,5 +5,6 @@ ADD . ./opt/
 WORKDIR /opt/
 
 RUN npm install
-EXPOSE 8080
-ENTRYPOINT ["npm", "start"]
+RUN npm run build
+EXPOSE 5000
+ENTRYPOINT ["node", "server.js"]

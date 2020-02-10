@@ -1,4 +1,5 @@
-import Preact, { h, Component, useState, useEffect } from 'preact';
+import Preact, { h, Component } from 'preact';
+import { useState, useEffect } from 'preact/hooks';
 
 import Button from 'preact-material-components/Button';
 import Card from 'preact-material-components/Card';
@@ -8,6 +9,7 @@ import 'preact-material-components/Button/style.css';
 import style from './style';
 import 'react-hint/css/index.css';
 import defaultResponse from './passives_with_gems.json';
+import useIfMounted from '../../components/ifMounted';
 
 import ReactHintFactory from 'react-hint'
 const ReactHint = ReactHintFactory({createElement: h, Component})
@@ -66,61 +68,75 @@ const ActCard = ({ data }) => {
     );
   };
 
-export default class Passives extends Component {
-	  state = {
-        response: defaultResponse
-    };
+const Passives = () => {
 
-    async asyncCall() {
-        let value = document.getElementById('build').value
-        const response = await fetch('/api/gems?pastebin='.concat(value));
-        const json = await response.json();
-        console.log(json)
-        console.log(typeof json)
-        if (typeof json == "string") {
-          alert(json)
-        } else {
-          this.setState({response: json})
-        }
+  const [response, setResponse] = useState(defaultResponse);
+  const [build, setBuild] = useState('');
+
+  const ifMounted = useIfMounted();
+
+  const handleClick = async () => {
+    const newResponse = await fetchBuildPassives(build);
+    if (typeof newResponse == "string") {
+      alert(newResponse)
+    } else {
+      ifMounted(() => setResponse(newResponse))
     }
+  };
 
-    renderTooltip = (target) => {
-        const vendor = target.dataset.vendor
-        const mission = target.dataset.mission
-        const gemName = target.dataset.name
-        const level = target.dataset.level
-        return (
-            <div class="mdc-card elevated">
-            <h2>{gemName}</h2>
-            <span>Level to: {level}</span>
-            <span>Vendor: {vendor}</span>
-            <span>Required Mission: {mission}</span>
-            </div>
-        );
-    };
+  const onInputChange = event => ifMounted(() => setBuild(event.target.value));
 
-    render({},{response}) {
-        return(
-            <div class={`${style.passives}`}>
-                <ReactHint
-                    position="right"
-                    autoPosition
-                    events
-                    onRenderContent = {this.renderTooltip}
-                />
-                <h1>Passive and Trial Locations</h1>
-                <div id={style.pobInput}>
-                    <div class={style.formGroup}>
-                        <input id="build" class={style.formField} type="text" placeholder="http://pastebin.com/XYZ" />
-                    </div>
-                    <Button class={style.buildButton} raised ripple onClick={() => { this.asyncCall() }}>Submit</Button>
-                </div>
-                <div id={style.acts}>
-                    {response.map(data => (
-                    <ActCard data={data} />
-                    ))}
-                </div>
-			</div>
-		);
-	}
+  async function fetchBuildPassives(build) {
+    const response = await fetch('/api/gems?pastebin='.concat(build));
+    const json = await response.json();
+    return json
+  }
+
+  const renderTooltip = (target) => {
+    const vendor = target.dataset.vendor
+    const mission = target.dataset.mission
+    const gemName = target.dataset.name
+    const level = target.dataset.level
+    return (
+        <div class="mdc-card elevated">
+          <h2>{gemName}</h2>
+          <span>Vendor: {vendor}</span>
+          <span>Required Mission: {mission}</span>
+          <span>Level to: {level}</span>
+        </div>
+    );
+  };
+
+  // const ifMounted = useIfMounted()
+
+  return(
+      <div class={`${style.passives}`}>
+          <ReactHint
+              position="right"
+              autoPosition
+              events
+              onRenderContent = {e => renderTooltip(e)}
+          />
+          <h1>Passive and Trial Locations</h1>
+          <div id={style.pobInput}>
+              <div class={style.formGroup}>
+                  <input
+                    id="build"
+                    class={style.formField}
+                    type="text"
+                    placeholder="http://pastebin.com/XYZ"
+                    onChange={e => onInputChange(e)}
+                    />
+              </div>
+              <Button class={style.buildButton} raised ripple onClick={() => handleClick()}>Submit</Button>
+          </div>
+          <div id={style.acts}>
+              {response.map(data => (
+              <ActCard data={data} />
+              ))}
+          </div>
+      </div>
+  );
 }
+
+export default Passives;

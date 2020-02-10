@@ -17,7 +17,7 @@ html, body {
 
 body {
   background: #333;
-  background-image: url(../assets/WftA_background.jpg);
+  background-image: url(../assets/background.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
