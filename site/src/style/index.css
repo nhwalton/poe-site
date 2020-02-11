@@ -1,6 +1,6 @@
 :root {
-  --mdc-theme-surface: #444;
-  --mdc-theme-primary: #00363a;
+  --mdc-theme-surface: rgba(68, 68, 68, 0.5);
+  --mdc-theme-primary: rgb(0, 54, 58);
 }
 
 html, body {
@@ -52,6 +52,10 @@ body {
 
 #app {
 	height: 100%;
+}
+
+.mdc-card {
+  backdrop-filter: blur(1px);
 }
 
 .mdc-theme--dark {
