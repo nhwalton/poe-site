@@ -32,7 +32,7 @@
     margin:10px 10px 10px 0px;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1100px) {
 	.zoneCard {
 		width:40%;
 		padding:20px;
@@ -40,7 +40,7 @@
 	}
   }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 750px) {
 	.zoneCard {
 		width:100%;
 		padding:20px;

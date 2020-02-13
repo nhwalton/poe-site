@@ -1,5 +1,7 @@
 import Preact, { h, Component } from 'preact';
-import { useState, useEffect } from 'preact/hooks';
+import { useState, useEffect, useMemo } from 'preact/hooks';
+
+import analytics from '../../components/analytics'
 
 import Button from 'preact-material-components/Button';
 import Card from 'preact-material-components/Card';
@@ -8,7 +10,7 @@ import 'preact-material-components/Card/style.css';
 import 'preact-material-components/Button/style.css';
 import style from './style';
 import 'react-hint/css/index.css';
-import defaultResponse from './passives_with_gems.json';
+import defaultResponse from './passives.json';
 import useIfMounted from '../../components/ifMounted';
 
 import ReactHintFactory from 'react-hint'
@@ -25,7 +27,7 @@ const Quests = ({ quest }) => {
 
 const Trials = ({ trial }) => {
     return (
-      <li class="passives" style="list-style-type:none;">
+      <li style="list-style-type:none;">
         {trial.name}
       </li>
     );
@@ -73,16 +75,42 @@ const Passives = () => {
   const [response, setResponse] = useState(defaultResponse);
   const [build, setBuild] = useState('');
 
+  const localBuildResponse = localStorage.getItem("buildResponse")
+  const localBuild = localStorage.getItem("build")
+
+  if (localBuildResponse != null && localBuildResponse != "") {
+    console.log("build in local storage")
+    useEffect(() => {
+      ifMounted(() => setResponse(JSON.parse(localBuildResponse)));
+    }, [localBuildResponse])
+  }
+
   const ifMounted = useIfMounted();
 
   const handleClick = async () => {
     const newResponse = await fetchBuildPassives(build);
     if (typeof newResponse == "string") {
       alert(newResponse)
+      // localStorage.setItem("build", "")
     } else {
       ifMounted(() => setResponse(newResponse))
+      console.log(newResponse)
+      localStorage.setItem("buildResponse", JSON.stringify(newResponse))
+      localStorage.setItem("build", build)
+      if (build != "") {
+        analytics.track('click', {
+          category: 'build',
+          label: build,
+          value: ''
+        })
+      };
     }
   };
+
+  const resetPassives = () => {
+    ifMounted(() => setResponse(defaultResponse))
+    localStorage.setItem("build", "")
+  }
 
   const onInputChange = event => ifMounted(() => setBuild(event.target.value));
 
@@ -107,28 +135,30 @@ const Passives = () => {
     );
   };
 
-  // const ifMounted = useIfMounted()
-
   return(
-      <div class={`${style.passives}`}>
+      <div class="contentWrapper">
           <ReactHint
               position="right"
               autoPosition
               events
               onRenderContent = {e => renderTooltip(e)}
           />
-          <h1>Passive and Trial Locations</h1>
-          <div id={style.pobInput}>
-              <div class={style.formGroup}>
-                  <input
-                    id="build"
-                    class={style.formField}
-                    type="text"
-                    placeholder="http://pastebin.com/XYZ"
-                    onChange={e => onInputChange(e)}
-                    />
-              </div>
-              <Button class={style.buildButton} raised ripple onClick={() => handleClick()}>Submit</Button>
+          <div class="titleWrapper">
+            <h1>Passive and Trial Locations</h1>
+            <div id={style.pobInput}>
+                <div class={style.formGroup}>
+                    <input
+                      id="build"
+                      class={style.formField}
+                      type="text"
+                      placeholder="http://pastebin.com/XYZ"
+                      onChange={e => onInputChange(e)}
+                      value={localBuild}
+                      />
+                </div>
+                <Button class={style.buildButton} raised ripple onClick={() => handleClick()}>Submit</Button>
+                <Button class={style.buildButton} raised ripple onClick={() => resetPassives()}>Reset</Button>
+            </div>
           </div>
           <div id={style.acts}>
               {response.map(data => (

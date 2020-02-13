@@ -35,8 +35,10 @@ const ZoneCard = ({ fossils, zoneName }) => {
 
 const Fossils = () => {
 	return (
-		<div class={`${style.fossils} page`}>
-			<h1>Fossil Locations</h1>
+		<div class="contentWrapper">
+			<div class="titleWrapper">
+				<h1>Fossil Locations</h1>
+			</div>
 			<div id={style.zones}>
 				{Object.keys(fossilLocations).map(function(key) {
 					return(
