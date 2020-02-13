@@ -1,0 +1,82 @@
+/* :root {
+    --mdc-theme-surface: #444444e5;
+	--mdc-theme-primary: #00363a;
+} */
+
+.fossils {
+	padding: 20px;
+	min-height: 100%;
+	width: 100%;
+}
+
+.cardHeader {
+  padding: 16px;
+}
+
+.cardBody {
+  padding: 16px;
+}
+
+#zones {
+    float:left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+	margin-right:-10px;
+	width:100%;
+}
+
+.zoneCard {
+    width:30%;
+    padding:20px;
+    margin:10px 10px 10px 0px;
+}
+
+@media only screen and (max-width: 1100px) {
+	.zoneCard {
+		width:40%;
+		padding:20px;
+		margin:10px 10px 10px 0px;
+	}
+  }
+
+@media only screen and (max-width: 750px) {
+	.zoneCard {
+		width:100%;
+		padding:20px;
+		margin:10px 10px 10px 0px;
+	}
+}
+
+.fossilContainer {
+	display:flex;
+	grid-gap: 10px;
+	padding: 10px;
+	align-items:center;
+}
+
+.fossil {
+	/* grid-area:image; */
+	display:grid;
+	grid-template-columns: auto;
+	margin-right: 20px;
+	grid-gap: 10px;
+}
+
+.fossilName {
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+.fossilEffect {
+	font-style: oblique;
+}
+
+.fossilContainer > img {
+	max-width:50px;
+	max-height:50px;
+}
+
+.fossilContainer > span {
+	margin-bottom:10px;
+}

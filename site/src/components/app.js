@@ -1,16 +1,19 @@
 import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
+import analytics from './analytics'
+
 import Header from './header';
 import Home from '../routes/home';
-import Profile from '../routes/profile';
 import NotFound from '../routes/404';
 import Passives from '../routes/passives';
 import Syndicate from '../routes/syndicate';
+import Fossils from '../routes/fossils';
 // import Home from 'async!../routes/home';
 // import Profile from 'async!../routes/profile';
 
 export default class App extends Component {
+
 	/** Gets fired when the route changes.
 	 *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
 	 *	@param {string} event.url	The newly routed URL
@@ -19,6 +22,7 @@ export default class App extends Component {
 		this.setState({
 			currentUrl: e.url
 		});
+		analytics.page()
 	};
 
 	render() {
@@ -27,10 +31,9 @@ export default class App extends Component {
 				<Header selectedRoute={this.state.currentUrl} />
 				<Router onChange={this.handleRoute}>
 					<Home path="/" />
-					<Profile path="/profile/" user="me" />
-					<Profile path="/profile/:user" />
 					<Passives path="/passives" />
 					<Syndicate path="/syndicate" />
+					<Fossils path="/fossils" />
 					<NotFound default />
 				</Router>
 			</div>

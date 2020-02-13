@@ -33,9 +33,9 @@ export default class Header extends Component {
 	};
 
 	goHome = this.linkTo('/');
-	goToMyProfile = this.linkTo('/profile');
 	goToPassives = this.linkTo('/passives');
 	goToSyndicate = this.linkTo('/syndicate');
+	goToFossils = this.linkTo('/fossils');
 
 	toggleDarkTheme = () => {
 		this.setState(
@@ -73,21 +73,22 @@ export default class Header extends Component {
 				<Drawer modal ref={this.drawerRef}>
 					<Drawer.DrawerContent>
 						<Drawer.DrawerItem selected={props.selectedRoute === '/'} onClick={this.goHome}>
-							<img src="../../assets/Exalted_Orb.png" />
+							<img src="../../assets/header/Exalted_Orb.png" />
 							Home
 						</Drawer.DrawerItem>
-						<Drawer.DrawerItem selected={props.selectedRoute === '/profile'} onClick={this.goToMyProfile}>
-							<img src="../../assets/Chaos_Orb.png" />
-							Profile
-						</Drawer.DrawerItem>
 						<Drawer.DrawerItem selected={props.selectedRoute === '/passives'} onClick={this.goToPassives}>
-							<img src="../../assets/Mirror_of_Kalandra.png" />
+							<img src="../../assets/header/Book_of_Skill.png" />
 							Passives
 						</Drawer.DrawerItem>
 						<Drawer.DrawerItem selected={props.selectedRoute === '/syndicate'} onClick={this.goToSyndicate}>
 							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
-							<img src="../../assets/Divine_Orb.png" />
+							<img src="../../assets/header/Cameria_the_Coldblooded.png" />
 							Syndicate
+						</Drawer.DrawerItem>
+						<Drawer.DrawerItem selected={props.selectedRoute === '/fossils'} onClick={this.goToFossils}>
+							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
+							<img src="../../assets/header/Bloodstained Fossil.png" />
+							Fossils
 						</Drawer.DrawerItem>
 					</Drawer.DrawerContent>
 				</Drawer>

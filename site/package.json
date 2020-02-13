@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": false,
   "name": "poe-hub",
   "version": "0.0.0",
   "license": "MIT",
@@ -26,10 +26,13 @@
     "eslint": "^4.5.0",
     "eslint-config-synacor": "^1.1.0",
     "if-env": "^1.0.0",
-    "preact-cli": "^2.0.0"
+    "preact-cli": "^3.0.0-rc.7"
   },
   "dependencies": {
+    "@analytics/google-analytics": "^0.2.2",
+    "analytics": "^0.3.0",
     "preact": "^10.3.0",
+    "preact-cli-plugin-fast-async": "^1.0.1",
     "preact-material-components": "^1.4.3",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1",

@@ -1,0 +1,134 @@
+{
+    "Magma Fissure":[
+        {
+            "fossil_name":"Scorched",
+            "fossil_effect":"More Fire modifiers",
+            "fossil_effect2":"No Cold modifiers"
+        },
+        {
+            "fossil_name":"Pristine",
+            "fossil_effect":"More Life modifiers",
+            "fossil_effect2":"No Armour, Energy Shield or Evasion modifiers"
+        },
+        {
+            "fossil_name":"Prismatic",
+            "fossil_effect":"More Elemental modifiers",
+            "fossil_effect2":"No Poison or Bleeding modifiers"
+        },
+        {
+            "fossil_name":"Enchanted",
+            "fossil_effect":"Has a Labyrinth Enchantment",
+            "fossil_effect2":""
+        },
+        {
+            "fossil_name":"Encrusted",
+            "fossil_effect":"More sockets",
+            "fossil_effect2":"Can have white sockets"
+        }
+    ],
+    "Sulphur Vents":[
+        {
+            "fossil_name":"Metallic",
+            "fossil_effect":"More Lightning modifiers",
+            "fossil_effect2":"No Physical modifiers"
+        },
+        {
+            "fossil_name":"Aetheric",
+            "fossil_effect":"More Caster modifiers",
+            "fossil_effect2":"Fewer Attack modifiers"
+        },
+        {
+            "fossil_name":"Perfect",
+            "fossil_effect":"Improved Quality",
+            "fossil_effect2":""
+        },
+        {
+            "fossil_name":"Encrusted",
+            "fossil_effect":"More sockets",
+            "fossil_effect2":"Can have white sockets"
+        }
+    ],
+    "Forzen Hollow":[
+        {
+            "fossil_name":"Frigid",
+            "fossil_effect":"More Cold modifiers",
+            "fossil_effect2":"No Fire modifiers"
+        },
+        {
+            "fossil_name":"Serrated",
+            "fossil_effect":"More Attack modifiers",
+            "fossil_effect2":"Fewer Caster modifiers"
+        },
+        {
+            "fossil_name":"Prismatic",
+            "fossil_effect":"More Elemental modifiers",
+            "fossil_effect2":"No Poison or Bleeding modifiers"
+        },
+        {
+            "fossil_name":"Sanctified",
+            "fossil_effect":"Numeric modifier values are lucky",
+            "fossil_effect2":"High Level modifiers are more common"
+        }
+    ],
+    "Fungal Caverns":[
+        {
+            "fossil_name":"Dense",
+            "fossil_effect":"More Armour, Energy Shield or Evasion modifiers",
+            "fossil_effect2":"No Life Modifiers"
+        },
+        {
+            "fossil_name":"Aberrant",
+            "fossil_effect":"More Chaos modifiers",
+            "fossil_effect2":"No Lightning modifiers"
+        },
+        {
+            "fossil_name":"Perfect",
+            "fossil_effect":"Improved Quality",
+            "fossil_effect2":""
+        },
+        {
+            "fossil_name":"Corroded",
+            "fossil_effect":"More Poison or Bleeding modifiers",
+            "fossil_effect2":"No Elemental modifiers"
+        },
+        {
+            "fossil_name":"Gilded",
+            "fossil_effect":"Item is overvalued by vendors",
+            "fossil_effect2":""
+        }
+    ],
+    "Petrified Forest":[
+        {
+            "fossil_name":"Bound",
+            "fossil_effect":"More Minion or Aura modifiers",
+            "fossil_effect2":""
+        },
+        {
+            "fossil_name":"Jagged",
+            "fossil_effect":"More Physical modifiers",
+            "fossil_effect2":"No Chaos modifiers"
+        },
+        {
+            "fossil_name":"Corroded",
+            "fossil_effect":"More Poison or Bleeding modifiers",
+            "fossil_effect2":"No Elemental modifiers"
+        },
+        {
+            "fossil_name":"Sanctified",
+            "fossil_effect":"More Chaos modifiers",
+            "fossil_effect2":"No Lightning modifiers"
+        }
+    ],
+    "Abyssal Depths":[
+        {
+            "fossil_name":"Bound",
+            "fossil_effect":"More Minion or Aura modifiers",
+            "fossil_effect2":""
+        },
+        {
+            "fossil_name":"Aberrant",
+            "fossil_effect":"More Chaos modifiers",
+            "fossil_effect2":"No Lightning modifiers"
+        }
+    ]
+}

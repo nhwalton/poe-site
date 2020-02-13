@@ -7,5 +7,5 @@ services:
 
   flask-api:
     image: flask-api:latest
-    ports: ["5000:5000"]
+    ports: ["6000:6000"]
     restart: "unless-stopped"

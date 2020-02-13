@@ -1,14 +1,17 @@
-import Preact, { h, Component, useState, useEffect } from 'preact';
+import Preact, { h, Component } from 'preact';
+import { useState, useEffect, useMemo } from 'preact/hooks';
+
+import analytics from '../../components/analytics'
 
 import Button from 'preact-material-components/Button';
 import Card from 'preact-material-components/Card';
-import TextField from 'preact-material-components/TextField';
 import 'preact-material-components/TextField/style.css';
 import 'preact-material-components/Card/style.css';
 import 'preact-material-components/Button/style.css';
 import style from './style';
 import 'react-hint/css/index.css';
-import defaultResponse from './passives_with_gems.json';
+import defaultResponse from './passives.json';
+import useIfMounted from '../../components/ifMounted';
 
 import ReactHintFactory from 'react-hint'
 const ReactHint = ReactHintFactory({createElement: h, Component})
@@ -24,7 +27,7 @@ const Quests = ({ quest }) => {
 
 const Trials = ({ trial }) => {
     return (
-      <li class="passives" style="list-style-type:none;">
+      <li style="list-style-type:none;">
         {trial.name}
       </li>
     );
@@ -32,7 +35,7 @@ const Trials = ({ trial }) => {
 
 const Gems = ({ gemDetails }) => {
     return (
-        <div style="width:20%;">
+        <div>
             <img 
                 data-rh data-vendor={gemDetails.vendor}
                 data-mission={gemDetails.mission}
@@ -67,64 +70,103 @@ const ActCard = ({ data }) => {
     );
   };
 
-export default class Passives extends Component {
-	  state = {
-        response: defaultResponse
-    };
+const Passives = () => {
 
-    async asyncCall() {
-        let value = document.getElementById('build').value//'xaTuiHwH'
-        const response = await fetch('http://localhost:5000/api/gems?pastebin='.concat(value));
-        const json = await response.json();
-        console.log(json)
-        console.log(typeof json)
-        if (typeof json == "string") {
-          alert(json)
-        } else {
-          this.setState({response: json})
-        }
+  const [response, setResponse] = useState(defaultResponse);
+  const [build, setBuild] = useState('');
+
+  const localBuildResponse = localStorage.getItem("buildResponse")
+  const localBuild = localStorage.getItem("build")
+
+  if (localBuildResponse != null && localBuildResponse != "") {
+    console.log("build in local storage")
+    useEffect(() => {
+      ifMounted(() => setResponse(JSON.parse(localBuildResponse)));
+    }, [localBuildResponse])
+  }
+
+  const ifMounted = useIfMounted();
+
+  const handleClick = async () => {
+    const newResponse = await fetchBuildPassives(build);
+    if (typeof newResponse == "string") {
+      alert(newResponse)
+      // localStorage.setItem("build", "")
+    } else {
+      ifMounted(() => setResponse(newResponse))
+      console.log(newResponse)
+      localStorage.setItem("buildResponse", JSON.stringify(newResponse))
+      localStorage.setItem("build", build)
+      if (build != "") {
+        analytics.track('click', {
+          category: 'build',
+          label: build,
+          value: ''
+        })
+      };
     }
+  };
 
-    renderTooltip = (target) => {
-        const vendor = target.dataset.vendor
-        const mission = target.dataset.mission
-        const gemName = target.dataset.name
-        const level = target.dataset.level
-        return (
-            <div class="mdc-card elevated">
-            <h2>{gemName}</h2>
-            <span>Level to: {level}</span>
-            <span>Vendor: {vendor}</span>
-            <span>Required Mission: {mission}</span>
+  const resetPassives = () => {
+    ifMounted(() => setResponse(defaultResponse))
+    localStorage.setItem("build", "")
+  }
+
+  const onInputChange = event => ifMounted(() => setBuild(event.target.value));
+
+  async function fetchBuildPassives(build) {
+    const response = await fetch('/api/gems?pastebin='.concat(build));
+    const json = await response.json();
+    return json
+  }
+
+  const renderTooltip = (target) => {
+    const vendor = target.dataset.vendor
+    const mission = target.dataset.mission
+    const gemName = target.dataset.name
+    const level = target.dataset.level
+    return (
+        <div class="mdc-card elevated">
+          <h2>{gemName}</h2>
+          <span>Vendor: {vendor}</span>
+          <span>Required Mission: {mission}</span>
+          <span>Level to: {level}</span>
+        </div>
+    );
+  };
+
+  return(
+      <div class="contentWrapper">
+          <ReactHint
+              position="right"
+              autoPosition
+              events
+              onRenderContent = {e => renderTooltip(e)}
+          />
+          <div class="titleWrapper">
+            <h1>Passive and Trial Locations</h1>
+            <div id={style.pobInput}>
+                <div class={style.formGroup}>
+                    <input
+                      id="build"
+                      class={style.formField}
+                      type="text"
+                      placeholder="http://pastebin.com/XYZ"
+                      onChange={e => onInputChange(e)}
+                      value={localBuild}
+                      />
+                </div>
+                <Button class={style.buildButton} raised ripple onClick={() => handleClick()}>Submit</Button>
+                <Button class={style.buildButton} raised ripple onClick={() => resetPassives()}>Reset</Button>
             </div>
-        );
-    };
-
-    render({},{response}) {
-        // console.log("response", response)
-        return(
-            <div class={`${style.passives}`}>
-                <ReactHint
-                    position="right"
-                    autoPosition
-                    events
-                    onRenderContent = {this.renderTooltip}
-                />
-                <h1>Passive and Trial Locations</h1>
-                <div id={style.pobInput}>
-                    <div class={style.formGroup}>
-                        {/* <span>Pastebin</span> */}
-                        <input id="build" class={style.formField} type="text" placeholder="http://pastebin.com/XYZ" />
-                    </div>
-                    {/* <TextField id="build" label="Pastebin" outlined value=""/> */}
-                    <Button class={style.buildButton} raised ripple onClick={() => { this.asyncCall() }}>Submit</Button>
-                </div>
-                <div id={style.acts}>
-                    {response.map(data => (
-                    <ActCard data={data} />
-                    ))}
-                </div>
-			</div>
-		);
-	}
+          </div>
+          <div id={style.acts}>
+              {response.map(data => (
+              <ActCard data={data} />
+              ))}
+          </div>
+      </div>
+  );
 }
+
+export default Passives;

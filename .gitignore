@@ -4,6 +4,8 @@ npm-debug.log
 .env
 .DS_Store
 
+package-lock.json
+
 flask-api/api/bin/*
 flask-api/api/lib/*
 flask-api/__pycache__

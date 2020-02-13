@@ -1,6 +1,6 @@
 :root {
-    --mdc-theme-surface: #444444e5;
-    --mdc-theme-primary: #00363a;
+    /* --mdc-theme-surface: #444444e5;
+    --mdc-theme-primary: #00363a; */
     --input-color: #8d8d8d;
     --input-border: #cdd9ed;
     --input-background: #fff;
@@ -53,10 +53,10 @@ li {
 }
 
 #pobInput {
-    float:left;
     display:flex;
     position:relative;
     align-items:center;
+    justify-content:center;
     margin-bottom:1em;
     font-size: 1em;
     height:50px;
@@ -80,6 +80,30 @@ label, input, button {
     margin-right:-10px;
 }
 
+@media only screen and (max-width: 1400px) {
+	.actCard {
+		width:30%;
+		padding:20px;
+		margin:10px 10px 10px 0px;
+	}
+  }
+
+@media only screen and (max-width: 850px) {
+	.actCard {
+		width:48%;
+		padding:20px;
+		margin:10px 10px 10px 0px;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.actCard {
+		width:100%;
+		padding:20px;
+		margin:10px 10px 10px 0px;
+	}
+}
+
 .buildButton {
     height:100%;
     margin:0 0 0 15px;
@@ -89,6 +113,14 @@ label, input, button {
     display:flex;
     flex-wrap:wrap;
     justify-content: left space-around;
+    margin-right:-10px;
+    width:100%;
+}
+
+.gemWrapper > img {
+    max-width:50px;
+    max-height:50px;
+    margin-right:10px;
 }
 
 .hintWrapper {

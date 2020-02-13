@@ -46,6 +46,7 @@ def decode_to_xml(enc, encoding='windows-1252'):
     xml = None
     try:
         xml = ET.fromstring(xml_str.decode(encoding))
+        # print(xml_str)
     except TypeError as err:
         raise(f"Could not parse the pastebin as xml msg={err}")
  
@@ -64,8 +65,13 @@ def _parse_skills(xml_skills):
     gems = []
     # parse skills and the supported gems
     for skill in xml_skills:
-        for gem in skill:
-            gems.append({'name':gem.attrib['nameSpec'],'level':gem.attrib['level']})
+        if "swap" not in skill.attrib['slot'].lower():
+            # print("Not a Swap", skill.attrib['slot'])
+            for gem in skill:
+                gems.append({'name':gem.attrib['nameSpec'],'level':gem.attrib['level']})
+        else:
+            # print("Is a Swap", skill.attrib['slot'])
+            continue
     return gems
  
 def return_info(pastebin):

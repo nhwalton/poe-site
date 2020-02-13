@@ -1,25 +1,19 @@
 import { h, Component, createRef } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
+
+import analytics from '../../components/analytics'
+
 import Card from 'preact-material-components/Card';
 import Button from 'preact-material-components/Button';
 import 'preact-material-components/Card/style.css';
 import 'preact-material-components/Button/style.css';
 import style from './style';
 import defaultJson from './table.json';
-
-// const handleClick = (e, props) => {
-// 	console.log(props.cellData)
-// 	let newColor = (props.cellData.class == "row" ? "green" :
-// 								(props.cellData.class == "green" ? "yellow" :
-// 								(props.cellData.class == "yellow" ? "red" : "row"
-// 								)))
-// 	newClassName(newColor)
-// 	// return(props.cellData.class)
-// };
+import useIfMounted from '../../components/ifMounted';
 
 const RowCell = (props) => {
 	let cellTitle = props.cellData.title
-	let localClass = localStorage.getItem(cellTitle)
+	let localClass = localStorage.getItem("syn-".concat(cellTitle))
 	
 	if (localClass != null) {
 		// console.log(cellTitle, localClass)
@@ -29,6 +23,8 @@ const RowCell = (props) => {
 	}
 
 	const [className, newClassName] = useState(useName);
+
+	const ifMounted = useIfMounted();
 
 	if (className != props.cellData.class && localClass == null) {
 		newClassName(props.cellData.class)
@@ -47,10 +43,19 @@ const RowCell = (props) => {
 							(className == "green" ? "yellow" :
 							(className == "yellow" ? "red" : "default"
 							)))
-		localStorage.setItem(cellTitle, newColor)
+		if (newColor != "") {
+			analytics.track('syn', {
+				category: cellTitle,
+				label: newColor,
+				value: ''
+			})
+			};
+
+		localStorage.setItem("syn-".concat(cellTitle), newColor)
 		props.cellData.class = newColor
 		// console.log(newColor)
-		newClassName(newColor)};
+		ifMounted(() => newClassName(newColor));
+	}
 
     return (
 		<div
@@ -84,38 +89,47 @@ const TableRow = ({ row , rowName }) => {
 const Syndicate = () => {
 
 	let initialJson = JSON.parse(JSON.stringify(defaultJson));
-
 	const [syndicate, setSyndicate] = useState(initialJson);
+
+	const ifMounted = useIfMounted();
 
 	// console.log(defaultJson.headers)
 
 	const resetColors = () => {
 		let resetJson = JSON.parse(JSON.stringify(defaultJson));
-		setSyndicate(resetJson);
+		ifMounted(() => setSyndicate(resetJson));
+		for (var key in localStorage) {
+			if (key.indexOf("syn") == 0) {
+				localStorage.removeItem(key);
+				console.log("removed ", key)
+			}
+		}
 		localStorage.clear();
 	}
 
-	const getState = () => {
-	}
+	// const getState = () => {
+	// }
 
 	return (
-		<div class={`${style.syndicate}`}>
+		<div class="contentWrapper">
 			{/* {console.log("render body")}
 			{console.log(syndicate)} */}
-			<div class={style.resetWrapper}>
-				<div class={style.titleWrapper}><h1>Syndicate Cheat Sheet</h1></div>
-				<div class={style.buttonWrapper}>
-					<Button class={style.resetButton} raised ripple onClick={() => resetColors()}>Reset</Button>
+			<div class="titleWrapper">
+				<h1>Syndicate Cheat Sheet</h1>
+				<div>
+					<Button raised ripple onClick={() => resetColors()}>Reset</Button>
 				</div>
 			</div>
 			<div class={style.tableWrapper}>
-				{Object.keys(syndicate).map(function(key) {
-					return (
-						<TableRow row={syndicate[key]} rowName={key}/>
-						)
+				<div>
+					{Object.keys(syndicate).map(function(key) {
+						return (
+							<TableRow row={syndicate[key]} rowName={key}/>
+							)
+						}
+					)
 					}
-				  )
-				}
+				</div>
 			</div>
 		</div>
 	);
