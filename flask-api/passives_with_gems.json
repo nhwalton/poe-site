@@ -3,15 +3,15 @@
         "act": "Act 1",
         "quests": [
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Dweller of the Deep"
             },
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Marooned Mariner"
             },
             {
-                "skillPoints":": 2",
+                "skillPoints":"2",
                 "name":"Way Forward"
             }
         ],
@@ -33,7 +33,7 @@
         "act": "Act 2",
         "quests": [
             {
-                "skillPoints":": 2",
+                "skillPoints":"2",
                 "name":"Deal with the Bandits"
             },
             {
@@ -63,11 +63,11 @@
         "act": "Act 3",
         "quests": [
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Victario's Secrets"
             },
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Piety's Pets"
             },
             {
@@ -93,7 +93,7 @@
         "act": "Act 4",
         "quests": [
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Indomitable Spirit"
             },
             {
@@ -123,11 +123,11 @@
         "act": "Act 5",
         "quests": [
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Service to Science"
             },
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Kitava's Torments"
             },
             {
@@ -153,15 +153,15 @@
         "act": "Act 6",
         "quests": [
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Father of War"
             },
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Cloven One"
             },
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Puppet Mistress"
             }
         ],
@@ -183,15 +183,15 @@
         "act": "Act 7",
         "quests": [
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Master of a Million Faces"
             },
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Queen of Despair"
             },
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Kishara's Star"
             }
         ],
@@ -213,15 +213,15 @@
         "act": "Act 8",
         "quests": [
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Love is Dead"
             },
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Gemling Legion"
             },
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Reflection of Terror"
             }
         ],
@@ -243,11 +243,11 @@
         "act": "Act 9",
         "quests": [
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Queen of the Sands"
             },
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Ruler of Highgate"
             },
             {
@@ -273,11 +273,11 @@
         "act": "Act 10",
         "quests": [
             {
-                "skillPoints":": 1",
+                "skillPoints":"1",
                 "name":"Map to Tsoatha"
             },
             {
-                "skillPoints":": 2",
+                "skillPoints":"2",
                 "name":"End to Hunger"
             },
             {

@@ -109,7 +109,7 @@ label, input, button {
     margin:0 0 0 15px;
 }
 
-.gemWrapper {
+.gemsWrapper {
     display:flex;
     flex-wrap:wrap;
     justify-content: left space-around;
@@ -117,10 +117,51 @@ label, input, button {
     width:100%;
 }
 
-.gemWrapper > img {
+.singleGem {
+    display:flex;
+    justify-content: left space-around;
+    margin-right:-10px;
+    width:100%;
+}
+
+.gemDetails {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:left;
+    align-content:center;
+	margin-bottom: 20px;
+}
+
+.singleGem > img {
     max-width:50px;
     max-height:50px;
     margin-right:10px;
+}
+
+.gemChip {
+    background: #555;
+    display: block;
+    padding: 0 12px;
+    border-radius: .2rem;
+    font-size: .8em;
+    margin:5px;
+  }
+
+.gemChip.blue {
+    background: #314F6F
+    ;
+}
+
+.gemChip.red {
+    background: #A3414D;
+}
+
+.gemChip.other {
+    background: #AA8144;
+}
+
+.gemChip.green {
+    background: #4B8F39;
 }
 
 .hintWrapper {

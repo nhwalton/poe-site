@@ -20,7 +20,7 @@ const Quests = ({ quest }) => {
     return (
         <li style="list-style-type:none;">
         {quest.name}
-        {quest.skillPoints}
+        <span class={style.gemChip + ' ' + style.blue}>{quest.skillPoints}</span>
         </li>
     );
 };
@@ -35,7 +35,7 @@ const Trials = ({ trial }) => {
 
 const Gems = ({ gemDetails }) => {
     return (
-        <div>
+        <div class={style.singleGem}>
             <img 
                 data-rh data-vendor={gemDetails.vendor}
                 data-mission={gemDetails.mission}
@@ -44,6 +44,12 @@ const Gems = ({ gemDetails }) => {
                 src={'../../assets/gems/' + gemDetails.gem_name + '.png'}
                 style="max-width:100%;"
                 />
+            <div class={style.gemDetails}>
+              <span class={style.gemChip + ' ' + style.blue}>{gemDetails.gem_name}</span>
+              <span class={style.gemChip + ' ' + style.red}>{gemDetails.level}</span>
+              <span class={style.gemChip + ' ' + style.other}>{gemDetails.mission}</span>
+              <span class={style.gemChip + ' ' + style.green}>{gemDetails.vendor}</span>
+            </div>
         </div>
     );
   };
@@ -61,7 +67,7 @@ const ActCard = ({ data }) => {
           <Trials trial={trial} />
         ))}
         <h3>Gems</h3>
-        <div class={style.gemWrapper}>
+        <div class={style.gemsWrapper}>
         {data.gems.map(details => (
           <Gems gemDetails={details} />
         ))}
@@ -120,29 +126,29 @@ const Passives = () => {
     return json
   }
 
-  const renderTooltip = (target) => {
-    const vendor = target.dataset.vendor
-    const mission = target.dataset.mission
-    const gemName = target.dataset.name
-    const level = target.dataset.level
-    return (
-        <div class="mdc-card elevated">
-          <h2>{gemName}</h2>
-          <span>Vendor: {vendor}</span>
-          <span>Required Mission: {mission}</span>
-          <span>Level to: {level}</span>
-        </div>
-    );
-  };
+  // const renderTooltip = (target) => {
+  //   const vendor = target.dataset.vendor
+  //   const mission = target.dataset.mission
+  //   const gemName = target.dataset.name
+  //   const level = target.dataset.level
+  //   return (
+  //       <div class="mdc-card elevated">
+  //         <h2>{gemName}</h2>
+  //         <span>Vendor: {vendor}</span>
+  //         <span>Required Mission: {mission}</span>
+  //         <span>Level to: {level}</span>
+  //       </div>
+  //   );
+  // };
 
   return(
       <div class="contentWrapper">
-          <ReactHint
+          {/* <ReactHint
               position="right"
               autoPosition
               events
               onRenderContent = {e => renderTooltip(e)}
-          />
+          /> */}
           <div class="titleWrapper">
             <h1>Passive and Trial Locations</h1>
             <div id={style.pobInput}>
