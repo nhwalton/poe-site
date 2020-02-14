@@ -3,12 +3,12 @@
         {
             "title":"#logo",
             "image":"POE-Syndicate_01",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#aisling",
             "image":"POE-Syndicate_02",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#cameria",
@@ -48,7 +48,7 @@
         {
             "title":"#janus",
             "image":"POE-Syndicate_10",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#jorgin",
@@ -73,7 +73,7 @@
         {
             "title":"#rin",
             "image":"POE-Syndicate_15",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#tora",
@@ -95,12 +95,12 @@
         {
             "title":"#transportation",
             "image":"POE-Syndicate_19",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#aisling-transportation",
             "image":"POE-Syndicate_20",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#cameria-transportation",
@@ -110,7 +110,7 @@
         {
             "title":"#elreon-transportation",
             "image":"POE-Syndicate_22",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#gravicius-transportation",
@@ -135,27 +135,27 @@
         {
             "title":"#it-that-fled-transportation",
             "image":"POE-Syndicate_27",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#janus-transportation",
             "image":"POE-Syndicate_28",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#jorgin-transportation",
             "image":"POE-Syndicate_29",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#korell-transportation",
             "image":"POE-Syndicate_30",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#leo-transportation",
             "image":"POE-Syndicate_31",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#riker-transportation",
@@ -165,7 +165,7 @@
         {
             "title":"#rin-transportation",
             "image":"POE-Syndicate_33",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#tora-transportation",
@@ -180,39 +180,39 @@
         {
             "title":"#vorici-transportation",
             "image":"POE-Syndicate_36",
-            "class":"default"
+            "class":"gray"
         }
     ],
     "fortification":[    
         {
             "title":"#fortification",
             "image":"POE-Syndicate_37",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#aisling-fortification",
             "image":"POE-Syndicate_38",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#cameria-fortification",
             "image":"POE-Syndicate_39",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#elreon-fortification",
             "image":"POE-Syndicate_40",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#gravicius-fortification",
             "image":"POE-Syndicate_41",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#guff-fortification",
             "image":"POE-Syndicate_42",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#haku-fortification",
@@ -227,7 +227,7 @@
         {
             "title":"#it-that-fled-fortification",
             "image":"POE-Syndicate_45",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#janus-fortification",
@@ -237,7 +237,7 @@
         {
             "title":"#jorgin-fortification",
             "image":"POE-Syndicate_47",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#korell-fortification",
@@ -252,17 +252,17 @@
         {
             "title":"#riker-fortification",
             "image":"POE-Syndicate_50",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#rin-fortification",
             "image":"POE-Syndicate_51",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#tora-fortification",
             "image":"POE-Syndicate_52",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#vagan-fortification",
@@ -279,22 +279,22 @@
     {
             "title":"#research",
             "image":"POE-Syndicate_55",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#aisling-research",
             "image":"POE-Syndicate_56",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#cameria-research",
             "image":"POE-Syndicate_57",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#elreon-research",
             "image":"POE-Syndicate_58",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#gravicius-research",
@@ -304,7 +304,7 @@
         {
             "title":"#guff-research",
             "image":"POE-Syndicate_60",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#haku-research",
@@ -324,7 +324,7 @@
         {
             "title":"#janus-research",
             "image":"POE-Syndicate_64",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#jorgin-research",
@@ -349,7 +349,7 @@
         {
             "title":"#rin-research",
             "image":"POE-Syndicate_69",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#tora-research",
@@ -359,24 +359,24 @@
         {
             "title":"#vagan-research",
             "image":"POE-Syndicate_71",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#vorici-research",
             "image":"POE-Syndicate_72",
-            "class":"default"
+            "class":"gray"
         }
     ],
     "intervention":[    
         {
             "title":"#intervention",
             "image":"POE-Syndicate_73",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#aisling-intervention",
             "image":"POE-Syndicate_74",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#cameria-intervention",
@@ -386,7 +386,7 @@
         {
             "title":"#elreon-intervention",
             "image":"POE-Syndicate_76",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#gravicius-intervention",
@@ -396,22 +396,22 @@
         {
             "title":"#guff-intervention",
             "image":"POE-Syndicate_78",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#haku-intervention",
             "image":"POE-Syndicate_79",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#hillock-intervention",
             "image":"POE-Syndicate_80",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#it-that-fled-intervention",
             "image":"POE-Syndicate_81",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#janus-intervention",
@@ -426,12 +426,12 @@
         {
             "title":"#korell-intervention",
             "image":"POE-Syndicate_84",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#leo-intervention",
             "image":"POE-Syndicate_85",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#riker-intervention",
@@ -441,7 +441,7 @@
         {
             "title":"#rin-intervention",
             "image":"POE-Syndicate_87",
-            "class":"default"
+            "class":"gray"
         },
         {
             "title":"#tora-intervention",
@@ -456,7 +456,7 @@
         {
             "title":"#vorici-intervention",
             "image":"POE-Syndicate_90",
-            "class":"default"
+            "class":"gray"
         }
     ]
 }
