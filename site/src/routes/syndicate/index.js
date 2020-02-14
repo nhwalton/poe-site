@@ -39,9 +39,9 @@ const RowCell = (props) => {
 	// }
 
 	const handleClick = () => {
-		let newColor = (className == "default" ? "green" :
+		let newColor = (className == "gray" ? "green" :
 							(className == "green" ? "yellow" :
-							(className == "yellow" ? "red" : "default"
+							(className == "yellow" ? "red" : "gray"
 							)))
 		if (newColor != "") {
 			analytics.track('syn', {
@@ -93,8 +93,6 @@ const Syndicate = () => {
 
 	const ifMounted = useIfMounted();
 
-	// console.log(defaultJson.headers)
-
 	const resetColors = () => {
 		let resetJson = JSON.parse(JSON.stringify(defaultJson));
 		ifMounted(() => setSyndicate(resetJson));
@@ -107,13 +105,8 @@ const Syndicate = () => {
 		localStorage.clear();
 	}
 
-	// const getState = () => {
-	// }
-
 	return (
-		<div class="contentWrapper">
-			{/* {console.log("render body")}
-			{console.log(syndicate)} */}
+		<div class={`${style.syndicate} page`}>
 			<div class="titleWrapper">
 				<h1>Syndicate Cheat Sheet</h1>
 				<div>

@@ -1,5 +1,5 @@
 .home {
-	padding: 20px;
+	padding: 20px 80px;
 	min-height: 100%;
 	width: 100%;
 }
@@ -10,4 +10,37 @@
 
 .cardBody {
   padding: 16px;
+}
+
+h1 {
+	font-family: 'unineue-heavyitalic', 'Helvetica Neue', arial, sans-serif;
+}
+
+.subtext {
+	text-align: center;
+	margin-bottom:40px;
+}
+
+.homeWrapper {
+	display:grid;
+	grid-template-columns: repeat(3, auto);
+	grid-gap: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+	.homeWrapper {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+	.homeWrapper {
+        grid-template-columns: repeat(1, auto);
+    }
+}
+
+.modulesWrapper {
+	display:grid;
+	grid-template-columns: 1fr;
+	grid-gap: 20px;
 }

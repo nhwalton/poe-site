@@ -3,27 +3,23 @@
         "act": "Act 1",
         "quests": [
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Dweller of the Deep"
             },
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Marooned Mariner"
             },
             {
-                "skillPoints":"2",
+                "skillPoints":"2 Skill Points",
                 "name":"Way Forward"
             }
         ],
         "trials": [
             {
-                "name":"Lower Prison"
-            },
-            {
-                "name":" "
-            },
-            {
-                "name":" "
+                "name":"Lower Prison",
+                "lab":"Normal 1/6",
+                "trap":"Spike Traps"
             }
         ],
         "gems": [
@@ -33,27 +29,22 @@
         "act": "Act 2",
         "quests": [
             {
-                "skillPoints":"2",
+                "skillPoints":"2 Skill Points",
                 "name":"Deal with the Bandits"
-            },
-            {
-                "skillPoints": " ",
-                "name":" "
-            },
-            {
-                "skillPoints": " ",
-                "name":" "
             }
         ],
         "trials": [
             {
-                "name":"Crypt (Level 1)"
+                "name":"Crypt",
+                "level":"1",
+                "lab":"Normal 2/6",
+                "trap":"Spinning Blades"
             },
             {
-                "name":"Chamber of Sins (Level 2)"
-            },
-            {
-                "name":" "
+                "name":"Chamber of Sins",
+                "level":"2",
+                "lab":"Normal 3/6",
+                "trap":"Sawblades"
             }
         ],
         "gems": [
@@ -63,27 +54,29 @@
         "act": "Act 3",
         "quests": [
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Victario's Secrets"
             },
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Piety's Pets"
-            },
-            {
-                "skillPoints": " ",
-                "name":" "
             }
         ],
         "trials": [
             {
-                "name":"Crematorium"
+                "name":"Crematorium",
+                "lab":"Normal 4/6",
+                "trap":"Furnace Traps"
             },
             {
-                "name":"Catacombs"
+                "name":"Catacombs",
+                "lab":"Normal 5/6",
+                "trap":"Bladed Sentries"
             },
             {
-                "name":"Imperial Gardens"
+                "name":"Imperial Gardens",
+                "lab":"Normal 6/6",
+                "trap":"Poison Dart Traps"
             }
         ],
         "gems": [
@@ -93,28 +86,11 @@
         "act": "Act 4",
         "quests": [
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Indomitable Spirit"
-            },
-            {
-                "skillPoints": " ",
-                "name":" "
-            },
-            {
-                "skillPoints": " ",
-                "name":" "
             }
         ],
         "trials": [
-            {
-                "name":"Lower Prison"
-            },
-            {
-                "name":" "
-            },
-            {
-                "name":" "
-            }
         ],
         "gems": [
         ]
@@ -123,28 +99,15 @@
         "act": "Act 5",
         "quests": [
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Service to Science"
             },
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Kitava's Torments"
-            },
-            {
-                "skillPoints": " ",
-                "name":" "
             }
         ],
         "trials": [
-            {
-                "name":"Lower Prison"
-            },
-            {
-                "name":" "
-            },
-            {
-                "name":" "
-            }
         ],
         "gems": [
         ]
@@ -153,27 +116,23 @@
         "act": "Act 6",
         "quests": [
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Father of War"
             },
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Cloven One"
             },
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Puppet Mistress"
             }
         ],
         "trials": [
             {
-                "name":"Lower Prison"
-            },
-            {
-                "name":" "
-            },
-            {
-                "name":" "
+                "name":"The Prison",
+                "lab":"Cruel 1/3",
+                "trap":"Spike Traps"
             }
         ],
         "gems": [
@@ -183,27 +142,29 @@
         "act": "Act 7",
         "quests": [
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Master of a Million Faces"
             },
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Queen of Despair"
             },
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Kishara's Star"
             }
         ],
         "trials": [
             {
-                "name":"Crypt"
+                "name":"Crypt",
+                "lab":"Cruel 2/3",
+                "trap":"Spinning Blades"
             },
             {
-                "name":"Chamber of Sins (Level 2)"
-            },
-            {
-                "name":" "
+                "name":"Chamber of Sins",
+                "level":"2",
+                "lab":"Cruel 3/3",
+                "trap":"Saw Blades"
             }
         ],
         "gems": [
@@ -213,27 +174,23 @@
         "act": "Act 8",
         "quests": [
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Love is Dead"
             },
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Gemling Legion"
             },
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Reflection of Terror"
             }
         ],
         "trials": [
             {
-                "name":"Bath House"
-            },
-            {
-                "name":" "
-            },
-            {
-                "name":" "
+                "name":"Bath House",
+                "lab":"Merciless 1/3",
+                "trap":"Furnace Traps"
             }
         ],
         "gems": [
@@ -243,27 +200,19 @@
         "act": "Act 9",
         "quests": [
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Queen of the Sands"
             },
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Ruler of Highgate"
-            },
-            {
-                "skillPoints": " ",
-                "name":" "
             }
         ],
         "trials": [
             {
-                "name":"Tunnel"
-            },
-            {
-                "name":" "
-            },
-            {
-                "name":" "
+                "name":"Tunnel",
+                "lab":"Merciless 2/3",
+                "trap":"Blade Sentries"
             }
         ],
         "gems": [
@@ -273,27 +222,19 @@
         "act": "Act 10",
         "quests": [
             {
-                "skillPoints":"1",
+                "skillPoints":"1 Skill Point",
                 "name":"Map to Tsoatha"
             },
             {
-                "skillPoints":"2",
+                "skillPoints":"2 Skill Points",
                 "name":"End to Hunger"
-            },
-            {
-                "skillPoints": " ",
-                "name":" "
             }
         ],
         "trials": [
             {
-                "name":"Ossuary"
-            },
-            {
-                "name":" "
-            },
-            {
-                "name":" "
+                "name":"Ossuary",
+                "lab":"Merciless 3/3",
+                "trap":"Poison Dart Traps"
             }
         ],
         "gems": [

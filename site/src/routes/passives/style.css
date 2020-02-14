@@ -19,7 +19,7 @@
 } 
 
 .passives {
-	padding: 60px 30px 0;
+	padding: 20px;
 	min-height: 100%;
 	width: 100%;
 }
@@ -40,12 +40,6 @@
 
 .table {
     text-align: left;
-}
-
-.actCard {
-    width:18%;
-    padding:20px;
-    margin:10px 10px 10px 0px;
 }
 
 li {
@@ -74,39 +68,57 @@ label, input, button {
 
 #acts {
     float:left;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display:grid;
+    grid-template-columns: repeat(3, auto);
     margin-right:-10px;
+    grid-gap:20px;
+    width:100%;
 }
 
-@media only screen and (max-width: 1400px) {
-	.actCard {
-		width:30%;
-		padding:20px;
-		margin:10px 10px 10px 0px;
-	}
-  }
+.actCard {
+    padding:20px;
+    margin:10px 10px 10px 0px;
+}
 
-@media only screen and (max-width: 850px) {
-	.actCard {
-		width:48%;
-		padding:20px;
-		margin:10px 10px 10px 0px;
+@media only screen and (max-width: 1050px) {
+	#acts {
+		grid-template-columns: repeat(2, auto);
 	}
 }
 
-@media only screen and (max-width: 550px) {
-	.actCard {
-		width:100%;
-		padding:20px;
-		margin:10px 10px 10px 0px;
+@media only screen and (max-width: 750px) {
+	#acts {
+		grid-template-columns: repeat(1, auto);
 	}
 }
 
 .buildButton {
     height:100%;
     margin:0 0 0 15px;
+}
+
+.itemsWrapper {
+    display:grid;
+    grid-template-rows: repeat(3, auto);
+    /* min-height:18vh; */
+}
+
+.singleItem {
+    display:grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    margin-bottom:20px;
+}
+
+@media only screen and (max-width: 550px) {
+	.itemsWrapper {
+        display:grid;
+        grid-template-rows: 1fr;
+    }
+}
+
+.chip.quest {
+    margin-right:auto;
 }
 
 .gemsWrapper {
@@ -122,45 +134,45 @@ label, input, button {
     justify-content: left space-around;
     margin-right:-10px;
     width:100%;
+    margin-bottom:20px;
 }
 
-.gemDetails {
+.itemDetails {
     display:flex;
     flex-wrap:wrap;
     justify-content:left;
     align-content:center;
-	margin-bottom: 20px;
+    margin-left:10px;
 }
 
 .singleGem > img {
     max-width:50px;
     max-height:50px;
-    margin-right:10px;
 }
 
-.gemChip {
+.chip {
     background: #555;
     display: block;
-    padding: 0 12px;
+    padding: 3px 12px;
     border-radius: .2rem;
     font-size: .8em;
     margin:5px;
   }
 
-.gemChip.blue {
+.chip.blue {
     background: #314F6F
     ;
 }
 
-.gemChip.red {
+.chip.red {
     background: #A3414D;
 }
 
-.gemChip.other {
-    background: #AA8144;
+.chip.orange {
+    background: #c96036;
 }
 
-.gemChip.green {
+.chip.green {
     background: #4B8F39;
 }
 

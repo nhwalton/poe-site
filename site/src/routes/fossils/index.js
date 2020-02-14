@@ -35,7 +35,7 @@ const ZoneCard = ({ fossils, zoneName }) => {
 
 const Fossils = () => {
 	return (
-		<div class="contentWrapper">
+		<div class={`${style.fossils} page`}>
 			<div class="titleWrapper">
 				<h1>Fossil Locations</h1>
 			</div>
