@@ -62,7 +62,7 @@ body {
 }
 
 #app {
-	height: 100%;
+  height: 100%;
 }
 
 .mdc-card {
@@ -92,6 +92,7 @@ body {
 
 .mdc-top-app-bar__title {
   font-family: 'unineue-heavyitalic', 'Helvetica Neue', arial, sans-serif !important;
+  font-size: 1.5rem !important;
 }
 
 /* .mdc-theme--dark .elevated {
@@ -213,4 +214,39 @@ body {
 
 .mdc-drawer .mdc-list-item__graphic {
   color:rgba(255, 255, 255, 0.781) !important;
+}
+
+.chip {
+  background: #555;
+  display: block;
+  padding: 3px 12px;
+  border-radius: .2rem;
+  font-size: .8em;
+  margin:5px;
+}
+
+.chip.quest {
+  margin-right:auto;
+}
+
+.chip.blue {
+  background: #314F6F
+  ;
+}
+
+.chip.red {
+  background: #A3414D;
+}
+
+.chip.orange {
+  background: #c96036;
+}
+
+.chip.green {
+  background: #4B8F39;
+}
+
+button > a {
+  color:#fff;
+  text-decoration: none;
 }

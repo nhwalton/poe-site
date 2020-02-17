@@ -19,7 +19,7 @@
 } 
 
 .passives {
-	padding: 20px;
+    padding: 20px 60px;
 	min-height: 100%;
 	width: 100%;
 }
@@ -77,16 +77,22 @@ label, input, button {
 
 .actCard {
     padding:20px;
-    margin:10px 10px 10px 0px;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1100px) {
+    .passives {
+        padding: 20px 40px;
+    }
+
 	#acts {
 		grid-template-columns: repeat(2, auto);
 	}
 }
 
 @media only screen and (max-width: 750px) {
+    .passives {
+        padding: 20px;
+    }
 	#acts {
 		grid-template-columns: repeat(1, auto);
 	}
@@ -115,10 +121,6 @@ label, input, button {
         display:grid;
         grid-template-rows: 1fr;
     }
-}
-
-.chip.quest {
-    margin-right:auto;
 }
 
 .gemsWrapper {
@@ -158,6 +160,10 @@ label, input, button {
     font-size: .8em;
     margin:5px;
   }
+
+.chip.quest {
+    margin-right:auto;
+}
 
 .chip.blue {
     background: #314F6F

@@ -63,6 +63,10 @@
 	grid-gap: 10px;
 }
 
+.fossil > span {
+	margin-right:auto;
+}
+
 .fossilName {
 	font-size:1.2em;
 	font-weight:bold;

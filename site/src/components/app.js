@@ -4,6 +4,7 @@ import { Router } from 'preact-router';
 import analytics from './analytics'
 
 import Header from './header';
+import Footer from './footer';
 import Home from '../routes/home';
 import NotFound from '../routes/404';
 import Passives from '../routes/passives';
@@ -36,6 +37,7 @@ export default class App extends Component {
 					<Fossils path="/fossils" />
 					<NotFound default />
 				</Router>
+				<Footer />
 			</div>
 		);
 	}
