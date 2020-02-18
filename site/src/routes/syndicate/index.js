@@ -30,14 +30,6 @@ const RowCell = (props) => {
 		newClassName(props.cellData.class)
 	}
 
-	// if (localStorage.getItem(cellTitle) != null) {
-	// 	newClassName(localStorage.getItem(cellTitle))
-	// }
-
-	// if (className != localStorage.getItem(cellTitle) && localStorage.getItem(cellTitle) != null) {
-	// 	newClassName(localStorage.getItem(cellTitle))
-	// }
-
 	const handleClick = () => {
 		if (props.loaded == props.needed) {
 		let newColor = (className == "gray" ? "green" :
@@ -54,15 +46,23 @@ const RowCell = (props) => {
 
 		localStorage.setItem("syn-".concat(cellTitle), newColor)
 		props.cellData.class = newColor
-		// console.log(newColor)
 		ifMounted(() => newClassName(newColor));
 		};
-	}
+	};
 
-	if (props.loaded < props.needed) {
-		var imageSrc = '../../assets/syndicate/loader.gif'
-	} else {
-		var imageSrc = '../../assets/syndicate/' + props.cellData.image + '.png'
+	const CellText = () => {
+		if (props.cellData.image.length == 0) {
+			var cellClass = `${style.cellInfo} ${style.cellCentered}`
+		} else {
+			var cellClass = style.cellInfo
+		}
+		return (
+			<div class={cellClass} style={`background-image:url("../../assets/syndicate/${props.cellData.image}.png")`}>
+				<div class={style.cellText}>
+					{props.cellData.text}
+				</div>
+			</div>
+			);
 	}
 
     return (
@@ -70,22 +70,18 @@ const RowCell = (props) => {
 			onClick = { () => handleClick(props) }
 			data-title = {cellTitle}
 			className = {style[className]}
-					>
-			<img
-				style="max-width:100%;"
-				src={imageSrc}
-				/>
+			>
+			<CellText />
 		</div>
     );
 };
 
-const TableRow = ({ row , rowName , loaded, needed }) => {
-	// console.log(rowName)
+const TableRow = ({ row , rowName }) => {
     return (
 		<div class={style.rowWrapper}>
 			{row.map(function(cell) {
 				return(
-				<RowCell cellData={cell} rowName={rowName} loaded={loaded} needed={needed}/>
+				<RowCell cellData={cell}/>
 				)
 			}
 			)
@@ -98,7 +94,6 @@ const Syndicate = () => {
 
 	let initialJson = JSON.parse(JSON.stringify(defaultJson));
 	const [syndicate, setSyndicate] = useState(initialJson);
-	const [loadedImages, setLoadedImages] = useState(0)
 
 	const ifMounted = useIfMounted();
 
@@ -114,23 +109,6 @@ const Syndicate = () => {
 		localStorage.clear();
 	}
 
-	function getSum(total, num) {
-		return total + num;
-	  } 
-
-	const lengthArray = Object.keys(syndicate).map(function(key) {
-		return syndicate[key].length;
-		});
-
-	const imagesLength = lengthArray.reduce(getSum, 0)
-
-	// console.log(imagesLength)
-
-	const onLoad = () => {
-		// console.log(loadedImages)
-		setLoadedImages(loadedImages + 1)
-	}
-
 	return (
 		<div class={`${style.syndicate} page`}>
 			<div class="titleWrapper">
@@ -143,32 +121,12 @@ const Syndicate = () => {
 				<div>
 					{Object.keys(syndicate).map(function(key) {
 						return (
-							<TableRow row={syndicate[key]} rowName={key} loaded={loadedImages} needed={imagesLength}/>
+							<TableRow row={syndicate[key]} rowName={key}/>
 							)
 						}
 					)
 					}
 				</div>
-			</div>
-			<div hidden>
-				{Object.keys(syndicate).map(function(key) {
-					// console.log(syndicate[key])
-					return(
-						syndicate[key].map(cell => {
-							return (
-								<img 
-									src={'../../assets/syndicate/' + cell.image + '.png'}
-									onLoad = {() => onLoad()}
-									/>
-								);
-							})
-						)
-						// return (
-						// 	<TableRow row={syndicate[key]} rowName={key}/>
-						// 	)
-					}
-					)
-					}
 			</div>
 		</div>
 	);

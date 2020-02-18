@@ -2,461 +2,551 @@
     "headers":[    
         {
             "title":"#logo",
-            "image":"POE-Syndicate_01",
-            "class":"gray"
+            "image":"poe_syndicate_01",
+            "class":"gray",
+            "text":""
         },
         {
             "title":"#aisling",
-            "image":"POE-Syndicate_02",
-            "class":"gray"
+            "image":"poe_syndicate_02",
+            "class":"gray",
+            "text":"Aisling"
         },
         {
             "title":"#cameria",
-            "image":"POE-Syndicate_03",
-            "class":"green"
+            "image":"poe_syndicate_03",
+            "class":"green",
+            "text":"Cameria"
         },
         {
             "title":"#elreon",
-            "image":"POE-Syndicate_04",
-            "class":"red"
+            "image":"poe_syndicate_04",
+            "class":"red",
+            "text":"Elreon"
         },
         {
             "title":"#gravicius",
-            "image":"POE-Syndicate_05",
-            "class":"yellow"
+            "image":"poe_syndicate_05",
+            "class":"yellow",
+            "text":"Gravicius"
         },
         {
             "title":"#guff",
-            "image":"POE-Syndicate_06",
-            "class":"red"
+            "image":"poe_syndicate_06",
+            "class":"red",
+            "text":"Guff"
         },
         {
             "title":"#haku",
-            "image":"POE-Syndicate_07",
-            "class":"red"
+            "image":"poe_syndicate_07",
+            "class":"red",
+            "text":"Haku"
         },
         {
             "title":"#hillock",
-            "image":"POE-Syndicate_08",
-            "class":"yellow"
+            "image":"poe_syndicate_08",
+            "class":"yellow",
+            "text":"Hillock"
         },
         {
             "title":"#it-that-fled",
-            "image":"POE-Syndicate_09",
-            "class":"green"
+            "image":"poe_syndicate_09",
+            "class":"green",
+            "text":"It That Fled"
         },
         {
             "title":"#janus",
-            "image":"POE-Syndicate_10",
-            "class":"gray"
+            "image":"poe_syndicate_10",
+            "class":"gray",
+            "text":"Janus"
         },
         {
             "title":"#jorgin",
-            "image":"POE-Syndicate_11",
-            "class":"green"
+            "image":"poe_syndicate_11",
+            "class":"green",
+            "text":"Jorgin"
         },
         {
             "title":"#korell",
-            "image":"POE-Syndicate_12",
-            "class":"yellow"
+            "image":"poe_syndicate_12",
+            "class":"yellow",
+            "text":"Korell"
         },
         {
             "title":"#leo",
-            "image":"POE-Syndicate_13",
-            "class":"green"
+            "image":"poe_syndicate_13",
+            "class":"green",
+            "text":"Leo"
         },
         {
             "title":"#riker",
-            "image":"POE-Syndicate_14",
-            "class":"yellow"
+            "image":"poe_syndicate_14",
+            "class":"yellow",
+            "text":"Riker"
         },
         {
             "title":"#rin",
-            "image":"POE-Syndicate_15",
-            "class":"gray"
+            "image":"poe_syndicate_15",
+            "class":"gray",
+            "text":"Rin"
         },
         {
             "title":"#tora",
-            "image":"POE-Syndicate_16",
-            "class":"green"
+            "image":"poe_syndicate_16",
+            "class":"green",
+            "text":"Tora"
         },
         {
             "title":"#vagan",
-            "image":"POE-Syndicate_17",
-            "class":"green"
+            "image":"poe_syndicate_17",
+            "class":"green",
+            "text":"Vagan"
         },
         {
             "title":"#vorici",
-            "image":"POE-Syndicate_18",
-            "class":"green"
+            "image":"poe_syndicate_18",
+            "class":"green",
+            "text":"Vorici"
         }
     ],
     "transportation":[    
         {
             "title":"#transportation",
-            "image":"POE-Syndicate_19",
-            "class":"gray"
+            "image":"poe_syndicate_19",
+            "class":"gray",
+            "text":""
         },
         {
             "title":"#aisling-transportation",
-            "image":"POE-Syndicate_20",
-            "class":"gray"
+            "image":"poe_syndicate_20",
+            "class":"gray",
+            "text":"Veiled Weapon"
         },
         {
             "title":"#cameria-transportation",
-            "image":"POE-Syndicate_21",
-            "class":"green"
+            "image":"poe_syndicate_21",
+            "class":"green",
+            "text":"Timeworn Item"
         },
         {
             "title":"#elreon-transportation",
-            "image":"POE-Syndicate_22",
-            "class":"gray"
+            "image":"poe_syndicate_22",
+            "class":"gray",
+            "text":"Unique Weapon"
         },
         {
             "title":"#gravicius-transportation",
-            "image":"POE-Syndicate_23",
-            "class":"yellow"
+            "image":"poe_syndicate_23",
+            "class":"yellow",
+            "text":"Full Stack Divination Cards"
         },
         {
             "title":"#guff-transportation",
-            "image":"POE-Syndicate_24",
-            "class":"yellow"
+            "image":"poe_syndicate_24",
+            "class":"yellow",
+            "text":"Craft Chaos Spam"
         },
         {
             "title":"#haku-transportation",
-            "image":"POE-Syndicate_25",
-            "class":"red"
+            "image":"",
+            "class":"red",
+            "text":"Rare Items"
         },
         {
             "title":"#hillock-transportation",
-            "image":"POE-Syndicate_26",
-            "class":"yellow"
+            "image":"poe_syndicate_26",
+            "class":"yellow",
+            "text":"Weapon Quality"
         },
         {
             "title":"#it-that-fled-transportation",
-            "image":"POE-Syndicate_27",
-            "class":"gray"
+            "image":"poe_syndicate_27",
+            "class":"gray",
+            "text":"Breach Splinters"
         },
         {
             "title":"#janus-transportation",
-            "image":"POE-Syndicate_28",
-            "class":"gray"
+            "image":"poe_syndicate_28",
+            "class":"gray",
+            "text":"Quality Currency"
         },
         {
             "title":"#jorgin-transportation",
-            "image":"POE-Syndicate_29",
-            "class":"gray"
+            "image":"poe_syndicate_29",
+            "class":"gray",
+            "text":"Talismans"
         },
         {
             "title":"#korell-transportation",
-            "image":"POE-Syndicate_30",
-            "class":"gray"
+            "image":"poe_syndicate_30",
+            "class":"gray",
+            "text":"Essences"
         },
         {
             "title":"#leo-transportation",
-            "image":"POE-Syndicate_31",
-            "class":"gray"
+            "image":"poe_syndicate_31",
+            "class":"gray",
+            "text":"Silver Coins"
         },
         {
             "title":"#riker-transportation",
-            "image":"POE-Syndicate_32",
-            "class":"yellow"
+            "image":"poe_syndicate_32",
+            "class":"yellow",
+            "text":"Take One (Currency)"
         },
         {
             "title":"#rin-transportation",
-            "image":"POE-Syndicate_33",
-            "class":"gray"
+            "image":"poe_syndicate_33",
+            "class":"gray",
+            "text":"Normal Maps"
         },
         {
             "title":"#tora-transportation",
-            "image":"POE-Syndicate_34",
-            "class":"yellow"
+            "image":"",
+            "class":"yellow",
+            "text":"Timed Item Traps"
         },
         {
             "title":"#vagan-transportation",
-            "image":"POE-Syndicate_35",
-            "class":"green"
+            "image":"poe_syndicate_35",
+            "class":"green",
+            "text":"Legion Splinters"
         },
         {
             "title":"#vorici-transportation",
-            "image":"POE-Syndicate_36",
-            "class":"gray"
+            "image":"poe_syndicate_36",
+            "class":"gray",
+            "text":"Quality Gems"
         }
     ],
     "fortification":[    
         {
             "title":"#fortification",
-            "image":"POE-Syndicate_37",
-            "class":"gray"
+            "image":"poe_syndicate_37",
+            "class":"gray",
+            "text":""
         },
         {
             "title":"#aisling-fortification",
-            "image":"POE-Syndicate_38",
-            "class":"gray"
+            "image":"poe_syndicate_38",
+            "class":"gray",
+            "text":"Veiled Armour"
         },
         {
             "title":"#cameria-fortification",
-            "image":"POE-Syndicate_39",
-            "class":"gray"
+            "image":"poe_syndicate_39",
+            "class":"gray",
+            "text":"Harbinger Orbs"
         },
         {
             "title":"#elreon-fortification",
-            "image":"POE-Syndicate_40",
-            "class":"gray"
+            "image":"poe_syndicate_40",
+            "class":"gray",
+            "text":"Unique Armour"
         },
         {
             "title":"#gravicius-fortification",
-            "image":"POE-Syndicate_41",
-            "class":"gray"
+            "image":"poe_syndicate_41",
+            "class":"gray",
+            "text":"Random Divination Cards"
         },
         {
             "title":"#guff-fortification",
-            "image":"POE-Syndicate_42",
-            "class":"gray"
+            "image":"poe_syndicate_42",
+            "class":"gray",
+            "text":"Craft Essence Spam"
         },
         {
             "title":"#haku-fortification",
-            "image":"POE-Syndicate_43",
-            "class":"red"
+            "image":"",
+            "class":"red",
+            "text":"Random Strongbox"
         },
         {
             "title":"#hillock-fortification",
-            "image":"POE-Syndicate_44",
-            "class":"yellow"
+            "image":"poe_syndicate_44",
+            "class":"yellow",
+            "text":"Armor Quality"
         },
         {
             "title":"#it-that-fled-fortification",
-            "image":"POE-Syndicate_45",
-            "class":"gray"
+            "image":"poe_syndicate_45",
+            "class":"gray",
+            "text":"Abyss Jewels"
         },
         {
             "title":"#janus-fortification",
-            "image":"POE-Syndicate_46",
-            "class":"yellow"
+            "image":"poe_syndicate_46",
+            "class":"yellow",
+            "text":"Currency Shards"
         },
         {
             "title":"#jorgin-fortification",
-            "image":"POE-Syndicate_47",
-            "class":"gray"
+            "image":"",
+            "class":"gray",
+            "text":"Items with Bestiary Affixes"
         },
         {
             "title":"#korell-fortification",
-            "image":"POE-Syndicate_48",
-            "class":"yellow"
+            "image":"poe_syndicate_48",
+            "class":"yellow",
+            "text":"Map Fragments"
         },
         {
             "title":"#leo-fortification",
-            "image":"POE-Syndicate_49",
-            "class":"yellow"
+            "image":"poe_syndicate_49",
+            "class":"yellow",
+            "text":"Random Currency"
         },
         {
             "title":"#riker-fortification",
-            "image":"POE-Syndicate_50",
-            "class":"gray"
+            "image":"poe_syndicate_50",
+            "class":"gray",
+            "text":"Take One (Unique)"
         },
         {
             "title":"#rin-fortification",
-            "image":"POE-Syndicate_51",
-            "class":"gray"
+            "image":"poe_syndicate_51",
+            "class":"gray",
+            "text":"Rare Maps"
         },
         {
             "title":"#tora-fortification",
-            "image":"POE-Syndicate_52",
-            "class":"gray"
+            "image":"poe_syndicate_52",
+            "class":"gray",
+            "text":"Enchanted Item"
         },
         {
             "title":"#vagan-fortification",
-            "image":"POE-Syndicate_53",
-            "class":"yellow"
+            "image":"",
+            "class":"yellow",
+            "text":"Legion Chests"
         },
         {
             "title":"#vorici-fortification",
-            "image":"POE-Syndicate_54",
-            "class":"yellow"
+            "image":"poe_syndicate_54",
+            "class":"yellow",
+            "text":"Socket Currency"
         }
     ],
     "research":[    
     {
             "title":"#research",
-            "image":"POE-Syndicate_55",
-            "class":"gray"
+            "image":"poe_syndicate_55",
+            "class":"gray",
+            "text":""
         },
         {
             "title":"#aisling-research",
-            "image":"POE-Syndicate_56",
-            "class":"gray"
+            "image":"",
+            "class":"gray",
+            "text":"Add Veiled Mods"
         },
         {
             "title":"#cameria-research",
-            "image":"POE-Syndicate_57",
-            "class":"gray"
+            "image":"poe_syndicate_57",
+            "class":"gray",
+            "text":"Sextants"
         },
         {
             "title":"#elreon-research",
-            "image":"POE-Syndicate_58",
-            "class":"gray"
+            "image":"poe_syndicate_58",
+            "class":"gray",
+            "text":"Unique Jewellery"
         },
         {
             "title":"#gravicius-research",
-            "image":"POE-Syndicate_59",
-            "class":"red"
+            "image":"poe_syndicate_59",
+            "class":"red",
+            "text":"Swap Divination Card"
         },
         {
             "title":"#guff-research",
-            "image":"POE-Syndicate_60",
-            "class":"gray"
+            "image":"poe_syndicate_60",
+            "class":"gray",
+            "text":"Craft Annul/Exalt Spam"
         },
         {
             "title":"#haku-research",
-            "image":"POE-Syndicate_61",
-            "class":"red"
+            "image":"",
+            "class":"red",
+            "text":"Rare Items with Quality"
         },
         {
             "title":"#hillock-research",
-            "image":"POE-Syndicate_62",
-            "class":"yellow"
+            "image":"poe_syndicate_62",
+            "class":"yellow",
+            "text":"Flask Quality"
         },
         {
             "title":"#it-that-fled-research",
-            "image":"POE-Syndicate_63",
-            "class":"green"
+            "image":"poe_syndicate_63",
+            "class":"green",
+            "text":"Upgrade Breachstone"
         },
         {
             "title":"#janus-research",
-            "image":"POE-Syndicate_64",
-            "class":"gray"
+            "image":"poe_syndicate_64",
+            "class":"gray",
+            "text":"Perandus Coins"
         },
         {
             "title":"#jorgin-research",
-            "image":"POE-Syndicate_65",
-            "class":"yellow"
+            "image":"poe_syndicate_65",
+            "class":"yellow",
+            "text":"Amulet to Talisman"
         },
         {
             "title":"#korell-research",
-            "image":"POE-Syndicate_66",
-            "class":"yellow"
+            "image":"poe_syndicate_66",
+            "class":"yellow",
+            "text":"Fossils"
         },
         {
             "title":"#leo-research",
-            "image":"POE-Syndicate_67",
-            "class":"green"
+            "image":"poe_syndicate_67",
+            "class":"green",
+            "text":"Use Currency on Item"
         },
         {
             "title":"#riker-research",
-            "image":"POE-Syndicate_68",
-            "class":"red"
+            "image":"",
+            "class":"red",
+            "text":"Take One (Veiled Rare)"
         },
         {
             "title":"#rin-research",
-            "image":"POE-Syndicate_69",
-            "class":"gray"
+            "image":"poe_syndicate_69",
+            "class":"gray",
+            "text":"Unique Maps"
         },
         {
             "title":"#tora-research",
-            "image":"POE-Syndicate_70",
-            "class":"green"
+            "image":"poe_syndicate_70",
+            "class":"green",
+            "text":"Gem Experience"
         },
         {
             "title":"#vagan-research",
-            "image":"POE-Syndicate_71",
-            "class":"gray"
+            "image":"poe_syndicate_71",
+            "class":"gray",
+            "text":"Incubators"
         },
         {
             "title":"#vorici-research",
-            "image":"POE-Syndicate_72",
-            "class":"gray"
+            "image":"",
+            "class":"gray",
+            "text":"White Sockets"
         }
     ],
     "intervention":[    
         {
             "title":"#intervention",
-            "image":"POE-Syndicate_73",
-            "class":"gray"
+            "image":"poe_syndicate_73",
+            "class":"gray",
+            "text":""
         },
         {
             "title":"#aisling-intervention",
-            "image":"POE-Syndicate_74",
-            "class":"gray"
+            "image":"poe_syndicate_74",
+            "class":"gray",
+            "text":"Veiled Jewellery"
         },
         {
             "title":"#cameria-intervention",
-            "image":"POE-Syndicate_75",
-            "class":"green"
+            "image":"poe_syndicate_75",
+            "class":"green",
+            "text":"Sulphite Scarab"
         },
         {
             "title":"#elreon-intervention",
-            "image":"POE-Syndicate_76",
-            "class":"gray"
+            "image":"poe_syndicate_76",
+            "class":"gray",
+            "text":"Reliquary Scarab"
         },
         {
             "title":"#gravicius-intervention",
-            "image":"POE-Syndicate_77",
-            "class":"yellow"
+            "image":"poe_syndicate_77",
+            "class":"yellow",
+            "text":"Divination Scarab"
         },
         {
             "title":"#guff-intervention",
-            "image":"POE-Syndicate_78",
-            "class":"gray"
+            "image":"poe_syndicate_78",
+            "class":"gray",
+            "text":"Craft Alteration Spam"
         },
         {
             "title":"#haku-intervention",
-            "image":"POE-Syndicate_79",
-            "class":"gray"
+            "image":"poe_syndicate_79",
+            "class":"gray",
+            "text":"Strongbox Scarab"
         },
         {
             "title":"#hillock-intervention",
-            "image":"POE-Syndicate_80",
-            "class":"gray"
+            "image":"poe_syndicate_80",
+            "class":"gray",
+            "text":"Map Quality"
         },
         {
             "title":"#it-that-fled-intervention",
-            "image":"POE-Syndicate_81",
-            "class":"gray"
+            "image":"poe_syndicate_81",
+            "class":"gray",
+            "text":"Breach Scarab"
         },
         {
             "title":"#janus-intervention",
-            "image":"POE-Syndicate_82",
-            "class":"green"
+            "image":"poe_syndicate_82",
+            "class":"green",
+            "text":"Perandus Scarab"
         },
         {
             "title":"#jorgin-intervention",
-            "image":"POE-Syndicate_83",
-            "class":"yellow"
+            "image":"poe_syndicate_83",
+            "class":"yellow",
+            "text":"Bestiary Scarab"
         },
         {
             "title":"#korell-intervention",
-            "image":"POE-Syndicate_84",
-            "class":"gray"
+            "image":"poe_syndicate_84",
+            "class":"gray",
+            "text":"Elder Scarab"
         },
         {
             "title":"#leo-intervention",
-            "image":"POE-Syndicate_85",
-            "class":"gray"
+            "image":"poe_syndicate_85",
+            "class":"gray",
+            "text":"Torment Scarab"
         },
         {
             "title":"#riker-intervention",
-            "image":"POE-Syndicate_86",
-            "class":"yellow"
+            "image":"poe_syndicate_86",
+            "class":"yellow",
+            "text":"Take One (Div Card)"
         },
         {
             "title":"#rin-intervention",
-            "image":"POE-Syndicate_87",
-            "class":"gray"
+            "image":"poe_syndicate_87",
+            "class":"gray",
+            "text":"Cartography Scarab"
         },
         {
             "title":"#tora-intervention",
-            "image":"POE-Syndicate_88",
-            "class":"yellow"
+            "image":"poe_syndicate_88",
+            "class":"yellow",
+            "text":"Harbinger Scarab"
         },
         {
             "title":"#vagan-intervention",
-            "image":"POE-Syndicate_89",
-            "class":"green"
+            "image":"poe_syndicate_89",
+            "class":"green",
+            "text":"Legion Scarab"
         },
         {
             "title":"#vorici-intervention",
-            "image":"POE-Syndicate_90",
-            "class":"gray"
+            "image":"poe_syndicate_90",
+            "class":"gray",
+            "text":"Shaper Scarab"
         }
     ]
 }

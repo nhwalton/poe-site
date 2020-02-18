@@ -19,7 +19,8 @@
 .footerBar > span.title {
     font-family: 'unineue-heavyitalic', 'Helvetica Neue', arial, sans-serif !important;
     font-size: 1.5rem;
-    padding-right:40px;
+    padding-right:40px; 
+    line-height:0.5em;
 }
 
 .siteMap {
