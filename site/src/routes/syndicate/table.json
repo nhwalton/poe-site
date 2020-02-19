@@ -3,7 +3,7 @@
         {
             "title":"#logo",
             "image":"poe_syndicate_01",
-            "class":"gray",
+            "class":"start",
             "text":""
         },
         {
@@ -113,7 +113,7 @@
         {
             "title":"#transportation",
             "image":"poe_syndicate_19",
-            "class":"gray",
+            "class":"start",
             "text":""
         },
         {
@@ -223,7 +223,7 @@
         {
             "title":"#fortification",
             "image":"poe_syndicate_37",
-            "class":"gray",
+            "class":"start",
             "text":""
         },
         {
@@ -333,7 +333,7 @@
     {
             "title":"#research",
             "image":"poe_syndicate_55",
-            "class":"gray",
+            "class":"start",
             "text":""
         },
         {
@@ -443,7 +443,7 @@
         {
             "title":"#intervention",
             "image":"poe_syndicate_73",
-            "class":"gray",
+            "class":"start",
             "text":""
         },
         {

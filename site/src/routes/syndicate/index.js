@@ -31,21 +31,23 @@ const RowCell = (props) => {
 	}
 
 	const handleClick = () => {
-		let newColor = (className == "gray" ? "green" :
-							(className == "green" ? "yellow" :
-							(className == "yellow" ? "red" : "gray"
-							)))
-		if (newColor != "") {
-			analytics.track('syn', {
-				category: cellTitle,
-				label: newColor,
-				value: ''
-			})
-			};
+		if (className != "start") {
+			let newColor = (className == "gray" ? "green" :
+								(className == "green" ? "yellow" :
+								(className == "yellow" ? "red" : "gray"
+								)))
+			if (newColor != "") {
+				analytics.track('syn', {
+					category: cellTitle,
+					label: newColor,
+					value: ''
+				})
+				};
 
-		localStorage.setItem("syn-".concat(cellTitle), newColor)
-		props.cellData.class = newColor
-		ifMounted(() => newClassName(newColor));
+			localStorage.setItem("syn-".concat(cellTitle), newColor)
+			props.cellData.class = newColor
+			ifMounted(() => newClassName(newColor));
+		};
 	};
 
 	const CellText = () => {
@@ -86,9 +88,7 @@ const TableRow = ({ row , rowName }) => {
 				return(
 				<RowCell cellData={cell}/>
 				)
-			}
-			)
-			}
+			})}
 		</div>
     );
 };

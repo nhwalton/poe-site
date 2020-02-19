@@ -11,3 +11,4 @@ flask-api/__pycache__
 *.sqlite
 flask-api/.vscode/*
 flask-api/file::memory:?cache=shared
+docker-build-push
