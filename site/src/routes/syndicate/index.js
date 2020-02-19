@@ -31,7 +31,6 @@ const RowCell = (props) => {
 	}
 
 	const handleClick = () => {
-		if (props.loaded == props.needed) {
 		let newColor = (className == "gray" ? "green" :
 							(className == "green" ? "yellow" :
 							(className == "yellow" ? "red" : "gray"
@@ -47,7 +46,6 @@ const RowCell = (props) => {
 		localStorage.setItem("syn-".concat(cellTitle), newColor)
 		props.cellData.class = newColor
 		ifMounted(() => newClassName(newColor));
-		};
 	};
 
 	const CellText = () => {
@@ -69,9 +67,14 @@ const RowCell = (props) => {
 		<div
 			onClick = { () => handleClick(props) }
 			data-title = {cellTitle}
-			className = {style[className]}
+			className = {`${style[className]} ${style.cellRatioBox}`}
 			>
-			<CellText />
+			<div class={style.cellRatioBoxInside}>
+				<div class={style.cellCentering}>
+					<CellText />
+				</div>
+			</div>
+			
 		</div>
     );
 };
@@ -117,8 +120,8 @@ const Syndicate = () => {
 					<Button raised ripple onClick={() => resetColors()}>Reset</Button>
 				</div>
 			</div>
-			<div class={style.tableWrapper}>
-				<div>
+			<div class={style.tableCenter}>
+				<div class={style.tableWrapper}>
 					{Object.keys(syndicate).map(function(key) {
 						return (
 							<TableRow row={syndicate[key]} rowName={key}/>

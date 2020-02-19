@@ -5,19 +5,29 @@
 }
 
 .cardHeader {
-  padding: 16px;
+	padding: 16px;
 }
 
 .cardBody {
-  padding: 16px;
-  display:grid;
-  grid-template-rows: auto 1fr auto;
-  height:100%;
+	padding: 16px;
+	display:grid;
+	grid-template-rows: auto 1fr auto;
+	grid-gap:0px;
+	height:100%;
 }
 
 h1 {
 	font-family: 'unineue-heavyitalic', 'Helvetica Neue', arial, sans-serif;
 }
+
+.moduleLink {
+  color:#fff;
+  text-decoration: none;
+}
+
+.moduleLink > button {
+	width:100%;
+  }
 
 .subtext {
 	text-align: center;
@@ -26,8 +36,24 @@ h1 {
 
 .homeWrapper {
 	display:grid;
-	grid-template-columns: repeat(3, auto);
+	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 20px;
+}
+
+.blue {
+	background-color: #314F6F !important;
+}
+
+.red {
+	background-color: #A3414D !important;
+}
+
+.orange {
+	background-color: #c96036 !important;
+}
+
+.green {
+	background-color: #4B8F39 !important;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -39,5 +65,11 @@ h1 {
 @media only screen and (max-width: 800px) {
 	.homeWrapper {
         grid-template-columns: repeat(1, auto);
-    }
+	}
+	
+	.home {
+		padding: 20px 30px;
+		min-height: 100%;
+		width: 100%;
+	}
 }

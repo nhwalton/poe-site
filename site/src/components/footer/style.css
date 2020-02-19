@@ -1,14 +1,16 @@
 .footerWrapper {
     width:100%;
+    flex:0;
 }
 
 .footerBar {
+    height:100%;
     width:100%;
-    height:90px;
     float:left;
     display:grid;
-    grid-template-columns: auto 1fr 1fr;
-    align-items: top;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap:20px;
+    align-items: center;
     justify-content: space-between;
     padding:20px 60px;
     background-color:var(--mdc-theme-primary);
@@ -19,8 +21,6 @@
 .footerBar > span.title {
     font-family: 'unineue-heavyitalic', 'Helvetica Neue', arial, sans-serif !important;
     font-size: 1.5rem;
-    padding-right:40px; 
-    line-height:0.5em;
 }
 
 .siteMap {
@@ -37,19 +37,14 @@
     text-decoration: none;
 }
 
-.gggAttrib {
-    background-color:#414852;
-    width:100%;
-    height:30px;
-    float:left;
-    display:grid;
-    grid-template-columns: 1fr;
-    align-content: center;
-    justify-content: space-between;
-    padding:10px 40px;
-    font-size: .8em;
-    text-align:center;
-    padding:20px 40px;
-    height:40px;
+@media only screen and (max-width: 1100px) {
+	.footerBar {
+        grid-template-columns: 1fr;
+        padding:20px 30px;
+    }
+
+    .footerBar > span.questions {
+        text-align: left;
+    }
 }
 

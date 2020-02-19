@@ -31,6 +31,7 @@
   "dependencies": {
     "@analytics/google-analytics": "^0.2.2",
     "analytics": "^0.3.0",
+    "normalize.css": "^8.0.1",
     "preact": "^10.3.0",
     "preact-cli-plugin-fast-async": "^1.0.1",
     "preact-material-components": "^1.4.3",

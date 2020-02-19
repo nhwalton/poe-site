@@ -99,7 +99,7 @@ def gems():
                 cur.execute(call)
 
                 rows = cur.fetchall()
-                print(gem_name, gem_level)
+                # print(gem_name, gem_level)
 
                 earliest = None
 
@@ -115,6 +115,7 @@ def gems():
                 if earliest == None:
                     continue
                 else:
+                    print(earliest)
                     gem_details = {
                         "act":earliest[0],
                         "vendor":earliest[1],

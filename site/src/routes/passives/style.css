@@ -1,17 +1,6 @@
 :root {
-    /* --mdc-theme-surface: #444444e5;
-    --mdc-theme-primary: #00363a; */
     --input-color: #8d8d8d;
-    --input-border: #cdd9ed;
     --input-background: #fff;
-    --input-placeholder: #cbd1dc;
-    --input-border-focus: #00363a;
-    --group-color: #fff;
-    --group-border: var(--input-border);
-    --group-background: #428e92;
-    --group-color-focus: #fff;
-    /* --group-border-focus: var(--input-border-focus); */
-    --group-background-focus: #006064;
   }
 
 * {
@@ -31,19 +20,6 @@
 .cardBody {
   padding: 16px;
   margin: 0 auto;
-}
-
-.tableWrapper {
-    float:left;
-    text-align:center;
-}
-
-.table {
-    text-align: left;
-}
-
-li {
-    line-height:1.5em;
 }
 
 #pobInput {
@@ -76,7 +52,7 @@ label, input, button {
 }
 
 .actCard {
-    padding:20px;
+    padding:0 30px;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -182,17 +158,6 @@ label, input, button {
     background: #4B8F39;
 }
 
-.hintWrapper {
-    background-color:#555;
-    padding:5px 20px;
-    border-radius: 2px;
-    box-shadow:0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-}
-
-.formField::placeholder {
-    color:#000;
-}
-
 .formField {
     display: block;
     width: 100%;
@@ -211,10 +176,7 @@ label, input, button {
 .formField::placeholder {
     color: var(--input-placeholder);
 }
-.formField:focus {
-    outline: none;
-    /* border-color: var(--input-border-focus); */
-}
+
 .formGroup {
     position: relative;
     display: flex;
@@ -225,22 +187,7 @@ label, input, button {
     font-weight: 500;
     text-transform: uppercase;
 }
-.formGroup > span, .formGroup .formField {
-    white-space: nowrap;
-    display: block;
-}
-.formGroup > span:not(:first-child):not(:last-child), .formGroup .formField:not(:first-child):not(:last-child) {
-    border-radius: 0;
-}
-.formGroup > span:first-child, .formGroup .formField:first-child {
-    border-radius: 2px 0 0 2px;
-}
-.formGroup > span:last-child, .formGroup .formField:last-child {
-    border-radius: 0 2px 2px 0;
-}
-.formGroup > span:not(:first-child), .formGroup .formField:not(:first-child) {
-    margin-left: -1px;
-}
+
 .formGroup .formField {
     position: relative;
     z-index: 1;
@@ -248,26 +195,4 @@ label, input, button {
     width: 1%;
     margin-top: 0;
     margin-bottom: 0;
-}
-.formGroup > span {
-    text-align: center;
-    padding: 0px 12px;
-    font-size: 14px;
-    line-height: 50px;
-    color: var(--group-color);
-    background: var(--group-background);
-    /* border: 1px solid var(--group-border); */
-    transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
-}
-.formGroup:focus-within > span {
-    color: var(--group-color-focus);
-    background: var(--group-background-focus);
-    /* border-color: var(--group-border-focus); */
-}
-
-body .formGroup {
-    max-width: 360px;
-}
-body .formGroup:not(:last-child) {
-    /* margin-bottom: 32px; */
 }
