@@ -1,0 +1,176 @@
+[
+    {
+        "name":"Chilling Tower",
+        "image":"",
+        "damage":"Low Damage",
+        "damageColor":"red",
+        "action":"Chills and Damages nearby enemies",
+        "baseRadius":"Radius: 35",
+        "recommendedTier":"Chilling Tier III",
+        "recommendedPlacement":"Anywhere",
+        "upgrades": [
+            {
+                "name":"Freezebolt Tower",
+                "image":"",
+                "damage":"Very High Damage",
+                "damageColor":"green",
+                "action":"Shoots a Piercing projectile which Freezes enemies",
+                "baseRadius":75
+            },
+            {
+                "name":"Glacial Cage Tower",
+                "image":"",
+                "damage":"Deals no Damage",
+                "damageColor":"",
+                "action":"Imprisons Enemies",
+                "baseRadius":60
+            }
+        ],
+        "notes":"The Chilling Tower can be upgraded to a Glacial Cage Tower if necessary as it is helpful for containing bosses and stopping their progress."
+    },
+    {
+        "name":"Shock Nova Tower",
+        "image":"",
+        "damage":"Low Damage",
+        "damageColor":"red",
+        "action":"Casts Shocked Ground",
+        "baseRadius":"Radius: 20",
+        "recommendedTier":"Arc Tower",
+        "recommendedPlacement":"near junctions",
+        "upgrades": [
+            {
+                "name":"Lightning Storm Tower",
+                "image":"",
+                "damage":"High Damage",
+                "damageColor":"yellow",
+                "action":"Lightning rapidly strikes around the Tower",
+                "baseRadius":45
+            },
+            {
+                "name":"Arc Tower",
+                "image":"",
+                "damage":"Medium Damage",
+                "damageColor":"orange",
+                "action":"Casts Arc",
+                "baseRadius":45
+            }
+        ],
+        "notes":"Here is some basic info about what you should do with this tower."
+    },
+    {
+        "name":"Empowering Tower",
+        "image":"",
+        "damage":"Deals no Damage",
+        "damageColor":"",
+        "action":"Improves the effectiveness of other Towers",
+        "baseRadius":"Radius: 35",
+        "recommendedTier":"Empowering Tier I",
+        "recommendedPlacement":"Anywhere",
+        "upgrades": [
+            {
+                "name":"Imbuing Tower",
+                "image":"",
+                "damage":"Deals no Damage",
+                "damageColor":"",
+                "action":"Improves the effectiveness of Players in range",
+                "baseRadius":55
+            },
+            {
+                "name":"Smothering Tower",
+                "image":"",
+                "damage":"Deals no Damage",
+                "damageColor":"",
+                "action":"Weakens Enemies in range",
+                "baseRadius":55
+            }
+        ],
+        "notes":"Here is some basic info about what you should do with this tower."
+    },
+    {
+        "name":"Seismic Tower",
+        "image":"",
+        "damage":"Low Damage",
+        "damageColor":"red",
+        "action":"Damages and Stuns nearby Enemies",
+        "baseRadius":"Radius: 45",
+        "recommendedTier":"Seismic Tier I",
+        "recommendedPlacement":"Anywhere",
+        "upgrades": [
+            {
+                "name":"Temporal Tower",
+                "image":"",
+                "damage":"Deals no Damage",
+                "damageColor":"",
+                "action":"Persistently Slows Monsters",
+                "baseRadius":45
+            },
+            {
+                "name":"Stone Gaze Tower",
+                "image":"",
+                "damage":"Deals no Damage",
+                "damageColor":"",
+                "action":"Periodically Petrifies Monsters",
+                "baseRadius":45
+            }
+        ],
+        "notes":"The Seismic Tower slows enemies equally from Tier I through Tier III and therefore is fine to be left at Tier I."
+    },
+    {
+        "name":"Summoning Tower",
+        "image":"",
+        "damage":"Low Damage",
+        "damageColor":"red",
+        "action":"Summons Minions",
+        "baseRadius":"Radius: 30",
+        "recommendedTier":"Avoid",
+        "recommendedPlacement":"Anywhere",
+        "upgrades": [
+            {
+                "name":"Scout Tower",
+                "image":"",
+                "damage":"High Damage",
+                "damageColor":"yellow",
+                "action":"Summons 10 Flying Minions",
+                "baseRadius":75
+            },
+            {
+                "name":"Sentinel Tower",
+                "image":"",
+                "damage":"Low Damage",
+                "damageColor":"red",
+                "action":"Summons 1 Durable Minion",
+                "baseRadius":45
+            }
+        ],
+        "notes":"While the summoning tower can be used to body block minions, it is suggested to avoid using this tower. If you are having trouble with one or two minions reaching your pump, a Scout Tower can be placed near the pump to seek out stragglers and finish them off."
+    },
+    {
+        "name":"Fireball Tower",
+        "image":"",
+        "damage":"Medium Damage",
+        "damageColor":"orange",
+        "action":"Casts a Fireball",
+        "baseRadius":"Radius: 45",
+        "recommendedTier":"Flamethrower Tower",
+        "recommendedPlacement":"Anywhere",
+        "upgrades": [
+            {
+                "name":"Flamethrower Tower",
+                "image":"",
+                "damage":"High Damage",
+                "damageColor":"yellow",
+                "action":"Casts a stream of Fire",
+                "baseRadius":45
+            },
+            {
+                "name":"Meteor Tower",
+                "image":"",
+                "damage":"Very High Damage",
+                "damageColor":"green",
+                "action":"Rains Meteors from the sky",
+                "baseRadius":100
+            }
+        ],
+        "notes":"Here is some basic info about what you should do with this tower."
+    }
+]

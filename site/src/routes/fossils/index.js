@@ -6,6 +6,25 @@ import style from './style';
 import fossilLocations from './table.json';
 
 const Fossil = ({ fossilDetails }) => {
+
+	const fossilEffect = () => {
+		if (fossilDetails.fossil_effect2 != '') {
+		return (
+			<div class={style.fossil}>
+				<span class={style.fossilName}>{fossilDetails.fossil_name}</span>
+				<span class="chip blue">{fossilDetails.fossil_effect}</span>
+				<span class="chip green">{fossilDetails.fossil_effect2}</span>
+			</div>
+		);
+		} else {
+			return (
+				<div class={style.fossil}>
+					<span class={style.fossilName}>{fossilDetails.fossil_name}</span>
+					<span class="chip blue">{fossilDetails.fossil_effect}</span>
+				</div>
+			);
+		}
+	}
     return (
         <div class={style.fossilContainer}>
 			<img 
@@ -13,11 +32,7 @@ const Fossil = ({ fossilDetails }) => {
                 data-name={fossilDetails.fossil_name}
                 src={'../../assets/fossils/' + fossilDetails.fossil_name + ' Fossil.png'}
                 />
-			<div class={style.fossil}>
-				<span class={style.fossilName}>{fossilDetails.fossil_name}</span>
-				<span class={style.fossilEffect}>{fossilDetails.fossil_effect}</span>
-				<span class={style.fossilEffect}>{fossilDetails.fossil_effect2}</span>
-			</div>
+			{fossilEffect()}
 		</div>
     );
   };

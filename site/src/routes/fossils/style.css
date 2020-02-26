@@ -19,32 +19,37 @@
 
 #zones {
     float:left;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+	flex-wrap: wrap; */
+	display:grid;
+	grid-gap:30px;
+	grid-template-columns: repeat(4, minmax(300px, 1fr));
     justify-content: space-around;
 	margin-right:-10px;
 	width:100%;
 }
 
 .zoneCard {
-    width:30%;
+    width:100%;
     padding:20px;
-    margin:10px 10px 10px 0px;
+    /* margin:10px 10px 10px 0px; */
 }
 
-@media only screen and (max-width: 1100px) {
-	.zoneCard {
-		width:40%;
-		padding:20px;
-		margin:10px 10px 10px 0px;
+@media only screen and (max-width: 1450px) {
+	#zones {
+		grid-template-columns: repeat(3, minmax(300px, 1fr));
 	}
   }
 
-@media only screen and (max-width: 750px) {
-	.zoneCard {
-		width:100%;
-		padding:20px;
-		margin:10px 10px 10px 0px;
+@media only screen and (max-width: 1100px) {
+	#zones {
+		grid-template-columns: repeat(2, minmax(300px, 1fr));
+	}
+  }
+
+@media only screen and (max-width: 800px) {
+	#zones {
+		grid-template-columns: repeat(1, minmax(300px, 1fr));
 	}
 }
 
@@ -61,6 +66,10 @@
 	grid-template-columns: auto;
 	margin-right: 20px;
 	grid-gap: 10px;
+}
+
+.fossil > span {
+	margin-right:auto;
 }
 
 .fossilName {

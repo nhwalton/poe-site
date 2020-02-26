@@ -1,16 +1,16 @@
-import { h, Component } from 'preact';
+import { Component } from 'preact';
 import { Router } from 'preact-router';
 
 import analytics from './analytics'
 
 import Header from './header';
+import Footer from './footer';
 import Home from '../routes/home';
 import NotFound from '../routes/404';
 import Passives from '../routes/passives';
 import Syndicate from '../routes/syndicate';
 import Fossils from '../routes/fossils';
-// import Home from 'async!../routes/home';
-// import Profile from 'async!../routes/profile';
+import Blight from '../routes/blight';
 
 export default class App extends Component {
 
@@ -34,8 +34,10 @@ export default class App extends Component {
 					<Passives path="/passives" />
 					<Syndicate path="/syndicate" />
 					<Fossils path="/fossils" />
+					<Blight path="/blight" />
 					<NotFound default />
 				</Router>
+				<Footer />
 			</div>
 		);
 	}

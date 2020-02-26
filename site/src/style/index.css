@@ -62,7 +62,9 @@ body {
 }
 
 #app {
-	height: 100%;
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
 }
 
 .mdc-card {
@@ -92,6 +94,7 @@ body {
 
 .mdc-top-app-bar__title {
   font-family: 'unineue-heavyitalic', 'Helvetica Neue', arial, sans-serif !important;
+  font-size: 1.5rem !important;
 }
 
 /* .mdc-theme--dark .elevated {
@@ -101,6 +104,7 @@ body {
 
 #app .page {
   padding-top: 60px;
+  flex:1 0 auto;
 }
 
 .contentWrapper {
@@ -135,6 +139,10 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
+  body {
+    background-position: 80% 0%;
+  }
+
 	.titleWrapper {
     margin:45px 0;
   }
@@ -144,6 +152,7 @@ body {
 	.titleWrapper {
     margin:30px 0;
   }
+
 }
 
 .titleWrapper > h1 {
@@ -152,30 +161,6 @@ body {
 
 .titleWrapper > div {
   margin-left:auto;
-}
-
-.react-hint--top:after {
-	top: auto;
-	border-bottom: none;
-	border-top-color: #555 !important;
-}
-
-.react-hint--left:after {
-	left: auto;
-	border-right: none;
-	border-left-color: #555 !important;
-}
-
-.react-hint--right:after {
-	right: auto;
-	border-left: none;
-	border-right-color: #555 !important;
-}
-
-.react-hint--bottom:after {
-	bottom: auto;
-	border-top: none;
-	border-bottom-color: #555 !important;
 }
 
 .mdc-drawer .mdc-list-item--activated {
@@ -213,4 +198,49 @@ body {
 
 .mdc-drawer .mdc-list-item__graphic {
   color:rgba(255, 255, 255, 0.781) !important;
+}
+
+.chip {
+  background: #555;
+  display: block;
+  padding: 3px 12px;
+  border-radius: .2rem;
+  font-size: .8em;
+  margin:5px;
+  box-shadow:0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.chip.quest {
+  margin-right:auto;
+}
+
+.chip.blue {
+  /* background: #314F6F */
+  background: #2b4f90;
+  ;
+}
+
+.chip.red {
+  background: #A3414D;
+}
+
+.chip.orange {
+  background: #c96036;
+}
+
+.chip.yellow {
+  background: #b78f1e;
+}
+
+
+.chip.green {
+  background: #4B8F39;
+}
+
+.chip.purple {
+  background: #7e398f;
+}
+
+.chip.cyan {
+  background: #4195a3;
 }

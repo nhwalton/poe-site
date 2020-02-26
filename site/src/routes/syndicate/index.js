@@ -30,58 +30,65 @@ const RowCell = (props) => {
 		newClassName(props.cellData.class)
 	}
 
-	// if (localStorage.getItem(cellTitle) != null) {
-	// 	newClassName(localStorage.getItem(cellTitle))
-	// }
-
-	// if (className != localStorage.getItem(cellTitle) && localStorage.getItem(cellTitle) != null) {
-	// 	newClassName(localStorage.getItem(cellTitle))
-	// }
-
 	const handleClick = () => {
-		let newColor = (className == "gray" ? "green" :
-							(className == "green" ? "yellow" :
-							(className == "yellow" ? "red" : "gray"
-							)))
-		if (newColor != "") {
-			analytics.track('syn', {
-				category: cellTitle,
-				label: newColor,
-				value: ''
-			})
-			};
+		if (className != "start") {
+			let newColor = (className == "gray" ? "green" :
+								(className == "green" ? "yellow" :
+								(className == "yellow" ? "red" : "gray"
+								)))
+			if (newColor != "") {
+				analytics.track('syn', {
+					category: cellTitle,
+					label: newColor,
+					value: ''
+				})
+				};
 
-		localStorage.setItem("syn-".concat(cellTitle), newColor)
-		props.cellData.class = newColor
-		// console.log(newColor)
-		ifMounted(() => newClassName(newColor));
+			localStorage.setItem("syn-".concat(cellTitle), newColor)
+			props.cellData.class = newColor
+			ifMounted(() => newClassName(newColor));
+		};
+	};
+
+	const CellText = () => {
+		if (props.cellData.image.length == 0) {
+			var cellClass = `${style.cellInfo} ${style.cellCentered}`
+		} else {
+			var cellClass = style.cellInfo
+		}
+		return (
+			<div class={cellClass} style={`background-image:url("../../assets/syndicate/${props.cellData.image}.png")`}>
+				<div class={style.cellText}>
+					{props.cellData.text}
+				</div>
+			</div>
+			);
 	}
 
     return (
 		<div
 			onClick = { () => handleClick(props) }
 			data-title = {cellTitle}
-			className = {style[className]}
-					>
-			<img
-				style="max-width:100%;"
-				src={'../../assets/syndicate/' + props.cellData.image + '.png'}
-				/>
+			className = {`${style[className]} ${style.cellRatioBox}`}
+			>
+			<div class={style.cellRatioBoxInside}>
+				<div class={style.cellCentering}>
+					<CellText />
+				</div>
+			</div>
+			
 		</div>
     );
 };
 
 const TableRow = ({ row , rowName }) => {
-	// console.log(rowName)
     return (
 		<div class={style.rowWrapper}>
 			{row.map(function(cell) {
 				return(
-				<RowCell cellData={cell} rowName={rowName}/>
+				<RowCell cellData={cell}/>
 				)
-			}
-			)
-			}
+			})}
 		</div>
     );
 };
@@ -113,8 +120,8 @@ const Syndicate = () => {
 					<Button raised ripple onClick={() => resetColors()}>Reset</Button>
 				</div>
 			</div>
-			<div class={style.tableWrapper}>
-				<div>
+			<div class={style.tableCenter}>
+				<div class={style.tableWrapper}>
 					{Object.keys(syndicate).map(function(key) {
 						return (
 							<TableRow row={syndicate[key]} rowName={key}/>
