@@ -1,7 +1,7 @@
 {
-  "private": false,
-  "name": "poe-hub",
-  "version": "0.0.0",
+  "private": true,
+  "name": "poesyn.xyz",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",

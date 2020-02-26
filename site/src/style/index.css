@@ -215,7 +215,8 @@ body {
 }
 
 .chip.blue {
-  background: #314F6F
+  /* background: #314F6F */
+  background: #2b4f90;
   ;
 }
 
@@ -227,6 +228,19 @@ body {
   background: #c96036;
 }
 
+.chip.yellow {
+  background: #b78f1e;
+}
+
+
 .chip.green {
   background: #4B8F39;
+}
+
+.chip.purple {
+  background: #7e398f;
+}
+
+.chip.cyan {
+  background: #4195a3;
 }

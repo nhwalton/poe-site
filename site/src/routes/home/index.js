@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import { Component } from 'preact';
 import Card from 'preact-material-components/Card';
 import Button from 'preact-material-components/Button';
 import 'preact-material-components/Card/style.css';

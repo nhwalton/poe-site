@@ -3,7 +3,7 @@
 	--mdc-theme-primary: #00363a;
 } */
 
-.fossils {
+.towers {
 	padding: 20px;
 	min-height: 100%;
 	width: 100%;
@@ -17,7 +17,7 @@
   padding: 16px;
 }
 
-#zones {
+#towers {
     float:left;
     /* display: flex;
 	flex-wrap: wrap; */
@@ -29,38 +29,49 @@
 	width:100%;
 }
 
-.zoneCard {
+.towerCard {
     width:100%;
     padding:20px;
     /* margin:10px 10px 10px 0px; */
 }
 
+.towerCard > p {
+	font-size: .9em;
+}
+
 @media only screen and (max-width: 1450px) {
-	#zones {
+	#towers {
 		grid-template-columns: repeat(3, minmax(300px, 1fr));
 	}
   }
 
 @media only screen and (max-width: 1100px) {
-	#zones {
+	#towers {
 		grid-template-columns: repeat(2, minmax(300px, 1fr));
 	}
   }
 
 @media only screen and (max-width: 800px) {
-	#zones {
+	#towers {
 		grid-template-columns: repeat(1, minmax(300px, 1fr));
 	}
 }
 
-.fossilContainer {
+.towerHeader {
+	display:grid;
+	grid-gap: 10px;
+	padding: 10px;
+	grid-template-columns: auto 1fr;
+}
+
+.towerContainer {
 	display:flex;
 	grid-gap: 10px;
 	padding: 10px;
 	align-items:center;
 }
 
-.fossil {
+.tower {
 	/* grid-area:image; */
 	display:grid;
 	grid-template-columns: auto;
@@ -68,7 +79,7 @@
 	grid-gap: 10px;
 }
 
-.fossil > span {
+.tower > span {
 	margin-right:auto;
 }
 
@@ -81,11 +92,11 @@
 	font-style: oblique;
 }
 
-.fossilContainer > img {
-	max-width:50px;
-	max-height:50px;
+.towerContainer > img {
+	max-width:75px;
+	max-height:75px;
 }
 
-.fossilContainer > span {
+.towerContainer > span {
 	margin-bottom:10px;
 }

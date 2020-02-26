@@ -36,6 +36,7 @@ export default class Header extends Component {
 	goToPassives = this.linkTo('/passives');
 	goToSyndicate = this.linkTo('/syndicate');
 	goToFossils = this.linkTo('/fossils');
+	goToBlight = this.linkTo('/blight');
 
 	toggleDarkTheme = () => {
 		this.setState(
@@ -89,6 +90,11 @@ export default class Header extends Component {
 							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
 							<img src="../../assets/header/Bloodstained Fossil.png" />
 							Fossils
+						</Drawer.DrawerItem>
+						<Drawer.DrawerItem selected={props.selectedRoute === '/blight'} onClick={this.goToBlight}>
+							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
+							<img src="../../assets/header/Fireball Tower.png" />
+							Blight Towers
 						</Drawer.DrawerItem>
 					</Drawer.DrawerContent>
 				</Drawer>
