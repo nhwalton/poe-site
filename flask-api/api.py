@@ -7,6 +7,8 @@ import sys
 
 import flask
 import pandas as pd
+import requests
+from expiringdict import ExpiringDict
 from flask import jsonify, request, send_file
 from flask_cors import CORS, cross_origin
 
@@ -17,7 +19,6 @@ app.config["DEBUG"] = True
 
 gem_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'gem_availability.csv')
 passives_path = path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'passives_with_gems.json')
-
 
 memory_uri = 'file::memory:?cache=shared'
 
@@ -31,6 +32,8 @@ except:
     pass
 
 conn.commit()
+
+scarab_cache = ExpiringDict(max_len=1, max_age_seconds=21600)
 
 @app.route('/', methods=['GET'])
 def home():
@@ -132,5 +135,40 @@ def gems():
                         continue
     
     return (jsonify(data))
+
+@app.route('/api/scarabs', methods=['GET'])
+@cross_origin()
+def scarabs():
+    if scarab_cache.get('scarabs'):
+        print("Cache Exists \n")
+        scarabs = scarab_cache.get('scarabs')
+    else:
+        print("Cache Does Not Exist \n")
+        r = requests.get('https://poe.ninja/api/data/itemoverview?league=Metamorph&type=Scarab&language=en').json()
+        scarabs = []
+        regex = r"(?:Gilded\s)(.*)"
+        for scarab in r["lines"]:
+            match = re.findall(regex, scarab["name"])
+            if match:
+                name = match[0]
+            else:
+                continue
+            value = scarab["chaosValue"]
+            scarabs.append({"name":name,"value":value})
+        df = pd.DataFrame(scarabs)
+        df['rank'] = df['value'].rank(method='max', ascending=False)
+        def rank_scarabs(row):
+            rank = row['rank']
+            if 0 < rank <= 3:
+                color = "green"
+            elif 3 < rank <= 6:
+                color = "yellow"
+            else:
+                color = "gray"
+            return(color)
+        df['color'] = df.apply(lambda row: rank_scarabs(row), axis=1)
+        scarabs = df.to_dict('records')
+        scarab_cache['scarabs'] = scarabs
+    return(jsonify(scarabs))
 
 CORS(app.run(host="0.0.0.0",port=6000))

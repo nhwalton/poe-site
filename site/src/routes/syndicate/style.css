@@ -30,6 +30,7 @@
 	overflow: hidden;
 	padding-top: calc(155/102 * 100%);
 	position: relative;
+	background-color:#333333e5;
 }
 
 .cellRatioBoxInside {
@@ -74,9 +75,13 @@ div.start > div > div > div {
 }
 
 .cellText {
-	height:35%;
+	height:50%;
 	display:flex;
 	align-items:flex-start;
+}
+
+.cellText.header {
+	height:30%;
 }
 
 .cellInfo.cellCentered .cellText {
@@ -182,3 +187,13 @@ div.start > div > div > div {
 	display: flex;
 	justify-content:space-between;
 }
+
+.noSelect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Opera and Firefox */
+  }

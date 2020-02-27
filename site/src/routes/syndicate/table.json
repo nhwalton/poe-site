@@ -455,19 +455,19 @@
         {
             "title":"#cameria-intervention",
             "image":"poe_syndicate_75",
-            "class":"green",
+            "class":"scarab",
             "text":"Sulphite Scarab"
         },
         {
             "title":"#elreon-intervention",
             "image":"poe_syndicate_76",
-            "class":"gray",
+            "class":"scarab",
             "text":"Reliquary Scarab"
         },
         {
             "title":"#gravicius-intervention",
             "image":"poe_syndicate_77",
-            "class":"yellow",
+            "class":"scarab",
             "text":"Divination Scarab"
         },
         {
@@ -479,8 +479,8 @@
         {
             "title":"#haku-intervention",
             "image":"poe_syndicate_79",
-            "class":"gray",
-            "text":"Strongbox Scarab"
+            "class":"scarab",
+            "text":"Ambush Scarab"
         },
         {
             "title":"#hillock-intervention",
@@ -491,31 +491,31 @@
         {
             "title":"#it-that-fled-intervention",
             "image":"poe_syndicate_81",
-            "class":"gray",
+            "class":"scarab",
             "text":"Breach Scarab"
         },
         {
             "title":"#janus-intervention",
             "image":"poe_syndicate_82",
-            "class":"green",
+            "class":"scarab",
             "text":"Perandus Scarab"
         },
         {
             "title":"#jorgin-intervention",
             "image":"poe_syndicate_83",
-            "class":"yellow",
+            "class":"scarab",
             "text":"Bestiary Scarab"
         },
         {
             "title":"#korell-intervention",
             "image":"poe_syndicate_84",
-            "class":"gray",
+            "class":"scarab",
             "text":"Elder Scarab"
         },
         {
             "title":"#leo-intervention",
             "image":"poe_syndicate_85",
-            "class":"gray",
+            "class":"scarab",
             "text":"Torment Scarab"
         },
         {
@@ -527,25 +527,25 @@
         {
             "title":"#rin-intervention",
             "image":"poe_syndicate_87",
-            "class":"gray",
+            "class":"scarab",
             "text":"Cartography Scarab"
         },
         {
             "title":"#tora-intervention",
             "image":"poe_syndicate_88",
-            "class":"yellow",
+            "class":"scarab",
             "text":"Harbinger Scarab"
         },
         {
             "title":"#vagan-intervention",
             "image":"poe_syndicate_89",
-            "class":"green",
+            "class":"scarab",
             "text":"Legion Scarab"
         },
         {
             "title":"#vorici-intervention",
             "image":"poe_syndicate_90",
-            "class":"gray",
+            "class":"scarab",
             "text":"Shaper Scarab"
         }
     ]
