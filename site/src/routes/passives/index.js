@@ -175,8 +175,7 @@ const Passives = () => {
 
   async function fetchBuildPassives(build) {
     const response = await fetch('/api/gems?pastebin='.concat(build));
-    const json = await response.json();
-    return json
+    return await response.json();
   }
 
   return(

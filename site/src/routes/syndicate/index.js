@@ -12,26 +12,39 @@ import defaultJson from './table.json';
 import useIfMounted from '../../components/ifMounted';
 
 const RowCell = (props) => {
+	// console.log(props.scarabs)
 	let cellTitle = props.cellData.title
 	let localClass = localStorage.getItem("syn-".concat(cellTitle))
-	
+	let scarabs = props.scarabs
+	// console.log(scarabs)
+	let useName;
+
 	if (localClass != null) {
 		// console.log(cellTitle, localClass)
-		var useName = localClass
+		useName = localClass
+	} else if (scarabs != '' && props.cellData.class == "scarab") {
+		// console.log(props.cellData.text)
+		let index = scarabs.findIndex(element => element.name == props.cellData.text)
+		// console.log(index)
+		useName = scarabs[index].color
+		// console.log(useName)
 	} else {
-		var useName = props.cellData.class
+		useName = props.cellData.class
 	}
-
 	const [className, newClassName] = useState(useName);
 
 	const ifMounted = useIfMounted();
 
-	if (className != props.cellData.class && localClass == null) {
+	if (className != props.cellData.class && localClass == null && props.cellData.class != "scarab") {
 		newClassName(props.cellData.class)
 	}
 
+	if (className == "scarab") {
+		newClassName(useName)
+	}
+
 	const handleClick = () => {
-		if (className != "start") {
+		if (className != "start" && props.cellData.class != "scarab") {
 			let newColor = (className == "gray" ? "green" :
 								(className == "green" ? "yellow" :
 								(className == "yellow" ? "red" : "gray"
@@ -51,15 +64,22 @@ const RowCell = (props) => {
 	};
 
 	const CellText = () => {
+		let cellClass;
+		let cellText;
 		if (props.cellData.image.length == 0) {
-			var cellClass = `${style.cellInfo} ${style.cellCentered}`
+			cellClass = `${style.cellInfo} ${style.cellCentered}`
 		} else {
-			var cellClass = style.cellInfo
+			cellClass = style.cellInfo
+		}
+		if (props.cellRow == "headers") {
+			cellText = `${style.cellText} ${style.header}`
+		} else {
+			cellText = style.cellText
 		}
 		return (
 			<div class={cellClass} style={`background-image:url("../../assets/syndicate/${props.cellData.image}.png")`}>
-				<div class={style.cellText}>
-					{props.cellData.text}
+				<div class={cellText}>
+					<p class={style.noSelect}>{props.cellData.text}</p>
 				</div>
 			</div>
 			);
@@ -81,12 +101,12 @@ const RowCell = (props) => {
     );
 };
 
-const TableRow = ({ row , rowName }) => {
+const TableRow = ({ row , rowName, scarabs }) => {
     return (
 		<div class={style.rowWrapper}>
 			{row.map(function(cell) {
 				return(
-				<RowCell cellData={cell}/>
+				<RowCell cellData={cell} cellRow={rowName} scarabs={scarabs}/>
 				)
 			})}
 		</div>
@@ -99,6 +119,22 @@ const Syndicate = () => {
 	const [syndicate, setSyndicate] = useState(initialJson);
 
 	const ifMounted = useIfMounted();
+
+	const [scarabs, setScarabs] = useState('');
+
+	async function fetchScarabs() {
+		const response = await fetch('/api/scarabs');
+		return response.json();
+	};
+
+	const getScarabs = async () => {
+		const response = await fetchScarabs();
+		setScarabs(response);
+	};
+	
+	useEffect(() => {
+		getScarabs()
+	}, []);
 
 	const resetColors = () => {
 		let resetJson = JSON.parse(JSON.stringify(defaultJson));
@@ -124,7 +160,7 @@ const Syndicate = () => {
 				<div class={style.tableWrapper}>
 					{Object.keys(syndicate).map(function(key) {
 						return (
-							<TableRow row={syndicate[key]} rowName={key}/>
+							<TableRow row={syndicate[key]} rowName={key} scarabs={scarabs}/>
 							)
 						}
 					)

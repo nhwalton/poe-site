@@ -67,6 +67,10 @@ body {
   flex-direction: column;
 }
 
+.mdc-list {
+  cursor: pointer;
+}
+
 .mdc-card {
   backdrop-filter: blur(1px);
 }
