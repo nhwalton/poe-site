@@ -33,6 +33,10 @@ body {
   background-color:#111;
 }
 
+h1 {
+	font-family: 'unineue-heavyitalic', 'Helvetica Neue', arial, sans-serif;
+}
+
 /* fallback */
 @font-face {
   font-family: 'Material Icons';

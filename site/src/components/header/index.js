@@ -57,7 +57,7 @@ export default class Header extends Component {
 	render(props) {
 		console.log("route",props.selectedRoute);
 		return (
-			<div class={`${style.header}`}>
+			<div>
 				<TopAppBar className="topappbar">
 					<TopAppBar.Row>
 						<TopAppBar.Section align-start>
@@ -79,7 +79,7 @@ export default class Header extends Component {
 						</Drawer.DrawerItem>
 						<Drawer.DrawerItem selected={props.selectedRoute === '/passives'} onClick={this.goToPassives}>
 							<img src="../../assets/header/Book_of_Skill.png" />
-							Passives
+							Leveling
 						</Drawer.DrawerItem>
 						<Drawer.DrawerItem selected={props.selectedRoute === '/syndicate'} onClick={this.goToSyndicate}>
 							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
