@@ -19,7 +19,7 @@ export default class Home extends Component {
 					<Card>
 						<div class={style.cardBody}>
 							<h2>Leveling Guide</h2>
-							<p>The leveling guide has all passive missions and lab locations to make sure you don't miss anything at league start. Additionally, if you are following a build, you are able to enter the POB Pastebin and track which gems you need to pick up and where.
+							<p>The leveling guide has all passive missions and lab locations to make sure you don't miss anything while leveling your character. Additionally, if you are following a build, you are able to enter the POB Pastebin and track which gems you need to pick up and where.
 							</p>
 							<a class={style.moduleLink} href="/passives"><Button raised ripple>Leveling Guide</Button></a>
 						</div>
@@ -34,12 +34,21 @@ export default class Home extends Component {
 					</Card>
 					<Card>
 						<div class={style.cardBody}>
+							<h2>Blight Towers</h2>
+							<p>The Blight Towers cheatsheet offers suggested upgrade tiers and placement for towers during Blight encounters and in Blighted Maps. Ther are also Notes referencing alternative usecases when towers can be used outside their usual recommendation.
+							</p>
+							<a class={style.moduleLink} href="/blight"><Button raised ripple>Blight Towers</Button></a>
+						</div>
+					</Card>
+					<Card>
+						<div class={style.cardBody}>
 							<h2>Fossil Locations</h2>
 							<p>The Fossil cheatsheet notes fossil availability in Delve based on the Delve zone/biome as well as the modifier for each type of fossil.
 							</p>
 							<a class={style.moduleLink} href="/fossils"><Button raised ripple>Fossil Locations</Button></a>
 						</div>
 					</Card>
+					
 				</div>
 			</div>
 		);

@@ -65,21 +65,26 @@ def _parse_skills(xml_skills):
     gems = []
     # parse skills and the supported gems
     for skill in xml_skills:
-        if "swap" not in skill.attrib['slot'].lower():
-            # print("Not a Swap", skill.attrib['slot'])
+        try:
+            if "swap" in skill.attrib['slot']:
+                swap = True
+                # print("Is a Swap", skill.attrib['slot'])
+            else:
+                swap = False
+        except:
+            swap = False
+            # print("Not a Swap")
+        if swap == False:
             for gem in skill:
                 gems.append({'name':gem.attrib['nameSpec'],'level':gem.attrib['level']})
         else:
-            # print("Is a Swap", skill.attrib['slot'])
             continue
     return gems
  
 def return_info(pastebin):
     try:
         raw = get_as_xml(pastebin)
-        
         xml = decode_to_xml(raw)
-        
         gems = _parse_skills(xml.find('Skills'))
         class_name = xml.find('Build').attrib['className']
         return(gems,class_name)

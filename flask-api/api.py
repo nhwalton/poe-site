@@ -64,9 +64,9 @@ def gems():
                 return jsonify("Error: Not a valid pastebin link.")
             try:
                 returned = return_info(pastebin_code)
-                print(returned)
+                # print(returned)
             except:
-                return jsonify("Error processing pastebin. Are you sure it's a POE build?")
+                return jsonify("Error while processing pastebin. Are you sure it's a POE build?")
 
             gems, class_name = returned
             gems = pd.DataFrame(gems).drop_duplicates().to_dict('r')
@@ -86,12 +86,19 @@ def gems():
         if pastebin == '':
             return (jsonify(data))
         else:
-            print(gems)
-
             for gem in gems:
 
                 gem_name = gem['name']
                 gem_level = gem['level']
+
+                vaal_regex = r"(?:Vaal\s)(.*)"
+                vaal_match = re.findall(vaal_regex, gem_name)
+                awakened_regex = r"(?:Awakened\s)(.*)"
+                awakened_match = re.findall(awakened_regex, gem_name)
+                if vaal_match:
+                    gem_name = vaal_match[0]
+                elif awakened_match:
+                    gem_name = awakened_match[0]
 
                 call = """ SELECT * 
                             FROM gems

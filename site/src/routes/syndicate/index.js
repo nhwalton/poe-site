@@ -66,10 +66,13 @@ const RowCell = (props) => {
 	const CellText = () => {
 		let cellClass;
 		let cellText;
+		let cellStyle;
 		if (props.cellData.image.length == 0) {
 			cellClass = `${style.cellInfo} ${style.cellCentered}`
+			cellStyle = ''
 		} else {
 			cellClass = style.cellInfo
+			cellStyle = `background-image:url("../../assets/syndicate/${props.cellData.image}.png")`
 		}
 		if (props.cellRow == "headers") {
 			cellText = `${style.cellText} ${style.header}`
@@ -77,7 +80,7 @@ const RowCell = (props) => {
 			cellText = style.cellText
 		}
 		return (
-			<div class={cellClass} style={`background-image:url("../../assets/syndicate/${props.cellData.image}.png")`}>
+			<div class={cellClass} style={cellStyle}>
 				<div class={cellText}>
 					<p class={style.noSelect}>{props.cellData.text}</p>
 				</div>
@@ -126,14 +129,9 @@ const Syndicate = () => {
 		const response = await fetch('/api/scarabs');
 		return response.json();
 	};
-
-	const getScarabs = async () => {
-		const response = await fetchScarabs();
-		setScarabs(response);
-	};
 	
 	useEffect(() => {
-		getScarabs()
+		fetchScarabs().then(result => setScarabs(result))
 	}, []);
 
 	const resetColors = () => {
