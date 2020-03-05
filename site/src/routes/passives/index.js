@@ -1,7 +1,8 @@
 import Preact, { h, Component } from 'preact';
-import { useState, useEffect, useMemo } from 'preact/hooks';
+import { useState, useEffect, useCallback } from 'preact/hooks';
 
-import analytics from '../../components/analytics'
+import analytics from '../../components/analytics';
+// import Select from 'react-select';
 
 import Button from 'preact-material-components/Button';
 import Card from 'preact-material-components/Card';
@@ -10,7 +11,8 @@ import 'preact-material-components/Card/style.css';
 import 'preact-material-components/Button/style.css';
 import style from './style';
 import defaultResponse from './passives.json';
-import useIfMounted from '../../components/ifMounted';
+import gemNames from './gems.txt';
+import classNames from './classes.txt';
 
 const Quests = ({ quest }) => {
     return (
@@ -142,59 +144,56 @@ const Passives = () => {
   const localBuild = localStorage.getItem("build")
   // const localGems = localStorage.getItem("addedGems")
 
+  const gemNamesArr = gemNames.split(',')
+  const classNamesArr = classNames.split(',')
+
   useEffect(() => {
     if (localBuildResponse != null && localBuildResponse != "") {
-      console.log('setting Response')
-      console.log(JSON.parse(localBuildResponse))
-      ifMounted(() => setResponse(JSON.parse(localBuildResponse)));
-      ifMounted(() => setBuild(localBuild));
+      setResponse(JSON.parse(localBuildResponse));
+      setBuild(localBuild);
     }
-  }, [localBuildResponse])
+  }, [localBuildResponse]);
 
-  const ifMounted = useIfMounted();
-
-  const handlePOB = async () => {
-    console.log(1, response)
-    if (localBuild != build) {
+  const handlePOB = useCallback(async () => {
+      console.log(666)
       const newResponse = await fetchBuildPassives(build);
       if (typeof newResponse == "string") {
         alert(newResponse)
         localStorage.setItem("build", "")
       } else {
-        ifMounted(() => setResponse(newResponse))
-        localStorage.setItem("buildResponse", JSON.stringify(newResponse))
-        localStorage.setItem("build", build)
+        setResponse(newResponse);
+        localStorage.setItem("buildResponse", JSON.stringify(newResponse));
+        localStorage.setItem("build", build);
         if (build != "") {
           analytics.track('click', {
             category: 'build',
             label: build,
             value: ''
           })
-        };
+        }
       }
-    }
-  };
+  },[build]);
 
   const handleGem = async () => {
     const singleGem = await getSingleGem(singleGemName, singleGemClass);
-    const addedGems = addedGems
-    const thisAct = singleGem['act']
-    const index = response.findIndex(element => element.act == thisAct)
-    const newResponse = JSON.parse(JSON.stringify(response));
-    newResponse[index]['gems'].push(singleGem)
-    ifMounted(() => setResponse(newResponse))
+    const addedGems = addedGems;
+    const thisAct = singleGem['act'];
+    const index = response.findIndex(element => element.act == thisAct);
+    const newResponse = [...response];
+    newResponse[index]['gems'].push(singleGem);
+    setResponse(newResponse);
     localStorage.setItem("buildResponse", JSON.stringify(newResponse))
   }
 
   const resetPassives = () => {
-    ifMounted(() => setResponse(defaultResponse))
-    localStorage.setItem("build", "")
+    setResponse(defaultResponse);
+    localStorage.setItem("build", "");
   }
 
-  const onBuildChange = event => ifMounted(() => setBuild(event.target.value));
-  const onGemAdd = event => ifMounted(() => setBuild(event.target.value));
-  const onGemName = event => ifMounted(() => setSingleGemName(event.target.value));
-  const onGemClass = event => ifMounted(() => setSingleGemClass(event.target.value));
+  const onBuildChange = event => setBuild(event.target.value);
+  const onGemAdd = event => setBuild(event.target.value);
+  const onGemName = event => setSingleGemName(event.target.value);
+  const onGemClass = event => setSingleGemClass(event.target.value);
 
   async function fetchBuildPassives(build) {
     const response = await fetch('/api/gems?pastebin='.concat(build));
@@ -204,6 +203,16 @@ const Passives = () => {
   async function getSingleGem(gemName, className) {
     const response = await fetch('/api/singleGem?gemName=' + gemName + '&className=' + className);
     return await response.json();
+  }
+
+  function suggest (query, syncResults) {
+    var results = gemNamesArr
+    syncResults(query
+      ? results.filter(function (result) {
+          return result.toLowerCase().indexOf(query.toLowerCase()) !== -1
+        })
+      : []
+    )
   }
 
   return(
@@ -227,25 +236,36 @@ const Passives = () => {
               </div>
               <div id={style.pobInput}>
                   <div class={style.formGroup}>
-                      <input
+                      <select
                         id="gemName"
                         class={style.formField}
                         type="text"
                         placeholder="Gem Name"
                         onChange={e => onGemName(e)}
                         value={singleGemName}
-                        />
-                      <input
+                        >
+                          {gemNamesArr.map(gemName => (
+                            <option value={gemName}>{gemName}</option>
+                            )
+                          )};
+                          </select>
+                      <div id="test"></div>
+                      <select
                         id="gemClass"
                         class={style.formField}
                         type="text"
                         placeholder="Class"
                         onChange={e => onGemClass(e)}
                         value={singleGemClass}
-                        />
+                      >
+                        {classNamesArr.map(className => (
+                            <option value={className}>{className}</option>
+                            )
+                          )};
+                      </select>
                   </div>
-                  <Button class={style.buildButton} raised ripple onClick={() => handleGem()}>Submit</Button>
-                  <Button class={style.buildButton} raised ripple onClick={() => resetPassives()}>Reset</Button>
+                  <Button class={style.buildButton} raised ripple onClick={() => handleGem()}>Add Gem</Button>
+                  {/* <Autocomplete id='gemClass' source={gemNamesArr} /> */}
               </div>
             </div>
           </div>
