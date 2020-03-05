@@ -8,6 +8,7 @@
         "baseRadius":"Radius: 35",
         "recommendedTier":"Chilling Tier III",
         "recommendedPlacement":"Anywhere",
+        "borderColor":"#2b4f90",
         "upgrades": [
             {
                 "name":"Freezebolt Tower",
@@ -37,6 +38,7 @@
         "baseRadius":"Radius: 20",
         "recommendedTier":"Arc Tower",
         "recommendedPlacement":"near junctions",
+        "borderColor":"#b78f1e",
         "upgrades": [
             {
                 "name":"Lightning Storm Tower",
@@ -66,6 +68,7 @@
         "baseRadius":"Radius: 35",
         "recommendedTier":"Empowering Tier I",
         "recommendedPlacement":"Anywhere",
+        "borderColor":"#4B8F39",
         "upgrades": [
             {
                 "name":"Imbuing Tower",
@@ -95,6 +98,7 @@
         "baseRadius":"Radius: 45",
         "recommendedTier":"Seismic Tier I",
         "recommendedPlacement":"Anywhere",
+        "borderColor":"#c96036",
         "upgrades": [
             {
                 "name":"Temporal Tower",
@@ -124,6 +128,7 @@
         "baseRadius":"Radius: 30",
         "recommendedTier":"Avoid",
         "recommendedPlacement":"Anywhere",
+        "borderColor":"#7e398f",
         "upgrades": [
             {
                 "name":"Scout Tower",
@@ -153,6 +158,7 @@
         "baseRadius":"Radius: 45",
         "recommendedTier":"Flamethrower Tower",
         "recommendedPlacement":"Anywhere",
+        "borderColor":"#A3414D",
         "upgrades": [
             {
                 "name":"Flamethrower Tower",

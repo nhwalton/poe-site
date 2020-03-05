@@ -1,4 +1,5 @@
 import base64
+import re
 import urllib
 import zlib
 from logging import log
@@ -90,3 +91,52 @@ def return_info(pastebin):
         return(gems,class_name)
     except:
         raise(Exception("Error processing pastebin. Are you sure it's a POE build?"))
+
+def get_gem_info(cur, gem, class_name):
+
+    gem_details = {}
+
+    gem_name = gem['name']
+    gem_level = gem['level']
+
+    vaal_regex = r"(?:Vaal\s)(.*)"
+    vaal_match = re.findall(vaal_regex, gem_name)
+    awakened_regex = r"(?:Awakened\s)(.*)"
+    awakened_match = re.findall(awakened_regex, gem_name)
+    if vaal_match:
+        gem_name = vaal_match[0]
+    elif awakened_match:
+        gem_name = awakened_match[0]
+
+    call = """ SELECT * 
+                FROM gems
+                WHERE class_name = "{}"
+                AND gem = "{}"
+            """.format(class_name, gem_name)
+
+    cur.execute(call)
+
+    rows = cur.fetchall()
+    # print(gem_name, gem_level)
+
+    earliest = None
+
+    for row in rows:
+        if row == []:
+            continue
+        elif earliest == None:
+            earliest = row
+        if row[0] < earliest[0]:
+            print(row[0], earliest[0])
+            earliest = row
+
+    if earliest != None:
+        print(earliest)
+        gem_details = {
+            "act":earliest[0],
+            "vendor":earliest[1],
+            "gem_name":earliest[2],
+            "mission":earliest[4],
+            "level":gem_level
+            }
+    return gem_details

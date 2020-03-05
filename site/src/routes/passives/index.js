@@ -71,7 +71,8 @@ const ActCard = ({ data }) => {
       if (trials.length > 0) {
           return (
             <div>
-              <h2>Trials</h2>
+              <hr></hr>
+              <h3>Trials</h3>
               <div class={style.itemsWrapper}>
                 {trials.map(trial => (
                   <Trials trial={trial} />
@@ -88,7 +89,7 @@ const ActCard = ({ data }) => {
       if (passives.length > 0) {
           return (
             <div>
-              <h2>Passives</h2>
+              <h3>Passives</h3>
               <div class={style.itemsWrapper}>
                   {data.quests.map(quest => (
                     <Quests quest={quest} />
@@ -105,7 +106,8 @@ const ActCard = ({ data }) => {
       if (gems.length > 0) {
         return (
           <div>
-            <h2>Gems</h2>
+            <hr></hr>
+            <h3>Gems</h3>
             <div class={style.gemsWrapper}>
                 {data.gems.map(details => (
                   <Gems gemDetails={details} />
@@ -132,20 +134,27 @@ const Passives = () => {
 
   const [response, setResponse] = useState(defaultResponse);
   const [build, setBuild] = useState('');
+  // const [addedGems, setAddedGems] = useState([]);
+  const [singleGemName, setSingleGemName] = useState('');
+  const [singleGemClass, setSingleGemClass] = useState('');
 
   const localBuildResponse = localStorage.getItem("buildResponse")
   const localBuild = localStorage.getItem("build")
+  // const localGems = localStorage.getItem("addedGems")
 
-  if (localBuildResponse != null && localBuildResponse != "") {
-    useEffect(() => {
+  useEffect(() => {
+    if (localBuildResponse != null && localBuildResponse != "") {
+      console.log('setting Response')
+      console.log(JSON.parse(localBuildResponse))
       ifMounted(() => setResponse(JSON.parse(localBuildResponse)));
       ifMounted(() => setBuild(localBuild));
-    }, [localBuildResponse])
-  }
+    }
+  }, [localBuildResponse])
 
   const ifMounted = useIfMounted();
 
-  const handleClick = async () => {
+  const handlePOB = async () => {
+    console.log(1, response)
     if (localBuild != build) {
       const newResponse = await fetchBuildPassives(build);
       if (typeof newResponse == "string") {
@@ -166,15 +175,34 @@ const Passives = () => {
     }
   };
 
+  const handleGem = async () => {
+    const singleGem = await getSingleGem(singleGemName, singleGemClass);
+    const addedGems = addedGems
+    const thisAct = singleGem['act']
+    const index = response.findIndex(element => element.act == thisAct)
+    const newResponse = JSON.parse(JSON.stringify(response));
+    newResponse[index]['gems'].push(singleGem)
+    ifMounted(() => setResponse(newResponse))
+    localStorage.setItem("buildResponse", JSON.stringify(newResponse))
+  }
+
   const resetPassives = () => {
     ifMounted(() => setResponse(defaultResponse))
     localStorage.setItem("build", "")
   }
 
-  const onInputChange = event => ifMounted(() => setBuild(event.target.value));
+  const onBuildChange = event => ifMounted(() => setBuild(event.target.value));
+  const onGemAdd = event => ifMounted(() => setBuild(event.target.value));
+  const onGemName = event => ifMounted(() => setSingleGemName(event.target.value));
+  const onGemClass = event => ifMounted(() => setSingleGemClass(event.target.value));
 
   async function fetchBuildPassives(build) {
     const response = await fetch('/api/gems?pastebin='.concat(build));
+    return await response.json();
+  }
+
+  async function getSingleGem(gemName, className) {
+    const response = await fetch('/api/singleGem?gemName=' + gemName + '&className=' + className);
     return await response.json();
   }
 
@@ -182,19 +210,43 @@ const Passives = () => {
       <div class={`${style.passives} page`}>
           <div class="titleWrapper">
             <h1>Passive and Trial Locations</h1>
-            <div id={style.pobInput}>
-                <div class={style.formGroup}>
-                    <input
-                      id="build"
-                      class={style.formField}
-                      type="text"
-                      placeholder="http://pastebin.com/XYZ"
-                      onChange={e => onInputChange(e)}
-                      value={localBuild}
-                      />
-                </div>
-                <Button class={style.buildButton} raised ripple onClick={() => handleClick()}>Submit</Button>
-                <Button class={style.buildButton} raised ripple onClick={() => resetPassives()}>Reset</Button>
+            <div class={style.inputWrapper}>
+              <div id={style.pobInput}>
+                  <div class={style.formGroup}>
+                      <input
+                        id="build"
+                        class={style.formField}
+                        type="text"
+                        placeholder="http://pastebin.com/XYZ"
+                        onChange={e => onBuildChange(e)}
+                        value={localBuild}
+                        />
+                  </div>
+                  <Button class={style.buildButton} raised ripple onClick={() => handlePOB()}>Submit</Button>
+                  <Button class={style.buildButton} raised ripple onClick={() => resetPassives()}>Reset</Button>
+              </div>
+              <div id={style.pobInput}>
+                  <div class={style.formGroup}>
+                      <input
+                        id="gemName"
+                        class={style.formField}
+                        type="text"
+                        placeholder="Gem Name"
+                        onChange={e => onGemName(e)}
+                        value={singleGemName}
+                        />
+                      <input
+                        id="gemClass"
+                        class={style.formField}
+                        type="text"
+                        placeholder="Class"
+                        onChange={e => onGemClass(e)}
+                        value={singleGemClass}
+                        />
+                  </div>
+                  <Button class={style.buildButton} raised ripple onClick={() => handleGem()}>Submit</Button>
+                  <Button class={style.buildButton} raised ripple onClick={() => resetPassives()}>Reset</Button>
+              </div>
             </div>
           </div>
           <div id={style.acts}>
