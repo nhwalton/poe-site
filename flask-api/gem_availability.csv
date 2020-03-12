@@ -615,440 +615,6 @@ Act 1,Nessa,Arcane Surge,Witch,Mercy Mission
 Act 1,Nessa,Swift Assembly,Witch,Mercy Mission
 Act 1,Nessa,Summon Phantasm,Witch,Mercy Mission
 Act 1,Nessa,Infused Channelling,Witch,Mercy Mission
-Act 1,Nessa,Split Arrow,,Enemy at the Gate
-Act 1,Nessa,Spectral Throw,,Enemy at the Gate
-Act 1,Nessa,Ground Slam,,Enemy at the Gate
-Act 1,Nessa,Blight,,Enemy at the Gate
-Act 1,Nessa,Raise Zombie,,Enemy at the Gate
-Act 1,Nessa,Heavy Strike,,Enemy at the Gate
-Act 1,Nessa,Fireball,,Enemy at the Gate
-Act 1,Nessa,Purifying Flame,,Enemy at the Gate
-Act 1,Nessa,Frost Blades,,Enemy at the Gate
-Act 1,Nessa,Spark,,Enemy at the Gate
-Act 1,Nessa,Glacial Hammer,,Enemy at the Gate
-Act 1,Nessa,Fireball,,Enemy at the Gate
-Act 1,Nessa,Spark,,Enemy at the Gate
-Act 1,Nessa,Glacial Hammer,,Enemy at the Gate
-Act 1,Nessa,Spark,,Enemy at the Gate
-Act 1,Nessa,Smite,,Enemy at the Gate
-Act 1,Nessa,Burning Arrow,,Enemy at the Gate
-Act 1,Nessa,Ice Shot,,Enemy at the Gate
-Act 1,Nessa,Ground Slam,,Enemy at the Gate
-Act 1,Nessa,Smite,,Enemy at the Gate
-Act 1,Nessa,Lightning Tendrils,,Enemy at the Gate
-Act 1,Nessa,Stormblast Mine,,Enemy at the Gate
-Act 1,Nessa,Magma Orb,,Enemy at the Gate
-Act 1,Nessa,Cleave,,Enemy at the Gate
-Act 1,Nessa,Blight,,Enemy at the Gate
-Act 1,Nessa,Ground Slam,,Enemy at the Gate
-Act 1,Nessa,Smite,,Enemy at the Gate
-Act 1,Nessa,Lightning Tendrils,,Enemy at the Gate
-Act 1,Nessa,Glacial Hammer,,Enemy at the Gate
-Act 1,Nessa,Magma Orb,,Enemy at the Gate
-Act 1,Nessa,Smite,,Enemy at the Gate
-Act 1,Nessa,Blight,,Enemy at the Gate
-Act 1,Nessa,Freezing Pulse,,Enemy at the Gate
-Act 1,Nessa,Onslaught,,Enemy at the Gate
-Act 1,Nessa,Cobra Lash,,Enemy at the Gate
-Act 1,Nessa,Raise Zombie,,Enemy at the Gate
-Act 1,Nessa,Raise Zombie,,Enemy at the Gate
-Act 1,Nessa,Ethereal Knives,,Enemy at the Gate
-Act 1,Nessa,Heavy Strike,,Enemy at the Gate
-Act 1,Nessa,Viper Strike,,Enemy at the Gate
-Act 1,Nessa,Ethereal Knives,,Enemy at the Gate
-Act 1,Nessa,Stormblast Mine,,Enemy at the Gate
-Act 1,Nessa,Raise Zombie,,Enemy at the Gate
-Act 1,Nessa,Lightning Tendrils,,Enemy at the Gate
-Act 1,Nessa,Split Arrow,,Enemy at the Gate
-Act 1,Nessa,Glacial Hammer,,Enemy at the Gate
-Act 1,Nessa,Explosive Trap,,Enemy at the Gate
-Act 1,Nessa,Stormblast Mine,,Enemy at the Gate
-Act 1,Nessa,Ground Slam,,Enemy at the Gate
-Act 1,Nessa,Magma Orb,,Enemy at the Gate
-Act 1,Nessa,Freezing Pulse,,Enemy at the Gate
-Act 1,Nessa,Cobra Lash,,Enemy at the Gate
-Act 1,Nessa,Explosive Trap,,Enemy at the Gate
-Act 1,Nessa,Cleave,,Enemy at the Gate
-Act 1,Nessa,Frostbolt,,Enemy at the Gate
-Act 1,Nessa,Perforate,,Enemy at the Gate
-Act 1,Nessa,Burning Arrow,,Enemy at the Gate
-Act 1,Nessa,Caustic Arrow,,Enemy at the Gate
-Act 1,Nessa,Frost Blades,,Enemy at the Gate
-Act 1,Nessa,Galvanic Arrow,,Enemy at the Gate
-Act 1,Nessa,Cobra Lash,,Enemy at the Gate
-Act 1,Nessa,Explosive Trap,,Enemy at the Gate
-Act 1,Nessa,Frostbolt,,Enemy at the Gate
-Act 1,Nessa,Frost Blades,,Enemy at the Gate
-Act 1,Nessa,Caustic Arrow,,Enemy at the Gate
-Act 1,Nessa,Heavy Strike,,Enemy at the Gate
-Act 1,Nessa,Cobra Lash,,Enemy at the Gate
-Act 1,Nessa,Freezing Pulse,,Enemy at the Gate
-Act 1,Nessa,Viper Strike,,Enemy at the Gate
-Act 1,Nessa,Galvanic Arrow,,Enemy at the Gate
-Act 1,Nessa,Purifying Flame,,Enemy at the Gate
-Act 1,Nessa,Double Strike,,Enemy at the Gate
-Act 1,Nessa,Frostbolt,,Enemy at the Gate
-Act 1,Nessa,Ethereal Knives,,Enemy at the Gate
-Act 1,Nessa,Dual Strike,,Enemy at the Gate
-Act 1,Nessa,Perforate,,Enemy at the Gate
-Act 1,Nessa,Viper Strike,,Enemy at the Gate
-Act 1,Nessa,Double Strike,,Enemy at the Gate
-Act 1,Nessa,Caustic Arrow,,Enemy at the Gate
-Act 1,Nessa,Molten Strike,,Enemy at the Gate
-Act 1,Nessa,Cleave,,Enemy at the Gate
-Act 1,Nessa,Galvanic Arrow,,Enemy at the Gate
-Act 1,Nessa,Ethereal Knives,,Enemy at the Gate
-Act 1,Nessa,Dual Strike,,Enemy at the Gate
-Act 1,Nessa,Purifying Flame,,Enemy at the Gate
-Act 1,Nessa,Molten Strike,,Enemy at the Gate
-Act 1,Nessa,Burning Arrow,,Enemy at the Gate
-Act 1,Nessa,Galvanic Arrow,,Enemy at the Gate
-Act 1,Nessa,Ice Shot,,Enemy at the Gate
-Act 1,Nessa,Freezing Pulse,,Enemy at the Gate
-Act 1,Nessa,Split Arrow,,Enemy at the Gate
-Act 1,Nessa,Ice Shot,,Enemy at the Gate
-Act 1,Nessa,Molten Strike,,Enemy at the Gate
-Act 1,Nessa,Ice Shot,,Enemy at the Gate
-Act 1,Nessa,Perforate,,Enemy at the Gate
-Act 1,Nessa,Unearth,,The Caged Brute
-Act 1,Nessa,Blink Arrow,,The Caged Brute
-Act 1,Nessa,Flame Dash,,The Caged Brute
-Act 1,Nessa,Added Lightning Damage,,The Caged Brute
-Act 1,Nessa,Bodyswap,,The Caged Brute
-Act 1,Nessa,Added Lightning Damage,,The Caged Brute
-Act 1,Nessa,Added Fire Damage,,The Caged Brute
-Act 1,Nessa,Lightning Warp,,The Caged Brute
-Act 1,Nessa,Life Gain on Hit,,The Caged Brute
-Act 1,Nessa,Added Lightning Damage,,The Caged Brute
-Act 1,Nessa,Knockback,,The Caged Brute
-Act 1,Nessa,Blink Arrow,,The Caged Brute
-Act 1,Nessa,Spell Totem,,The Caged Brute
-Act 1,Nessa,Added Cold Damage,,The Caged Brute
-Act 1,Nessa,Lesser Multiple Projectiles,,The Caged Brute
-Act 1,Nessa,Smoke Mine,,The Caged Brute
-Act 1,Nessa,Lesser Multiple Projectiles,,The Caged Brute
-Act 1,Nessa,Added Cold Damage,,The Caged Brute
-Act 1,Nessa,Knockback,,The Caged Brute
-Act 1,Nessa,Added Cold Damage,,The Caged Brute
-Act 1,Nessa,Summon Skeletons,,The Caged Brute
-Act 1,Nessa,Ballista Totem,,The Caged Brute
-Act 1,Nessa,Knockback,,The Caged Brute
-Act 1,Nessa,Summon Skeletons,,The Caged Brute
-Act 1,Nessa,Blink Arrow,,The Caged Brute
-Act 1,Nessa,Rallying Cry,,The Caged Brute
-Act 1,Nessa,Bodyswap,,The Caged Brute
-Act 1,Nessa,Infernal Legion,,The Caged Brute
-Act 1,Nessa,Lightning Warp,,The Caged Brute
-Act 1,Nessa,Summon Skeletons,,The Caged Brute
-Act 1,Nessa,Additional Accuracy,,The Caged Brute
-Act 1,Nessa,Stun,,The Caged Brute
-Act 1,Nessa,Arrow Nova,,The Caged Brute
-Act 1,Nessa,Withering Step,,The Caged Brute
-Act 1,Nessa,Flame Dash,,The Caged Brute
-Act 1,Nessa,Infernal Legion,,The Caged Brute
-Act 1,Nessa,Siphoning Trap,,The Caged Brute
-Act 1,Nessa,Arrow Nova,,The Caged Brute
-Act 1,Nessa,Unearth,,The Caged Brute
-Act 1,Nessa,Blind,,The Caged Brute
-Act 1,Nessa,Withering Step,,The Caged Brute
-Act 1,Nessa,Summon Skeletons,,The Caged Brute
-Act 1,Nessa,Blastchain Mine,,The Caged Brute
-Act 1,Nessa,Maim,,The Caged Brute
-Act 1,Nessa,Siphoning Trap,,The Caged Brute
-Act 1,Nessa,Minion Damage,,The Caged Brute
-Act 1,Nessa,Clarity,,The Caged Brute
-Act 1,Nessa,Clarity,,The Caged Brute
-Act 1,Nessa,Wither,,The Caged Brute
-Act 1,Nessa,Increased Critical Strikes,,The Caged Brute
-Act 1,Nessa,Shield Charge,,The Caged Brute
-Act 1,Nessa,Whirling Blades,,The Caged Brute
-Act 1,Nessa,Wither,,The Caged Brute
-Act 1,Nessa,Lightning Warp,,The Caged Brute
-Act 1,Nessa,Spell Totem,,The Caged Brute
-Act 1,Nessa,Life Gain on Hit,,The Caged Brute
-Act 1,Nessa,Minion Damage,,The Caged Brute
-Act 1,Nessa,Combustion,,The Caged Brute
-Act 1,Nessa,Whirling Blades,,The Caged Brute
-Act 1,Nessa,Rallying Cry,,The Caged Brute
-Act 1,Nessa,Clarity,,The Caged Brute
-Act 1,Nessa,Shield Charge,,The Caged Brute
-Act 1,Nessa,Ballista Totem,,The Caged Brute
-Act 1,Nessa,Smoke Mine,,The Caged Brute
-Act 1,Nessa,Infernal Legion,,The Caged Brute
-Act 1,Nessa,Infernal Legion,,The Caged Brute
-Act 1,Nessa,Life Gain on Hit,,The Caged Brute
-Act 1,Nessa,Maim,,The Caged Brute
-Act 1,Nessa,Minion Damage,,The Caged Brute
-Act 1,Nessa,Increased Critical Strikes,,The Caged Brute
-Act 1,Nessa,Infernal Legion,,The Caged Brute
-Act 1,Nessa,Blastchain Mine,,The Caged Brute
-Act 1,Nessa,Maim,,The Caged Brute
-Act 1,Nessa,Clarity,,The Caged Brute
-Act 1,Nessa,Void Manipulation,,The Caged Brute
-Act 1,Nessa,Leap Slam,,The Caged Brute
-Act 1,Nessa,Flicker Strike,,The Caged Brute
-Act 1,Nessa,Blind,,The Caged Brute
-Act 1,Nessa,Precision,,The Caged Brute
-Act 1,Nessa,Increased Critical Strikes,,The Caged Brute
-Act 1,Nessa,Siphoning Trap,,The Caged Brute
-Act 1,Nessa,Wither,,The Caged Brute
-Act 1,Nessa,Ballista Totem,,The Caged Brute
-Act 1,Nessa,Minion Damage,,The Caged Brute
-Act 1,Nessa,Flame Dash,,The Caged Brute
-Act 1,Nessa,Spell Totem,,The Caged Brute
-Act 1,Nessa,Arrow Nova,,The Caged Brute
-Act 1,Nessa,Chance to Flee,,The Caged Brute
-Act 1,Nessa,Stun,,The Caged Brute
-Act 1,Nessa,Unbound Ailments,,The Caged Brute
-Act 1,Nessa,Chance to Flee,,The Caged Brute
-Act 1,Nessa,Whirling Blades,,The Caged Brute
-Act 1,Nessa,Unbound Ailments,,The Caged Brute
-Act 1,Nessa,Void Manipulation,,The Caged Brute
-Act 1,Nessa,Multiple Traps,,The Caged Brute
-Act 1,Nessa,Shield Charge,,The Caged Brute
-Act 1,Nessa,Trap,,The Caged Brute
-Act 1,Nessa,Unbound Ailments,,The Caged Brute
-Act 1,Nessa,Whirling Blades,,The Caged Brute
-Act 1,Nessa,Leap Slam,,The Caged Brute
-Act 1,Nessa,Trap,,The Caged Brute
-Act 1,Nessa,Shield Charge,,The Caged Brute
-Act 1,Nessa,Combustion,,The Caged Brute
-Act 1,Nessa,Combustion,,The Caged Brute
-Act 1,Nessa,Precision,,The Caged Brute
-Act 1,Nessa,Multiple Traps,,The Caged Brute
-Act 1,Nessa,Multiple Traps,,The Caged Brute
-Act 1,Nessa,Flicker Strike,,The Caged Brute
-Act 1,Nessa,Stun,,The Caged Brute
-Act 1,Nessa,Siphoning Trap,,The Caged Brute
-Act 1,Nessa,Reave,,The Siren's Cadence
-Act 1,Nessa,Scorching Ray,,The Siren's Cadence
-Act 1,Nessa,Bone Offering,,The Siren's Cadence
-Act 1,Nessa,Sunder,,The Siren's Cadence
-Act 1,Nessa,Firestorm,,The Siren's Cadence
-Act 1,Nessa,Arctic Breath,,The Siren's Cadence
-Act 1,Nessa,Sunder,,The Siren's Cadence
-Act 1,Nessa,Barrage,,The Siren's Cadence
-Act 1,Nessa,Static Strike,,The Siren's Cadence
-Act 1,Nessa,Fire Trap,,The Siren's Cadence
-Act 1,Nessa,Reave,,The Siren's Cadence
-Act 1,Nessa,Barrage,,The Siren's Cadence
-Act 1,Nessa,Spectral Shield Throw,,The Siren's Cadence
-Act 1,Nessa,Blade Vortex,,The Siren's Cadence
-Act 1,Nessa,Spirit Offering,,The Siren's Cadence
-Act 1,Nessa,Elemental Hit,,The Siren's Cadence
-Act 1,Nessa,Volatile Dead,,The Siren's Cadence
-Act 1,Nessa,Barrage,,The Siren's Cadence
-Act 1,Nessa,Lightning Trap,,The Siren's Cadence
-Act 1,Nessa,Ice Nova,,The Siren's Cadence
-Act 1,Nessa,Power Siphon,,The Siren's Cadence
-Act 1,Nessa,Sunder,,The Siren's Cadence
-Act 1,Nessa,Searing Bond,,The Siren's Cadence
-Act 1,Nessa,Arctic Breath,,The Siren's Cadence
-Act 1,Nessa,Arc,,The Siren's Cadence
-Act 1,Nessa,Siege Ballista,,The Siren's Cadence
-Act 1,Nessa,Reave,,The Siren's Cadence
-Act 1,Nessa,Sweep,,The Siren's Cadence
-Act 1,Nessa,Toxic Rain,,The Siren's Cadence
-Act 1,Nessa,Shattering Steel,,The Siren's Cadence
-Act 1,Nessa,Lightning Arrow,,The Siren's Cadence
-Act 1,Nessa,Blade Vortex,,The Siren's Cadence
-Act 1,Nessa,Rain of Arrows,,The Siren's Cadence
-Act 1,Nessa,Storm Call,,The Siren's Cadence
-Act 1,Nessa,Firestorm,,The Siren's Cadence
-Act 1,Nessa,Sweep,,The Siren's Cadence
-Act 1,Nessa,Venom Gyre,,The Siren's Cadence
-Act 1,Nessa,Chain Hook,,The Siren's Cadence
-Act 1,Nessa,Power Siphon,,The Siren's Cadence
-Act 1,Nessa,Reave,,The Siren's Cadence
-Act 1,Nessa,Chain Hook,,The Siren's Cadence
-Act 1,Nessa,Firestorm,,The Siren's Cadence
-Act 1,Nessa,Rain of Arrows,,The Siren's Cadence
-Act 1,Nessa,Lightning Trap,,The Siren's Cadence
-Act 1,Nessa,Bone Offering,,The Siren's Cadence
-Act 1,Nessa,Venom Gyre,,The Siren's Cadence
-Act 1,Nessa,Shattering Steel,,The Siren's Cadence
-Act 1,Nessa,Arctic Breath,,The Siren's Cadence
-Act 1,Nessa,Essence Drain,,The Siren's Cadence
-Act 1,Nessa,Arc,,The Siren's Cadence
-Act 1,Nessa,Infernal Blow,,The Siren's Cadence
-Act 1,Nessa,Lightning Arrow,,The Siren's Cadence
-Act 1,Nessa,Sweep,,The Siren's Cadence
-Act 1,Nessa,Bone Offering,,The Siren's Cadence
-Act 1,Nessa,Chain Hook,,The Siren's Cadence
-Act 1,Nessa,Lightning Arrow,,The Siren's Cadence
-Act 1,Nessa,Arc,,The Siren's Cadence
-Act 1,Nessa,Lightning Trap,,The Siren's Cadence
-Act 1,Nessa,Fire Trap,,The Siren's Cadence
-Act 1,Nessa,Scorching Ray,,The Siren's Cadence
-Act 1,Nessa,Flesh Offering,,The Siren's Cadence
-Act 1,Nessa,Toxic Rain,,The Siren's Cadence
-Act 1,Nessa,Flesh Offering,,The Siren's Cadence
-Act 1,Nessa,Essence Drain,,The Siren's Cadence
-Act 1,Nessa,Storm Call,,The Siren's Cadence
-Act 1,Nessa,Fire Trap,,The Siren's Cadence
-Act 1,Nessa,Arc,,The Siren's Cadence
-Act 1,Nessa,Lightning Strike,,The Siren's Cadence
-Act 1,Nessa,Lightning Strike,,The Siren's Cadence
-Act 1,Nessa,Flame Surge,,The Siren's Cadence
-Act 1,Nessa,Flesh Offering,,The Siren's Cadence
-Act 1,Nessa,Icicle Mine,,The Siren's Cadence
-Act 1,Nessa,Storm Burst,,The Siren's Cadence
-Act 1,Nessa,Incinerate,,The Siren's Cadence
-Act 1,Nessa,Siege Ballista,,The Siren's Cadence
-Act 1,Nessa,Siege Ballista,,The Siren's Cadence
-Act 1,Nessa,Toxic Rain,,The Siren's Cadence
-Act 1,Nessa,Shattering Steel,,The Siren's Cadence
-Act 1,Nessa,Storm Call,,The Siren's Cadence
-Act 1,Nessa,Rain of Arrows,,The Siren's Cadence
-Act 1,Nessa,Spirit Offering,,The Siren's Cadence
-Act 1,Nessa,Power Siphon,,The Siren's Cadence
-Act 1,Nessa,Ice Spear,,The Siren's Cadence
-Act 1,Nessa,Lacerate,,The Siren's Cadence
-Act 1,Nessa,Blade Vortex,,The Siren's Cadence
-Act 1,Nessa,Firestorm,,The Siren's Cadence
-Act 1,Nessa,Spirit Offering,,The Siren's Cadence
-Act 1,Nessa,Searing Bond,,The Siren's Cadence
-Act 1,Nessa,Chain Hook,,The Siren's Cadence
-Act 1,Nessa,Storm Brand,,The Siren's Cadence
-Act 1,Nessa,Storm Brand,,The Siren's Cadence
-Act 1,Nessa,Elemental Hit,,The Siren's Cadence
-Act 1,Nessa,Essence Drain,,The Siren's Cadence
-Act 1,Nessa,Lightning Arrow,,The Siren's Cadence
-Act 1,Nessa,Ice Spear,,The Siren's Cadence
-Act 1,Nessa,Searing Bond,,The Siren's Cadence
-Act 1,Nessa,Volatile Dead,,The Siren's Cadence
-Act 1,Nessa,Icicle Mine,,The Siren's Cadence
-Act 1,Nessa,Infernal Blow,,The Siren's Cadence
-Act 1,Nessa,Incinerate,,The Siren's Cadence
-Act 1,Nessa,Sweep,,The Siren's Cadence
-Act 1,Nessa,Static Strike,,The Siren's Cadence
-Act 1,Nessa,Scorching Ray,,The Siren's Cadence
-Act 1,Nessa,Flame Surge,,The Siren's Cadence
-Act 1,Nessa,Venom Gyre,,The Siren's Cadence
-Act 1,Nessa,Elemental Hit,,The Siren's Cadence
-Act 1,Nessa,Storm Brand,,The Siren's Cadence
-Act 1,Nessa,Storm Burst,,The Siren's Cadence
-Act 1,Nessa,Bone Offering,,The Siren's Cadence
-Act 1,Nessa,Storm Brand,,The Siren's Cadence
-Act 1,Nessa,Icicle Mine,,The Siren's Cadence
-Act 1,Nessa,Power Siphon,,The Siren's Cadence
-Act 1,Nessa,Ice Nova,,The Siren's Cadence
-Act 1,Nessa,Searing Bond,,The Siren's Cadence
-Act 1,Nessa,Storm Burst,,The Siren's Cadence
-Act 1,Nessa,Incinerate,,The Siren's Cadence
-Act 1,Nessa,Ice Spear,,The Siren's Cadence
-Act 1,Nessa,Flesh Offering,,The Siren's Cadence
-Act 1,Nessa,Ice Nova,,The Siren's Cadence
-Act 1,Nessa,Venom Gyre,,The Siren's Cadence
-Act 1,Nessa,Spirit Offering,,The Siren's Cadence
-Act 1,Nessa,Flame Surge,,The Siren's Cadence
-Act 1,Nessa,Blood and Sand,,Breaking Some Eggs
-Act 1,Nessa,Conversion Trap,,Breaking Some Eggs
-Act 1,Nessa,Contagion,,Breaking Some Eggs
-Act 1,Nessa,Detonate Dead,,Breaking Some Eggs
-Act 1,Nessa,Blood and Sand,,Breaking Some Eggs
-Act 1,Nessa,Summon Holy Relic,,Breaking Some Eggs
-Act 1,Nessa,Conversion Trap,,Breaking Some Eggs
-Act 1,Nessa,Blood and Sand,,Breaking Some Eggs
-Act 1,Nessa,Bear Trap,,Breaking Some Eggs
-Act 1,Nessa,Bear Trap,,Breaking Some Eggs
-Act 1,Nessa,Bear Trap,,Breaking Some Eggs
-Act 1,Nessa,Conversion Trap,,Breaking Some Eggs
-Act 1,Nessa,Summon Holy Relic,,Breaking Some Eggs
-Act 1,Nessa,Contagion,,Breaking Some Eggs
-Act 1,Nessa,Summon Raging Spirit,,Breaking Some Eggs
-Act 1,Nessa,War Banner,,Breaking Some Eggs
-Act 1,Nessa,Puncture,,Breaking Some Eggs
-Act 1,Nessa,Reckoning,,Breaking Some Eggs
-Act 1,Nessa,Riposte,,Breaking Some Eggs
-Act 1,Nessa,Animate Weapon,,Breaking Some Eggs
-Act 1,Nessa,Contagion,,Breaking Some Eggs
-Act 1,Nessa,Frost Bomb,,Breaking Some Eggs
-Act 1,Nessa,Frost Wall,,Breaking Some Eggs
-Act 1,Nessa,Holy Flame Totem,,Breaking Some Eggs
-Act 1,Nessa,Summon Raging Spirit,,Breaking Some Eggs
-Act 1,Nessa,Reckoning,,Breaking Some Eggs
-Act 1,Nessa,Detonate Dead,,Breaking Some Eggs
-Act 1,Nessa,Animate Weapon,,Breaking Some Eggs
-Act 1,Nessa,Animate Weapon,,Breaking Some Eggs
-Act 1,Nessa,Shrapnel Ballista,,Breaking Some Eggs
-Act 1,Nessa,Summon Raging Spirit,,Breaking Some Eggs
-Act 1,Nessa,Detonate Dead,,Breaking Some Eggs
-Act 1,Nessa,Rejuvenation Totem,,Breaking Some Eggs
-Act 1,Nessa,Frost Wall,,Breaking Some Eggs
-Act 1,Nessa,Frost Wall,,Breaking Some Eggs
-Act 1,Nessa,Puncture,,Breaking Some Eggs
-Act 1,Nessa,Puncture,,Breaking Some Eggs
-Act 1,Nessa,Reckoning,,Breaking Some Eggs
-Act 1,Nessa,Vigilant Strike,,Breaking Some Eggs
-Act 1,Nessa,War Banner,,Breaking Some Eggs
-Act 1,Nessa,Summon Holy Relic,,Breaking Some Eggs
-Act 1,Nessa,Summon Holy Relic,,Breaking Some Eggs
-Act 1,Nessa,Decoy Totem,,Breaking Some Eggs
-Act 1,Nessa,Vigilant Strike,,Breaking Some Eggs
-Act 1,Nessa,Devouring Totem,,Breaking Some Eggs
-Act 1,Nessa,Puncture,,Breaking Some Eggs
-Act 1,Nessa,Summon Raging Spirit,,Breaking Some Eggs
-Act 1,Nessa,Molten Shell,,Breaking Some Eggs
-Act 1,Nessa,Animate Weapon,,Breaking Some Eggs
-Act 1,Nessa,Shrapnel Ballista,,Breaking Some Eggs
-Act 1,Nessa,Orb of Storms,,Breaking Some Eggs
-Act 1,Nessa,Summon Holy Relic,,Breaking Some Eggs
-Act 1,Nessa,Decoy Totem,,Breaking Some Eggs
-Act 1,Nessa,Detonate Dead,,Breaking Some Eggs
-Act 1,Nessa,Riposte,,Breaking Some Eggs
-Act 1,Nessa,Orb of Storms,,Breaking Some Eggs
-Act 1,Nessa,Frost Bomb,,Breaking Some Eggs
-Act 1,Nessa,Frost Wall,,Breaking Some Eggs
-Act 1,Nessa,Rejuvenation Totem,,Breaking Some Eggs
-Act 1,Nessa,Riposte,,Breaking Some Eggs
-Act 1,Nessa,Molten Shell,,Breaking Some Eggs
-Act 1,Nessa,Orb of Storms,,Breaking Some Eggs
-Act 1,Nessa,Rejuvenation Totem,,Breaking Some Eggs
-Act 1,Nessa,Holy Flame Totem,,Breaking Some Eggs
-Act 1,Nessa,Ancestral Protector,,Breaking Some Eggs
-Act 1,Nessa,Holy Flame Totem,,Breaking Some Eggs
-Act 1,Nessa,Frost Bomb,,Breaking Some Eggs
-Act 1,Nessa,Ancestral Protector,,Breaking Some Eggs
-Act 1,Nessa,Molten Shell,,Breaking Some Eggs
-Act 1,Nessa,Reckoning,,Breaking Some Eggs
-Act 1,Nessa,Holy Flame Totem,,Breaking Some Eggs
-Act 1,Nessa,Ancestral Protector,,Breaking Some Eggs
-Act 1,Nessa,Spell Cascade,,Mercy Mission
-Act 1,Nessa,Arcane Surge,,Mercy Mission
-Act 1,Nessa,Arcane Surge,,Mercy Mission
-Act 1,Nessa,Infused Channelling,,Mercy Mission
-Act 1,Nessa,Ruthless,,Mercy Mission
-Act 1,Nessa,Arcane Surge,,Mercy Mission
-Act 1,Nessa,Infused Channelling,,Mercy Mission
-Act 1,Nessa,Infused Channelling,,Mercy Mission
-Act 1,Nessa,Summon Phantasm,,Mercy Mission
-Act 1,Nessa,Mirage Archer,,Mercy Mission
-Act 1,Nessa,Chance to Bleed,,Mercy Mission
-Act 1,Nessa,Lesser Poison,,Mercy Mission
-Act 1,Nessa,Lesser Poison,,Mercy Mission
-Act 1,Nessa,Lesser Poison,,Mercy Mission
-Act 1,Nessa,Summon Phantasm,,Mercy Mission
-Act 1,Nessa,Ancestral Call,,Mercy Mission
-Act 1,Nessa,Lesser Poison,,Mercy Mission
-Act 1,Nessa,Chance to Bleed,,Mercy Mission
-Act 1,Nessa,Spell Cascade,,Mercy Mission
-Act 1,Nessa,Spell Cascade,,Mercy Mission
-Act 1,Nessa,Ancestral Call,,Mercy Mission
-Act 1,Nessa,Volley,,Mercy Mission
-Act 1,Nessa,Pierce,,Mercy Mission
-Act 1,Nessa,Ruthless,,Mercy Mission
-Act 1,Nessa,Ruthless,,Mercy Mission
-Act 1,Nessa,Elemental Proliferation,,Mercy Mission
-Act 1,Nessa,Elemental Proliferation,,Mercy Mission
-Act 1,Nessa,Pierce,,Mercy Mission
-Act 1,Nessa,Elemental Proliferation,,Mercy Mission
-Act 1,Nessa,Pierce,,Mercy Mission
-Act 1,Nessa,Swift Assembly,,Mercy Mission
-Act 1,Nessa,Summon Phantasm,,Mercy Mission
-Act 1,Nessa,Mirage Archer,,Mercy Mission
-Act 1,Nessa,Mirage Archer,,Mercy Mission
-Act 1,Nessa,Swift Assembly,,Mercy Mission
 Act 2,Yeena,Shockwave,Duelist,Sharp and Cruel
 Act 2,Yeena,Rage,Duelist,Sharp and Cruel
 Act 2,Yeena,Close Combat,Duelist,Sharp and Cruel
@@ -1269,115 +835,6 @@ Act 2,Yeena,Herald of Thunder,Witch,The Root of the Problem
 Act 2,Yeena,Herald of Ash,Witch,The Root of the Problem
 Act 2,Yeena,Herald of Ice,Witch,The Root of the Problem
 Act 2,Yeena,Herald of Purity,Witch,The Root of the Problem
-Act 2,Yeena,Bloodlust,,Sharp and Cruel
-Act 2,Yeena,Iron Grip,,Sharp and Cruel
-Act 2,Yeena,Faster Attacks,,Sharp and Cruel
-Act 2,Yeena,Faster Casting,,Sharp and Cruel
-Act 2,Yeena,Increased Critical Damage,,Sharp and Cruel
-Act 2,Yeena,Cold to Fire,,Sharp and Cruel
-Act 2,Yeena,Shockwave,,Sharp and Cruel
-Act 2,Yeena,Power Charge On Critical,,Sharp and Cruel
-Act 2,Yeena,Rage,,Sharp and Cruel
-Act 2,Yeena,Trap and Mine Damage,,Sharp and Cruel
-Act 2,Yeena,Elemental Damage with Attacks,,Sharp and Cruel
-Act 2,Yeena,Cold to Fire,,Sharp and Cruel
-Act 2,Yeena,Faster Casting,,Sharp and Cruel
-Act 2,Yeena,Increased Critical Damage,,Sharp and Cruel
-Act 2,Yeena,Iron Grip,,Sharp and Cruel
-Act 2,Yeena,Close Combat,,Sharp and Cruel
-Act 2,Yeena,Cold to Fire,,Sharp and Cruel
-Act 2,Yeena,Concentrated Effect,,Sharp and Cruel
-Act 2,Yeena,Deathmark,,Sharp and Cruel
-Act 2,Yeena,Endurance Charge on Melee Stun,,Sharp and Cruel
-Act 2,Yeena,Power Charge On Critical,,Sharp and Cruel
-Act 2,Yeena,Shockwave,,Sharp and Cruel
-Act 2,Yeena,Trap and Mine Damage,,Sharp and Cruel
-Act 2,Yeena,Concentrated Effect,,Sharp and Cruel
-Act 2,Yeena,Controlled Destruction,,Sharp and Cruel
-Act 2,Yeena,Deathmark,,Sharp and Cruel
-Act 2,Yeena,Elemental Focus,,Sharp and Cruel
-Act 2,Yeena,Endurance Charge on Melee Stun,,Sharp and Cruel
-Act 2,Yeena,Faster Casting,,Sharp and Cruel
-Act 2,Yeena,Increased Critical Damage,,Sharp and Cruel
-Act 2,Yeena,Endurance Charge on Melee Stun,,Sharp and Cruel
-Act 2,Yeena,Power Charge On Critical,,Sharp and Cruel
-Act 2,Yeena,Shockwave,,Sharp and Cruel
-Act 2,Yeena,Damage on Full Life,,Sharp and Cruel
-Act 2,Yeena,Controlled Destruction,,Sharp and Cruel
-Act 2,Yeena,Deadly Ailments,,Sharp and Cruel
-Act 2,Yeena,Deathmark,,Sharp and Cruel
-Act 2,Yeena,Elemental Focus,,Sharp and Cruel
-Act 2,Yeena,Point Blank,,Sharp and Cruel
-Act 2,Yeena,Iron Will,,Sharp and Cruel
-Act 2,Yeena,Damage on Full Life,,Sharp and Cruel
-Act 2,Yeena,Minion Life,,Sharp and Cruel
-Act 2,Yeena,Minion Speed,,Sharp and Cruel
-Act 2,Yeena,Nightblade,,Sharp and Cruel
-Act 2,Yeena,Vicious Projectiles,,Sharp and Cruel
-Act 2,Yeena,Physical to Lightning,,Sharp and Cruel
-Act 2,Yeena,Point Blank,,Sharp and Cruel
-Act 2,Yeena,Point Blank,,Sharp and Cruel
-Act 2,Yeena,Damage on Full Life,,Sharp and Cruel
-Act 2,Yeena,Concentrated Effect,,Sharp and Cruel
-Act 2,Yeena,Controlled Destruction,,Sharp and Cruel
-Act 2,Yeena,Deathmark,,Sharp and Cruel
-Act 2,Yeena,Elemental Focus,,Sharp and Cruel
-Act 2,Yeena,Iron Will,,Sharp and Cruel
-Act 2,Yeena,Iron Will,,Sharp and Cruel
-Act 2,Yeena,Vicious Projectiles,,Sharp and Cruel
-Act 2,Yeena,Vicious Projectiles,,Sharp and Cruel
-Act 2,Yeena,Nightblade,,Sharp and Cruel
-Act 2,Yeena,Vicious Projectiles,,Sharp and Cruel
-Act 2,Yeena,Nightblade,,Sharp and Cruel
-Act 2,Yeena,Nightblade,,Sharp and Cruel
-Act 2,Yeena,Minion Speed,,Sharp and Cruel
-Act 2,Yeena,Minion Speed,,Sharp and Cruel
-Act 2,Yeena,Minion Life,,Sharp and Cruel
-Act 2,Yeena,Minion Life,,Sharp and Cruel
-Act 2,Yeena,Minion Speed,,Sharp and Cruel
-Act 2,Yeena,Minion Life,,Sharp and Cruel
-Act 2,Yeena,Enduring Cry,,The Root of the Problem
-Act 2,Yeena,Flesh and Stone,,The Root of the Problem
-Act 2,Yeena,Enduring Cry,,The Root of the Problem
-Act 2,Yeena,Righteous Fire,,The Root of the Problem
-Act 2,Yeena,Summon Skitterbots,,The Root of the Problem
-Act 2,Yeena,Flesh and Stone,,The Root of the Problem
-Act 2,Yeena,Ensnaring Arrow,,The Root of the Problem
-Act 2,Yeena,Flesh and Stone,,The Root of the Problem
-Act 2,Yeena,Desecrate,,The Root of the Problem
-Act 2,Yeena,Frenzy,,The Root of the Problem
-Act 2,Yeena,Summon Skitterbots,,The Root of the Problem
-Act 2,Yeena,Ensnaring Arrow,,The Root of the Problem
-Act 2,Yeena,Plague Bearer,,The Root of the Problem
-Act 2,Yeena,Herald of Agony,,The Root of the Problem
-Act 2,Yeena,Plague Bearer,,The Root of the Problem
-Act 2,Yeena,Brand Recall,,The Root of the Problem
-Act 2,Yeena,Righteous Fire,,The Root of the Problem
-Act 2,Yeena,Blood Rage,,The Root of the Problem
-Act 2,Yeena,Wave of Conviction,,The Root of the Problem
-Act 2,Yeena,Desecrate,,The Root of the Problem
-Act 2,Yeena,Herald of Agony,,The Root of the Problem
-Act 2,Yeena,Cold Snap,,The Root of the Problem
-Act 2,Yeena,Cold Snap,,The Root of the Problem
-Act 2,Yeena,Plague Bearer,,The Root of the Problem
-Act 2,Yeena,Brand Recall,,The Root of the Problem
-Act 2,Yeena,Arctic Armour,,The Root of the Problem
-Act 2,Yeena,Brand Recall,,The Root of the Problem
-Act 2,Yeena,Righteous Fire,,The Root of the Problem
-Act 2,Yeena,Summon Skitterbots,,The Root of the Problem
-Act 2,Yeena,Blood Rage,,The Root of the Problem
-Act 2,Yeena,Tempest Shield,,The Root of the Problem
-Act 2,Yeena,Ensnaring Arrow,,The Root of the Problem
-Act 2,Yeena,Plague Bearer,,The Root of the Problem
-Act 2,Yeena,Plague Bearer,,The Root of the Problem
-Act 2,Yeena,Wave of Conviction,,The Root of the Problem
-Act 2,Yeena,Herald of Purity,,The Root of the Problem
-Act 2,Yeena,Plague Bearer,,The Root of the Problem
-Act 2,Yeena,Wave of Conviction,,The Root of the Problem
-Act 2,Yeena,Herald of Agony,,The Root of the Problem
-Act 2,Yeena,Herald of Purity,,The Root of the Problem
-Act 2,Yeena,Frenzy,,The Root of the Problem
-Act 2,Yeena,Flesh and Stone,,The Root of the Problem
 Act 3,Clarissa,Pride,Duelist,Lost in Love
 Act 3,Clarissa,Anger,Duelist,Lost in Love
 Act 3,Clarissa,Punishment,Duelist,Lost in Love
@@ -3955,316 +3412,9 @@ Act 3,Siosa,Cold Penetration,Witch,A Fixture of Fate
 Act 3,Siosa,Cold to Fire,Witch,A Fixture of Fate
 Act 3,Siosa,Concentrated Effect,Witch,A Fixture of Fate
 Act 3,Siosa,Controlled Destruction,Witch,A Fixture of Fate
-Act 3,Clarissa,Assassin's Mark,,Lost in Love
-Act 3,Clarissa,Enfeeble,,Lost in Love
-Act 3,Clarissa,Elemental Weakness,,Lost in Love
-Act 3,Clarissa,Elemental Weakness,,Lost in Love
-Act 3,Clarissa,Assassin's Mark,,Lost in Love
-Act 3,Clarissa,Enfeeble,,Lost in Love
-Act 3,Clarissa,Assassin's Mark,,Lost in Love
-Act 3,Clarissa,Projectile Weakness,,Lost in Love
-Act 3,Clarissa,Projectile Weakness,,Lost in Love
-Act 3,Clarissa,Dread Banner,,Lost in Love
-Act 3,Clarissa,Despair,,Lost in Love
-Act 3,Clarissa,Convocation,,Lost in Love
-Act 3,Clarissa,Elemental Weakness,,Lost in Love
-Act 3,Clarissa,Projectile Weakness,,Lost in Love
-Act 3,Clarissa,Haste,,Lost in Love
-Act 3,Clarissa,Hatred,,Lost in Love
-Act 3,Clarissa,Grace,,Lost in Love
-Act 3,Clarissa,Grace,,Lost in Love
-Act 3,Clarissa,Conductivity,,Lost in Love
-Act 3,Clarissa,Projectile Weakness,,Lost in Love
-Act 3,Clarissa,Haste,,Lost in Love
-Act 3,Clarissa,Punishment,,Lost in Love
-Act 3,Clarissa,Poacher's Mark,,Lost in Love
-Act 3,Clarissa,Conductivity,,Lost in Love
-Act 3,Clarissa,Poacher's Mark,,Lost in Love
-Act 3,Clarissa,Convocation,,Lost in Love
-Act 3,Clarissa,Anger,,Lost in Love
-Act 3,Clarissa,Assassin's Mark,,Lost in Love
-Act 3,Clarissa,Plague Bearer,,Lost in Love
-Act 3,Clarissa,Grace,,Lost in Love
-Act 3,Clarissa,Grace,,Lost in Love
-Act 3,Clarissa,Purity of Ice,,Lost in Love
-Act 3,Clarissa,Plague Bearer,,Lost in Love
-Act 3,Clarissa,Poacher's Mark,,Lost in Love
-Act 3,Clarissa,Poacher's Mark,,Lost in Love
-Act 3,Clarissa,Discipline,,Lost in Love
-Act 3,Clarissa,Frostbite,,Lost in Love
-Act 3,Clarissa,Punishment,,Lost in Love
-Act 3,Clarissa,Conductivity,,Lost in Love
-Act 3,Clarissa,Purity of Ice,,Lost in Love
-Act 3,Clarissa,Enfeeble,,Lost in Love
-Act 3,Clarissa,Vengeance,,Lost in Love
-Act 3,Clarissa,Vengeance,,Lost in Love
-Act 3,Clarissa,Vitality,,Lost in Love
-Act 3,Clarissa,Plague Bearer,,Lost in Love
-Act 3,Clarissa,Vitality,,Lost in Love
-Act 3,Clarissa,Warlord's Mark,,Lost in Love
-Act 3,Clarissa,Vengeance,,Lost in Love
-Act 3,Clarissa,Dread Banner,,Lost in Love
-Act 3,Clarissa,Temporal Chains,,Lost in Love
-Act 3,Clarissa,Discipline,,Lost in Love
-Act 3,Clarissa,Frostbite,,Lost in Love
-Act 3,Clarissa,Temporal Chains,,Lost in Love
-Act 3,Clarissa,Vengeance,,Lost in Love
-Act 3,Clarissa,Vitality,,Lost in Love
-Act 3,Clarissa,Warlord's Mark,,Lost in Love
-Act 3,Clarissa,Anger,,Lost in Love
-Act 3,Clarissa,Haste,,Lost in Love
-Act 3,Clarissa,Plague Bearer,,Lost in Love
-Act 3,Clarissa,Temporal Chains,,Lost in Love
-Act 3,Clarissa,Determination,,Lost in Love
-Act 3,Clarissa,Vitality,,Lost in Love
-Act 3,Clarissa,Warlord's Mark,,Lost in Love
-Act 3,Clarissa,Convocation,,Lost in Love
-Act 3,Clarissa,Frostbite,,Lost in Love
-Act 3,Clarissa,Determination,,Lost in Love
-Act 3,Clarissa,Determination,,Lost in Love
-Act 3,Clarissa,Discipline,,Lost in Love
-Act 3,Clarissa,Zealotry,,Lost in Love
-Act 3,Clarissa,Purity of Ice,,Lost in Love
-Act 3,Clarissa,Determination,,Lost in Love
-Act 3,Clarissa,Convocation,,Lost in Love
-Act 3,Clarissa,Vulnerability,,Lost in Love
-Act 3,Clarissa,Zealotry,,Lost in Love
-Act 3,Clarissa,Vulnerability,,Lost in Love
-Act 3,Clarissa,Flammability,,Lost in Love
-Act 3,Clarissa,Bane,,Lost in Love
-Act 3,Clarissa,Malevolence,,Lost in Love
-Act 3,Clarissa,Vulnerability,,Lost in Love
-Act 3,Clarissa,Bane,,Lost in Love
-Act 3,Clarissa,Purity of Lightning,,Lost in Love
-Act 3,Clarissa,Flammability,,Lost in Love
-Act 3,Clarissa,Malevolence,,Lost in Love
-Act 3,Clarissa,Warlord's Mark,,Lost in Love
-Act 3,Clarissa,Purity of Lightning,,Lost in Love
-Act 3,Clarissa,Bane,,Lost in Love
-Act 3,Clarissa,Wrath,,Lost in Love
-Act 3,Clarissa,Purity of Fire,,Lost in Love
-Act 3,Clarissa,Malevolence,,Lost in Love
-Act 3,Clarissa,Purity of Fire,,Lost in Love
-Act 3,Clarissa,Purity of Lightning,,Lost in Love
-Act 3,Clarissa,Wrath,,Lost in Love
-Act 3,Clarissa,Zealotry,,Lost in Love
-Act 3,Clarissa,Purity of Fire,,Lost in Love
-Act 3,Clarissa,Elemental Army,,A Fixture of Fate
-Act 3,Clarissa,Energy Leech,,A Fixture of Fate
-Act 3,Clarissa,Cold Penetration,,A Fixture of Fate
-Act 3,Clarissa,Hypothermia,,A Fixture of Fate
-Act 3,Clarissa,Efficacy,,A Fixture of Fate
-Act 3,Clarissa,Faster Projectiles,,A Fixture of Fate
-Act 3,Clarissa,Feeding Frenzy,,A Fixture of Fate
-Act 3,Clarissa,Feeding Frenzy,,A Fixture of Fate
-Act 3,Clarissa,Efficacy,,A Fixture of Fate
-Act 3,Clarissa,Energy Leech,,A Fixture of Fate
-Act 3,Clarissa,Faster Projectiles,,A Fixture of Fate
-Act 3,Clarissa,Faster Projectiles,,A Fixture of Fate
-Act 3,Clarissa,Efficacy,,A Fixture of Fate
-Act 3,Clarissa,Energy Leech,,A Fixture of Fate
-Act 3,Clarissa,Feeding Frenzy,,A Fixture of Fate
-Act 3,Clarissa,Blood Magic,,A Fixture of Fate
-Act 3,Clarissa,Charged Mines,,A Fixture of Fate
-Act 3,Clarissa,Blood Magic,,A Fixture of Fate
-Act 3,Clarissa,Charged Mines,,A Fixture of Fate
-Act 3,Clarissa,Cold Penetration,,A Fixture of Fate
-Act 3,Clarissa,Fire Penetration,,A Fixture of Fate
-Act 3,Clarissa,Blood Magic,,A Fixture of Fate
-Act 3,Clarissa,Charged Mines,,A Fixture of Fate
-Act 3,Clarissa,Charged Mines,,A Fixture of Fate
-Act 3,Clarissa,Feeding Frenzy,,A Fixture of Fate
-Act 3,Clarissa,Increased Duration,,A Fixture of Fate
-Act 3,Clarissa,Intensify,,A Fixture of Fate
-Act 3,Clarissa,High-Impact Mine,,A Fixture of Fate
-Act 3,Clarissa,Burning Damage,,A Fixture of Fate
-Act 3,Clarissa,Increased Duration,,A Fixture of Fate
-Act 3,Clarissa,Generosity,,A Fixture of Fate
-Act 3,Clarissa,Intensify,,A Fixture of Fate
-Act 3,Clarissa,High-Impact Mine,,A Fixture of Fate
-Act 3,Clarissa,Impale,,A Fixture of Fate
-Act 3,Clarissa,Burning Damage,,A Fixture of Fate
-Act 3,Clarissa,Increased Duration,,A Fixture of Fate
-Act 3,Clarissa,Item Rarity,,A Fixture of Fate
-Act 3,Clarissa,Fire Penetration,,A Fixture of Fate
-Act 3,Clarissa,High-Impact Mine,,A Fixture of Fate
-Act 3,Clarissa,High-Impact Mine,,A Fixture of Fate
-Act 3,Clarissa,Impale,,A Fixture of Fate
-Act 3,Clarissa,Burning Damage,,A Fixture of Fate
-Act 3,Clarissa,Increased Duration,,A Fixture of Fate
-Act 3,Clarissa,Item Rarity,,A Fixture of Fate
-Act 3,Clarissa,Meat Shield,,A Fixture of Fate
-Act 3,Clarissa,Poison,,A Fixture of Fate
-Act 3,Clarissa,Charged Traps,,A Fixture of Fate
-Act 3,Clarissa,Generosity,,A Fixture of Fate
-Act 3,Clarissa,Less Duration,,A Fixture of Fate
-Act 3,Clarissa,Inspiration,,A Fixture of Fate
-Act 3,Clarissa,Slower Projectiles,,A Fixture of Fate
-Act 3,Clarissa,Elemental Army,,A Fixture of Fate
-Act 3,Clarissa,Advanced Traps,,A Fixture of Fate
-Act 3,Clarissa,Item Rarity,,A Fixture of Fate
-Act 3,Clarissa,Lightning Penetration,,A Fixture of Fate
-Act 3,Clarissa,Fork,,A Fixture of Fate
-Act 3,Clarissa,Charged Traps,,A Fixture of Fate
-Act 3,Clarissa,Less Duration,,A Fixture of Fate
-Act 3,Clarissa,Inspiration,,A Fixture of Fate
-Act 3,Clarissa,Slower Projectiles,,A Fixture of Fate
-Act 3,Clarissa,Elemental Army,,A Fixture of Fate
-Act 3,Clarissa,Advanced Traps,,A Fixture of Fate
-Act 3,Clarissa,Lightning Penetration,,A Fixture of Fate
-Act 3,Clarissa,Less Duration,,A Fixture of Fate
-Act 3,Clarissa,Inspiration,,A Fixture of Fate
-Act 3,Clarissa,Slower Projectiles,,A Fixture of Fate
-Act 3,Clarissa,Elemental Army,,A Fixture of Fate
-Act 3,Clarissa,Advanced Traps,,A Fixture of Fate
-Act 3,Clarissa,Life Leech,,A Fixture of Fate
-Act 3,Clarissa,Lightning Penetration,,A Fixture of Fate
-Act 3,Clarissa,Swift Affliction,,A Fixture of Fate
-Act 3,Clarissa,Pulverise,,A Fixture of Fate
-Act 3,Clarissa,Swift Affliction,,A Fixture of Fate
-Act 3,Clarissa,Intensify,,A Fixture of Fate
-Act 3,Clarissa,Fork,,A Fixture of Fate
-Act 3,Clarissa,Poison,,A Fixture of Fate
-Act 3,Clarissa,Charged Traps,,A Fixture of Fate
-Act 3,Clarissa,Generosity,,A Fixture of Fate
-Act 3,Clarissa,Mana Leech,,A Fixture of Fate
-Act 3,Clarissa,Innervate,,A Fixture of Fate
-Act 3,Clarissa,Charged Traps,,A Fixture of Fate
-Act 3,Clarissa,Meat Shield,,A Fixture of Fate
-Act 3,Clarissa,Pulverise,,A Fixture of Fate
-Act 3,Clarissa,Poison,,A Fixture of Fate
-Act 3,Clarissa,Innervate,,A Fixture of Fate
-Act 3,Clarissa,Poison,,A Fixture of Fate
-Act 3,Clarissa,Ice Bite,,A Fixture of Fate
-Act 3,Clarissa,Mana Leech,,A Fixture of Fate
-Act 3,Clarissa,Fortify,,A Fixture of Fate
-Act 3,Clarissa,Meat Shield,,A Fixture of Fate
-Act 3,Clarissa,Meat Shield,,A Fixture of Fate
-Act 3,Clarissa,Ancestral Warchief,,Sever the Right Hand
-Act 3,Clarissa,Consecrated Path,,Sever the Right Hand
-Act 3,Clarissa,Divine Ire,,Sever the Right Hand
-Act 3,Clarissa,Dominating Blow,,Sever the Right Hand
-Act 3,Clarissa,Dominating Blow,,Sever the Right Hand
-Act 3,Clarissa,Vortex,,Sever the Right Hand
-Act 3,Clarissa,Consecrated Path,,Sever the Right Hand
-Act 3,Clarissa,Divine Ire,,Sever the Right Hand
-Act 3,Clarissa,Cremation,,Sever the Right Hand
-Act 3,Clarissa,Seismic Trap,,Sever the Right Hand
-Act 3,Clarissa,Glacial Cascade,,Sever the Right Hand
-Act 3,Clarissa,Divine Ire,,Sever the Right Hand
-Act 3,Clarissa,Blast Rain,,Sever the Right Hand
-Act 3,Clarissa,Blade Flurry,,Sever the Right Hand
-Act 3,Clarissa,Cremation,,Sever the Right Hand
-Act 3,Clarissa,Dominating Blow,,Sever the Right Hand
-Act 3,Clarissa,Earthquake,,Sever the Right Hand
-Act 3,Clarissa,Blade Flurry,,Sever the Right Hand
-Act 3,Clarissa,Charged Dash,,Sever the Right Hand
-Act 3,Clarissa,Seismic Trap,,Sever the Right Hand
-Act 3,Clarissa,Glacial Cascade,,Sever the Right Hand
-Act 3,Clarissa,Earthquake,,Sever the Right Hand
-Act 3,Clarissa,Bladestorm,,Sever the Right Hand
-Act 3,Clarissa,Bladestorm,,Sever the Right Hand
-Act 3,Clarissa,Flamethrower Trap,,Sever the Right Hand
-Act 3,Clarissa,Tectonic Slam,,Sever the Right Hand
-Act 3,Clarissa,Tornado Shot,,Sever the Right Hand
-Act 3,Clarissa,Lightning Spire Trap,,Sever the Right Hand
-Act 3,Clarissa,Earthquake,,Sever the Right Hand
-Act 3,Clarissa,Shockwave Totem,,Sever the Right Hand
-Act 3,Clarissa,Soulrend,,Sever the Right Hand
-Act 3,Clarissa,Pestilent Strike,,Sever the Right Hand
-Act 3,Clarissa,Seismic Trap,,Sever the Right Hand
-Act 3,Clarissa,Tornado Shot,,Sever the Right Hand
-Act 3,Clarissa,Bladestorm,,Sever the Right Hand
-Act 3,Clarissa,Blast Rain,,Sever the Right Hand
-Act 3,Clarissa,Tectonic Slam,,Sever the Right Hand
-Act 3,Clarissa,Tornado Shot,,Sever the Right Hand
-Act 3,Clarissa,Cyclone,,Sever the Right Hand
-Act 3,Clarissa,Dark Pact,,Sever the Right Hand
-Act 3,Clarissa,Shockwave Totem,,Sever the Right Hand
-Act 3,Clarissa,Soulrend,,Sever the Right Hand
-Act 3,Clarissa,Lightning Spire Trap,,Sever the Right Hand
-Act 3,Clarissa,Blast Rain,,Sever the Right Hand
-Act 3,Clarissa,Blade Flurry,,Sever the Right Hand
-Act 3,Clarissa,Dark Pact,,Sever the Right Hand
-Act 3,Clarissa,Tectonic Slam,,Sever the Right Hand
-Act 3,Clarissa,Glacial Cascade,,Sever the Right Hand
-Act 3,Clarissa,Dark Pact,,Sever the Right Hand
-Act 3,Clarissa,Soulrend,,Sever the Right Hand
-Act 3,Clarissa,Bladestorm,,Sever the Right Hand
-Act 3,Clarissa,Vortex,,Sever the Right Hand
-Act 3,Clarissa,Seismic Trap,,Sever the Right Hand
-Act 3,Clarissa,Explosive Arrow,,Sever the Right Hand
-Act 3,Clarissa,Pyroclast Mine,,Sever the Right Hand
-Act 3,Clarissa,Flameblast,,Sever the Right Hand
-Act 3,Clarissa,Pestilent Strike,,Sever the Right Hand
-Act 3,Clarissa,Consecrated Path,,Sever the Right Hand
-Act 3,Clarissa,Raise Spectre,,Sever the Right Hand
-Act 3,Clarissa,Scourge Arrow,,Sever the Right Hand
-Act 3,Clarissa,Shock Nova,,Sever the Right Hand
-Act 3,Clarissa,Shockwave Totem,,Sever the Right Hand
-Act 3,Clarissa,Flamethrower Trap,,Sever the Right Hand
-Act 3,Clarissa,Glacial Cascade,,Sever the Right Hand
-Act 3,Clarissa,Cyclone,,Sever the Right Hand
-Act 3,Clarissa,Explosive Arrow,,Sever the Right Hand
-Act 3,Clarissa,Pyroclast Mine,,Sever the Right Hand
-Act 3,Clarissa,Ball Lightning,,Sever the Right Hand
-Act 3,Clarissa,Flamethrower Trap,,Sever the Right Hand
-Act 3,Clarissa,Lightning Spire Trap,,Sever the Right Hand
-Act 3,Clarissa,Dark Pact,,Sever the Right Hand
-Act 3,Clarissa,Ancestral Warchief,,Sever the Right Hand
-Act 3,Clarissa,Flamethrower Trap,,Sever the Right Hand
-Act 3,Clarissa,Ice Crash,,Sever the Right Hand
-Act 3,Clarissa,Raise Spectre,,Sever the Right Hand
-Act 3,Clarissa,Scourge Arrow,,Sever the Right Hand
-Act 3,Clarissa,Shock Nova,,Sever the Right Hand
-Act 3,Clarissa,Shockwave Totem,,Sever the Right Hand
-Act 3,Clarissa,Lightning Spire Trap,,Sever the Right Hand
-Act 3,Clarissa,Blast Rain,,Sever the Right Hand
-Act 3,Clarissa,Pestilent Strike,,Sever the Right Hand
-Act 3,Clarissa,Vortex,,Sever the Right Hand
-Act 3,Clarissa,Consecrated Path,,Sever the Right Hand
-Act 3,Clarissa,Ball Lightning,,Sever the Right Hand
-Act 3,Clarissa,Bladefall,,Sever the Right Hand
-Act 3,Clarissa,Pestilent Strike,,Sever the Right Hand
-Act 3,Clarissa,Armageddon Brand,,Sever the Right Hand
-Act 3,Clarissa,Ball Lightning,,Sever the Right Hand
-Act 3,Clarissa,Explosive Arrow,,Sever the Right Hand
-Act 3,Clarissa,Ice Trap,,Sever the Right Hand
-Act 3,Clarissa,Kinetic Blast,,Sever the Right Hand
-Act 3,Clarissa,Artillery Ballista,,Sever the Right Hand
-Act 3,Clarissa,Armageddon Brand,,Sever the Right Hand
-Act 3,Clarissa,Bladefall,,Sever the Right Hand
-Act 3,Clarissa,Wild Strike,,Sever the Right Hand
-Act 3,Clarissa,Raise Spectre,,Sever the Right Hand
-Act 3,Clarissa,Kinetic Blast,,Sever the Right Hand
-Act 3,Clarissa,Ancestral Warchief,,Sever the Right Hand
-Act 3,Clarissa,Lancing Steel,,Sever the Right Hand
-Act 3,Clarissa,Ball Lightning,,Sever the Right Hand
-Act 3,Clarissa,Shock Nova,,Sever the Right Hand
-Act 3,Clarissa,Flameblast,,Sever the Right Hand
-Act 3,Clarissa,Ice Trap,,Sever the Right Hand
-Act 3,Clarissa,Lancing Steel,,Sever the Right Hand
-Act 3,Clarissa,Explosive Arrow,,Sever the Right Hand
-Act 3,Clarissa,Pyroclast Mine,,Sever the Right Hand
-Act 3,Clarissa,Bladefall,,Sever the Right Hand
-Act 3,Clarissa,Raise Spectre,,Sever the Right Hand
-Act 3,Clarissa,Scourge Arrow,,Sever the Right Hand
-Act 3,Clarissa,Lancing Steel,,Sever the Right Hand
-Act 3,Clarissa,Wild Strike,,Sever the Right Hand
-Act 3,Clarissa,Winter Orb,,Sever the Right Hand
-Act 3,Clarissa,Winter Orb,,Sever the Right Hand
-Act 3,Clarissa,Artillery Ballista,,Sever the Right Hand
-Act 3,Clarissa,Armageddon Brand,,Sever the Right Hand
-Act 3,Clarissa,Ice Trap,,Sever the Right Hand
-Act 3,Clarissa,Winter Orb,,Sever the Right Hand
-Act 3,Clarissa,Kinetic Blast,,Sever the Right Hand
-Act 3,Clarissa,Armageddon Brand,,Sever the Right Hand
-Act 3,Clarissa,Wild Strike,,Sever the Right Hand
-Act 3,Clarissa,Wild Strike,,Sever the Right Hand
-Act 3,Clarissa,Ice Trap,,Sever the Right Hand
 Act 4,Petarus and Vanja,Brutality,Duelist,The Eternal Nightmare
 Act 4,Petarus and Vanja,Withering Touch,Duelist,The Eternal Nightmare
-Act 4,Petarus and Vanja,Barrage,Duelist,The Eternal Nightmare
+Act 4,Petarus and Vanja,Barrage Support,Duelist,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cast On Critical Strike,Duelist,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cast when Damage Taken,Duelist,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cast on Death,Duelist,The Eternal Nightmare
@@ -4288,7 +3438,7 @@ Act 4,Petarus and Vanja,Phase Run,Duelist,Breaking the Seal
 Act 4,Petarus and Vanja,Summon Stone Golem,Duelist,Breaking the Seal
 Act 4,Petarus and Vanja,Summon Ice Golem,Duelist,Breaking the Seal
 Act 4,Petarus and Vanja,Summon Lightning Golem,Duelist,Breaking the Seal
-Act 4,Petarus and Vanja,Barrage,Marauder,The Eternal Nightmare
+Act 4,Petarus and Vanja,Barrage Support,Marauder,The Eternal Nightmare
 Act 4,Petarus and Vanja,Brutality,Marauder,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cast On Critical Strike,Marauder,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cast when Damage Taken,Marauder,The Eternal Nightmare
@@ -4322,7 +3472,7 @@ Act 4,Petarus and Vanja,Cast when Damage Taken,Ranger,The Eternal Nightmare
 Act 4,Petarus and Vanja,Chain,Ranger,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cast when Stunned,Ranger,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cast while Channelling,Ranger,The Eternal Nightmare
-Act 4,Petarus and Vanja,Barrage,Ranger,The Eternal Nightmare
+Act 4,Petarus and Vanja,Barrage Support,Ranger,The Eternal Nightmare
 Act 4,Petarus and Vanja,Vile Toxins,Ranger,The Eternal Nightmare
 Act 4,Petarus and Vanja,Curse On Hit,Ranger,The Eternal Nightmare
 Act 4,Petarus and Vanja,Greater Multiple Projectiles,Ranger,The Eternal Nightmare
@@ -4363,7 +3513,7 @@ Act 4,Petarus and Vanja,Withering Touch,Scion,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cluster Traps,Scion,The Eternal Nightmare
 Act 4,Petarus and Vanja,Unleash,Scion,The Eternal Nightmare
 Act 4,Petarus and Vanja,Immolate,Scion,The Eternal Nightmare
-Act 4,Petarus and Vanja,Barrage,Scion,The Eternal Nightmare
+Act 4,Petarus and Vanja,Barrage Support,Scion,The Eternal Nightmare
 Act 4,Petarus and Vanja,Summon Carrion Golem,Scion,Breaking the Seal
 Act 4,Petarus and Vanja,Immortal Call,Scion,Breaking the Seal
 Act 4,Petarus and Vanja,Phase Run,Scion,Breaking the Seal
@@ -4391,7 +3541,7 @@ Act 4,Petarus and Vanja,Cast on Melee Kill,Shadow,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cast when Stunned,Shadow,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cast while Channelling,Shadow,The Eternal Nightmare
 Act 4,Petarus and Vanja,Chain,Shadow,The Eternal Nightmare
-Act 4,Petarus and Vanja,Barrage,Shadow,The Eternal Nightmare
+Act 4,Petarus and Vanja,Barrage Support,Shadow,The Eternal Nightmare
 Act 4,Petarus and Vanja,Decay,Shadow,The Eternal Nightmare
 Act 4,Petarus and Vanja,Minefield,Shadow,The Eternal Nightmare
 Act 4,Petarus and Vanja,Vile Toxins,Shadow,The Eternal Nightmare
@@ -4418,7 +3568,7 @@ Act 4,Petarus and Vanja,Cast when Stunned,Templar,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cast when Damage Taken,Templar,The Eternal Nightmare
 Act 4,Petarus and Vanja,Chain,Templar,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cast while Channelling,Templar,The Eternal Nightmare
-Act 4,Petarus and Vanja,Barrage,Templar,The Eternal Nightmare
+Act 4,Petarus and Vanja,Barrage Support,Templar,The Eternal Nightmare
 Act 4,Petarus and Vanja,Unleash,Templar,The Eternal Nightmare
 Act 4,Petarus and Vanja,Ignite Proliferation,Templar,The Eternal Nightmare
 Act 4,Petarus and Vanja,Curse On Hit,Templar,The Eternal Nightmare
@@ -4439,7 +3589,7 @@ Act 4,Petarus and Vanja,Cast on Melee Kill,Witch,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cast while Channelling,Witch,The Eternal Nightmare
 Act 4,Petarus and Vanja,Chain,Witch,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cast On Critical Strike,Witch,The Eternal Nightmare
-Act 4,Petarus and Vanja,Barrage,Witch,The Eternal Nightmare
+Act 4,Petarus and Vanja,Barrage Support,Witch,The Eternal Nightmare
 Act 4,Petarus and Vanja,Bonechill,Witch,The Eternal Nightmare
 Act 4,Petarus and Vanja,Cluster Traps,Witch,The Eternal Nightmare
 Act 4,Petarus and Vanja,Decay,Witch,The Eternal Nightmare
@@ -4461,52 +3611,6 @@ Act 4,Petarus and Vanja,Abyssal Cry,Witch,Breaking the Seal
 Act 4,Petarus and Vanja,Summon Lightning Golem,Witch,Breaking the Seal
 Act 4,Petarus and Vanja,Summon Carrion Golem,Witch,Breaking the Seal
 Act 4,Petarus and Vanja,Summon Stone Golem,Witch,Breaking the Seal
-Act 4,Petarus and Vanja,Withering Touch,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Cluster Traps,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Brutality,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Brutality,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Withering Touch,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Bonechill,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Unleash,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Ignite Proliferation,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Immolate,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Minefield,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Vile Toxins,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Unleash,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Ignite Proliferation,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Immolate,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Minefield,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Vile Toxins,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Cluster Traps,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Decay,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Bonechill,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Brutality,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Withering Touch,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Cluster Traps,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Brutality,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Decay,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Ignite Proliferation,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Minefield,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Vile Toxins,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Decay,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Unleash,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Ignite Proliferation,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Immolate,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Minefield,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Vile Toxins,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Decay,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Bonechill,,The Eternal Nightmare
-Act 4,Petarus and Vanja,Phase Run,,Breaking the Seal
-Act 4,Petarus and Vanja,Immortal Call,,Breaking the Seal
-Act 4,Petarus and Vanja,Berserk,,Breaking the Seal
-Act 4,Petarus and Vanja,Immortal Call,,Breaking the Seal
-Act 4,Petarus and Vanja,Phase Run,,Breaking the Seal
-Act 4,Petarus and Vanja,Summon Carrion Golem,,Breaking the Seal
-Act 4,Petarus and Vanja,Berserk,,Breaking the Seal
-Act 4,Petarus and Vanja,Berserk,,Breaking the Seal
-Act 4,Petarus and Vanja,Phase Run,,Breaking the Seal
-Act 4,Petarus and Vanja,Summon Carrion Golem,,Breaking the Seal
-Act 4,Petarus and Vanja,Immortal Call,,Breaking the Seal
 Act 6,Lilly Roth,Abyssal Cry,Duelist,None
 Act 6,Lilly Roth,Ancestral Warchief,Duelist,None
 Act 6,Lilly Roth,Anger,Duelist,None
@@ -4729,7 +3833,7 @@ Act 6,Lilly Roth,Added Lightning Damage,Duelist,None
 Act 6,Lilly Roth,Additional Accuracy,Duelist,None
 Act 6,Lilly Roth,Arcane Surge,Duelist,None
 Act 6,Lilly Roth,Arrow Nova,Duelist,None
-Act 6,Lilly Roth,Barrage,Duelist,None
+Act 6,Lilly Roth,Barrage Support,Duelist,None
 Act 6,Lilly Roth,Blasphemy,Duelist,None
 Act 6,Lilly Roth,Blind,Duelist,None
 Act 6,Lilly Roth,Blood Magic,Duelist,None
@@ -5070,7 +4174,7 @@ Act 6,Lilly Roth,Added Lightning Damage,Marauder,None
 Act 6,Lilly Roth,Additional Accuracy,Marauder,None
 Act 6,Lilly Roth,Arcane Surge,Marauder,None
 Act 6,Lilly Roth,Arrow Nova,Marauder,None
-Act 6,Lilly Roth,Barrage,Marauder,None
+Act 6,Lilly Roth,Barrage Support,Marauder,None
 Act 6,Lilly Roth,Blasphemy,Marauder,None
 Act 6,Lilly Roth,Blind,Marauder,None
 Act 6,Lilly Roth,Blood Magic,Marauder,None
@@ -5411,7 +4515,7 @@ Act 6,Lilly Roth,Added Lightning Damage,Ranger,None
 Act 6,Lilly Roth,Additional Accuracy,Ranger,None
 Act 6,Lilly Roth,Arcane Surge,Ranger,None
 Act 6,Lilly Roth,Arrow Nova,Ranger,None
-Act 6,Lilly Roth,Barrage,Ranger,None
+Act 6,Lilly Roth,Barrage Support,Ranger,None
 Act 6,Lilly Roth,Blasphemy,Ranger,None
 Act 6,Lilly Roth,Blind,Ranger,None
 Act 6,Lilly Roth,Blood Magic,Ranger,None
@@ -5787,7 +4891,7 @@ Act 6,Lilly Roth,Added Lightning Damage,Scion,None
 Act 6,Lilly Roth,Additional Accuracy,Scion,None
 Act 6,Lilly Roth,Arcane Surge,Scion,None
 Act 6,Lilly Roth,Arrow Nova,Scion,None
-Act 6,Lilly Roth,Barrage,Scion,None
+Act 6,Lilly Roth,Barrage Support,Scion,None
 Act 6,Lilly Roth,Blasphemy,Scion,None
 Act 6,Lilly Roth,Blind,Scion,None
 Act 6,Lilly Roth,Blood Magic,Scion,None
@@ -6035,7 +5139,7 @@ Act 6,Lilly Roth,Wrath,Shadow,None
 Act 6,Lilly Roth,Added Chaos Damage,Shadow,None
 Act 6,Lilly Roth,Arcane Surge,Shadow,None
 Act 6,Lilly Roth,Arrow Nova,Shadow,None
-Act 6,Lilly Roth,Barrage,Shadow,None
+Act 6,Lilly Roth,Barrage Support,Shadow,None
 Act 6,Lilly Roth,Blasphemy,Shadow,None
 Act 6,Lilly Roth,Blind,Shadow,None
 Act 6,Lilly Roth,Blood Magic,Shadow,None
@@ -6381,7 +5485,7 @@ Act 6,Lilly Roth,Added Chaos Damage,Templar,None
 Act 6,Lilly Roth,Additional Accuracy,Templar,None
 Act 6,Lilly Roth,Arcane Surge,Templar,None
 Act 6,Lilly Roth,Arrow Nova,Templar,None
-Act 6,Lilly Roth,Barrage,Templar,None
+Act 6,Lilly Roth,Barrage Support,Templar,None
 Act 6,Lilly Roth,Blasphemy,Templar,None
 Act 6,Lilly Roth,Blind,Templar,None
 Act 6,Lilly Roth,Blood Magic,Templar,None
@@ -6805,7 +5909,7 @@ Act 6,Lilly Roth,Minion Damage,Witch,None
 Act 6,Lilly Roth,Minion Life,Witch,None
 Act 6,Lilly Roth,Arcane Surge,Witch,None
 Act 6,Lilly Roth,Arrow Nova,Witch,None
-Act 6,Lilly Roth,Barrage,Witch,None
+Act 6,Lilly Roth,Barrage Support,Witch,None
 Act 6,Lilly Roth,Blasphemy,Witch,None
 Act 6,Lilly Roth,Innervate,Witch,None
 Act 6,Lilly Roth,Volley,Witch,None

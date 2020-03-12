@@ -8,13 +8,11 @@ const Footer = () => {
                     <a href="/passives">Leveling Guide</a>
                     <a href="/syndicate">Syndicate Cheatsheet</a>
                     <a href="/fossils">Fossil Locations</a>
+                    <a href="/blight">Blight Towers</a>
                 </div>
                 <span class={style.title}>poesyn.xyz</span>
-                <span class={style.questions}>Placeholder</span>
+                <span class={style.questions}></span>
             </div>
-            {/* <div class={style.gggAttrib}>
-                <span>All <a href="https://www.pathofexile.com/">Path of Exile</a> related images and artwork used on this site are the property of <a href="http://www.grindinggear.com/">Grinding Gear Games </a></span>
-            </div> */}
         </div>
 	);
 }

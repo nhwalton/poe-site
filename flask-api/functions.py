@@ -129,7 +129,7 @@ def get_gem_info(cur, gem, class_name):
         if row[0] < earliest[0]:
             print(row[0], earliest[0])
             earliest = row
-
+            
     if earliest != None:
         print(earliest)
         gem_details = {

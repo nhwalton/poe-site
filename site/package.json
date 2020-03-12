@@ -36,6 +36,7 @@
     "preact-cli-plugin-fast-async": "^1.0.1",
     "preact-material-components": "^1.4.3",
     "preact-render-to-string": "^5.1.4",
-    "preact-router": "^3.2.1"
+    "preact-router": "^3.2.1",
+    "react-select": "^3.0.8"
   }
 }

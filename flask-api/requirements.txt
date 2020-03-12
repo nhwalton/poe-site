@@ -4,3 +4,4 @@ pandas==1.0.1
 defusedxml==0.6.0
 requests==2.23.0
 expiringdict==1.2.0
+waitress==1.4.3

@@ -115,6 +115,7 @@ label, input, button {
     margin-right:-10px;
     width:100%;
     margin-bottom:20px;
+    align-items:center;
 }
 
 .itemDetails {
@@ -174,7 +175,9 @@ label, input, button {
     border: 0px solid var(--input-border);
     background: var(--input-background);
     transition: border 0.3s ease;
+    margin:0;
 }
+
 .formField::placeholder {
     color: var(--input-placeholder);
 }
@@ -190,11 +193,18 @@ label, input, button {
     text-transform: uppercase;
 }
 
+.formGroup.gemGroup {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
+}
+
+
 .formGroup .formField {
     position: relative;
     z-index: 1;
     flex: 1 1 auto;
-    width: 1%;
+    width: 100%;
     margin-top: 0;
     margin-bottom: 0;
 }
