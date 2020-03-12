@@ -15,8 +15,8 @@ const UpgradedTower = ({ towerDetails }) => {
 					src={'../../assets/towers/' + towerDetails.name + '.png'}
 					/>
 				<div class={style.tower}>
-					<span class={`chip ${towerDetails.damageColor}`}>{towerDetails.damage}</span>
-					<span class="chip purple">{towerDetails.action}</span>
+					<span class={`pill ${towerDetails.damageColor}`}>{towerDetails.damage}</span>
+					<span class="pill purple">{towerDetails.action}</span>
 					{/* <span class="chip blue">{towerDetails.baseRadius}</span> */}
 				</div>
 			</div>
@@ -26,27 +26,27 @@ const UpgradedTower = ({ towerDetails }) => {
 
 const TowerCard = ({ data }) => {
     return (
-      <Card class={style.towerCard}>
-        <h2>{data.name}</h2>
+      <Card class={style.towerCard} style={`border-color:${data.borderColor}`}>
+        <h1>{data.name}</h1>
 		<div class={style.towerContainer}>
 			<img 
 				class={style.tower}
                 src={'../../assets/towers/' + data.name + '.png'}
                 />
 			<div class={style.tower}>
-				<span class={`chip ${data.damageColor}`}>{data.damage}</span>
-				<span class="chip purple">{data.action}</span>
-				<span class="chip blue">Upgrade to {data.recommendedTier}</span>
-				<span class="chip cyan">Place {data.recommendedPlacement}</span>
+				<span class={`pill ${data.damageColor}`}>{data.damage}</span>
+				<span class="pill purple">{data.action}</span>
+				<span class="pill blue">Upgrade to {data.recommendedTier}</span>
+				<span class="pill cyan">Place {data.recommendedPlacement}</span>
 			</div>
 		</div>
-		{/* <p><b>Recommended Tier:</b> {data.recommendedTier}</p> */}
-		{/* <p><b>Recommended Placement:</b> {data.recommendedPlacement}</p> */}
-		<h3>Tier IV Upgrades</h3>
+		<hr></hr>
+		<h2>Tier IV Upgrades</h2>
         {data.upgrades.map(towerDetails => (
           <UpgradedTower towerDetails={towerDetails} />
         ))}
-		<h3>Notes</h3>
+		<hr></hr>
+		<h2>Notes</h2>
 		<span>{data.notes}</span>
       </Card>
     );

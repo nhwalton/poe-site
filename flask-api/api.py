@@ -12,7 +12,7 @@ from expiringdict import ExpiringDict
 from flask import jsonify, request, send_file
 from flask_cors import CORS, cross_origin
 
-from functions import return_info
+from functions import return_info, get_gem_info
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
@@ -45,6 +45,24 @@ def home():
 # 		return send_file("/" + passives_path)
 # 	except Exception as e:
 # 		return str(e)
+
+@app.route('/api/singleGem', methods=['GET'])
+@cross_origin()
+def singleGem():
+    if 'gemName' in request.args and 'className' in request.args:
+        gemName = request.args['gemName']
+        class_name = request.args['className']
+        gem = {}
+        gem['name'] = gemName
+        gem['level'] = 'N/A'
+        conn = sqlite3.connect(memory_uri)
+        cur = conn.cursor()
+
+        gem_details = get_gem_info(cur=cur, gem=gem, class_name = class_name)
+
+        return(gem_details)
+
+
 
 @app.route('/api/gems', methods=['GET'])
 @cross_origin()
@@ -88,58 +106,15 @@ def gems():
         else:
             for gem in gems:
 
-                gem_name = gem['name']
-                gem_level = gem['level']
+                gem_details = get_gem_info(cur=cur, gem=gem, class_name=class_name)
 
-                vaal_regex = r"(?:Vaal\s)(.*)"
-                vaal_match = re.findall(vaal_regex, gem_name)
-                awakened_regex = r"(?:Awakened\s)(.*)"
-                awakened_match = re.findall(awakened_regex, gem_name)
-                if vaal_match:
-                    gem_name = vaal_match[0]
-                elif awakened_match:
-                    gem_name = awakened_match[0]
-
-                call = """ SELECT * 
-                            FROM gems
-                            WHERE class_name = "{}"
-                            AND gem = "{}"
-                        """.format(class_name, gem_name)
-
-                cur.execute(call)
-
-                rows = cur.fetchall()
-                # print(gem_name, gem_level)
-
-                earliest = None
-
-                for row in rows:
-                    if row == []:
-                        continue
-                    elif earliest == None:
-                        earliest = row
-                    if row[0] < earliest[0]:
-                        print(row[0], earliest[0])
-                        earliest = row
-
-                if earliest == None:
-                    continue
-                else:
-                    print(earliest)
-                    gem_details = {
-                        "act":earliest[0],
-                        "vendor":earliest[1],
-                        "gem_name":earliest[2],
-                        "mission":earliest[4],
-                        "level":gem_level
-                        }
-
-                for each in data:
-                    if each['act'] == gem_details['act']:
-                        each['gems'].append(gem_details)
-                        break
-                    else:
-                        continue
+                if gem_details != {}:
+                    for each in data:
+                        if each['act'] == gem_details['act']:
+                            each['gems'].append(gem_details)
+                            break
+                        else:
+                            continue
     
     return (jsonify(data))
 

@@ -45,14 +45,16 @@ label, input, button {
 #acts {
     float:left;
     display:grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     margin-right:-10px;
     grid-gap:20px;
     width:100%;
 }
 
 .actCard {
-    padding:0 30px;
+    padding:20px;
+    border: 8px solid #444;
+    width:100%;
 }
 
 @media only screen and (max-width: 1100px) {

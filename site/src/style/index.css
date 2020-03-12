@@ -34,7 +34,21 @@ body {
 }
 
 h1 {
-	font-family: 'unineue-heavyitalic', 'Helvetica Neue', arial, sans-serif;
+  font-family: 'unineue-heavyitalic', 'Helvetica Neue', arial, sans-serif;
+  text-align:center;
+  margin:10px auto 20px
+}
+
+h2 {
+  text-align:center;
+}
+
+hr {
+  width:100%;
+  background: linear-gradient(90deg, transparent, #343434, transparent);
+  border: none;
+  height:2px;
+  margin-top:10px;
 }
 
 /* fallback */
@@ -223,9 +237,7 @@ h1 {
 }
 
 .chip.blue {
-  /* background: #314F6F */
   background: #2b4f90;
-  ;
 }
 
 .chip.red {
@@ -240,7 +252,6 @@ h1 {
   background: #b78f1e;
 }
 
-
 .chip.green {
   background: #4B8F39;
 }
@@ -251,4 +262,43 @@ h1 {
 
 .chip.cyan {
   background: #4195a3;
+}
+
+.pill {
+  background: #555;
+  border-left: 8px solid #333;
+  display: block;
+  padding: 3px 12px;
+  border-radius: .2rem;
+  font-size: .8em;
+  margin:5px;
+  box-shadow:0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.pill.blue {
+  border-left: 8px solid #2b4f90;
+}
+
+.pill.red {
+  border-left: 8px solid #A3414D;
+}
+
+.pill.orange {
+  border-left: 8px solid #c96036;
+}
+
+.pill.yellow {
+  border-left: 8px solid #b78f1e;
+}
+
+.pill.green {
+  border-left: 8px solid #4B8F39;
+}
+
+.pill.purple {
+  border-left: 8px solid #7e398f;
+}
+
+.pill.cyan {
+  border-left: 8px solid #4195a3;
 }
