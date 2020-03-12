@@ -145,6 +145,15 @@ hr {
   align-items:center;
 }
 
+.titleWrapper > h1 {
+  grid-column-start: 2;
+}
+
+.titleWrapper > div {
+  margin-left:auto;
+  padding-left:60px;
+}
+
 @media only screen and (max-width: 1400px) {
 	.titleWrapper {
     display:block;
@@ -157,6 +166,8 @@ hr {
   
   .titleWrapper > div {
     margin:0 auto;
+    max-width:600px;
+    padding-left:0;
   }
 }
 
@@ -175,14 +186,6 @@ hr {
     margin:30px 0;
   }
 
-}
-
-.titleWrapper > h1 {
-  grid-column-start: 2;
-}
-
-.titleWrapper > div {
-  margin-left:auto;
 }
 
 .mdc-drawer .mdc-list-item--activated {
@@ -266,7 +269,7 @@ hr {
 
 .pill {
   background: #555;
-  border-left: 8px solid #333;
+  border-left: 6px solid #333;
   display: block;
   padding: 3px 12px;
   border-radius: .2rem;
@@ -276,29 +279,29 @@ hr {
 }
 
 .pill.blue {
-  border-left: 8px solid #2b4f90;
+  border-left-color:#2b4f90;
 }
 
 .pill.red {
-  border-left: 8px solid #A3414D;
+  border-left-color:#A3414D;
 }
 
 .pill.orange {
-  border-left: 8px solid #c96036;
+  border-left-color:#c96036;
 }
 
 .pill.yellow {
-  border-left: 8px solid #b78f1e;
+  border-left-color:#b78f1e;
 }
 
 .pill.green {
-  border-left: 8px solid #4B8F39;
+  border-left-color:#4B8F39;
 }
 
 .pill.purple {
-  border-left: 8px solid #7e398f;
+  border-left-color:#7e398f;
 }
 
 .pill.cyan {
-  border-left: 8px solid #4195a3;
+  border-left-color:#4195a3;
 }

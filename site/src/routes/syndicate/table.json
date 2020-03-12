@@ -120,7 +120,7 @@
             "title":"#aisling-transportation",
             "image":"poe_syndicate_20",
             "class":"gray",
-            "text":"Veiled Weapon"
+            "text":"Veiled Weapon & Jewellery"
         },
         {
             "title":"#cameria-transportation",
@@ -230,7 +230,7 @@
             "title":"#aisling-fortification",
             "image":"poe_syndicate_38",
             "class":"gray",
-            "text":"Veiled Armour"
+            "text":"Veiled Armour & Jewellery"
         },
         {
             "title":"#cameria-fortification",
@@ -448,9 +448,9 @@
         },
         {
             "title":"#aisling-intervention",
-            "image":"poe_syndicate_74",
+            "image":"",
             "class":"gray",
-            "text":"Veiled Jewellery"
+            "text":"Metamorph Scarab"
         },
         {
             "title":"#cameria-intervention",

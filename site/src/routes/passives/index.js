@@ -1,9 +1,6 @@
 import Preact, { h, Component } from 'preact';
 import { useState, useEffect, useCallback } from 'preact/hooks';
 
-import analytics from '../../components/analytics';
-// import Select from 'react-select';
-
 import Button from 'preact-material-components/Button';
 import Card from 'preact-material-components/Card';
 import 'preact-material-components/TextField/style.css';
@@ -19,7 +16,7 @@ const Quests = ({ quest }) => {
         <div class={style.singleItem}>
             {quest.name}
             <div class={style.itemDetails}>
-               <span class="chip blue">{quest.skillPoints}</span>
+               <span class="pill blue">{quest.skillPoints}</span>
             </div>
         </div>
     );
@@ -31,9 +28,9 @@ const Trials = ({ trial }) => {
       <div class={style.singleItem}>
         {trial.name}
         <div class={style.itemDetails}>
-            <span class="chip blue">Level {trial.level}</span>
-            <span class="chip red">{trial.lab}</span>
-            <span class="chip green">{trial.trap}</span>
+            <span class="pill blue">Level {trial.level}</span>
+            <span class="pill red">{trial.lab}</span>
+            <span class="pill green">{trial.trap}</span>
         </div>
       </div>
     );
@@ -42,8 +39,8 @@ const Trials = ({ trial }) => {
       <div class={style.singleItem}>
         {trial.name}
         <div class={style.itemDetails}>
-            <span class="chip red">{trial.lab}</span>
-            <span class="chip green">{trial.trap}</span>
+            <span class="pill red">{trial.lab}</span>
+            <span class="pill green">{trial.trap}</span>
         </div>
       </div>
     );
@@ -58,10 +55,10 @@ const Gems = ({ gemDetails }) => {
                 style="max-width:100%;"
                 />
             <div class={style.itemDetails}>
-              <span class="chip blue">{gemDetails.gem_name}</span>
-              <span class="chip red">Level to {gemDetails.level}</span>
-              <span class="chip orange">{gemDetails.mission}</span>
-              <span class="chip green">{gemDetails.vendor}</span>
+              <span class="pill blue">{gemDetails.gem_name}</span>
+              <span class="pill red">Level to {gemDetails.level}</span>
+              <span class="pill orange">{gemDetails.mission}</span>
+              <span class="pill green">{gemDetails.vendor}</span>
             </div>
         </div>
     );
@@ -205,20 +202,10 @@ const Passives = () => {
     return await response.json();
   }
 
-  function suggest (query, syncResults) {
-    var results = gemNamesArr
-    syncResults(query
-      ? results.filter(function (result) {
-          return result.toLowerCase().indexOf(query.toLowerCase()) !== -1
-        })
-      : []
-    )
-  }
-
   return(
       <div class={`${style.passives} page`}>
           <div class="titleWrapper">
-            <h1>Passive and Trial Locations</h1>
+            <h1>Leveling Guide</h1>
             <div class={style.inputWrapper}>
               <div id={style.pobInput}>
                   <div class={style.formGroup}>
@@ -235,7 +222,7 @@ const Passives = () => {
                   <Button class={style.buildButton} raised ripple onClick={() => resetPassives()}>Reset</Button>
               </div>
               <div id={style.pobInput}>
-                  <div class={style.formGroup}>
+                  <div class={` ${style.formGroup} ${style.gemGroup} `}>
                       <select
                         id="gemName"
                         class={style.formField}
@@ -248,8 +235,7 @@ const Passives = () => {
                             <option value={gemName}>{gemName}</option>
                             )
                           )};
-                          </select>
-                      <div id="test"></div>
+                      </select>
                       <select
                         id="gemClass"
                         class={style.formField}
@@ -257,15 +243,15 @@ const Passives = () => {
                         placeholder="Class"
                         onChange={e => onGemClass(e)}
                         value={singleGemClass}
-                      >
-                        {classNamesArr.map(className => (
+                        >
+                          {classNamesArr.map(className => (
                             <option value={className}>{className}</option>
                             )
                           )};
                       </select>
                   </div>
                   <Button class={style.buildButton} raised ripple onClick={() => handleGem()}>Add Gem</Button>
-                  {/* <Autocomplete id='gemClass' source={gemNamesArr} /> */}
+                  {/* <Button class={style.buildButton} raised ripple onClick={() => resetPassives()}>Reset</Button> */}
               </div>
             </div>
           </div>

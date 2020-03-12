@@ -11,11 +11,12 @@ import requests
 from expiringdict import ExpiringDict
 from flask import jsonify, request, send_file
 from flask_cors import CORS, cross_origin
+from waitress import serve
 
 from functions import return_info, get_gem_info
 
 app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+# app.config["DEBUG"] = True
 
 gem_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'gem_availability.csv')
 passives_path = path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'passives_with_gems.json')
@@ -153,4 +154,7 @@ def scarabs():
         scarab_cache['scarabs'] = scarabs
     return(jsonify(scarabs))
 
-CORS(app.run(host="0.0.0.0",port=6000))
+if __name__ == "__main__":
+    CORS(serve(app, listen='*:6000'))
+
+# CORS(app.run(host="0.0.0.0",port=6000))
