@@ -1,9 +1,8 @@
 import { h, Component, createRef } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
 
-import analytics from '../../components/analytics'
+import analytics from '../../components/analytics';
 
-import Card from 'preact-material-components/Card';
 import Button from 'preact-material-components/Button';
 import 'preact-material-components/Card/style.css';
 import 'preact-material-components/Button/style.css';
@@ -12,22 +11,16 @@ import defaultJson from './table.json';
 import useIfMounted from '../../components/ifMounted';
 
 const RowCell = (props) => {
-	// console.log(props.scarabs)
 	let cellTitle = props.cellData.title
 	let localClass = localStorage.getItem("syn-".concat(cellTitle))
 	let scarabs = props.scarabs
-	// console.log(scarabs)
 	let useName;
 
 	if (localClass != null) {
-		// console.log(cellTitle, localClass)
 		useName = localClass
 	} else if (scarabs != '' && props.cellData.class == "scarab") {
-		// console.log(props.cellData.text)
 		let index = scarabs.findIndex(element => element.name == props.cellData.text)
-		// console.log(index)
 		useName = scarabs[index].color
-		// console.log(useName)
 	} else {
 		useName = props.cellData.class
 	}

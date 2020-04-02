@@ -1,7 +1,7 @@
 import { Component } from 'preact';
 import { Router } from 'preact-router';
 
-import analytics from './analytics'
+import analytics from './analytics';
 
 import Header from './header';
 import Footer from './footer';

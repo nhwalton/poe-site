@@ -152,7 +152,6 @@ const Passives = () => {
   }, [localBuildResponse]);
 
   const handlePOB = useCallback(async () => {
-      console.log(666)
       const newResponse = await fetchBuildPassives(build);
       if (typeof newResponse == "string") {
         alert(newResponse)
@@ -183,7 +182,8 @@ const Passives = () => {
   }
 
   const resetPassives = () => {
-    setResponse(defaultResponse);
+    const resetResponse = JSON.parse(JSON.stringify(defaultResponse))
+    setResponse(resetResponse);
     localStorage.setItem("build", "");
   }
 
@@ -226,27 +226,27 @@ const Passives = () => {
                       <select
                         id="gemName"
                         class={style.formField}
-                        type="text"
-                        placeholder="Gem Name"
                         onChange={e => onGemName(e)}
-                        value={singleGemName}
                         >
+                          <option value="none" selected disabled hidden> 
+                            Gem Name
+                          </option>
                           {gemNamesArr.map(gemName => (
                             <option value={gemName}>{gemName}</option>
-                            )
+                          )
                           )};
                       </select>
                       <select
                         id="gemClass"
                         class={style.formField}
-                        type="text"
-                        placeholder="Class"
                         onChange={e => onGemClass(e)}
-                        value={singleGemClass}
                         >
+                          <option value="none" selected disabled hidden> 
+                            Class
+                          </option>
                           {classNamesArr.map(className => (
                             <option value={className}>{className}</option>
-                            )
+                          )
                           )};
                       </select>
                   </div>

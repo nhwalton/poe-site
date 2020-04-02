@@ -5998,269 +5998,318 @@ Act 6,Lilly Roth,Elemental Proliferation,Witch,None
 Act 6,Lilly Roth,Cast On Critical Strike,Witch,None
 Act 6,Lilly Roth,Withering Touch,Witch,None
 Act 6,Lilly Roth,Charged Mines,Witch,None
-Drop,Drop Only,Empower,Duelist,
-Drop,Drop Only,Empower,Marauder,
-Drop,Drop Only,Empower,Ranger,
-Drop,Drop Only,Empower,Scion,
-Drop,Drop Only,Empower,Shadow,
-Drop,Drop Only,Empower,Templar,
-Drop,Drop Only,Empower,Witch,
-Drop,Drop Only,Enhance,Duelist,
-Drop,Drop Only,Enhance,Marauder,
-Drop,Drop Only,Enhance,Ranger,
-Drop,Drop Only,Enhance,Scion,
-Drop,Drop Only,Enhance,Shadow,
-Drop,Drop Only,Enhance,Templar,
-Drop,Drop Only,Enhance,Witch,
-Drop,Drop Only,Enlighten,Duelist,
-Drop,Drop Only,Enlighten,Marauder,
-Drop,Drop Only,Enlighten,Ranger,
-Drop,Drop Only,Enlighten,Scion,
-Drop,Drop Only,Enlighten,Shadow,
-Drop,Drop Only,Enlighten,Templar,
-Drop,Drop Only,Enlighten,Witch,
-Drop,Drop Only,Portal,Duelist,
-Drop,Drop Only,Portal,Marauder,
-Drop,Drop Only,Portal,Ranger,
-Drop,Drop Only,Portal,Scion,
-Drop,Drop Only,Portal,Shadow,
-Drop,Drop Only,Portal,Templar,
-Drop,Drop Only,Portal,Witch,
-Drop,Vaal Side Area,Vaal Blade Vortex,Duelist,
-Drop,Vaal Side Area,Vaal Burning Arrow,Duelist,
-Drop,Vaal Side Area,Vaal Cyclone,Duelist,
-Drop,Vaal Side Area,Vaal Detonate Dead,Duelist,
-Drop,Vaal Side Area,Vaal Double Strike,Duelist,
-Drop,Vaal Side Area,Vaal Grace,Duelist,
-Drop,Vaal Side Area,Vaal Haste,Duelist,
-Drop,Vaal Side Area,Vaal Impurity of Ice,Duelist,
-Drop,Vaal Side Area,Vaal Lightning Strike,Duelist,
-Drop,Vaal Side Area,Vaal Rain of Arrows,Duelist,
-Drop,Vaal Side Area,Vaal Reave,Duelist,
-Drop,Vaal Side Area,Vaal Spectral Throw,Duelist,
-Drop,Vaal Side Area,Vaal Ancestral Warchief,Duelist,
-Drop,Vaal Side Area,Vaal Earthquake,Duelist,
-Drop,Vaal Side Area,Vaal Glacial Hammer,Duelist,
-Drop,Vaal Side Area,Vaal Ground Slam,Duelist,
-Drop,Vaal Side Area,Vaal Impurity of Fire,Duelist,
-Drop,Vaal Side Area,Vaal Molten Shell,Duelist,
-Drop,Vaal Side Area,Vaal Arc,Duelist,
-Drop,Vaal Side Area,Vaal Blight,Duelist,
-Drop,Vaal Side Area,Vaal Clarity,Duelist,
-Drop,Vaal Side Area,Vaal Cold Snap,Duelist,
-Drop,Vaal Side Area,Vaal Discipline,Duelist,
-Drop,Vaal Side Area,Vaal Fireball,Duelist,
-Drop,Vaal Side Area,Vaal Flameblast,Duelist,
-Drop,Vaal Side Area,Vaal Ice Nova,Duelist,
-Drop,Vaal Side Area,Vaal Impurity of Lightning,Duelist,
-Drop,Vaal Side Area,Vaal Lightning Trap,Duelist,
-Drop,Vaal Side Area,Vaal Power Siphon,Duelist,
-Drop,Vaal Side Area,Vaal Righteous Fire,Duelist,
-Drop,Vaal Side Area,Vaal Spark,Duelist,
-Drop,Vaal Side Area,Vaal Storm Call,Duelist,
-Drop,Vaal Side Area,Vaal Summon Skeletons,Duelist,
-Drop,Vaal Side Area,Vaal Breach,Duelist,
-Drop,Vaal Side Area,Vaal Blade Vortex,Marauder,
-Drop,Vaal Side Area,Vaal Burning Arrow,Marauder,
-Drop,Vaal Side Area,Vaal Cyclone,Marauder,
-Drop,Vaal Side Area,Vaal Detonate Dead,Marauder,
-Drop,Vaal Side Area,Vaal Double Strike,Marauder,
-Drop,Vaal Side Area,Vaal Grace,Marauder,
-Drop,Vaal Side Area,Vaal Haste,Marauder,
-Drop,Vaal Side Area,Vaal Impurity of Ice,Marauder,
-Drop,Vaal Side Area,Vaal Lightning Strike,Marauder,
-Drop,Vaal Side Area,Vaal Rain of Arrows,Marauder,
-Drop,Vaal Side Area,Vaal Reave,Marauder,
-Drop,Vaal Side Area,Vaal Spectral Throw,Marauder,
-Drop,Vaal Side Area,Vaal Ancestral Warchief,Marauder,
-Drop,Vaal Side Area,Vaal Earthquake,Marauder,
-Drop,Vaal Side Area,Vaal Glacial Hammer,Marauder,
-Drop,Vaal Side Area,Vaal Ground Slam,Marauder,
-Drop,Vaal Side Area,Vaal Impurity of Fire,Marauder,
-Drop,Vaal Side Area,Vaal Molten Shell,Marauder,
-Drop,Vaal Side Area,Vaal Arc,Marauder,
-Drop,Vaal Side Area,Vaal Blight,Marauder,
-Drop,Vaal Side Area,Vaal Clarity,Marauder,
-Drop,Vaal Side Area,Vaal Cold Snap,Marauder,
-Drop,Vaal Side Area,Vaal Discipline,Marauder,
-Drop,Vaal Side Area,Vaal Fireball,Marauder,
-Drop,Vaal Side Area,Vaal Flameblast,Marauder,
-Drop,Vaal Side Area,Vaal Ice Nova,Marauder,
-Drop,Vaal Side Area,Vaal Impurity of Lightning,Marauder,
-Drop,Vaal Side Area,Vaal Lightning Trap,Marauder,
-Drop,Vaal Side Area,Vaal Power Siphon,Marauder,
-Drop,Vaal Side Area,Vaal Righteous Fire,Marauder,
-Drop,Vaal Side Area,Vaal Spark,Marauder,
-Drop,Vaal Side Area,Vaal Storm Call,Marauder,
-Drop,Vaal Side Area,Vaal Summon Skeletons,Marauder,
-Drop,Vaal Side Area,Vaal Breach,Marauder,
-Drop,Vaal Side Area,Vaal Blade Vortex,Ranger,
-Drop,Vaal Side Area,Vaal Burning Arrow,Ranger,
-Drop,Vaal Side Area,Vaal Cyclone,Ranger,
-Drop,Vaal Side Area,Vaal Detonate Dead,Ranger,
-Drop,Vaal Side Area,Vaal Double Strike,Ranger,
-Drop,Vaal Side Area,Vaal Grace,Ranger,
-Drop,Vaal Side Area,Vaal Haste,Ranger,
-Drop,Vaal Side Area,Vaal Impurity of Ice,Ranger,
-Drop,Vaal Side Area,Vaal Lightning Strike,Ranger,
-Drop,Vaal Side Area,Vaal Rain of Arrows,Ranger,
-Drop,Vaal Side Area,Vaal Reave,Ranger,
-Drop,Vaal Side Area,Vaal Spectral Throw,Ranger,
-Drop,Vaal Side Area,Vaal Ancestral Warchief,Ranger,
-Drop,Vaal Side Area,Vaal Earthquake,Ranger,
-Drop,Vaal Side Area,Vaal Glacial Hammer,Ranger,
-Drop,Vaal Side Area,Vaal Ground Slam,Ranger,
-Drop,Vaal Side Area,Vaal Impurity of Fire,Ranger,
-Drop,Vaal Side Area,Vaal Molten Shell,Ranger,
-Drop,Vaal Side Area,Vaal Arc,Ranger,
-Drop,Vaal Side Area,Vaal Blight,Ranger,
-Drop,Vaal Side Area,Vaal Clarity,Ranger,
-Drop,Vaal Side Area,Vaal Cold Snap,Ranger,
-Drop,Vaal Side Area,Vaal Discipline,Ranger,
-Drop,Vaal Side Area,Vaal Fireball,Ranger,
-Drop,Vaal Side Area,Vaal Flameblast,Ranger,
-Drop,Vaal Side Area,Vaal Ice Nova,Ranger,
-Drop,Vaal Side Area,Vaal Impurity of Lightning,Ranger,
-Drop,Vaal Side Area,Vaal Lightning Trap,Ranger,
-Drop,Vaal Side Area,Vaal Power Siphon,Ranger,
-Drop,Vaal Side Area,Vaal Righteous Fire,Ranger,
-Drop,Vaal Side Area,Vaal Spark,Ranger,
-Drop,Vaal Side Area,Vaal Storm Call,Ranger,
-Drop,Vaal Side Area,Vaal Summon Skeletons,Ranger,
-Drop,Vaal Side Area,Vaal Breach,Ranger,
-Drop,Vaal Side Area,Vaal Blade Vortex,Scion,
-Drop,Vaal Side Area,Vaal Burning Arrow,Scion,
-Drop,Vaal Side Area,Vaal Cyclone,Scion,
-Drop,Vaal Side Area,Vaal Detonate Dead,Scion,
-Drop,Vaal Side Area,Vaal Double Strike,Scion,
-Drop,Vaal Side Area,Vaal Grace,Scion,
-Drop,Vaal Side Area,Vaal Haste,Scion,
-Drop,Vaal Side Area,Vaal Impurity of Ice,Scion,
-Drop,Vaal Side Area,Vaal Lightning Strike,Scion,
-Drop,Vaal Side Area,Vaal Rain of Arrows,Scion,
-Drop,Vaal Side Area,Vaal Reave,Scion,
-Drop,Vaal Side Area,Vaal Spectral Throw,Scion,
-Drop,Vaal Side Area,Vaal Ancestral Warchief,Scion,
-Drop,Vaal Side Area,Vaal Earthquake,Scion,
-Drop,Vaal Side Area,Vaal Glacial Hammer,Scion,
-Drop,Vaal Side Area,Vaal Ground Slam,Scion,
-Drop,Vaal Side Area,Vaal Impurity of Fire,Scion,
-Drop,Vaal Side Area,Vaal Molten Shell,Scion,
-Drop,Vaal Side Area,Vaal Arc,Scion,
-Drop,Vaal Side Area,Vaal Blight,Scion,
-Drop,Vaal Side Area,Vaal Clarity,Scion,
-Drop,Vaal Side Area,Vaal Cold Snap,Scion,
-Drop,Vaal Side Area,Vaal Discipline,Scion,
-Drop,Vaal Side Area,Vaal Fireball,Scion,
-Drop,Vaal Side Area,Vaal Flameblast,Scion,
-Drop,Vaal Side Area,Vaal Ice Nova,Scion,
-Drop,Vaal Side Area,Vaal Impurity of Lightning,Scion,
-Drop,Vaal Side Area,Vaal Lightning Trap,Scion,
-Drop,Vaal Side Area,Vaal Power Siphon,Scion,
-Drop,Vaal Side Area,Vaal Righteous Fire,Scion,
-Drop,Vaal Side Area,Vaal Spark,Scion,
-Drop,Vaal Side Area,Vaal Storm Call,Scion,
-Drop,Vaal Side Area,Vaal Summon Skeletons,Scion,
-Drop,Vaal Side Area,Vaal Breach,Scion,
-Drop,Vaal Side Area,Vaal Blade Vortex,Shadow,
-Drop,Vaal Side Area,Vaal Burning Arrow,Shadow,
-Drop,Vaal Side Area,Vaal Cyclone,Shadow,
-Drop,Vaal Side Area,Vaal Detonate Dead,Shadow,
-Drop,Vaal Side Area,Vaal Double Strike,Shadow,
-Drop,Vaal Side Area,Vaal Grace,Shadow,
-Drop,Vaal Side Area,Vaal Haste,Shadow,
-Drop,Vaal Side Area,Vaal Impurity of Ice,Shadow,
-Drop,Vaal Side Area,Vaal Lightning Strike,Shadow,
-Drop,Vaal Side Area,Vaal Rain of Arrows,Shadow,
-Drop,Vaal Side Area,Vaal Reave,Shadow,
-Drop,Vaal Side Area,Vaal Spectral Throw,Shadow,
-Drop,Vaal Side Area,Vaal Ancestral Warchief,Shadow,
-Drop,Vaal Side Area,Vaal Earthquake,Shadow,
-Drop,Vaal Side Area,Vaal Glacial Hammer,Shadow,
-Drop,Vaal Side Area,Vaal Ground Slam,Shadow,
-Drop,Vaal Side Area,Vaal Impurity of Fire,Shadow,
-Drop,Vaal Side Area,Vaal Molten Shell,Shadow,
-Drop,Vaal Side Area,Vaal Arc,Shadow,
-Drop,Vaal Side Area,Vaal Blight,Shadow,
-Drop,Vaal Side Area,Vaal Clarity,Shadow,
-Drop,Vaal Side Area,Vaal Cold Snap,Shadow,
-Drop,Vaal Side Area,Vaal Discipline,Shadow,
-Drop,Vaal Side Area,Vaal Fireball,Shadow,
-Drop,Vaal Side Area,Vaal Flameblast,Shadow,
-Drop,Vaal Side Area,Vaal Ice Nova,Shadow,
-Drop,Vaal Side Area,Vaal Impurity of Lightning,Shadow,
-Drop,Vaal Side Area,Vaal Lightning Trap,Shadow,
-Drop,Vaal Side Area,Vaal Power Siphon,Shadow,
-Drop,Vaal Side Area,Vaal Righteous Fire,Shadow,
-Drop,Vaal Side Area,Vaal Spark,Shadow,
-Drop,Vaal Side Area,Vaal Storm Call,Shadow,
-Drop,Vaal Side Area,Vaal Summon Skeletons,Shadow,
-Drop,Vaal Side Area,Vaal Breach,Shadow,
-Drop,Vaal Side Area,Vaal Blade Vortex,Templar,
-Drop,Vaal Side Area,Vaal Burning Arrow,Templar,
-Drop,Vaal Side Area,Vaal Cyclone,Templar,
-Drop,Vaal Side Area,Vaal Detonate Dead,Templar,
-Drop,Vaal Side Area,Vaal Double Strike,Templar,
-Drop,Vaal Side Area,Vaal Grace,Templar,
-Drop,Vaal Side Area,Vaal Haste,Templar,
-Drop,Vaal Side Area,Vaal Impurity of Ice,Templar,
-Drop,Vaal Side Area,Vaal Lightning Strike,Templar,
-Drop,Vaal Side Area,Vaal Rain of Arrows,Templar,
-Drop,Vaal Side Area,Vaal Reave,Templar,
-Drop,Vaal Side Area,Vaal Spectral Throw,Templar,
-Drop,Vaal Side Area,Vaal Ancestral Warchief,Templar,
-Drop,Vaal Side Area,Vaal Earthquake,Templar,
-Drop,Vaal Side Area,Vaal Glacial Hammer,Templar,
-Drop,Vaal Side Area,Vaal Ground Slam,Templar,
-Drop,Vaal Side Area,Vaal Impurity of Fire,Templar,
-Drop,Vaal Side Area,Vaal Molten Shell,Templar,
-Drop,Vaal Side Area,Vaal Arc,Templar,
-Drop,Vaal Side Area,Vaal Blight,Templar,
-Drop,Vaal Side Area,Vaal Clarity,Templar,
-Drop,Vaal Side Area,Vaal Cold Snap,Templar,
-Drop,Vaal Side Area,Vaal Discipline,Templar,
-Drop,Vaal Side Area,Vaal Fireball,Templar,
-Drop,Vaal Side Area,Vaal Flameblast,Templar,
-Drop,Vaal Side Area,Vaal Ice Nova,Templar,
-Drop,Vaal Side Area,Vaal Impurity of Lightning,Templar,
-Drop,Vaal Side Area,Vaal Lightning Trap,Templar,
-Drop,Vaal Side Area,Vaal Power Siphon,Templar,
-Drop,Vaal Side Area,Vaal Righteous Fire,Templar,
-Drop,Vaal Side Area,Vaal Spark,Templar,
-Drop,Vaal Side Area,Vaal Storm Call,Templar,
-Drop,Vaal Side Area,Vaal Summon Skeletons,Templar,
-Drop,Vaal Side Area,Vaal Breach,Templar,
-Drop,Vaal Side Area,Vaal Blade Vortex,Witch,
-Drop,Vaal Side Area,Vaal Burning Arrow,Witch,
-Drop,Vaal Side Area,Vaal Cyclone,Witch,
-Drop,Vaal Side Area,Vaal Detonate Dead,Witch,
-Drop,Vaal Side Area,Vaal Double Strike,Witch,
-Drop,Vaal Side Area,Vaal Grace,Witch,
-Drop,Vaal Side Area,Vaal Haste,Witch,
-Drop,Vaal Side Area,Vaal Impurity of Ice,Witch,
-Drop,Vaal Side Area,Vaal Lightning Strike,Witch,
-Drop,Vaal Side Area,Vaal Rain of Arrows,Witch,
-Drop,Vaal Side Area,Vaal Reave,Witch,
-Drop,Vaal Side Area,Vaal Spectral Throw,Witch,
-Drop,Vaal Side Area,Vaal Ancestral Warchief,Witch,
-Drop,Vaal Side Area,Vaal Earthquake,Witch,
-Drop,Vaal Side Area,Vaal Glacial Hammer,Witch,
-Drop,Vaal Side Area,Vaal Ground Slam,Witch,
-Drop,Vaal Side Area,Vaal Impurity of Fire,Witch,
-Drop,Vaal Side Area,Vaal Molten Shell,Witch,
-Drop,Vaal Side Area,Vaal Arc,Witch,
-Drop,Vaal Side Area,Vaal Blight,Witch,
-Drop,Vaal Side Area,Vaal Clarity,Witch,
-Drop,Vaal Side Area,Vaal Cold Snap,Witch,
-Drop,Vaal Side Area,Vaal Discipline,Witch,
-Drop,Vaal Side Area,Vaal Fireball,Witch,
-Drop,Vaal Side Area,Vaal Flameblast,Witch,
-Drop,Vaal Side Area,Vaal Ice Nova,Witch,
-Drop,Vaal Side Area,Vaal Impurity of Lightning,Witch,
-Drop,Vaal Side Area,Vaal Lightning Trap,Witch,
-Drop,Vaal Side Area,Vaal Power Siphon,Witch,
-Drop,Vaal Side Area,Vaal Righteous Fire,Witch,
-Drop,Vaal Side Area,Vaal Spark,Witch,
-Drop,Vaal Side Area,Vaal Storm Call,Witch,
-Drop,Vaal Side Area,Vaal Summon Skeletons,Witch,
-Drop,Vaal Side Area,Vaal Breach,Witch,
+Drop,Drop Only,Empower,Duelist,None
+Drop,Drop Only,Empower,Marauder,None
+Drop,Drop Only,Empower,Ranger,None
+Drop,Drop Only,Empower,Scion,None
+Drop,Drop Only,Empower,Shadow,None
+Drop,Drop Only,Empower,Templar,None
+Drop,Drop Only,Empower,Witch,None
+Drop,Drop Only,Enhance,Duelist,None
+Drop,Drop Only,Enhance,Marauder,None
+Drop,Drop Only,Enhance,Ranger,None
+Drop,Drop Only,Enhance,Scion,None
+Drop,Drop Only,Enhance,Shadow,None
+Drop,Drop Only,Enhance,Templar,None
+Drop,Drop Only,Enhance,Witch,None
+Drop,Drop Only,Enlighten,Duelist,None
+Drop,Drop Only,Enlighten,Marauder,None
+Drop,Drop Only,Enlighten,Ranger,None
+Drop,Drop Only,Enlighten,Scion,None
+Drop,Drop Only,Enlighten,Shadow,None
+Drop,Drop Only,Enlighten,Templar,None
+Drop,Drop Only,Enlighten,Witch,None
+Drop,Drop Only,Portal,Duelist,None
+Drop,Drop Only,Portal,Marauder,None
+Drop,Drop Only,Portal,Ranger,None
+Drop,Drop Only,Portal,Scion,None
+Drop,Drop Only,Portal,Shadow,None
+Drop,Drop Only,Portal,Templar,None
+Drop,Drop Only,Portal,Witch,None
+Drop,Vaal Side Area,Vaal Blade Vortex,Duelist,None
+Drop,Vaal Side Area,Vaal Burning Arrow,Duelist,None
+Drop,Vaal Side Area,Vaal Cyclone,Duelist,None
+Drop,Vaal Side Area,Vaal Detonate Dead,Duelist,None
+Drop,Vaal Side Area,Vaal Double Strike,Duelist,None
+Drop,Vaal Side Area,Vaal Grace,Duelist,None
+Drop,Vaal Side Area,Vaal Haste,Duelist,None
+Drop,Vaal Side Area,Vaal Impurity of Ice,Duelist,None
+Drop,Vaal Side Area,Vaal Lightning Strike,Duelist,None
+Drop,Vaal Side Area,Vaal Rain of Arrows,Duelist,None
+Drop,Vaal Side Area,Vaal Reave,Duelist,None
+Drop,Vaal Side Area,Vaal Spectral Throw,Duelist,None
+Drop,Vaal Side Area,Vaal Ancestral Warchief,Duelist,None
+Drop,Vaal Side Area,Vaal Earthquake,Duelist,None
+Drop,Vaal Side Area,Vaal Glacial Hammer,Duelist,None
+Drop,Vaal Side Area,Vaal Ground Slam,Duelist,None
+Drop,Vaal Side Area,Vaal Impurity of Fire,Duelist,None
+Drop,Vaal Side Area,Vaal Molten Shell,Duelist,None
+Drop,Vaal Side Area,Vaal Arc,Duelist,None
+Drop,Vaal Side Area,Vaal Blight,Duelist,None
+Drop,Vaal Side Area,Vaal Clarity,Duelist,None
+Drop,Vaal Side Area,Vaal Cold Snap,Duelist,None
+Drop,Vaal Side Area,Vaal Discipline,Duelist,None
+Drop,Vaal Side Area,Vaal Fireball,Duelist,None
+Drop,Vaal Side Area,Vaal Flameblast,Duelist,None
+Drop,Vaal Side Area,Vaal Ice Nova,Duelist,None
+Drop,Vaal Side Area,Vaal Impurity of Lightning,Duelist,None
+Drop,Vaal Side Area,Vaal Lightning Trap,Duelist,None
+Drop,Vaal Side Area,Vaal Power Siphon,Duelist,None
+Drop,Vaal Side Area,Vaal Righteous Fire,Duelist,None
+Drop,Vaal Side Area,Vaal Spark,Duelist,None
+Drop,Vaal Side Area,Vaal Storm Call,Duelist,None
+Drop,Vaal Side Area,Vaal Summon Skeletons,Duelist,None
+Drop,Vaal Side Area,Vaal Breach,Duelist,None
+Drop,Vaal Side Area,Vaal Blade Vortex,Marauder,None
+Drop,Vaal Side Area,Vaal Burning Arrow,Marauder,None
+Drop,Vaal Side Area,Vaal Cyclone,Marauder,None
+Drop,Vaal Side Area,Vaal Detonate Dead,Marauder,None
+Drop,Vaal Side Area,Vaal Double Strike,Marauder,None
+Drop,Vaal Side Area,Vaal Grace,Marauder,None
+Drop,Vaal Side Area,Vaal Haste,Marauder,None
+Drop,Vaal Side Area,Vaal Impurity of Ice,Marauder,None
+Drop,Vaal Side Area,Vaal Lightning Strike,Marauder,None
+Drop,Vaal Side Area,Vaal Rain of Arrows,Marauder,None
+Drop,Vaal Side Area,Vaal Reave,Marauder,None
+Drop,Vaal Side Area,Vaal Spectral Throw,Marauder,None
+Drop,Vaal Side Area,Vaal Ancestral Warchief,Marauder,None
+Drop,Vaal Side Area,Vaal Earthquake,Marauder,None
+Drop,Vaal Side Area,Vaal Glacial Hammer,Marauder,None
+Drop,Vaal Side Area,Vaal Ground Slam,Marauder,None
+Drop,Vaal Side Area,Vaal Impurity of Fire,Marauder,None
+Drop,Vaal Side Area,Vaal Molten Shell,Marauder,None
+Drop,Vaal Side Area,Vaal Arc,Marauder,None
+Drop,Vaal Side Area,Vaal Blight,Marauder,None
+Drop,Vaal Side Area,Vaal Clarity,Marauder,None
+Drop,Vaal Side Area,Vaal Cold Snap,Marauder,None
+Drop,Vaal Side Area,Vaal Discipline,Marauder,None
+Drop,Vaal Side Area,Vaal Fireball,Marauder,None
+Drop,Vaal Side Area,Vaal Flameblast,Marauder,None
+Drop,Vaal Side Area,Vaal Ice Nova,Marauder,None
+Drop,Vaal Side Area,Vaal Impurity of Lightning,Marauder,None
+Drop,Vaal Side Area,Vaal Lightning Trap,Marauder,None
+Drop,Vaal Side Area,Vaal Power Siphon,Marauder,None
+Drop,Vaal Side Area,Vaal Righteous Fire,Marauder,None
+Drop,Vaal Side Area,Vaal Spark,Marauder,None
+Drop,Vaal Side Area,Vaal Storm Call,Marauder,None
+Drop,Vaal Side Area,Vaal Summon Skeletons,Marauder,None
+Drop,Vaal Side Area,Vaal Breach,Marauder,None
+Drop,Vaal Side Area,Vaal Blade Vortex,Ranger,None
+Drop,Vaal Side Area,Vaal Burning Arrow,Ranger,None
+Drop,Vaal Side Area,Vaal Cyclone,Ranger,None
+Drop,Vaal Side Area,Vaal Detonate Dead,Ranger,None
+Drop,Vaal Side Area,Vaal Double Strike,Ranger,None
+Drop,Vaal Side Area,Vaal Grace,Ranger,None
+Drop,Vaal Side Area,Vaal Haste,Ranger,None
+Drop,Vaal Side Area,Vaal Impurity of Ice,Ranger,None
+Drop,Vaal Side Area,Vaal Lightning Strike,Ranger,None
+Drop,Vaal Side Area,Vaal Rain of Arrows,Ranger,None
+Drop,Vaal Side Area,Vaal Reave,Ranger,None
+Drop,Vaal Side Area,Vaal Spectral Throw,Ranger,None
+Drop,Vaal Side Area,Vaal Ancestral Warchief,Ranger,None
+Drop,Vaal Side Area,Vaal Earthquake,Ranger,None
+Drop,Vaal Side Area,Vaal Glacial Hammer,Ranger,None
+Drop,Vaal Side Area,Vaal Ground Slam,Ranger,None
+Drop,Vaal Side Area,Vaal Impurity of Fire,Ranger,None
+Drop,Vaal Side Area,Vaal Molten Shell,Ranger,None
+Drop,Vaal Side Area,Vaal Arc,Ranger,None
+Drop,Vaal Side Area,Vaal Blight,Ranger,None
+Drop,Vaal Side Area,Vaal Clarity,Ranger,None
+Drop,Vaal Side Area,Vaal Cold Snap,Ranger,None
+Drop,Vaal Side Area,Vaal Discipline,Ranger,None
+Drop,Vaal Side Area,Vaal Fireball,Ranger,None
+Drop,Vaal Side Area,Vaal Flameblast,Ranger,None
+Drop,Vaal Side Area,Vaal Ice Nova,Ranger,None
+Drop,Vaal Side Area,Vaal Impurity of Lightning,Ranger,None
+Drop,Vaal Side Area,Vaal Lightning Trap,Ranger,None
+Drop,Vaal Side Area,Vaal Power Siphon,Ranger,None
+Drop,Vaal Side Area,Vaal Righteous Fire,Ranger,None
+Drop,Vaal Side Area,Vaal Spark,Ranger,None
+Drop,Vaal Side Area,Vaal Storm Call,Ranger,None
+Drop,Vaal Side Area,Vaal Summon Skeletons,Ranger,None
+Drop,Vaal Side Area,Vaal Breach,Ranger,None
+Drop,Vaal Side Area,Vaal Blade Vortex,Scion,None
+Drop,Vaal Side Area,Vaal Burning Arrow,Scion,None
+Drop,Vaal Side Area,Vaal Cyclone,Scion,None
+Drop,Vaal Side Area,Vaal Detonate Dead,Scion,None
+Drop,Vaal Side Area,Vaal Double Strike,Scion,None
+Drop,Vaal Side Area,Vaal Grace,Scion,None
+Drop,Vaal Side Area,Vaal Haste,Scion,None
+Drop,Vaal Side Area,Vaal Impurity of Ice,Scion,None
+Drop,Vaal Side Area,Vaal Lightning Strike,Scion,None
+Drop,Vaal Side Area,Vaal Rain of Arrows,Scion,None
+Drop,Vaal Side Area,Vaal Reave,Scion,None
+Drop,Vaal Side Area,Vaal Spectral Throw,Scion,None
+Drop,Vaal Side Area,Vaal Ancestral Warchief,Scion,None
+Drop,Vaal Side Area,Vaal Earthquake,Scion,None
+Drop,Vaal Side Area,Vaal Glacial Hammer,Scion,None
+Drop,Vaal Side Area,Vaal Ground Slam,Scion,None
+Drop,Vaal Side Area,Vaal Impurity of Fire,Scion,None
+Drop,Vaal Side Area,Vaal Molten Shell,Scion,None
+Drop,Vaal Side Area,Vaal Arc,Scion,None
+Drop,Vaal Side Area,Vaal Blight,Scion,None
+Drop,Vaal Side Area,Vaal Clarity,Scion,None
+Drop,Vaal Side Area,Vaal Cold Snap,Scion,None
+Drop,Vaal Side Area,Vaal Discipline,Scion,None
+Drop,Vaal Side Area,Vaal Fireball,Scion,None
+Drop,Vaal Side Area,Vaal Flameblast,Scion,None
+Drop,Vaal Side Area,Vaal Ice Nova,Scion,None
+Drop,Vaal Side Area,Vaal Impurity of Lightning,Scion,None
+Drop,Vaal Side Area,Vaal Lightning Trap,Scion,None
+Drop,Vaal Side Area,Vaal Power Siphon,Scion,None
+Drop,Vaal Side Area,Vaal Righteous Fire,Scion,None
+Drop,Vaal Side Area,Vaal Spark,Scion,None
+Drop,Vaal Side Area,Vaal Storm Call,Scion,None
+Drop,Vaal Side Area,Vaal Summon Skeletons,Scion,None
+Drop,Vaal Side Area,Vaal Breach,Scion,None
+Drop,Vaal Side Area,Vaal Blade Vortex,Shadow,None
+Drop,Vaal Side Area,Vaal Burning Arrow,Shadow,None
+Drop,Vaal Side Area,Vaal Cyclone,Shadow,None
+Drop,Vaal Side Area,Vaal Detonate Dead,Shadow,None
+Drop,Vaal Side Area,Vaal Double Strike,Shadow,None
+Drop,Vaal Side Area,Vaal Grace,Shadow,None
+Drop,Vaal Side Area,Vaal Haste,Shadow,None
+Drop,Vaal Side Area,Vaal Impurity of Ice,Shadow,None
+Drop,Vaal Side Area,Vaal Lightning Strike,Shadow,None
+Drop,Vaal Side Area,Vaal Rain of Arrows,Shadow,None
+Drop,Vaal Side Area,Vaal Reave,Shadow,None
+Drop,Vaal Side Area,Vaal Spectral Throw,Shadow,None
+Drop,Vaal Side Area,Vaal Ancestral Warchief,Shadow,None
+Drop,Vaal Side Area,Vaal Earthquake,Shadow,None
+Drop,Vaal Side Area,Vaal Glacial Hammer,Shadow,None
+Drop,Vaal Side Area,Vaal Ground Slam,Shadow,None
+Drop,Vaal Side Area,Vaal Impurity of Fire,Shadow,None
+Drop,Vaal Side Area,Vaal Molten Shell,Shadow,None
+Drop,Vaal Side Area,Vaal Arc,Shadow,None
+Drop,Vaal Side Area,Vaal Blight,Shadow,None
+Drop,Vaal Side Area,Vaal Clarity,Shadow,None
+Drop,Vaal Side Area,Vaal Cold Snap,Shadow,None
+Drop,Vaal Side Area,Vaal Discipline,Shadow,None
+Drop,Vaal Side Area,Vaal Fireball,Shadow,None
+Drop,Vaal Side Area,Vaal Flameblast,Shadow,None
+Drop,Vaal Side Area,Vaal Ice Nova,Shadow,None
+Drop,Vaal Side Area,Vaal Impurity of Lightning,Shadow,None
+Drop,Vaal Side Area,Vaal Lightning Trap,Shadow,None
+Drop,Vaal Side Area,Vaal Power Siphon,Shadow,None
+Drop,Vaal Side Area,Vaal Righteous Fire,Shadow,None
+Drop,Vaal Side Area,Vaal Spark,Shadow,None
+Drop,Vaal Side Area,Vaal Storm Call,Shadow,None
+Drop,Vaal Side Area,Vaal Summon Skeletons,Shadow,None
+Drop,Vaal Side Area,Vaal Breach,Shadow,None
+Drop,Vaal Side Area,Vaal Blade Vortex,Templar,None
+Drop,Vaal Side Area,Vaal Burning Arrow,Templar,None
+Drop,Vaal Side Area,Vaal Cyclone,Templar,None
+Drop,Vaal Side Area,Vaal Detonate Dead,Templar,None
+Drop,Vaal Side Area,Vaal Double Strike,Templar,None
+Drop,Vaal Side Area,Vaal Grace,Templar,None
+Drop,Vaal Side Area,Vaal Haste,Templar,None
+Drop,Vaal Side Area,Vaal Impurity of Ice,Templar,None
+Drop,Vaal Side Area,Vaal Lightning Strike,Templar,None
+Drop,Vaal Side Area,Vaal Rain of Arrows,Templar,None
+Drop,Vaal Side Area,Vaal Reave,Templar,None
+Drop,Vaal Side Area,Vaal Spectral Throw,Templar,None
+Drop,Vaal Side Area,Vaal Ancestral Warchief,Templar,None
+Drop,Vaal Side Area,Vaal Earthquake,Templar,None
+Drop,Vaal Side Area,Vaal Glacial Hammer,Templar,None
+Drop,Vaal Side Area,Vaal Ground Slam,Templar,None
+Drop,Vaal Side Area,Vaal Impurity of Fire,Templar,None
+Drop,Vaal Side Area,Vaal Molten Shell,Templar,None
+Drop,Vaal Side Area,Vaal Arc,Templar,None
+Drop,Vaal Side Area,Vaal Blight,Templar,None
+Drop,Vaal Side Area,Vaal Clarity,Templar,None
+Drop,Vaal Side Area,Vaal Cold Snap,Templar,None
+Drop,Vaal Side Area,Vaal Discipline,Templar,None
+Drop,Vaal Side Area,Vaal Fireball,Templar,None
+Drop,Vaal Side Area,Vaal Flameblast,Templar,None
+Drop,Vaal Side Area,Vaal Ice Nova,Templar,None
+Drop,Vaal Side Area,Vaal Impurity of Lightning,Templar,None
+Drop,Vaal Side Area,Vaal Lightning Trap,Templar,None
+Drop,Vaal Side Area,Vaal Power Siphon,Templar,None
+Drop,Vaal Side Area,Vaal Righteous Fire,Templar,None
+Drop,Vaal Side Area,Vaal Spark,Templar,None
+Drop,Vaal Side Area,Vaal Storm Call,Templar,None
+Drop,Vaal Side Area,Vaal Summon Skeletons,Templar,None
+Drop,Vaal Side Area,Vaal Breach,Templar,None
+Drop,Vaal Side Area,Vaal Blade Vortex,Witch,None
+Drop,Vaal Side Area,Vaal Burning Arrow,Witch,None
+Drop,Vaal Side Area,Vaal Cyclone,Witch,None
+Drop,Vaal Side Area,Vaal Detonate Dead,Witch,None
+Drop,Vaal Side Area,Vaal Double Strike,Witch,None
+Drop,Vaal Side Area,Vaal Grace,Witch,None
+Drop,Vaal Side Area,Vaal Haste,Witch,None
+Drop,Vaal Side Area,Vaal Impurity of Ice,Witch,None
+Drop,Vaal Side Area,Vaal Lightning Strike,Witch,None
+Drop,Vaal Side Area,Vaal Rain of Arrows,Witch,None
+Drop,Vaal Side Area,Vaal Reave,Witch,None
+Drop,Vaal Side Area,Vaal Spectral Throw,Witch,None
+Drop,Vaal Side Area,Vaal Ancestral Warchief,Witch,None
+Drop,Vaal Side Area,Vaal Earthquake,Witch,None
+Drop,Vaal Side Area,Vaal Glacial Hammer,Witch,None
+Drop,Vaal Side Area,Vaal Ground Slam,Witch,None
+Drop,Vaal Side Area,Vaal Impurity of Fire,Witch,None
+Drop,Vaal Side Area,Vaal Molten Shell,Witch,None
+Drop,Vaal Side Area,Vaal Arc,Witch,None
+Drop,Vaal Side Area,Vaal Blight,Witch,None
+Drop,Vaal Side Area,Vaal Clarity,Witch,None
+Drop,Vaal Side Area,Vaal Cold Snap,Witch,None
+Drop,Vaal Side Area,Vaal Discipline,Witch,None
+Drop,Vaal Side Area,Vaal Fireball,Witch,None
+Drop,Vaal Side Area,Vaal Flameblast,Witch,None
+Drop,Vaal Side Area,Vaal Ice Nova,Witch,None
+Drop,Vaal Side Area,Vaal Impurity of Lightning,Witch,None
+Drop,Vaal Side Area,Vaal Lightning Trap,Witch,None
+Drop,Vaal Side Area,Vaal Power Siphon,Witch,None
+Drop,Vaal Side Area,Vaal Righteous Fire,Witch,None
+Drop,Vaal Side Area,Vaal Spark,Witch,None
+Drop,Vaal Side Area,Vaal Storm Call,Witch,None
+Drop,Vaal Side Area,Vaal Summon Skeletons,Witch,None
+Drop,Vaal Side Area,Vaal Breach,Witch,None
+Act 1,Nessa,Kinetic Bolt,Witch,Enemy at the Gate
+Act 1,Nessa,Kinetic Bolt,Shadow,Mercy Mission
+Act 1,Nessa,Kinetic Bolt,Ranger,Mercy Mission
+Act 1,Nessa,Kinetic Bolt,Scion,Mercy Mission
+Act 3,Siosa,Kinetic Bolt,Duelist,A Fixture of Fate
+Act 3,Siosa,Kinetic Bolt,Marauder,A Fixture of Fate
+Act 3,Siosa,Kinetic Bolt,Templar,A Fixture of Fate
+Act 2,Yeena,Arcane Cloak,Shadow,Intruders in Black
+Act 2,Yeena,Arcane Cloak,Templar,Intruders in Black
+Act 2,Yeena,Arcane Cloak,Witch,Intruders in Black
+Act 2,Yeena,Arcane Cloak,Scion,The Root of the Problem
+Act 3,Siosa,Arcane Cloak,Duelist,A Fixture of Fate
+Act 3,Siosa,Arcane Cloak,Marauder,A Fixture of Fate
+Act 3,Siosa,Arcane Cloak,Ranger,A Fixture of Fate
+Act 2,Yeena,Blade Blast,Shadow,Intruders in Black
+Act 2,Yeena,Blade Blast,Ranger,The Root of the Problem
+Act 2,Yeena,Blade Blast,Scion,The Root of the Problem
+Act 2,Yeena,Blade Blast,Templar,The Root of the Problem
+Act 2,Yeena,Blade Blast,Witch,The Root of the Problem
+Act 3,Siosa,Blade Blast,Duelist,A Fixture of Fate
+Act 3,Siosa,Blade Blast,Marauder,A Fixture of Fate
+Act 3,Clarissa,Spellslinger,Witch,Lost in Love
+Act 3,Siosa,Spellslinger,Duelist,A Fixture of Fate
+Act 3,Siosa,Spellslinger,Marauder,A Fixture of Fate
+Act 3,Siosa,Spellslinger,Ranger,A Fixture of Fate
+Act 3,Siosa,Spellslinger,Scion,A Fixture of Fate
+Act 3,Siosa,Spellslinger,Shadow,A Fixture of Fate
+Act 3,Siosa,Spellslinger,Templar,A Fixture of Fate
+Act 3,Siosa,Stormbind,Templar,Sever the Right Hand
+Act 3,Siosa,Stormbind,Witch,Sever the Right Hand
+Act 3,Siosa,Stormbind,Scion,A Fixture of Fate
+Act 3,Siosa,Stormbind,Shadow,A Fixture of Fate
+Act 3,Siosa,Stormbind,Duelist,A Fixture of Fate
+Act 3,Siosa,Stormbind,Marauder,A Fixture of Fate
+Act 3,Siosa,Stormbind,Ranger,A Fixture of Fate
+Act 3,Siosa,Archmage,Shadow,A Fixture of Fate
+Act 3,Siosa,Archmage,Templar,A Fixture of Fate
+Act 3,Siosa,Archmage,Witch,A Fixture of Fate
+Act 3,Siosa,Archmage,Scion,A Fixture of Fate
+Act 6,Lilly Roth,Archmage,Duelist,None
+Act 6,Lilly Roth,Archmage,Marauder,None
+Act 6,Lilly Roth,Archmage,Ranger,None
+Act 3,Siosa,Second Wind,Duelist,A Fixture of Fate
+Act 3,Siosa,Second Wind,Ranger,A Fixture of Fate
+Act 3,Siosa,Second Wind,Scion,A Fixture of Fate
+Act 3,Siosa,Second Wind,Shadow,A Fixture of Fate
+Act 3,Siosa,Second Wind,Templar,A Fixture of Fate
+Act 3,Siosa,Second Wind,Witch,A Fixture of Fate
+Act 6,Lilly Roth,Second Wind,Marauder,None

@@ -268,7 +268,7 @@ hr {
 }
 
 .pill {
-  background: #555;
+  background: #292929;
   border-left: 6px solid #333;
   display: block;
   padding: 3px 12px;
@@ -280,28 +280,35 @@ hr {
 
 .pill.blue {
   border-left-color:#2b4f90;
+  background-color:#2b4f9020;
 }
 
 .pill.red {
   border-left-color:#A3414D;
+  background-color:#A3414D20;
 }
 
 .pill.orange {
   border-left-color:#c96036;
+  background-color:#c9603620;
 }
 
 .pill.yellow {
   border-left-color:#b78f1e;
+  background-color:#b78f1e20;
 }
 
 .pill.green {
   border-left-color:#4B8F39;
+  background-color:#4B8F3920;
 }
 
 .pill.purple {
   border-left-color:#7e398f;
+  background-color:#7e398f20;
 }
 
 .pill.cyan {
   border-left-color:#4195a3;
+  background-color:#4195a320;
 }

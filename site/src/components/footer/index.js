@@ -11,7 +11,7 @@ const Footer = () => {
                     <a href="/blight">Blight Towers</a>
                 </div>
                 <span class={style.title}>poesyn.xyz</span>
-                <span class={style.questions}></span>
+                <span class={style.questions}><a class={style.homeLink} href="https://twitter.com/poesynxyz">Twitter</a></span>
             </div>
         </div>
 	);

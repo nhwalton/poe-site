@@ -1,3 +1,4 @@
+import argparse
 import csv
 import json
 import os
@@ -16,7 +17,11 @@ from waitress import serve
 from functions import return_info, get_gem_info
 
 app = flask.Flask(__name__)
-# app.config["DEBUG"] = True
+
+parser = argparse.ArgumentParser(description='--env dev to run development server')
+parser.add_argument("--env", default='prod', help="Set --env dev for dev server")
+args = parser.parse_args()
+is_dev = args.env
 
 gem_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'gem_availability.csv')
 passives_path = path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'passives_with_gems.json')
@@ -127,7 +132,7 @@ def scarabs():
         scarabs = scarab_cache.get('scarabs')
     else:
         print("Cache Does Not Exist \n")
-        r = requests.get('https://poe.ninja/api/data/itemoverview?league=Metamorph&type=Scarab&language=en').json()
+        r = requests.get('https://poe.ninja/api/data/itemoverview?league=Delirium&type=Scarab&language=en').json()
         scarabs = []
         regex = r"(?:Gilded\s)(.*)"
         for scarab in r["lines"]:
@@ -154,7 +159,12 @@ def scarabs():
         scarab_cache['scarabs'] = scarabs
     return(jsonify(scarabs))
 
+
 if __name__ == "__main__":
-    CORS(serve(app, listen='*:6000'))
+    if is_dev == 'dev':
+        app.config["DEBUG"] = True
+        CORS(app.run(host="0.0.0.0",port=6000))
+    else:
+        CORS(serve(app, listen='*:6000'))
 
 # CORS(app.run(host="0.0.0.0",port=6000))
