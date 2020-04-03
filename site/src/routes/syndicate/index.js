@@ -4,6 +4,7 @@ import { useState, useEffect } from 'preact/hooks';
 import analytics from '../../components/analytics';
 
 import Button from 'preact-material-components/Button';
+import Switch from 'preact-material-components/Switch';
 import 'preact-material-components/Card/style.css';
 import 'preact-material-components/Button/style.css';
 import style from './style';
@@ -15,6 +16,11 @@ const RowCell = (props) => {
 	let localClass = localStorage.getItem("syn-".concat(cellTitle))
 	let scarabs = props.scarabs
 	let useName;
+	let challenge = "";
+
+	if (props.cellData.challenge && props.challenges == true) {
+		challenge = "challenge"
+	}
 
 	if (localClass != null) {
 		useName = localClass
@@ -30,9 +36,7 @@ const RowCell = (props) => {
 
 	if (className != props.cellData.class && localClass == null && props.cellData.class != "scarab") {
 		newClassName(props.cellData.class)
-	}
-
-	if (className == "scarab") {
+	} else if (className == "scarab") {
 		newClassName(useName)
 	}
 
@@ -85,7 +89,7 @@ const RowCell = (props) => {
 		<div
 			onClick = { () => handleClick(props) }
 			data-title = {cellTitle}
-			className = {`${style[className]} ${style.cellRatioBox}`}
+			className = {`${style[className]} ${style.cellRatioBox} ${style[challenge]}`}
 			>
 			<div class={style.cellRatioBoxInside}>
 				<div class={style.cellCentering}>
@@ -97,12 +101,12 @@ const RowCell = (props) => {
     );
 };
 
-const TableRow = ({ row , rowName, scarabs }) => {
+const TableRow = (props) => {
     return (
 		<div class={style.rowWrapper}>
-			{row.map(function(cell) {
+			{props.row.map(function(cell) {
 				return(
-				<RowCell cellData={cell} cellRow={rowName} scarabs={scarabs}/>
+				<RowCell cellData={cell} cellRow={props.rowName} scarabs={props.scarabs} challenges={props.challenges}/>
 				)
 			})}
 		</div>
@@ -117,6 +121,8 @@ const Syndicate = () => {
 	const ifMounted = useIfMounted();
 
 	const [scarabs, setScarabs] = useState('');
+
+	const [challenges, setChallenges] = useState(false);
 
 	async function fetchScarabs() {
 		const response = await fetch('/api/scarabs');
@@ -133,17 +139,26 @@ const Syndicate = () => {
 		for (var key in localStorage) {
 			if (key.indexOf("syn") == 0) {
 				localStorage.removeItem(key);
-				console.log("removed ", key)
 			}
 		}
 		localStorage.clear();
+	}
+
+	const toggleChallenges = () => {
+		const currentToggle = challenges
+		if (currentToggle == true) {
+			setChallenges(false);
+		} else {
+			setChallenges(true);
+		}
 	}
 
 	return (
 		<div class={`${style.syndicate} page`}>
 			<div class="titleWrapper">
 				<h1>Syndicate Cheat Sheet</h1>
-				<div>
+				<div class={style.buttons}>
+					<Button raised ripped onClick={() => toggleChallenges()}>Challenges</Button>
 					<Button raised ripple onClick={() => resetColors()}>Reset</Button>
 				</div>
 			</div>
@@ -151,7 +166,7 @@ const Syndicate = () => {
 				<div class={style.tableWrapper}>
 					{Object.keys(syndicate).map(function(key) {
 						return (
-							<TableRow row={syndicate[key]} rowName={key} scarabs={scarabs}/>
+							<TableRow row={syndicate[key]} rowName={key} scarabs={scarabs} challenges={challenges}/>
 							)
 						}
 					)

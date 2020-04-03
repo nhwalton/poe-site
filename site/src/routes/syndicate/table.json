@@ -340,7 +340,8 @@
             "title":"#aisling-research",
             "image":"",
             "class":"gray",
-            "text":"Add Veiled Mods"
+            "text":"Add Veiled Mods",
+            "challenge":true
         },
         {
             "title":"#cameria-research",
@@ -382,7 +383,8 @@
             "title":"#it-that-fled-research",
             "image":"poe_syndicate_63",
             "class":"green",
-            "text":"Upgrade Breachstone"
+            "text":"Upgrade Breachstone",
+            "challenge":true
         },
         {
             "title":"#janus-research",
@@ -394,7 +396,8 @@
             "title":"#jorgin-research",
             "image":"poe_syndicate_65",
             "class":"yellow",
-            "text":"Amulet to Talisman"
+            "text":"Amulet to Talisman",
+            "challenge":true
         },
         {
             "title":"#korell-research",
@@ -424,7 +427,8 @@
             "title":"#tora-research",
             "image":"poe_syndicate_70",
             "class":"green",
-            "text":"Gem Experience"
+            "text":"Gem Experience",
+            "challenge":true
         },
         {
             "title":"#vagan-research",
@@ -436,7 +440,8 @@
             "title":"#vorici-research",
             "image":"",
             "class":"gray",
-            "text":"White Sockets"
+            "text":"White Sockets",
+            "challenge":true
         }
     ],
     "intervention":[    
@@ -486,7 +491,8 @@
             "title":"#hillock-intervention",
             "image":"poe_syndicate_80",
             "class":"gray",
-            "text":"Map Quality"
+            "text":"Map Quality",
+            "challenge":true
         },
         {
             "title":"#it-that-fled-intervention",

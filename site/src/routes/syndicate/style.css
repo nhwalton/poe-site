@@ -18,6 +18,11 @@
 	justify-content: center;
 }
 
+.buttons {
+	display:grid;
+	grid-gap:15px;
+}
+
 .tableWrapper {
 	width:100%;
 	float:left;
@@ -170,6 +175,12 @@ div.start > div > div > div {
 .yellow {
 	background-color:#cc9900;
 	box-shadow: inset .2em .2em #e0ad14;
+	cursor: pointer;
+}
+
+.challenge {
+	background-color:#014f8f;
+	box-shadow: inset .2em .2em #0f69bd;
 	cursor: pointer;
 }
 
