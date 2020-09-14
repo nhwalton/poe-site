@@ -454,26 +454,30 @@
         {
             "title":"#aisling-intervention",
             "image":"poe_syndicate_74",
-            "class":"scarab",
-            "text":"Metamorph Scarab"
+            "class":"gray",
+            "text":"Metamorph Scarab",
+            "scarab":true
         },
         {
             "title":"#cameria-intervention",
             "image":"poe_syndicate_75",
-            "class":"scarab",
-            "text":"Sulphite Scarab"
+            "class":"green",
+            "text":"Sulphite Scarab",
+            "scarab":true
         },
         {
             "title":"#elreon-intervention",
             "image":"poe_syndicate_76",
-            "class":"scarab",
-            "text":"Reliquary Scarab"
+            "class":"gray",
+            "text":"Reliquary Scarab",
+            "scarab":true
         },
         {
             "title":"#gravicius-intervention",
             "image":"poe_syndicate_77",
-            "class":"scarab",
-            "text":"Divination Scarab"
+            "class":"gray",
+            "text":"Divination Scarab",
+            "scarab":true
         },
         {
             "title":"#guff-intervention",
@@ -484,8 +488,9 @@
         {
             "title":"#haku-intervention",
             "image":"poe_syndicate_79",
-            "class":"scarab",
-            "text":"Ambush Scarab"
+            "class":"gray",
+            "text":"Ambush Scarab",
+            "scarab":true
         },
         {
             "title":"#hillock-intervention",
@@ -497,32 +502,37 @@
         {
             "title":"#it-that-fled-intervention",
             "image":"poe_syndicate_81",
-            "class":"scarab",
-            "text":"Breach Scarab"
+            "class":"gray",
+            "text":"Breach Scarab",
+            "scarab":true
         },
         {
             "title":"#janus-intervention",
             "image":"poe_syndicate_82",
-            "class":"scarab",
-            "text":"Perandus Scarab"
+            "class":"gray",
+            "text":"Perandus Scarab",
+            "scarab":true
         },
         {
             "title":"#jorgin-intervention",
             "image":"poe_syndicate_83",
-            "class":"scarab",
-            "text":"Bestiary Scarab"
+            "class":"green",
+            "text":"Bestiary Scarab",
+            "scarab":true
         },
         {
             "title":"#korell-intervention",
             "image":"poe_syndicate_84",
-            "class":"scarab",
-            "text":"Elder Scarab"
+            "class":"gray",
+            "text":"Elder Scarab",
+            "scarab":true
         },
         {
             "title":"#leo-intervention",
             "image":"poe_syndicate_85",
-            "class":"scarab",
-            "text":"Torment Scarab"
+            "class":"gray",
+            "text":"Torment Scarab",
+            "scarab":true
         },
         {
             "title":"#riker-intervention",
@@ -533,26 +543,30 @@
         {
             "title":"#rin-intervention",
             "image":"poe_syndicate_87",
-            "class":"scarab",
-            "text":"Cartography Scarab"
+            "class":"gray",
+            "text":"Cartography Scarab",
+            "scarab":true
         },
         {
             "title":"#tora-intervention",
             "image":"poe_syndicate_88",
-            "class":"scarab",
-            "text":"Harbinger Scarab"
+            "class":"gray",
+            "text":"Harbinger Scarab",
+            "scarab":true
         },
         {
             "title":"#vagan-intervention",
             "image":"poe_syndicate_89",
-            "class":"scarab",
-            "text":"Legion Scarab"
+            "class":"gray",
+            "text":"Legion Scarab",
+            "scarab":true
         },
         {
             "title":"#vorici-intervention",
             "image":"poe_syndicate_90",
-            "class":"scarab",
-            "text":"Shaper Scarab"
+            "class":"gray",
+            "text":"Shaper Scarab",
+            "scarab":true
         }
     ]
 }

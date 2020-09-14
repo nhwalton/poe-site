@@ -5,6 +5,13 @@
 	font-family: Roboto, sans-serif;;
 }
 
+.tiny {
+	padding-top: 20px;
+	min-height: 100%;
+	width: 100%;
+	font-family: Roboto, sans-serif;;
+}
+
 .cardHeader {
   padding: 16px;
 }
@@ -211,3 +218,12 @@ div.start > div > div > div {
 			  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome, Opera and Firefox */
   }
+
+.info {
+	width:80%;
+	margin:0 auto;
+}
+
+.additionalInfo.tiny {
+	display:none;
+}
