@@ -37,6 +37,7 @@ export default class Header extends Component {
 	goToSyndicate = this.linkTo('/syndicate');
 	goToFossils = this.linkTo('/fossils');
 	goToBlight = this.linkTo('/blight');
+	goToOverlay = this.linkTo('/syndicate-overlay');
 
 	toggleDarkTheme = () => {
 		this.setState(
@@ -95,6 +96,11 @@ export default class Header extends Component {
 							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
 							<img src="../../assets/header/Fireball Tower.png" />
 							Blight Towers
+						</Drawer.DrawerItem>
+						<Drawer.DrawerItem selected={props.selectedRoute === '/syndicate-overlay'} onClick={this.goToOverlay}>
+							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
+							<img src="../../assets/header/POE_Overlay_Community_Fork.png" />
+							Syndicate Overlay
 						</Drawer.DrawerItem>
 					</Drawer.DrawerContent>
 				</Drawer>

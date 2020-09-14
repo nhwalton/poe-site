@@ -36,8 +36,8 @@ const TowerCard = ({ data }) => {
 			<div class={style.tower}>
 				<span class={`pill ${data.damageColor}`}>{data.damage}</span>
 				<span class="pill purple">{data.action}</span>
-				<span class="pill blue">Upgrade to {data.recommendedTier}</span>
-				<span class="pill cyan">Place {data.recommendedPlacement}</span>
+				<span class="pill blue">{data.recommendedTier}</span>
+				<span class="pill cyan">{data.recommendedPlacement}</span>
 			</div>
 		</div>
 		<hr></hr>

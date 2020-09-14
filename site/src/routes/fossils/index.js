@@ -12,15 +12,15 @@ const Fossil = ({ fossilDetails }) => {
 		return (
 			<div class={style.fossil}>
 				<span class={style.fossilName}>{fossilDetails.fossil_name}</span>
-				<span class="chip blue">{fossilDetails.fossil_effect}</span>
-				<span class="chip green">{fossilDetails.fossil_effect2}</span>
+				<span class="pill blue">{fossilDetails.fossil_effect}</span>
+				<span class="pill green">{fossilDetails.fossil_effect2}</span>
 			</div>
 		);
 		} else {
 			return (
 				<div class={style.fossil}>
 					<span class={style.fossilName}>{fossilDetails.fossil_name}</span>
-					<span class="chip blue">{fossilDetails.fossil_effect}</span>
+					<span class="pill blue">{fossilDetails.fossil_effect}</span>
 				</div>
 			);
 		}

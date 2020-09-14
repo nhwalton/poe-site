@@ -5,6 +5,13 @@
 	font-family: Roboto, sans-serif;;
 }
 
+.tiny {
+	padding-top: 20px;
+	min-height: 100%;
+	width: 100%;
+	font-family: Roboto, sans-serif;;
+}
+
 .cardHeader {
   padding: 16px;
 }
@@ -16,6 +23,11 @@
 .tableCenter {
 	display:flex;
 	justify-content: center;
+}
+
+.buttons {
+	display:grid;
+	grid-gap:15px;
 }
 
 .tableWrapper {
@@ -173,6 +185,12 @@ div.start > div > div > div {
 	cursor: pointer;
 }
 
+.challenge {
+	background-color:#014f8f;
+	box-shadow: inset .2em .2em #0f69bd;
+	cursor: pointer;
+}
+
 .resetButton {
 	margin-bottom:15px;
 	position: absolute;
@@ -200,3 +218,12 @@ div.start > div > div > div {
 			  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome, Opera and Firefox */
   }
+
+.info {
+	width:80%;
+	margin:0 auto;
+}
+
+.additionalInfo.tiny {
+	display:none;
+}

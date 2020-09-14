@@ -6,8 +6,8 @@
         "damageColor":"red",
         "action":"Chills and Damages nearby enemies",
         "baseRadius":"Radius: 35",
-        "recommendedTier":"Chilling Tier III",
-        "recommendedPlacement":"Anywhere",
+        "recommendedTier":"Recommend Chilling Tier II",
+        "recommendedPlacement":"Place Behind Damage Towers",
         "borderColor":"#2b4f90",
         "upgrades": [
             {
@@ -27,7 +27,7 @@
                 "baseRadius":60
             }
         ],
-        "notes":"The Chilling Tower can be upgraded to a Glacial Cage Tower if necessary as it is helpful for containing bosses and stopping their progress."
+        "notes":"The Chilling Tower can be upgraded to a Glacial Cage Tower if necessary as it is helpful for containing bosses and stopping their progress. A single Glacial Cage near the pump is recommended in this scenario."
     },
     {
         "name":"Shock Nova Tower",
@@ -36,8 +36,8 @@
         "damageColor":"red",
         "action":"Casts Shocked Ground",
         "baseRadius":"Radius: 20",
-        "recommendedTier":"Arc Tower",
-        "recommendedPlacement":"near junctions",
+        "recommendedTier":"Recommend Arc Tower",
+        "recommendedPlacement":"Place Near Choke Points",
         "borderColor":"#b78f1e",
         "upgrades": [
             {
@@ -57,7 +57,7 @@
                 "baseRadius":45
             }
         ],
-        "notes":"Here is some basic info about what you should do with this tower."
+        "notes":"Arc Towers are one of the best DPS towers and should be high priority unless there are many resistant portals on the map."
     },
     {
         "name":"Empowering Tower",
@@ -66,8 +66,8 @@
         "damageColor":"",
         "action":"Improves the effectiveness of other Towers",
         "baseRadius":"Radius: 35",
-        "recommendedTier":"Empowering Tier I",
-        "recommendedPlacement":"Anywhere",
+        "recommendedTier":"Recommend Empowering Tier III",
+        "recommendedPlacement":"Place Evenly Throughout",
         "borderColor":"#4B8F39",
         "upgrades": [
             {
@@ -87,7 +87,7 @@
                 "baseRadius":55
             }
         ],
-        "notes":"Here is some basic info about what you should do with this tower."
+        "notes":"The Imbuing Tower can be useful near the pump or if your build does large amounts of AOE damage. Imbuing Towers can be helpful when paired with a Glacial Cage tower to take down bosses before they reach the pump."
     },
     {
         "name":"Seismic Tower",
@@ -96,8 +96,8 @@
         "damageColor":"red",
         "action":"Damages and Stuns nearby Enemies",
         "baseRadius":"Radius: 45",
-        "recommendedTier":"Seismic Tier I",
-        "recommendedPlacement":"Anywhere",
+        "recommendedTier":"Recommend Seismic Tier I",
+        "recommendedPlacement":"Place Evenly Throughout",
         "borderColor":"#c96036",
         "upgrades": [
             {
@@ -117,7 +117,7 @@
                 "baseRadius":45
             }
         ],
-        "notes":"The Seismic Tower slows enemies equally from Tier I through Tier III and therefore is fine to be left at Tier I."
+        "notes":"The ideal setup for Seismic Towers is to place Tier I Seismic Towers near Tier III Empowering Towers to enable perma-stuns. The Temporal Tower can be useful if Seismic and Chilling Towers are nullified by resistant mobs."
     },
     {
         "name":"Summoning Tower",
@@ -126,8 +126,8 @@
         "damageColor":"red",
         "action":"Summons Minions",
         "baseRadius":"Radius: 30",
-        "recommendedTier":"Avoid",
-        "recommendedPlacement":"Anywhere",
+        "recommendedTier":"Recommend Avoiding",
+        "recommendedPlacement":"Avoid",
         "borderColor":"#7e398f",
         "upgrades": [
             {
@@ -147,7 +147,7 @@
                 "baseRadius":45
             }
         ],
-        "notes":"While the summoning tower can be used to body block minions, it is suggested to avoid using this tower. If you are having trouble with one or two minions reaching your pump, a Scout Tower can be placed near the pump to seek out stragglers and finish them off."
+        "notes":"While the summoning tower can be used to body block minions, it is not particularly effective. If you are having trouble with small numbers of minions reaching your pump, a Scout Tower can be placed near the pump to seek out stragglers and finish them off."
     },
     {
         "name":"Fireball Tower",
@@ -156,8 +156,8 @@
         "damageColor":"orange",
         "action":"Casts a Fireball",
         "baseRadius":"Radius: 45",
-        "recommendedTier":"Flamethrower Tower",
-        "recommendedPlacement":"Anywhere",
+        "recommendedTier":"Recommend Meteor Tower",
+        "recommendedPlacement":"Near Junctions or Pump",
         "borderColor":"#A3414D",
         "upgrades": [
             {
@@ -177,6 +177,6 @@
                 "baseRadius":100
             }
         ],
-        "notes":"Here is some basic info about what you should do with this tower."
+        "notes":"The meteor tower is a good option for dealing heavy damage to bosses. Placing a few Meteor Towers near large junctions or the pump can help damage high-health minions and bosses. The Flamethrower Tower can be considered if there are Lightning Resistant mobs that make the Arc Tower less desireable or if you have an anointment that buffs the Flamethrower tower."
     }
 ]

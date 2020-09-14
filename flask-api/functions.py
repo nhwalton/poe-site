@@ -117,7 +117,8 @@ def get_gem_info(cur, gem, class_name):
     cur.execute(call)
 
     rows = cur.fetchall()
-    # print(gem_name, gem_level)
+    print(gem_name, gem_level)
+    print(rows)
 
     earliest = None
 
