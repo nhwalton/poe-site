@@ -132,7 +132,7 @@ def scarabs():
         scarabs = scarab_cache.get('scarabs')
     else:
         print("Cache Does Not Exist \n")
-        r = requests.get('https://poe.ninja/api/data/itemoverview?league=Harvest&type=Scarab&language=en').json()
+        r = requests.get('https://poe.ninja/api/data/itemoverview?league=Heist&type=Scarab&language=en').json()
         scarabs = []
         regex = r"(?:Gilded\s)(.*)"
         for scarab in r["lines"]:

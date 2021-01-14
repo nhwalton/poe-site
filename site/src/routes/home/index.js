@@ -60,8 +60,6 @@ export default class Home extends Component {
 					<h1>Change Log</h1>
 				</div>
 				<div>
-					<p class={style.centeredText}>Waiting for patch-notes to know if there are changes to Syndicate rewards.</p>
-					<br></br>
 					<h3>3.12 Heist</h3>
 					<p>Added the ability to toggle Scarab pricing on the Syndicate Cheatsheet. If you don't want prices to be auto-fetched from POE Ninja, simply click the button up top to switch functionality.</p>
 					<h3>3.11 Harvest</h3>

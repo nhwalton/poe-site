@@ -53,7 +53,8 @@ label, input, button {
 
 .actCard {
     padding:20px;
-    border: 8px solid #444;
+    border: 1px solid #444;
+    background-color:#292929cc;
     width:100%;
 }
 
