@@ -2,7 +2,7 @@
   "private": true,
   "name": "poesyn.xyz",
   "version": "0.1.0",
-  "description": "testing 123",
+  "description": "poesyn.xyz",
   "license": "MIT",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",

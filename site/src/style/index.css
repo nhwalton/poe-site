@@ -1,6 +1,6 @@
 :root {
   --mdc-theme-surface: rgba(68, 68, 68, 0.5);
-  --mdc-theme-primary: rgb(26, 33, 42);
+  --mdc-theme-primary: rgba(26, 33, 42, 0);
 }
 
 @font-face {
@@ -19,7 +19,7 @@ html, body {
 	margin: 0;
 	font-family: 'Helvetica Neue', arial, sans-serif;
 	font-weight: 400;
-	color: #fff;
+	color: #ccc;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -90,7 +90,10 @@ hr {
 }
 
 .mdc-card {
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(2px);
+  border:solid 1px #444;
+  background-color: #292929cc !important;
+  color:#e0e0e0;
 }
 
 .mdc-theme--dark {
@@ -141,7 +144,7 @@ hr {
   grid-template-columns: 1fr auto 1fr;
   grid-column-gap: 5px;
   justify-items:center;
-  margin:60px 0;
+  margin:40px 0;
   align-items:center;
 }
 
@@ -326,4 +329,11 @@ hr {
 .pill.cyan {
   border-left-color:#4195a3;
   background-color:#4195a320;
+}
+
+.mdc-button {
+  color: #f7b10a !important;
+  border: solid 1px #f7b10a !important;
+  backdrop-filter: blur(2px) !important;
+  border-radius:3px;
 }
