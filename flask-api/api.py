@@ -9,12 +9,13 @@ import sys
 import flask
 import pandas as pd
 import requests
+from bs4 import BeautifulSoup
 from expiringdict import ExpiringDict
 from flask import jsonify, request, send_file
 from flask_cors import CORS, cross_origin
 from waitress import serve
 
-from functions import return_info, get_gem_info
+from functions import return_info, get_gem_info, get_current_league
 
 app = flask.Flask(__name__)
 
@@ -40,6 +41,8 @@ except:
 conn.commit()
 
 scarab_cache = ExpiringDict(max_len=1, max_age_seconds=21600)
+
+current_league = None
 
 @app.route('/', methods=['GET'])
 def home():
@@ -132,7 +135,11 @@ def scarabs():
         scarabs = scarab_cache.get('scarabs')
     else:
         print("Cache Does Not Exist \n")
-        r = requests.get('https://poe.ninja/api/data/itemoverview?league=Ritual&type=Scarab&language=en').json()
+        try:
+            r = requests.get('https://poe.ninja/api/data/itemoverview?league={}&type=Scarab&language=en'.format(current_league)).json()
+        except:
+            current_league = get_current_league()
+            r = requests.get('https://poe.ninja/api/data/itemoverview?league={}&type=Scarab&language=en'.format(current_league)).json()
         scarabs = []
         regex = r"(?:Gilded\s)(.*)"
         for scarab in r["lines"]:
