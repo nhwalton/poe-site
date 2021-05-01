@@ -15,13 +15,13 @@
         {
             "title":"#cameria",
             "image":"poe_syndicate_03",
-            "class":"green",
+            "class":"yellow",
             "text":"Cameria"
         },
         {
             "title":"#elreon",
             "image":"poe_syndicate_04",
-            "class":"red",
+            "class":"gray",
             "text":"Elreon"
         },
         {
@@ -120,12 +120,12 @@
             "title":"#aisling-transportation",
             "image":"poe_syndicate_20",
             "class":"gray",
-            "text":"Veiled Weapon & Jewellery"
+            "text":"Double Veiled Weapon & Jewellery"
         },
         {
             "title":"#cameria-transportation",
             "image":"poe_syndicate_21",
-            "class":"green",
+            "class":"gray",
             "text":"Timeworn Item"
         },
         {
@@ -148,7 +148,7 @@
         },
         {
             "title":"#haku-transportation",
-            "image":"",
+            "image":"poe_syndicate_25",
             "class":"red",
             "text":"Rare Items"
         },
@@ -191,7 +191,7 @@
         {
             "title":"#riker-transportation",
             "image":"poe_syndicate_32",
-            "class":"yellow",
+            "class":"green",
             "text":"Take One (Currency)"
         },
         {
@@ -230,12 +230,12 @@
             "title":"#aisling-fortification",
             "image":"poe_syndicate_38",
             "class":"gray",
-            "text":"Veiled Armour & Jewellery"
+            "text":"Double Veiled Armour & Jewellery"
         },
         {
             "title":"#cameria-fortification",
             "image":"poe_syndicate_39",
-            "class":"gray",
+            "class":"yellow",
             "text":"Harbinger Orbs"
         },
         {
@@ -272,7 +272,7 @@
             "title":"#it-that-fled-fortification",
             "image":"poe_syndicate_45",
             "class":"gray",
-            "text":"Abyss Jewels"
+            "text":"Enchanted Maps (Extra Breach)"
         },
         {
             "title":"#janus-fortification",
@@ -282,7 +282,7 @@
         },
         {
             "title":"#jorgin-fortification",
-            "image":"",
+            "image":"poe_syndicate_47",
             "class":"gray",
             "text":"Items with Bestiary Affixes"
         },
@@ -338,15 +338,15 @@
         },
         {
             "title":"#aisling-research",
-            "image":"",
-            "class":"gray",
-            "text":"Add Veiled Mods",
+            "image":"poe_syndicate_56",
+            "class":"green",
+            "text":"Veiled Chaos Orb",
             "challenge":true
         },
         {
             "title":"#cameria-research",
             "image":"poe_syndicate_57",
-            "class":"gray",
+            "class":"yellow",
             "text":"Sextants"
         },
         {
@@ -369,7 +369,7 @@
         },
         {
             "title":"#haku-research",
-            "image":"",
+            "image":"poe_syndicate_61",
             "class":"red",
             "text":"Rare Items with Quality"
         },
@@ -438,8 +438,8 @@
         },
         {
             "title":"#vorici-research",
-            "image":"",
-            "class":"gray",
+            "image":"poe_syndicate_72",
+            "class":"green",
             "text":"White Sockets",
             "challenge":true
         }
@@ -461,21 +461,21 @@
         {
             "title":"#cameria-intervention",
             "image":"poe_syndicate_75",
-            "class":"green",
+            "class":"gray",
             "text":"Sulphite Scarab",
             "scarab":true
         },
         {
             "title":"#elreon-intervention",
             "image":"poe_syndicate_76",
-            "class":"gray",
+            "class":"yellow",
             "text":"Reliquary Scarab",
             "scarab":true
         },
         {
             "title":"#gravicius-intervention",
             "image":"poe_syndicate_77",
-            "class":"gray",
+            "class":"yellow",
             "text":"Divination Scarab",
             "scarab":true
         },
@@ -496,13 +496,13 @@
             "title":"#hillock-intervention",
             "image":"poe_syndicate_80",
             "class":"gray",
-            "text":"Map Quality",
-            "challenge":true
+            "text":"Abyss Scarab",
+            "scarab":true
         },
         {
             "title":"#it-that-fled-intervention",
             "image":"poe_syndicate_81",
-            "class":"gray",
+            "class":"yellow",
             "text":"Breach Scarab",
             "scarab":true
         },
@@ -516,7 +516,7 @@
         {
             "title":"#jorgin-intervention",
             "image":"poe_syndicate_83",
-            "class":"green",
+            "class":"gray",
             "text":"Bestiary Scarab",
             "scarab":true
         },
@@ -537,8 +537,9 @@
         {
             "title":"#riker-intervention",
             "image":"poe_syndicate_86",
-            "class":"yellow",
-            "text":"Take One (Div Card)"
+            "class":"green",
+            "text":"Blight Scarab",
+            "scarab":true
         },
         {
             "title":"#rin-intervention",
@@ -550,14 +551,14 @@
         {
             "title":"#tora-intervention",
             "image":"poe_syndicate_88",
-            "class":"gray",
+            "class":"green",
             "text":"Harbinger Scarab",
             "scarab":true
         },
         {
             "title":"#vagan-intervention",
             "image":"poe_syndicate_89",
-            "class":"gray",
+            "class":"green",
             "text":"Legion Scarab",
             "scarab":true
         },

@@ -29,7 +29,7 @@ export default class Home extends Component {
 					</Card>
 					<Card>
 						<div class={style.cardBody}>
-							<h2>Syndicate Cheatsheet 3.12</h2>
+							<h2>Syndicate Cheatsheet 3.14</h2>
 							<p>The Syndicate cheatsheet is updated for Path of Exile 3.12 and shows all Immortal Syndicate members and their safehouse rewards based on their location.
 							<br></br>
 							<br></br>

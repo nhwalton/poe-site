@@ -1,4 +1,5 @@
 import base64
+import json
 import re
 import urllib
 import zlib
@@ -6,12 +7,23 @@ from logging import log
 from urllib.request import Request
 
 import defusedxml.ElementTree as ET
-
+import requests
+from bs4 import BeautifulSoup
 
 class CaptchaError(Exception):
     def __init__(self, message):
         self.message = message
- 
+
+def get_current_league():
+    soup = BeautifulSoup(requests.get('https://poe.ninja').text,'html.parser')
+    challenge = soup.find(string=re.compile("challenge"))
+    challenge = re.findall(r'(\[.*\])',challenge)
+    challenge = json.loads(challenge[0])
+    for k in challenge:
+        if k['url'] == 'challenge':
+            current_league = k['name']
+            return current_league
+
 def get_raw_data(url):
     q = Request(url)
     q.add_header('Cache-Control', 'max-age=0')
