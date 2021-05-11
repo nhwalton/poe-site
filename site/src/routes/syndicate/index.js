@@ -12,11 +12,13 @@ import defaultJson from './table.json';
 import useIfMounted from '../../components/ifMounted';
 
 const RowCell = (props) => {
-	let cellTitle = props.cellData.title
-	let localClass = localStorage.getItem("syn-".concat(cellTitle))
-	let scarabs = props.scarabs
+	let cellTitle = props.cellData.title;
+	let localClass = localStorage.getItem("syn-".concat(cellTitle));
+	let scarabs = props.scarabs;
 	let useName;
 	let challenge = "";
+
+	let useColor = localStorage.getItem("currentColor")
 
 	if (props.cellData.challenge && props.challenges == true) {
 		challenge = "challenge"
@@ -49,7 +51,7 @@ const RowCell = (props) => {
 
 	const handleClick = () => {
 		if ((className != "start" && props.cellData.scarab != true) || (props.cellData.scarab == true && props.useScarabPricing != true)) {
-			console.log(props.cellData.scarab, props.useScarabPricing)
+			// console.log(props.cellData.scarab, props.useScarabPricing)
 			let newColor = (className == "gray" ? "green" :
 								(className == "green" ? "yellow" :
 								(className == "yellow" ? "red" : "gray"
@@ -97,7 +99,7 @@ const RowCell = (props) => {
 		<div
 			onClick = { () => handleClick(props) }
 			data-title = {cellTitle}
-			className = {`${style[className]} ${style.cellRatioBox} ${style[challenge]}`}
+			className = {`${style[className]} ${style[useColor]} ${style.cellRatioBox} ${style[challenge]}`}
 			>
 			<div class={style.cellRatioBoxInside}>
 				<div class={style.cellCentering}>
@@ -136,6 +138,35 @@ const Syndicate = (props) => {
 
 	const [scarabButton, setScarabButton] = useState("Auto Scarabs")
 
+	let initColor = localStorage.getItem("currentColor");
+
+	const [useColor, setUseColor] = useState(initColor)
+
+	if (useColor == null) {
+		setUseColor('default')
+		localStorage.setItem("currentColor",'default');
+	}
+
+	const cycleColor = () => {
+		const currentToggle = useColor
+		const colorOptions = ['default','accessible']
+		const isThisColor = (color) => color == currentToggle;
+		const toggleIndex = colorOptions.findIndex(isThisColor)
+		// console.log("color state was:",currentToggle)
+		if (toggleIndex == (colorOptions.length - 1)) {
+			const newColor = colorOptions[0]
+			setUseColor(newColor);
+			localStorage.setItem("currentColor", newColor)
+			// console.log("new color state is:",newColor)
+		} else {
+			const newIndex = toggleIndex + 1
+			const newColor = colorOptions[newIndex]
+			setUseColor(newColor);
+			localStorage.setItem("currentColor", newColor)
+			// console.log("new color state is:",newColor)
+		}
+	}
+
 	// const [challenges, setChallenges] = useState(false);
 
 	async function fetchScarabs() {
@@ -167,10 +198,11 @@ const Syndicate = (props) => {
 		ifMounted(() => setSyndicate(resetJson));
 		for (var key in localStorage) {
 			if (key.indexOf("syn") == 0) {
+				console.log(key)
 				localStorage.removeItem(key);
 			}
 		}
-		localStorage.clear();
+		// localStorage.clear();
 	}
 
 	const toggleScarabs = () => {
@@ -208,6 +240,7 @@ const Syndicate = (props) => {
 				<h1>Syndicate Cheat Sheet 3.14</h1>
 				<div class={style.buttons}>
 					{/* <Button raised ripped onClick={() => toggleChallenges()}>Challenges</Button> */}
+					<Button raised ripped onClick={() => cycleColor()}>Color Mode</Button>
 					<Button raised ripped onClick={() => toggleScarabs()}>{scarabButton}</Button>
 					<Button raised ripple onClick={() => resetColors()}>Reset</Button>
 				</div>
@@ -225,6 +258,31 @@ const Syndicate = (props) => {
 				</div>
 			</div>
 			<div class={toggleDiv}>
+				<div class={`titleWrapper ${display}`}>
+					<h1>Color Ratings - Relative Return</h1>
+				</div>
+				<div class={`${style.colorGuide}`}>
+						<div className = {`${style.green} ${style.legend} ${style[useColor]}`}>
+							<div className = {`${style.legendText}`}>
+								Great
+							</div>
+						</div>
+						<div className = {`${style.yellow} ${style.legend} ${style[useColor]}`}>
+						<div className = {`${style.legendText}`}>
+								Good
+							</div>
+						</div>
+						<div className = {`${style.gray} ${style.legend} ${style[useColor]}`}>
+						<div className = {`${style.legendText}`}>
+								Okay
+							</div>
+						</div>
+						<div className = {`${style.red} ${style.legend} ${style[useColor]}`}>
+						<div className = {`${style.legendText}`}>
+								Poor
+							</div>
+						</div>
+					</div>
 				<div class={`titleWrapper ${display}`}>
 					<h1>Additional Info</h1>
 				</div>
