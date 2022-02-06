@@ -120,13 +120,13 @@
             "title":"#aisling-transportation",
             "image":"poe_syndicate_20",
             "class":"gray",
-            "text":"Double Veiled Weapon & Jewellery"
+            "text":"Double Veiled Weapon & Jewelery"
         },
         {
             "title":"#cameria-transportation",
             "image":"poe_syndicate_21",
             "class":"gray",
-            "text":"Timeworn Item"
+            "text":"League Specific Unique"
         },
         {
             "title":"#elreon-transportation",
@@ -186,12 +186,12 @@
             "title":"#leo-transportation",
             "image":"poe_syndicate_31",
             "class":"gray",
-            "text":"Silver Coins"
+            "text":"Catalysts"
         },
         {
             "title":"#riker-transportation",
             "image":"poe_syndicate_32",
-            "class":"green",
+            "class":"yellow",
             "text":"Take One (Currency)"
         },
         {
@@ -230,7 +230,7 @@
             "title":"#aisling-fortification",
             "image":"poe_syndicate_38",
             "class":"gray",
-            "text":"Double Veiled Armour & Jewellery"
+            "text":"Double Veiled Armour & Jewelery"
         },
         {
             "title":"#cameria-fortification",
@@ -347,13 +347,13 @@
             "title":"#cameria-research",
             "image":"poe_syndicate_57",
             "class":"yellow",
-            "text":"Sextants"
+            "text":"Orbs of Unmaking"
         },
         {
             "title":"#elreon-research",
             "image":"poe_syndicate_58",
             "class":"gray",
-            "text":"Unique Jewellery"
+            "text":"Unique Jewelery & Flasks"
         },
         {
             "title":"#gravicius-research",
@@ -389,8 +389,8 @@
         {
             "title":"#janus-research",
             "image":"poe_syndicate_64",
-            "class":"gray",
-            "text":"Perandus Coins"
+            "class":"yellow",
+            "text":"Expedition Currency"
         },
         {
             "title":"#jorgin-research",
@@ -495,22 +495,22 @@
         {
             "title":"#hillock-intervention",
             "image":"poe_syndicate_80",
-            "class":"gray",
+            "class":"green",
             "text":"Abyss Scarab",
             "scarab":true
         },
         {
             "title":"#it-that-fled-intervention",
             "image":"poe_syndicate_81",
-            "class":"yellow",
+            "class":"gray",
             "text":"Breach Scarab",
             "scarab":true
         },
         {
             "title":"#janus-intervention",
             "image":"poe_syndicate_82",
-            "class":"gray",
-            "text":"Perandus Scarab",
+            "class":"green",
+            "text":"Expedition Scarab",
             "scarab":true
         },
         {
@@ -537,7 +537,7 @@
         {
             "title":"#riker-intervention",
             "image":"poe_syndicate_86",
-            "class":"green",
+            "class":"gray",
             "text":"Blight Scarab",
             "scarab":true
         },
@@ -558,7 +558,7 @@
         {
             "title":"#vagan-intervention",
             "image":"poe_syndicate_89",
-            "class":"green",
+            "class":"yellow",
             "text":"Legion Scarab",
             "scarab":true
         },

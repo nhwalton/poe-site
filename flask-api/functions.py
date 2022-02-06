@@ -17,8 +17,11 @@ class CaptchaError(Exception):
 def get_current_league():
     soup = BeautifulSoup(requests.get('https://poe.ninja').text,'html.parser')
     challenge = soup.find(string=re.compile("challenge"))
+    print(challenge)
     challenge = re.findall(r'(\[.*\])',challenge)
-    challenge = json.loads(challenge[0])
+    challenge = challenge[0].split(';')[0]
+    challenge = json.loads(challenge)
+    print(challenge)
     for k in challenge:
         if k['url'] == 'challenge':
             current_league = k['name']

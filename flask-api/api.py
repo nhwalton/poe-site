@@ -9,7 +9,6 @@ import sys
 import flask
 import pandas as pd
 import requests
-from bs4 import BeautifulSoup
 from expiringdict import ExpiringDict
 from flask import jsonify, request, send_file
 from flask_cors import CORS, cross_origin
@@ -70,8 +69,6 @@ def singleGem():
         gem_details = get_gem_info(cur=cur, gem=gem, class_name = class_name)
 
         return(gem_details)
-
-
 
 @app.route('/api/gems', methods=['GET'])
 @cross_origin()
@@ -135,11 +132,11 @@ def scarabs():
         scarabs = scarab_cache.get('scarabs')
     else:
         print("Cache Does Not Exist \n")
-        try:
-            r = requests.get('https://poe.ninja/api/data/itemoverview?league={}&type=Scarab&language=en'.format(current_league)).json()
-        except:
-            current_league = get_current_league()
-            r = requests.get('https://poe.ninja/api/data/itemoverview?league={}&type=Scarab&language=en'.format(current_league)).json()
+        # current_league = None
+        current_league = get_current_league()
+        print('Current League',current_league)
+        r = requests.get('https://poe.ninja/api/data/itemoverview?league={}&type=Scarab&language=en'.format(current_league)).json()
+        print('Got Scarabs')
         scarabs = []
         regex = r"(?:Gilded\s)(.*)"
         for scarab in r["lines"]:
@@ -165,7 +162,6 @@ def scarabs():
         scarabs = df.to_dict('records')
         scarab_cache['scarabs'] = scarabs
     return(jsonify(scarabs))
-
 
 if __name__ == "__main__":
     if is_dev == 'dev':

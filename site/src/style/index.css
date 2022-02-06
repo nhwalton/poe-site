@@ -40,6 +40,7 @@ h1 {
 }
 
 h2 {
+  font-family: 'unineue-heavyitalic', 'Helvetica Neue', arial, sans-serif;
   text-align:center;
 }
 
@@ -146,6 +147,10 @@ hr {
   justify-items:center;
   margin:40px 0;
   align-items:center;
+}
+
+.titleWrapper > h2 {
+  margin:10px 0;
 }
 
 .titleWrapper.tiny {

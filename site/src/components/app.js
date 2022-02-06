@@ -30,7 +30,7 @@ const App = () => {
 	}
 
 	function handleRoute(e) {
-		console.log(e.url)
+		// console.log(e.url)
 		setUrl(e.url)
 		shouldToggle(e.url)
 		analytics.page()
