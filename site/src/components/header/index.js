@@ -56,7 +56,7 @@ export default class Header extends Component {
 	}
 
 	render(props) {
-		console.log("route",props.selectedRoute);
+		// console.log("route",props.selectedRoute);
 		return (
 			<div>
 				<TopAppBar className="topappbar">
@@ -78,14 +78,14 @@ export default class Header extends Component {
 							<img src="../../assets/header/Exalted_Orb.png" />
 							Home
 						</Drawer.DrawerItem>
-						<Drawer.DrawerItem selected={props.selectedRoute === '/passives'} onClick={this.goToPassives}>
-							<img src="../../assets/header/Book_of_Skill.png" />
-							Leveling
-						</Drawer.DrawerItem>
 						<Drawer.DrawerItem selected={props.selectedRoute === '/syndicate'} onClick={this.goToSyndicate}>
 							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
 							<img src="../../assets/header/Cameria_the_Coldblooded.png" />
 							Syndicate
+						</Drawer.DrawerItem>
+						<Drawer.DrawerItem selected={props.selectedRoute === '/passives'} onClick={this.goToPassives}>
+							<img src="../../assets/header/Book_of_Skill.png" />
+							Leveling
 						</Drawer.DrawerItem>
 						<Drawer.DrawerItem selected={props.selectedRoute === '/fossils'} onClick={this.goToFossils}>
 							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
