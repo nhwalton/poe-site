@@ -1,7 +1,8 @@
 .home {
 	padding: 20px 80px;
 	min-height: 100%;
-	width: 100%;
+	width: 75%;
+	margin:auto;
 }
 
 .homeLink {
@@ -38,13 +39,15 @@
 
 .homeWrapper {
 	display:grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 20px;
+	/* width:60%; */
+	margin:auto;
 }
 
 @media only screen and (max-width: 1100px) {
 	.homeWrapper {
-        grid-template-columns: repeat(2, auto);
+		grid-template-columns: repeat(1, auto);
     }
 }
 
@@ -62,4 +65,9 @@
 
 .centeredText {
 	text-align: center;
+}
+
+.cardBody > a > button {
+	margin-top:1rem;
+	margin-bottom:1rem;
 }
