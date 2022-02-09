@@ -1,5 +1,6 @@
 import { h, Component, createRef } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
+import { Canvas } from 'reaflow';
 
 import analytics from '../../components/analytics';
 
@@ -11,54 +12,74 @@ import style from './style';
 import defaultJson from './table.json';
 import useIfMounted from '../../components/ifMounted';
 
+console.clear();
+
+const nodes = [
+	{
+	  id: '1',
+	  text: '1'
+	},
+	{
+	  id: '2',
+	  text: '2'
+	}
+  ];
+  
+const edges = [
+	{
+		id: '1-2',
+		from: '1',
+		to: '2'
+	}
+	];
+
 const initialJson = JSON.parse(JSON.stringify(defaultJson));
 
 const ModifierRecipe = (props) => {
 	const modifier = props.modifier
-	const modifiers = props.modifiers
-	const baseModifiers = []
-	const recipeModifiers = []
-	// console.log(baseModifiers, 'baseModifiers')
-	// console.log(modifiers, 'modifiers')
-
-	console.log(modifier['title'])
-
-	const getRecipe = function(modifier) {
-		let recipeLength = initialJson['modifiers'][modifier]['recipe'].length
-		if (recipeLength > 0) {
-			console.log('****getting sub recipe for', modifier)
-			recipeModifiers.push(modifier)
-			initialJson['modifiers'][modifier]['recipe'].map( modifier => {
-				getRecipe(modifier)
-			})
-		} else {
-			console.log('******got base modifier', modifier)
-			baseModifiers.push(modifier)
-		}
+	const recipe = props.recipe
+	
+	let parentObject = {
+		'tier': 0,
+		'title': modifier['title'],
+		'children': []
 	}
 
-	modifiers.map(function(modifier) {
-		console.log('**getting recipe for', modifier)
-		getRecipe(modifier)
+	let modList = []
+	
+	console.log(parentObject)
+
+	const getRecipe = function(modifier, parentObject) {
+		let recipeLength = initialJson['modifiers'][modifier]['recipe'].length
+		let modObject = {
+			'title': modifier,
+			'tier': parentObject['tier'] + 1,
+			'children': []
+		}
+		if (recipeLength > 0) {
+			parentObject['children'].push(modObject)
+			initialJson['modifiers'][modifier]['recipe'].map( modifier => {
+				getRecipe(modifier, modObject)
+			})
+		} else {
+			delete modObject['children']
+			parentObject['children'].push(modObject)
+		}
+	}
+	
+	recipe.map(function(modifier) {
+		getRecipe(modifier, parentObject)
 	})
 	
-	// modifiers.map(modifier => {
-	// 	baseModifiers.push(getRecipe(modifier))
-	// }
-
-	console.log('Recipes', recipeModifiers)
-	console.log('Base Modifiers', baseModifiers)
-	console.log('*****')
+	modList.push(parentObject)
+	console.log(modList)
 
 	return (
 		<div>
-			{baseModifiers.map( modifier => {
-				return (
-					<div>{modifier}</div>
-				);
-				}
-			)
-			}
+			<Canvas
+				nodes={nodes}
+				edges={edges}
+			/>
 		</div>
 	);
 };
@@ -72,7 +93,7 @@ const StrategyModifier = (props) => {
 		<div className={`${style.strategyModifier}`}>
 			<img src={modifier['image']}></img>
 			<span>{modifier['title']}</span>
-			<ModifierRecipe modifiers={modifier['recipe']} modifier={modifier}/>
+			<ModifierRecipe recipe={modifier['recipe']} modifier={modifier}/>
 		</div>
 	);
 };

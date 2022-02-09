@@ -465,7 +465,7 @@
         {
             "title":"Max Combo",
             "order":
-                ["abberath-touched", "shakari-touched", "innocence-touched", "kitava-touched"]
+                ["abberath-touched", "innocence-touched", "kitava-touched", "shakari-touched"]
         }
     ]
 }
