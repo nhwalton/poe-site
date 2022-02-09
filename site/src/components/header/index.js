@@ -38,6 +38,7 @@ export default class Header extends Component {
 	goToFossils = this.linkTo('/fossils');
 	goToBlight = this.linkTo('/blight');
 	goToOverlay = this.linkTo('/syndicate-overlay');
+	goToArchnemesis = this.linkTo('/archnemesis');
 
 	toggleDarkTheme = () => {
 		this.setState(
@@ -82,6 +83,11 @@ export default class Header extends Component {
 							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
 							<img src="../../assets/header/Cameria_the_Coldblooded.png" />
 							Syndicate
+						</Drawer.DrawerItem>
+						<Drawer.DrawerItem selected={props.selectedRoute === '/archnemesis'} onClick={this.goToArchnemesis}>
+							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
+							<img src="../../assets/header/Cameria_the_Coldblooded.png" />
+							Archnemesis
 						</Drawer.DrawerItem>
 						<Drawer.DrawerItem selected={props.selectedRoute === '/passives'} onClick={this.goToPassives}>
 							<img src="../../assets/header/Book_of_Skill.png" />

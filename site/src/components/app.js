@@ -13,6 +13,7 @@ import Syndicate from '../routes/syndicate';
 import SyndicateOverlay from '../routes/syndicate';
 import Fossils from '../routes/fossils';
 import Blight from '../routes/blight';
+import Archnemesis from '../routes/archnemesis';
 
 // const [toggle, toggleHeaderFooter] = useState(false);
 
@@ -56,6 +57,7 @@ const App = () => {
 					<SyndicateOverlay path="/syndicate-overlay" />
 					<Fossils path="/fossils" />
 					<Blight path="/blight" />
+					<Archnemesis path="/archnemesis" />
 					<NotFound default />
 				</Router>
 				<Footer />
