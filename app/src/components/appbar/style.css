@@ -1,0 +1,14 @@
+.menuBar {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.pageTitle {
+    font-family: unineue-heavyitalic,Helvetica Neue,arial,sans-serif!important;
+    font-size: 1.5rem!important;
+}
+
+.MuiListItem-root > img {
+    margin-right: 20px;
+    opacity: .5;
+}

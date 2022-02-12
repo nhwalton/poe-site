@@ -26,7 +26,7 @@ is_dev = args.env
 gem_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'gem_availability.csv')
 passives_path = path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'passives_with_gems.json')
 
-memory_uri = 'file::memory:?cache=shared'
+memory_uri = "file::memory:?cache=shared"
 
 conn = sqlite3.connect(memory_uri)
 cur = conn.cursor()
