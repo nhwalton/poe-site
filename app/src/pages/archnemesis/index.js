@@ -1,5 +1,5 @@
-import { h, Component, createRef, useState, useEffect } from 'react';
-import { Canvas } from 'reaflow';
+import { h, Component, createRef, useState, useEffect, Fragment } from 'react';
+import { Canvas, Node, Icon } from 'reaflow';
 
 import Button from '@mui/material/Button';
 import Switch from '@mui/material/Switch';
@@ -36,16 +36,10 @@ const ModifierRecipe = (props) => {
 	const recipe = props.modifier['recipe']
 
 	return (
-		// <div>
-		// 	<Canvas
-		// 		nodes={nodes}
-		// 		edges={edges}
-		// 	/>
-		// </div>
 		<div>
             {recipe.map( modifier => {
                 return (
-                    <div>{modifier}</div>
+                    <p>{modifier}</p>
                 );
                 }
             )
@@ -67,14 +61,19 @@ const StrategyModifier = (props) => {
 
 const StrategyCard = (props) => {	
 	
-	const strategy = []
+	// console.log('strategy',props.strategy)
 	
 	function GetRecipe(recipeItem, parentObject) {
 		let recipeLength = initialJson['modifiers'][recipeItem]['recipe'].length
+		const parentId = parentObject['id']
 		// const id = useEffect(() => Counter(), [])
 		let modObject = {
-			'text': recipeItem,
-			'children': []
+			'text': initialJson['modifiers'][recipeItem]['title'],
+			'children': [],
+			'image': initialJson['modifiers'][recipeItem]['image'],
+			'parentId': parentId,
+			'id': id
+
 			// 'id': id
 		}
 		if (recipeLength > 0) {
@@ -83,74 +82,98 @@ const StrategyCard = (props) => {
 				GetRecipe(recipeItem, modObject)
 			})
 		} else {
-			// delete modObject['children']
+			delete modObject['children']
 			parentObject['children'].push(modObject)
 		}
 	}
-
+	
 	let id = 0
-	props.strategy['order'].map( modifier => {
-		// const id = Counter()
-		id += 1
-		const recipe = initialJson['modifiers'][modifier]['recipe']
-		const title = initialJson['modifiers'][modifier]['title']
-		let parentObject = {
-			'text': title,
-			'children': [],
-			'id': id
-		}
-	
-		let modList = []
-		recipe.map(function(recipeItem) {
-			GetRecipe(recipeItem, parentObject)
-		})
-		modList.push(parentObject)
-		strategy.push(modList)
-	})
 
-	function flatten(arr) {
-		return arr.reduce(function (flat, toFlatten) {
-			return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
-		}, []);
-	};
-
-	function Flatten(arr) {
-		console.log(arr)
-		arr.forEach(parent => {
-			const parentId = parent.id
-			results.push(parent)
-			if (Array.isArray) {parent.children.forEach( child => {
-				id += 1
-				child.id = id
-				child.parentId = parentId
-				const edge = {}
-				edge.id = `${parentId}-${id}`
-				edge.from = parentId
-				edge.to = id
-				edges.push(edge)
-				results.push(child)
-				if (Array.isArray(child.children)) { Flatten(child.children) }
-			})}
+	function MapStrategy (props) {
+		let strategy = []
+		props.strategy['order'].map( modifier => {
+			id += 1
+			const recipe = initialJson['modifiers'][modifier]['recipe']
+			const title = initialJson['modifiers'][modifier]['title']
+			const image = initialJson['modifiers'][modifier]['image']
+			let parentObject = {
+				'text': title,
+				'children': [],
+				'image': image,
+				'id': id
+			}
+		
+			recipe.map(function(recipeItem) {
+				GetRecipe(recipeItem, parentObject, id)
+			})
+			// modList.push(parentObject)
+			strategy.push(parentObject)
 		})
+		return (strategy)
 	}
-
-	const results = [];
-	const edges = [];
 	
+	function crawlChildren(parent, results, links) {
+		const parentId = parent.id
+		if (Array.isArray(parent.children)) {parent.children.forEach( child => {
+			id += 1
+			child.id = id
+			child.parentId = parentId
+			const edge = {
+				id: `${parentId}-${child.id}`,
+				from: parentId,
+				to: child.id
+			}
+			links.push(edge)
+			if (Array.isArray(child.children)) { crawlChildren(child, results, links) }
+			else {
+				child.icon = {
+					url: child.image,
+					height: 50,
+					width: 50
+				  }
+				results.push(child)
+				// setResults(results)
+			}
+		parent.icon = {
+				url: parent.image,
+				height: 50,
+				width: 50
+			  }
+		results.push(parent)
+		setResults(results)
+		setLinks(links)
+	})}	
+}
+
+	const [strategy, setStrategy] = useState([])
+	const [results, setResults] = useState([]);
+	const [links, setLinks] = useState([]);
+
 	useEffect(() => {
-		const flattened = flatten(strategy)
-		Flatten(flattened)
-	}, []);
+		console.log('strategy changed', strategy)}, [strategy]
+	)
 
-	console.log(results)
-	console.log(edges)
+	useEffect(() => {
+		// setStrategy(MapStrategy(props))
+		const thisResults = []
+		const thisLinks = []
+		const thisStrategy = MapStrategy(props).forEach(parent => { crawlChildren(parent, thisResults, thisLinks) });
+		setStrategy(thisStrategy)
+		setResults(thisResults)
+		setLinks(thisLinks)
+	}, [props]);
 
-	const nodes = results;
-
+	const nodes = [...new Set(results)];
+	const edges = [...new Set(links)];
+	console.log('nodes',nodes)
+	// console.log('edges',edges)
+	console.log(props)
+	const modifierTitle = initialJson['modifiers'][props.strategy['title']]['title']
 	return (
 		<div>
-			<h2>{props.strategy['title']}</h2>
-			<div className="recipe">
+			<img src={initialJson['modifiers'][props.strategy['title']]['image']}></img>
+			<h2>{modifierTitle}</h2>
+			{/* <div className="recipe">
 				{props.strategy['order'].map( modifier => {
 					return (
 						<div>
@@ -160,6 +183,20 @@ const StrategyCard = (props) => {
 					}
 				)
 				}
+			</div> */}
+			<div>
+				<Canvas
+					// fit={true}
+					// height={500}
+					// width={"75%"}
+					// maxWidth={"75%"}
+    				maxHeight={700}
+					nodes={nodes}
+					edges={edges}
+					node={
+						<Node icon={<Icon />} />
+					}
+				/>
 			</div>
 		</div>
 	);
@@ -168,23 +205,69 @@ const StrategyCard = (props) => {
 const Archnemesis = (props) => {
 	const display = props.display
 
+	const defaultModifier = {
+		"title":"mirror-image",
+		"order":
+			["mirror-image"]
+	}
+
 	// let initialJson = JSON.parse(JSON.stringify(defaultJson));
 	const [archnemesis, setArchnemesis] = useState(initialJson);
+	const [strategy, setStrategy] = useState(defaultModifier);
+
+	function onModifier(event) {
+		console.log(event.target.value)
+		const thisStrategy = {
+			'title': event.target.value,
+			'order': [event.target.value]
+		}
+		// console.log(thisStrategy)
+		setStrategy(thisStrategy)
+	}
+
+	const recipeModifiers = {}
+
+	Object.keys(initialJson['modifiers']).map(modifier => {
+		const thisModifier = initialJson['modifiers'][modifier]
+		if (thisModifier.recipe.length !== 0) {
+			recipeModifiers[modifier] = thisModifier
+		}
+	})
+
 	return (
 		<div className={`archnemesis page ${display}`}>
 			<div className={`titleWrapper ${display}`}>
 				<h1>Archnemesis Recipes</h1>
 			</div>
+			<div className="formGroup gemGroup">
+				<select
+				id="modName"
+				className="formField"
+				onChange={e => onModifier(e)}
+				>
+					<option value="Mirror Image" selected disabled hidden> 
+					Modifier
+					</option>
+					{Object.keys(recipeModifiers).map(function(key) {
+						const title = recipeModifiers[key]['title']
+						const value = recipeModifiers[key]['icon']
+						return(
+						<option value={value}>{title}</option>
+						);
+					})};
+				</select>
+			</div>
 			<div>
 				<div>
-					{Object.keys(initialJson['strategies']).map(function(key) {
+					{/* {Object.keys(initialJson['strategies']).map(function(key) {
 						return (
 							<StrategyCard strategy={initialJson['strategies'][key]}/>
 								// <h2>{initialJson['strategies'][key]['title']}</h2>
 							);
 						}
 					)
-					}
+					} */}
+					<StrategyCard strategy={strategy}/>
 				</div>
 			</div>
 		</div>
