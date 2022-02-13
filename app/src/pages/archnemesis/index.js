@@ -1,32 +1,13 @@
-import { h, Component, createRef, useState, useEffect, Fragment } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Canvas, Node, Icon } from 'reaflow';
-
 import Button from '@mui/material/Button';
-import Switch from '@mui/material/Switch';
+import { FullscreenProvider, useFullscreen  } from '../../components/useFullscreen';
+
 import './style.css';
+
 import defaultJson from './table.json';
 
 console.clear();
-
-const nodes2 = [
-	{
-	  id: '1',
-	  text: '1'
-	},
-	{
-	  id: '2',
-	  text: '2'
-	}
-  ];
-  
-const edges2 = [
-	{
-		id: '1-2',
-		from: '1',
-		to: '2'
-	}
-	];
-
 
 const initialJson = JSON.parse(JSON.stringify(defaultJson));
 
@@ -59,7 +40,14 @@ const StrategyModifier = (props) => {
 	);
 };
 
-const StrategyCard = (props) => {	
+const StrategyCard = (props) => {
+
+	const {
+        fullscreenRef,
+        enterFullscreen,
+        exitFullscreen,
+        fullscreenActive,
+    } = useFullscreen();
 	
 	// console.log('strategy',props.strategy)
 	
@@ -169,6 +157,7 @@ const StrategyCard = (props) => {
 	// console.log('edges',edges)
 	console.log(props)
 	const modifierTitle = initialJson['modifiers'][props.strategy['title']]['title']
+
 	return (
 		<div>
 			<img src={initialJson['modifiers'][props.strategy['title']]['image']}></img>
@@ -184,20 +173,58 @@ const StrategyCard = (props) => {
 				)
 				}
 			</div> */}
+			<main ref={fullscreenRef}>
+                {fullscreenActive ? (
+					<Button variant="syn" type="button" onClick={exitFullscreen}>
+							Exit fullscreen mode
+					</Button>
+					) : (
+					<Button variant="syn" type="button" onClick={enterFullscreen}>
+						Enter fullscreen mode
+					</Button>
+                )}
 			<div>
-				<Canvas
-					// fit={true}
-					// height={500}
-					// width={"75%"}
-					// maxWidth={"75%"}
-    				maxHeight={700}
+			{fullscreenActive ? (
+                    <Canvas
+					fit={true}
+					center={true}
+					pannable={true}
+					zoomable="true"
+					readonly={true}
+					maxHeight={"100vh"}
+					maxWidth={"100vw"}
 					nodes={nodes}
 					edges={edges}
 					node={
 						<Node icon={<Icon />} />
 					}
 				/>
+                ) : (
+                    <Canvas
+					center={true}
+					pannable={true}
+					readonly={true}
+					maxHeight={750}
+					nodes={nodes}
+					edges={edges}
+					node={
+						<Node icon={<Icon />} />
+					}
+				/>
+                )}
+				{/* <Canvas
+					// fit={true}
+					// height={500}
+					// width={"75%"}
+					// maxWidth={"75%"}
+					nodes={nodes}
+					edges={edges}
+					node={
+						<Node icon={<Icon />} />
+					}
+				/> */}
 			</div>
+			</main>
 		</div>
 	);
 };
@@ -206,9 +233,9 @@ const Archnemesis = (props) => {
 	const display = props.display
 
 	const defaultModifier = {
-		"title":"mirror-image",
+		"title":"heralding-minions",
 		"order":
-			["mirror-image"]
+			["heralding-minions"]
 	}
 
 	// let initialJson = JSON.parse(JSON.stringify(defaultJson));
@@ -235,42 +262,45 @@ const Archnemesis = (props) => {
 	})
 
 	return (
-		<div className={`archnemesis page ${display}`}>
-			<div className={`titleWrapper ${display}`}>
-				<h1>Archnemesis Recipes</h1>
-			</div>
-			<div className="formGroup gemGroup">
-				<select
-				id="modName"
-				className="formField"
-				onChange={e => onModifier(e)}
-				>
-					<option value="Mirror Image" selected disabled hidden> 
-					Modifier
-					</option>
-					{Object.keys(recipeModifiers).map(function(key) {
-						const title = recipeModifiers[key]['title']
-						const value = recipeModifiers[key]['icon']
-						return(
-						<option value={value}>{title}</option>
-						);
-					})};
-				</select>
-			</div>
-			<div>
+		<FullscreenProvider>
+			<div className={`archnemesis page ${display}`}>
+				<div className={`titleWrapper ${display}`}>
+					<h1>Archnemesis Recipes</h1>
+						<div className="formGroup">
+							<select
+							id="modName"
+							className="formField"
+							defaultValue="Heralding Minions"
+							onChange={e => onModifier(e)}
+							>
+								<option selected disabled hidden> 
+								Modifier
+								</option>
+								{Object.keys(recipeModifiers).map(function(key) {
+									const title = recipeModifiers[key]['title']
+									const value = recipeModifiers[key]['icon']
+									return(
+									<option value={value}>{title}</option>
+									);
+								})};
+							</select>
+						</div>
+				</div>
 				<div>
-					{/* {Object.keys(initialJson['strategies']).map(function(key) {
-						return (
-							<StrategyCard strategy={initialJson['strategies'][key]}/>
-								// <h2>{initialJson['strategies'][key]['title']}</h2>
-							);
-						}
-					)
-					} */}
-					<StrategyCard strategy={strategy}/>
+					<div>
+						{/* {Object.keys(initialJson['strategies']).map(function(key) {
+							return (
+								<StrategyCard strategy={initialJson['strategies'][key]}/>
+									// <h2>{initialJson['strategies'][key]['title']}</h2>
+								);
+							}
+						)
+						} */}
+						<StrategyCard strategy={strategy}/>
+					</div>
 				</div>
 			</div>
-		</div>
+		</FullscreenProvider>
 	);
 }
 
