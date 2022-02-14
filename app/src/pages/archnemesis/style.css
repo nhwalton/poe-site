@@ -221,3 +221,17 @@ div.start > div > div > div {
 			  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome, Opera and Firefox */
   }
+
+.treeCanvas {
+	width:100%;
+	height:750px;
+}
+
+.butterflies-link {
+	stroke: #475872 !important;
+	stroke-width: 2px;
+}
+
+.butterflie-circle-endpoint {
+    display:none !important;
+  }

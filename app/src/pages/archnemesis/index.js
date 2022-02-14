@@ -1,9 +1,13 @@
 import { useRef, useState, useEffect } from 'react';
-import { Canvas, Node, Icon } from 'reaflow';
+// import { Canvas, Node, Icon } from 'reaflow';
 import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
 import { FullscreenProvider, useFullscreen  } from '../../components/useFullscreen';
+import CompactBoxTree from '../../components/butterfly';
 
+import 'butterfly-dag/dist/index.css';
 import './style.css';
+import Node from '../../components/butterfly/node.js';
 
 import defaultJson from './table.json';
 
@@ -49,27 +53,45 @@ const StrategyCard = (props) => {
         fullscreenActive,
     } = useFullscreen();
 	
-	// console.log('strategy',props.strategy)
-	
-	function GetRecipe(recipeItem, parentObject) {
+	function GetRecipe(recipeItem, parentObject, edges) {
+		id += 1;
 		let recipeLength = initialJson['modifiers'][recipeItem]['recipe'].length
 		const parentId = parentObject['id']
 		// const id = useEffect(() => Counter(), [])
 		let modObject = {
-			'text': initialJson['modifiers'][recipeItem]['title'],
-			'children': [],
-			'image': initialJson['modifiers'][recipeItem]['image'],
-			'parentId': parentId,
-			'id': id
-
-			// 'id': id
+			'id': `{recipeItem}-${id}`,
+			'Class': Node,
+			content:initialJson['modifiers'][recipeItem]['title'],
+			// 'text': initialJson['modifiers'][recipeItem]['title'],
+			imageUrl: initialJson['modifiers'][recipeItem]['image'],
+			children: [],
+			endpoints: [{
+				id: '1',
+				orientation: [0, -1],
+				pos: [0.5, 0]
+			}, {
+				id: '2',
+				orientation: [0, 1],
+				pos: [0.5, 0]
+			}]
 		}
+		let modEdge = {
+			id: `${id}`,
+			source: '2',
+			target: '1',
+			sourceNode: parentId,
+			targetNode: `{recipeItem}-${id}`,
+			type: 'endpoint'
+		}
+
 		if (recipeLength > 0) {
 			parentObject['children'].push(modObject)
+			edges.push(modEdge)
 			initialJson['modifiers'][recipeItem]['recipe'].map( recipeItem => {
-				GetRecipe(recipeItem, modObject)
+				GetRecipe(recipeItem, modObject, edges)
 			})
 		} else {
+			edges.push(modEdge)
 			delete modObject['children']
 			parentObject['children'].push(modObject)
 		}
@@ -79,89 +101,127 @@ const StrategyCard = (props) => {
 
 	function MapStrategy (props) {
 		let strategy = []
+		let edges = []
 		props.strategy['order'].map( modifier => {
 			id += 1
 			const recipe = initialJson['modifiers'][modifier]['recipe']
 			const title = initialJson['modifiers'][modifier]['title']
 			const image = initialJson['modifiers'][modifier]['image']
 			let parentObject = {
-				'text': title,
-				'children': [],
-				'image': image,
-				'id': id
+				isRoot: true,
+				id: 'Root',
+				content: title,
+				imageUrl: image,
+				'Class': Node,
+				endpoints: [{
+					id: '1',
+					orientation: [0, -1],
+					pos: [0.5, 0]
+				}, {
+					id: '2',
+					orientation: [0, 1],
+					pos: [0.5, 0]
+				}],
+				// 'text': title,
+				children: [],
+				// 'image': image,
+				// 'id': id
 			}
-		
+			let parentEdge = {
+				id: `${id}`,
+				source: '2',
+				target: '1',
+				sourceNode: 'Root',
+				type: 'endpoint'
+			}
 			recipe.map(function(recipeItem) {
-				GetRecipe(recipeItem, parentObject, id)
+				GetRecipe(recipeItem, parentObject, edges)
 			})
 			// modList.push(parentObject)
+			edges.push(parentEdge)
 			strategy.push(parentObject)
 		})
-		return (strategy)
+		const data = {
+			nodes: strategy[0],
+			edges: edges
+		}
+		return (data)
 	}
 	
-	function crawlChildren(parent, results, links) {
-		const parentId = parent.id
-		if (Array.isArray(parent.children)) {parent.children.forEach( child => {
-			id += 1
-			child.id = id
-			child.parentId = parentId
-			const edge = {
-				id: `${parentId}-${child.id}`,
-				from: parentId,
-				to: child.id
-			}
-			links.push(edge)
-			if (Array.isArray(child.children)) { crawlChildren(child, results, links) }
-			else {
-				child.icon = {
-					url: child.image,
-					height: 50,
-					width: 50
-				  }
-				results.push(child)
-				// setResults(results)
-			}
-		parent.icon = {
-				url: parent.image,
-				height: 50,
-				width: 50
-			  }
-		results.push(parent)
-		setResults(results)
-		setLinks(links)
-	})}	
-}
+// 	function crawlChildren(parent, results, links) {
+// 		const parentId = parent.id
+// 		if (Array.isArray(parent.children)) {parent.children.forEach( child => {
+// 			id += 1
+// 			child.id = id
+// 			child.parentId = parentId
+// 			const edge = {
+// 				id: `${parentId}-${child.id}`,
+// 				from: parentId,
+// 				to: child.id
+// 			}
+// 			links.push(edge)
+// 			if (Array.isArray(child.children)) { crawlChildren(child, results, links) }
+// 			else {
+// 				child.icon = {
+// 					url: child.image,
+// 					height: 50,
+// 					width: 50
+// 				  }
+// 				results.push(child)
+// 				// setResults(results)
+// 			}
+// 		parent.icon = {
+// 				url: parent.image,
+// 				height: 50,
+// 				width: 50
+// 			  }
+// 		results.push(parent)
+// 		setResults(results)
+// 		setLinks(links)
+// 	})}	
+// }
 
-	const [strategy, setStrategy] = useState([])
-	const [results, setResults] = useState([]);
-	const [links, setLinks] = useState([]);
+	const [strategy, setStrategy] = useState({})
+	// const [results, setResults] = useState([]);
+	// const [links, setLinks] = useState([]);
 
-	useEffect(() => {
-		console.log('strategy changed', strategy)}, [strategy]
-	)
+	// useEffect(() => {
+	// 	console.log('strategy changed', strategy)}, [strategy]
+	// )
 
-	useEffect(() => {
-		// setStrategy(MapStrategy(props))
-		const thisResults = []
-		const thisLinks = []
-		const thisStrategy = MapStrategy(props).forEach(parent => { crawlChildren(parent, thisResults, thisLinks) });
-		setStrategy(thisStrategy)
-		setResults(thisResults)
-		setLinks(thisLinks)
-	}, [props]);
+	// useEffect(() => {
+	// 	// setStrategy(MapStrategy(props))
+	// 	const thisResults = []
+	// 	const thisLinks = []
+	// 	const thisStrategy = MapStrategy(props).forEach(parent => { crawlChildren(parent, thisResults, thisLinks) });
+	// 	setStrategy(thisStrategy)
+	// 	setResults(thisResults)
+	// 	setLinks(thisLinks)
+	// }, [props]);
 
-	const nodes = [...new Set(results)];
-	const edges = [...new Set(links)];
-	console.log('nodes',nodes)
+	// useEffect(() => {
+	// 	setStrategy(MapStrategy(props))
+	// }, [props]);
+
+	const BoxTree = () => {
+		const strategy = MapStrategy(props)
+		return (
+			<CompactBoxTree data={strategy}/>
+		)
+	}
+
+	// const nodes = [...new Set(results)];
+	// const edges = [...new Set(links)];
+	// console.log('nodes',nodes)
 	// console.log('edges',edges)
-	console.log(props)
+	// console.log(props)
 	const modifierTitle = initialJson['modifiers'][props.strategy['title']]['title']
 
 	return (
 		<div>
 			<img src={initialJson['modifiers'][props.strategy['title']]['image']}></img>
 			<h2>{modifierTitle}</h2>
+			
 			{/* <div className="recipe">
 				{props.strategy['order'].map( modifier => {
 					return (
@@ -185,44 +245,12 @@ const StrategyCard = (props) => {
                 )}
 			<div>
 			{fullscreenActive ? (
-                    <Canvas
-					fit={true}
-					center={true}
-					pannable={true}
-					zoomable="true"
-					readonly={true}
-					maxHeight={"100vh"}
-					maxWidth={"100vw"}
-					nodes={nodes}
-					edges={edges}
-					node={
-						<Node icon={<Icon />} />
-					}
-				/>
+				<div className="treeCanvas"><BoxTree/></div>
                 ) : (
-                    <Canvas
-					center={true}
-					pannable={true}
-					readonly={true}
-					maxHeight={750}
-					nodes={nodes}
-					edges={edges}
-					node={
-						<Node icon={<Icon />} />
-					}
-				/>
+				<Card variant="arch">
+					<div className="treeCanvas"><BoxTree/></div>
+				</Card>
                 )}
-				{/* <Canvas
-					// fit={true}
-					// height={500}
-					// width={"75%"}
-					// maxWidth={"75%"}
-					nodes={nodes}
-					edges={edges}
-					node={
-						<Node icon={<Icon />} />
-					}
-				/> */}
 			</div>
 			</main>
 		</div>
@@ -243,12 +271,10 @@ const Archnemesis = (props) => {
 	const [strategy, setStrategy] = useState(defaultModifier);
 
 	function onModifier(event) {
-		console.log(event.target.value)
 		const thisStrategy = {
 			'title': event.target.value,
 			'order': [event.target.value]
 		}
-		// console.log(thisStrategy)
 		setStrategy(thisStrategy)
 	}
 

@@ -59,9 +59,22 @@ const CustomTheme = createTheme({
           props: { variant: "syn" },
           style: {
             color: "#e0e0e0 !important",
-            background: "linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)",
             border: "1px solid #444",
             background: "rgba(41,41,41,.8)!important",
+            backdropFilter: "blur(2px)",
+            padding: "1.5rem",
+            width: "75%",
+            margin: "auto",
+            textAlign: "left"
+            // border: "1px solid #f7b10a!important",
+          }
+        },
+        {
+          props: { variant: "arch" },
+          style: {
+            color: "#e0e0e0 !important",
+            border: "1px solid #444",
+            background: "rgba(20,20,20,.8)!important",
             backdropFilter: "blur(2px)",
             padding: "1.5rem",
             width: "75%",

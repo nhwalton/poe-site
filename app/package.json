@@ -7,6 +7,8 @@
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.4.1",
     "@mui/material": "^5.4.1",
+    "butterfly-dag": "^4.1.25",
+    "butterfly-react": "^0.0.37-beta",
     "fscreen": "^1.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
