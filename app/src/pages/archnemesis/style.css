@@ -53,7 +53,7 @@
 
 .formGroup {
     position: relative;
-    display: flex;
+    display: grid;
     width: 50%;
     font-family:Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -92,15 +92,6 @@
 	float:left;
 	display:grid;
 	grid-template: repeat(5, 1fr) / auto; /* Row / Column */
-}
-
-.cellRatioBox {
-	height: 0;
-	overflow: hidden;
-	padding-top: calc(155/102 * 100%);
-	position: relative;
-	background-color:#333333e5;
-	margin-right:7px;
 }
 
 .cellRatioBoxInside {
@@ -227,6 +218,11 @@ div.start > div > div > div {
 	height:750px;
 }
 
+.treeCanvasFull {
+	width:100vw;
+	height:100vh;
+}
+
 .butterflies-link {
 	stroke: #475872 !important;
 	stroke-width: 2px;
@@ -235,3 +231,16 @@ div.start > div > div > div {
 .butterflie-circle-endpoint {
     display:none !important;
   }
+
+h2.archTitle {
+	font-size: 2rem;
+	margin: -5px auto;
+}
+
+.fullscreenModifiers {
+	display:grid;
+	grid-template: auto / auto;
+	grid-gap:15px;
+	margin:auto;
+	width:100%;
+}

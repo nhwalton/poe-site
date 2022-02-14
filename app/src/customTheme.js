@@ -33,6 +33,31 @@ const CustomTheme = createTheme({
             width: "15rem"
             // border: "1px solid #f7b10a!important",
           }
+        },
+        {
+          props: { variant: "arch" },
+          style: {
+            fontWeight: "bold",
+            // color: "#f7b10a !important",
+            color: "#fff",
+            background: "linear-gradient(45deg, #f7b10a 30%, #f39521 90%)",
+            width: "15rem",
+            marginTop: "25px"
+            // border: "1px solid #f7b10a!important",
+          }
+        },
+        {
+          props: { variant: "archFullscreen" },
+          style: {
+            fontWeight: "bold",
+            // color: "#f7b10a !important",
+            color: "#fff",
+            background: "linear-gradient(45deg, #f7b10a 30%, #f39521 90%)",
+            width: "100%",
+            margin: "auto",
+            marginTop: "25px"
+            // border: "1px solid #f7b10a!important",
+          }
         }
       ],
       defaultProps: {
@@ -79,6 +104,7 @@ const CustomTheme = createTheme({
             padding: "1.5rem",
             width: "75%",
             margin: "auto",
+            marginTop: "25px",
             textAlign: "left"
             // border: "1px solid #f7b10a!important",
           }
