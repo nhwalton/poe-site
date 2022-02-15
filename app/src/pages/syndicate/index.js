@@ -143,6 +143,7 @@ const Syndicate = (props) => {
 
 	async function fetchScarabs() {
 		const response = await fetch('/api/scarabs');
+		console.log('response', response);
 		return response.json();
 	};
 	
@@ -158,9 +159,9 @@ const Syndicate = (props) => {
 		}
 		if (localScarab === true) {
 			setScarabPricing(true)
-			setScarabButton("Auto Scarabs")
+			setScarabButton("Auto")
 		} else {
-			setScarabButton("Manual Scarabs")
+			setScarabButton("Manual")
 		}
 	}, []);
 
@@ -178,11 +179,11 @@ const Syndicate = (props) => {
 		const currentToggle = scarabPricing
 		if (currentToggle === true) {
 			setScarabPricing(false);
-			setScarabButton("Manual Scarabs")
+			setScarabButton("Manual")
 			localStorage.setItem("scarabPricing", false)
 		} else {
 			setScarabPricing(true);
-			setScarabButton("Auto Scarabs")
+			setScarabButton("Auto")
 			localStorage.setItem("scarabPricing", true)
 		}
 	}
@@ -207,8 +208,8 @@ const Syndicate = (props) => {
 				<h1>Syndicate Cheat Sheet 3.17</h1>
 				<div className="buttons">
 					{/* <Button onClick={() => toggleChallenges()}>Challenges</Button> */}
-					<Button variant="syn" onClick={() => cycleColor()}>Color Mode</Button>
-					<Button variant="syn" onClick={() => toggleScarabs()}>{scarabButton}</Button>
+					<Button variant="syn" onClick={() => cycleColor()}>Color Mode: {useColor}</Button>
+					<Button variant="syn" onClick={() => toggleScarabs()}>Scarab Scoring: {scarabButton}</Button>
 					<Button variant="syn" onClick={() => ResetColors()}>Reset</Button>
 				</div>
 			</div>

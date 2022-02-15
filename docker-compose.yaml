@@ -1,11 +1,15 @@
 version: "3"
 
 services:
-  site:
-    image: site:latest
-    ports: ["8080:8080"]
-
+  app:
+    image: nhwalton/poe-app:latest
+    ports: ["5000:80"]
+    volumes: 
+        - ./app:/opt
+        - /app/node_modules
+    depends_on:
+        - flask-api
   flask-api:
-    image: flask-api:latest
+    image: nhwalton/poe-api:latest
     ports: ["6000:6000"]
     restart: "unless-stopped"
