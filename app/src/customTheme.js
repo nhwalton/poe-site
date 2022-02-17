@@ -17,6 +17,18 @@ const CustomTheme = createTheme({
           }
         },
         {
+          props: { variant: "home" },
+          style: {
+            fontWeight: "bold",
+            // color: "#f7b10a !important",
+            color: "#fff",
+            background: "linear-gradient(45deg, #f7b10a 30%, #f39521 90%)",
+            width: "50%",
+            marginTop:"1em"
+            // border: "1px solid #f7b10a!important",
+          }
+        },
+        {
           props: { variant: "menu" },
           style: {
             fontWeight: "bold",
@@ -47,7 +59,21 @@ const CustomTheme = createTheme({
           }
         },
         {
-          props: { variant: "archFullscreen" },
+          props: { variant: "archEnterFullscreen" },
+          style: {
+            display: "grid",
+            fontWeight: "bold",
+            // color: "#f7b10a !important",
+            color: "#fff",
+            background: "linear-gradient(45deg, #f7b10a 30%, #f39521 90%)",
+            width: "100%",
+            marginRight: "auto",
+            width: "50%"
+            // border: "1px solid #f7b10a!important",
+          }
+        },
+        {
+          props: { variant: "archExitFullscreen" },
           style: {
             fontWeight: "bold",
             // color: "#f7b10a !important",
@@ -61,9 +87,9 @@ const CustomTheme = createTheme({
         }
       ],
       defaultProps: {
-        disableElevation: false,
-        disableFocusRipple: true,
-        disableRipple: true
+        // disableElevation: false,
+        // disableFocusRipple: true,
+        // disableRipple: true
       }
     },
     MuiCard: {
@@ -71,12 +97,12 @@ const CustomTheme = createTheme({
         {
           props: { variant: "home" },
           style: {
-            color: "#e0e0e0 !important",
-            background: "linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)",
-            border: "1px solid #444",
-            background: "rgba(41,41,41,.8)!important",
+            color: "#d1d1d1 !important",
+            border: "1px solid #2e2e2e",
+            background: "rgba(24, 24, 24,.8)!important",
             backdropFilter: "blur(2px)",
-            padding: "1.5rem"
+            padding: "1rem 3rem",
+            textAlign: "left"
             // border: "1px solid #f7b10a!important",
           }
         },
@@ -96,6 +122,21 @@ const CustomTheme = createTheme({
         },
         {
           props: { variant: "arch" },
+          style: {
+            color: "#e0e0e0 !important",
+            border: "1px solid #444",
+            background: "rgba(20,20,20,.8)!important",
+            backdropFilter: "blur(2px)",
+            padding: "1.5rem",
+            width: "75%",
+            margin: "auto",
+            marginTop: "25px",
+            textAlign: "left"
+            // border: "1px solid #f7b10a!important",
+          }
+        },
+        {
+          props: { variant: "archFullscreen" },
           style: {
             color: "#e0e0e0 !important",
             border: "1px solid #444",
@@ -134,9 +175,9 @@ const CustomTheme = createTheme({
         }
       ],
       defaultProps: {
-        disableElevation: false,
-        disableFocusRipple: true,
-        disableRipple: true
+        // disableElevation: false,
+        // disableFocusRipple: true,
+        // disableRipple: true
       }
     },
     MuiListItem: {
@@ -151,9 +192,9 @@ const CustomTheme = createTheme({
         }
       ],
       defaultProps: {
-        disableElevation: false,
-        disableFocusRipple: true,
-        disableRipple: true
+        // disableElevation: false,
+        // disableFocusRipple: true,
+        // disableRipple: true
       }
     },
     MuiListItemText: {
@@ -166,9 +207,9 @@ const CustomTheme = createTheme({
         }
       ],
       defaultProps: {
-        disableElevation: false,
-        disableFocusRipple: true,
-        disableRipple: true
+        // disableElevation: false,
+        // disableFocusRipple: true,
+        // disableRipple: true
       }
     },
     MuiDrawerPaper: {
@@ -181,9 +222,9 @@ const CustomTheme = createTheme({
         }
       ],
       defaultProps: {
-        disableElevation: false,
-        disableFocusRipple: true,
-        disableRipple: true
+        // disableElevation: false,
+        // disableFocusRipple: true,
+        // disableRipple: true
       }
     }
   }

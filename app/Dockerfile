@@ -11,11 +11,15 @@ RUN npm run build
 
 FROM nginx:alpine
 
-WORKDIR /usr/share/nginx/html
+RUN mkdir -p /var/www/poesyn.xyz/html
 
-RUN rm -rf ./*
+WORKDIR /var/www/poesyn.xyz/html
+
+# RUN rm -rf /usr/share/nginx/html*
 
 COPY --from=build /app/build .
+
+# RUN mkdir -p /etc/nginx/sites-enabled/poesyn.xyz
 
 RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d

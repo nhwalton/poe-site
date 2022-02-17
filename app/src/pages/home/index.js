@@ -28,26 +28,32 @@ const Home = () => {
 
 	return (
 		<div className="home page">
-			<div className="titleWrapper">
-				<h1 className="homeTitle">poesyn.xyz</h1>
-			</div>
-			<div className="subtext">
-				<span >PoeSyn.xyz is a collection of tools to aide Exiles in their journeys through Wraeclast. If you have any comments or suggestions, let me know on <a className="homeLink" href="https://twitter.com/poesynxyz">Twitter</a>.</span>
-			</div>
 			<div className="homeWrapper">
 				<Card variant="home">
-					<div className="cardBody">
-						<h2>Syndicate Cheatsheet 3.17</h2>
-						<p>The Syndicate cheatsheet is updated for Path of Exile 3.17 and shows all Immortal Syndicate members and their safehouse rewards based on their location.
-						<br></br>
-						<br></br>
-						The relative value of each reward is denoted in varying colors and can be changed by clicking on a cell. Scarab are priced automaticall by default, though you can toggle them to set manual values. Auto scarab rankings are updated every 6 hours from <a className="homeLink" href="https://poe.ninja">Poe Ninja</a>. Use the toggle at the top to change between manual and auto ranking.
-						</p>
-						<a className="moduleLink" href="#"><Button variant="bold">Syndicate Cheat Sheet</Button></a>
+					<div className="titleWrapper">
 					</div>
-				</Card>
-				<Card variant="home">
-					<div className="cardBody">
+						<h1 className="homeTitle">poesyn.xyz</h1>
+					<div className="subtext">
+							<p >PoeSyn.xyz is a collection of tools to aide Exiles in their journeys through Wraeclast.</p>
+							<p >Path of Exile's leagues feature complex mechanics and the tools below are designed to help navigate particularly burdensome ones.</p>
+					</div>
+					<div className="homeSection">
+						<h2>Syndicate Cheatsheet 3.17</h2>
+						<p>The Syndicate cheatsheet is updated for Path of Exile 3.17 and shows all Immortal Syndicate members and their safehouse rewards based on their location.</p>
+
+						<p>The relative value of each reward is denoted in varying colors and can be changed by clicking on a cell. Scarab are priced automaticall by default, though you can toggle them on the top to set manual values. Auto scarab rankings are updated every 6 hours from <a className="homeLink" href="https://poe.ninja">Poe Ninja</a>.</p>
+						<Button variant="home"><a className="moduleLink" href="/syndicate">Syndicate Cheat Sheet</a></Button>
+					</div>
+					<div className="homeSection">
+						<h2>Archnemesis Recipes</h2>
+						<p>The Archnemesis Recipes display all craftable modifier recipes including sub-recipes required for complex modifiers.</p>
+						
+						<p>A fullscreen mode is available for navigating the tree of larger recipes and each item can be collapsed to remove it from view.</p>
+						
+						<p>Note: This page was designed for desktop use only and will not work well on mobile devices.</p>
+						<Button variant="home"><a className="moduleLink" href="/archnemesis">Archnemesis Recipes</a></Button>
+					</div>
+					<div className="homeSection">
 						<h2>Change Log</h2>
 						<ExpandMore
 							expand={expanded}
@@ -72,6 +78,8 @@ const Home = () => {
 							</ul>
 						</Collapse>
 					</div>
+				</Card>
+				<Card variant="home">
 				</Card>
 				
 			</div>

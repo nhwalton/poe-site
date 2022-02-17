@@ -40,7 +40,7 @@
 .cellRatioBox {
 	height: 0;
 	overflow: hidden;
-	padding-top: calc(155/102 * 100%);
+	padding-top: calc(145/102 * 100%);
 	position: relative;
 	background-color:#333333e5;
 	margin: 0.25em 0.25em;

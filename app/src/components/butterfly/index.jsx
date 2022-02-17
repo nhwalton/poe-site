@@ -7,7 +7,6 @@ import './index.css';
 class CompactBoxTree extends Component {
   componentDidMount() {
     const data = this.props.data
-    console.log(data)
     let root = document.getElementById('dag-canvas');
     this.canvas = new TreeCanvas({
         root: root,

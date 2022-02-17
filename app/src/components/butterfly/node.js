@@ -5,7 +5,7 @@ import './index.css';
 
 class BaseNode extends TreeNode {
   draw = (opts) => {
-    console.log('draw', opts);
+    // console.log('draw', opts);
     let container = $('<div class="iot-node"></div>')
       .css('top', opts.top + 'px')
       .css('left', opts.left + 'px')
@@ -25,7 +25,6 @@ class BaseNode extends TreeNode {
     return container[0];
   }
 
-  
   showExpandBtn(container = this.dom) {
     let expandBtn = $(`<div class='expand-btn'>...</div>`);
     expandBtn.on('click', (e) => {

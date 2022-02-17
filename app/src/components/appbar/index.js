@@ -87,7 +87,7 @@ export default function SwipeableTemporaryDrawer() {
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
             onOpen={toggleDrawer(anchor, true)}
-            variant="nav"
+            // variant="nav"
             PaperProps={{
                 sx: {
                   backgroundColor: "#222",

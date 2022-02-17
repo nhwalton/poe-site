@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 // import { Canvas, Node, Icon } from 'reaflow';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -11,38 +11,7 @@ import Node from '../../components/butterfly/node.js';
 
 import defaultJson from './table.json';
 
-console.clear();
-
 const initialJson = JSON.parse(JSON.stringify(defaultJson));
-
-const ModifierRecipe = (props) => {
-	const title = props.modifier['title']
-	const modifier = props.modifier
-	const recipe = props.modifier['recipe']
-
-	return (
-		<div>
-            {recipe.map( modifier => {
-                return (
-                    <p>{modifier}</p>
-                );
-                }
-            )
-            }
-        </div>
-	);
-};
-
-const StrategyModifier = (props) => {
-	const modifier = initialJson['modifiers'][props.modifier]
-	return (
-		<div className="strategyModifier">
-			<img src={modifier['image']}></img>
-			<span>{modifier['title']}</span>
-			<ModifierRecipe modifier={modifier}/>
-		</div>
-	);
-};
 
 const StrategyCard = (props) => {
 
@@ -60,9 +29,8 @@ const StrategyCard = (props) => {
 		id += 1;
 		let recipeLength = initialJson['modifiers'][recipeItem]['recipe'].length
 		const parentId = parentObject['id']
-		// const id = useEffect(() => Counter(), [])
 		let modObject = {
-			'id': `{recipeItem}-${id}`,
+			'id': `${recipeItem}-${id}`,
 			'Class': Node,
 			content:initialJson['modifiers'][recipeItem]['title'],
 			// 'text': initialJson['modifiers'][recipeItem]['title'],
@@ -83,7 +51,7 @@ const StrategyCard = (props) => {
 			source: '2',
 			target: '1',
 			sourceNode: parentId,
-			targetNode: `{recipeItem}-${id}`,
+			targetNode: `${recipeItem}-${id}`,
 			type: 'endpoint'
 		}
 
@@ -125,23 +93,11 @@ const StrategyCard = (props) => {
 					orientation: [0, 1],
 					pos: [0.5, 0]
 				}],
-				// 'text': title,
-				children: [],
-				// 'image': image,
-				// 'id': id
-			}
-			let parentEdge = {
-				id: `${id}`,
-				source: '2',
-				target: '1',
-				sourceNode: 'Root',
-				type: 'endpoint'
+				children: []
 			}
 			recipe.map(function(recipeItem) {
 				GetRecipe(recipeItem, parentObject, edges)
 			})
-			// modList.push(parentObject)
-			edges.push(parentEdge)
 			strategy.push(parentObject)
 		})
 		const data = {
@@ -161,47 +117,56 @@ const StrategyCard = (props) => {
 	const modifierTitle = initialJson['modifiers'][props.strategy['title']]['title']
 
 	return (
-		<div>
-			<img src={initialJson['modifiers'][props.strategy['title']]['image']}></img>
-			<h2 className="archTitle">{modifierTitle}</h2>
-			<main ref={fullscreenRef}>
-                {fullscreenActive ? (
-					<div className="fullscreenModifiers">
-						<Button variant="archFullscreen" type="button" onClick={exitFullscreen}>
-								Exit fullscreen mode
-						</Button>
-						<ModPicker recipeModifiers={recipeModifiers}/>
-					</div>
-					) : (
-					<Button variant="arch" type="button" onClick={enterFullscreen}>
+		<React.Fragment>
+			<div className="modifierHeader">
+					<Button variant="archEnterFullscreen" type="button" onClick={enterFullscreen}>
 						Enter fullscreen mode
 					</Button>
-                )}
-			<div>
-				{fullscreenActive ? (
-						<div className="treeCanvasFull"><BoxTree/></div>
-					) : (
-					<Card variant="arch">
-						<div className="treeCanvas"><BoxTree/></div>
-					</Card>
-					)}
+				<div className="modifierInfo">
+					<img src={initialJson['modifiers'][props.strategy['title']]['image']}></img>
+					<h2 className="archTitle">{modifierTitle}</h2>
+				</div>
+				<div className="modifierPickers">
+					<ModPicker recipeModifiers={recipeModifiers}/>
+				</div>
 			</div>
+			<main ref={fullscreenRef}>
+				<div>
+					{fullscreenActive ? (
+							<div className="treeCanvasFull">
+								<div className="fullscreenModifiers">
+									<Button variant="archExitFullscreen" type="button" onClick={exitFullscreen}>
+										Exit fullscreen mode
+									</Button>
+									<ModPicker recipeModifiers={recipeModifiers}/>
+								</div>
+								<BoxTree/>
+							</div>
+						) : (
+							<Card variant="arch">
+								<div className="treeCanvas"><BoxTree/></div>
+							</Card>
+						)}
+				</div>
 			</main>
-		</div>
+		</React.Fragment>
 	);
 };
 
 const Archnemesis = (props) => {
 	const display = props.display
 
-	const defaultModifier = {
+	let defaultModifier = {
 		"title":"heralding-minions",
 		"order":
 			["heralding-minions"]
 	}
 
-	// let initialJson = JSON.parse(JSON.stringify(defaultJson));
-	const [archnemesis, setArchnemesis] = useState(initialJson);
+	let localMod = JSON.parse(localStorage.getItem("selectedModifier"))
+	if (localMod) {
+		defaultModifier = localMod
+	}
+
 	const [strategy, setStrategy] = useState(defaultModifier);
 
 	function onModifier(event) {
@@ -210,6 +175,7 @@ const Archnemesis = (props) => {
 			'order': [event.target.value]
 		}
 		setStrategy(thisStrategy)
+		localStorage.setItem("selectedModifier",JSON.stringify(thisStrategy))
 	}
 
 	const recipeModifiers = {}
@@ -227,17 +193,17 @@ const Archnemesis = (props) => {
 			<select
 			id="modName"
 			className="formField"
-			defaultValue="Heralding Minions"
 			onChange={e => onModifier(e)}
+			value="Select Modifier"
 			>
-				<option selected disabled hidden> 
-				Modifier
+				<option	value="Select Modifier" disabled hidden> 
+				Select Modifier
 				</option>
 				{Object.keys(recipeModifiers).map(function(key) {
 					const title = recipeModifiers[key]['title']
 					const value = recipeModifiers[key]['icon']
 					return(
-					<option value={value}>{title}</option>
+					<option value={value} key={key}>{title}</option>
 					);
 				})};
 			</select>
@@ -247,11 +213,8 @@ const Archnemesis = (props) => {
 	return (
 		<FullscreenProvider>
 			<div className={`archnemesis page ${display}`}>
-				<div className={`titleWrapper ${display}`}>
+				<div className={`titleWrapper archnemesis ${display}`}>
 					<h1>Archnemesis Recipes</h1>
-						<div className="formGroup">
-							<ModPicker recipeModifiers={recipeModifiers}/>
-						</div>
 				</div>
 				<div>
 					<div>

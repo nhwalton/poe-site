@@ -214,7 +214,7 @@ const Syndicate = (props) => {
 				</div>
 			</div>
 			<div className="tableCenter">
-				<div className="tableWrapper">
+				<div className="tableWrapper syndicate">
 					{Object.keys(syndicate).map(function(key) {
 						return (
 							// <TableRow row={syndicate[key]} rowName={key} scarabs={scarabs} challenges={challenges}/>
