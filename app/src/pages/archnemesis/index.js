@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 // import { Canvas, Node, Icon } from 'reaflow';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { FullscreenProvider, useFullscreen  } from '../../components/useFullscreen';
 import CompactBoxTree from '../../components/butterfly';
 
@@ -116,11 +117,13 @@ const StrategyCard = (props) => {
 
 	const modifierTitle = initialJson['modifiers'][props.strategy['title']]['title']
 
+	const fullscreenText = useMediaQuery('(min-width:1960px)') ? 'Enter fullscreen Mode' : 'Fullscreen';
+
 	return (
 		<React.Fragment>
 			<div className="modifierHeader">
 					<Button variant="archEnterFullscreen" type="button" onClick={enterFullscreen}>
-						Enter fullscreen mode
+						{fullscreenText}
 					</Button>
 				<div className="modifierInfo">
 					<img src={initialJson['modifiers'][props.strategy['title']]['image']}></img>
@@ -187,6 +190,8 @@ const Archnemesis = (props) => {
 		}
 	})
 
+	console.log(recipeModifiers)
+
 	const ModPicker = (props) => {
 		const recipeModifiers = props.recipeModifiers
 		return(
@@ -199,7 +204,7 @@ const Archnemesis = (props) => {
 				<option	value="Select Modifier" disabled hidden> 
 				Select Modifier
 				</option>
-				{Object.keys(recipeModifiers).map(function(key) {
+				{Object.keys(recipeModifiers).sort().map(function(key) {
 					const title = recipeModifiers[key]['title']
 					const value = recipeModifiers[key]['icon']
 					return(

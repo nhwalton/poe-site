@@ -107,41 +107,29 @@ div.start > div > div > div {
 	/* margin-bottom:0.5em; */
 }
 
-@media only screen and (max-width: 1050px) and (min-width: 1000px) and (orientation: portrait){
-	.tableWrapper {
-		width:80%;
-		grid-template: auto / repeat(5, 1fr); /* Row / Column */
-	}
-
-	.rowWrapper {
-		grid-template: repeat(18, 1fr) / auto; /* Row / Column */
-	}
-
-	.cellRatioBox {
-		padding-top: calc(3/2 * 100%);
-	}
-
-	.cellInfo {
-		font-size: 1.7vw;
-	}
-}
-
 @media only screen and (max-width: 950px) {
 	.tableWrapper {
-		width:80%;
 		grid-template: auto / repeat(5, 1fr); /* Row / Column */
 	}
-
+	
 	.rowWrapper {
 		grid-template: repeat(18, 1fr) / auto; /* Row / Column */
 	}
-
+	
 	.cellRatioBox {
 		padding-top: calc(3/2 * 100%);
 	}
-
+	
 	.cellInfo {
 		font-size: 1.7vw;
+	}
+
+	.buttons {
+		grid-template-columns: 1fr !important;
+	}
+	
+	.syndicate {
+		padding: 5px;
 	}
 }
 

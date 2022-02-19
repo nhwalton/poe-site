@@ -9,12 +9,13 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from '@mui/icons-material/MenuRounded';
 import Exalted from '../../assets/header/Exalted_Orb.png';
 import Cameria from '../../assets/header/Cameria_the_Coldblooded.png';
 import Passive from '../../assets/header/Book_of_Skill.png';
 import Fossil from '../../assets/header/Bloodstained_Fossil.png';
 import Blight from '../../assets/header/Fireball_Tower.png';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import './style.css';
 
@@ -37,6 +38,14 @@ export default function SwipeableTemporaryDrawer() {
 
     setState({ ...state, [anchor]: open });
   };
+
+  const PageTitle = () => { 
+    const title = <span className="pageTitle">poesyn.xyz</span>
+		const useTitle = useMediaQuery('(min-width:1500px)') ? title : null;
+		return (
+			useTitle
+		)
+	}
 
   const list = (anchor) => (
     <Box
@@ -79,8 +88,8 @@ export default function SwipeableTemporaryDrawer() {
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
 
-          <Button onClick={toggleDrawer(anchor, true)} variant="menu"><MenuIcon /></Button>
-          <span className="pageTitle">poesyn.xyz</span>
+          <Button onClick={toggleDrawer(anchor, true)} variant="menu"><MenuIcon fontSize="large" variant="hamburger"/></Button>
+          <PageTitle />
 
           <Drawer
             anchor={anchor}
@@ -92,6 +101,7 @@ export default function SwipeableTemporaryDrawer() {
                 sx: {
                   backgroundColor: "#222",
                   color: "#e0e0e0",
+                  paddingTop: "1em"
                 }
               }}
           >

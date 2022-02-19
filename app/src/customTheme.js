@@ -24,7 +24,27 @@ const CustomTheme = createTheme({
             color: "#fff",
             background: "linear-gradient(45deg, #f7b10a 30%, #f39521 90%)",
             width: "50%",
-            marginTop:"1em"
+            '&:hover': {
+              backgroundColor: '#f39521',
+              color: '#fff',
+            }
+            // marginTop:"1em"
+            // border: "1px solid #f7b10a!important",
+          }
+        },
+        {
+          props: { variant: "homeWide" },
+          style: {
+            fontWeight: "bold",
+            // color: "#f7b10a !important",
+            color: "#fff",
+            background: "linear-gradient(45deg, #f7b10a 30%, #f39521 90%)",
+            width: "100%",
+            '&:hover': {
+              backgroundColor: '#f39521',
+              color: '#fff',
+            }
+            // marginTop:"1em"
             // border: "1px solid #f7b10a!important",
           }
         },
@@ -66,9 +86,9 @@ const CustomTheme = createTheme({
             // color: "#f7b10a !important",
             color: "#fff",
             background: "linear-gradient(45deg, #f7b10a 30%, #f39521 90%)",
-            width: "100%",
             marginRight: "auto",
-            width: "50%"
+            width: "50%",
+            overflow: "hidden",
             // border: "1px solid #f7b10a!important",
           }
         },
@@ -115,6 +135,21 @@ const CustomTheme = createTheme({
             backdropFilter: "blur(2px)",
             padding: "1.5rem",
             width: "75%",
+            margin: "auto",
+            textAlign: "left"
+            // border: "1px solid #f7b10a!important",
+          }
+        },
+        {
+          props: { variant: "synNarrow" },
+          style: {
+            color: "#e0e0e0 !important",
+            border: "1px solid #444",
+            background: "rgba(41,41,41,.8)!important",
+            backdropFilter: "blur(2px)",
+            padding: "1.5rem",
+            width: "calc(100vw - 40px)",
+            // width: "95%",
             margin: "auto",
             textAlign: "left"
             // border: "1px solid #f7b10a!important",
@@ -218,6 +253,22 @@ const CustomTheme = createTheme({
           props: { variant: "nav" },
           style: {
             backgroundColor: "#222 !important"
+          }
+        }
+      ],
+      defaultProps: {
+        // disableElevation: false,
+        // disableFocusRipple: true,
+        // disableRipple: true
+      }
+    },
+    MuiSvgIcon: {
+      variants: [
+        {
+          props: { variant: "hamburger" },
+          style: {
+            width: "2em",
+            marginTop: "-0.2em"
           }
         }
       ],

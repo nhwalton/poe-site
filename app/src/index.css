@@ -53,6 +53,7 @@ h1 {
   margin:10px auto 20px;
   font-size:3em;
 	color: #f7b10a;
+  text-shadow: 6px 6px 0px #402300;
 }
 
 h2 {
@@ -210,6 +211,7 @@ hr {
     padding-left:0;
     grid-template-columns: repeat(3, auto);
     align-items: center;
+    justify-items: center;
   }
 
   .titleWrapper > div.buttons > button {

@@ -5,6 +5,7 @@ import Card from '@mui/material/Card';
 import Switch from '@mui/material/Switch';
 import './style.css';
 import defaultJson from './table.json';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const RowCell = (props) => {
 	let cellTitle = props.cellData.title;
@@ -202,10 +203,20 @@ const Syndicate = (props) => {
 		toggleDiv = "additionalInfo tiny}"
 	}
 
+	const TitleHeader = () => {
+		const useTitle = useMediaQuery('(min-width:1500px)') ? 'Syndicate Cheat Sheet 3.17' : 'Syndicate Cheat Sheet';
+		const title = <h1>{useTitle}</h1>
+			return (
+				title
+			)
+		}
+
+	const infoVariant = useMediaQuery('(min-width:950px)') ? 'syn' : 'synNarrow';
+
 	return (
 		<div className={`syndicate page ${display}`}>
 			<div className={`titleWrapper ${display}`}>
-				<h1>Syndicate Cheat Sheet 3.17</h1>
+				<TitleHeader />
 				<div className="buttons">
 					{/* <Button onClick={() => toggleChallenges()}>Challenges</Button> */}
 					<Button variant="syn" onClick={() => cycleColor()}>Color Mode: {useColor}</Button>
@@ -254,7 +265,7 @@ const Syndicate = (props) => {
 				<div className={`${display}`}>
 					<h2>Additional Info</h2>
 				</div>
-				<Card variant="syn">
+				<Card variant={infoVariant}>
 					<div className="info">
 					<p>The above table is a customizable Syndicate Cheat Sheet for POE 3.17 and shows the possible rewards for running a Syndicate safehouse (Transportation, Fortification, Research and Intervention) with a given member in a certain safehouse. For example, when running an Intervention safehouse while Cameria is present, one of the safehouse reward chests will contain Sulphite Scarabs. Each Syndicate member has tiers of rewards based on their rank -- Sergeant, Lieutenant, or Captain -- when you run their safehouse, though there is a fourth tier achievable if the Mastermind is run while a member is Captain. The default color associated with each member assumes they are ran at their highest rank (Captain) as certain members are less valuable at lower ranks. For a more detailed list of rewards, visit the <a href="https://pathofexile.gamepedia.com/Immortal_Syndicate">Path of Exile Wiki</a>. </p>
 					<p>Starting cell colors are based around Softcore Trade League and you can change the color of any reward by simply clicking on it's cell. It is important to note that the default ratings are only a starting point and each player will value certain combinations over others. Some of the default values are based on worth to the player OR the relative worth when selling the member's crafting bench to other players. With this in mind, Solo Self Found and Hardcore players will find less value in certain rewards due to not being in Softcore Trade League.</p>

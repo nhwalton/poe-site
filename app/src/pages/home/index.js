@@ -5,6 +5,7 @@ import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Card from '@mui/material/Card';
+import useMediaQuery from '@mui/material/useMediaQuery';
 // import '@mui/material/Card/style.css';
 // import '@mui/material/Button/style.css';
 import './style.css';
@@ -25,6 +26,13 @@ const Home = () => {
 	const handleExpandClick = () => {
 		setExpanded(!expanded);
 	  };
+	
+	const PageModuleButton = (props) => { 
+		const variant = useMediaQuery('(min-width:650px)') ? 'home' : 'homeWide';
+		return (
+			<Button variant={variant}><a className="moduleLink" href={props.href}>{props.text}</a></Button>
+		)
+	}
 
 	return (
 		<div className="home page">
@@ -42,7 +50,8 @@ const Home = () => {
 						<p>The Syndicate cheatsheet is updated for Path of Exile 3.17 and shows all Immortal Syndicate members and their safehouse rewards based on their location.</p>
 
 						<p>The relative value of each reward is denoted in varying colors and can be changed by clicking on a cell. Scarab are priced automaticall by default, though you can toggle them on the top to set manual values. Auto scarab rankings are updated every 6 hours from <a className="homeLink" href="https://poe.ninja">Poe Ninja</a>.</p>
-						<Button variant="home"><a className="moduleLink" href="/syndicate">Syndicate Cheat Sheet</a></Button>
+						{/* <Button variant="home"><a className="moduleLink" href="/syndicate">Syndicate Cheat Sheet</a></Button> */}
+						<PageModuleButton href="/syndicate" text="Syndicate Cheat Sheet" />
 					</div>
 					<div className="homeSection">
 						<h2>Archnemesis Recipes</h2>
@@ -51,7 +60,8 @@ const Home = () => {
 						<p>A fullscreen mode is available for navigating the tree of larger recipes and each item can be collapsed to remove it from view.</p>
 						
 						<p>Note: This page was designed for desktop use only and will not work well on mobile devices.</p>
-						<Button variant="home"><a className="moduleLink" href="/archnemesis">Archnemesis Recipes</a></Button>
+						{/* <Button variant="home"><a className="moduleLink" href="/archnemesis">Archnemesis Recipes</a></Button> */}
+						<PageModuleButton href="/archnemesis" text="Archnemesis Recipes" />
 					</div>
 					<div className="homeSection">
 						<h2>Change Log</h2>
