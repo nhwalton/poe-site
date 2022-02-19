@@ -6,9 +6,9 @@ const Footer = () => {
             <div className="footerBar">
                 <div>
                     <div className="siteMap">
-                        <a href="/passives">Leveling Guide</a>
                         <a href="/syndicate">Syndicate Cheatsheet</a>
                         <a href="/archnemesis">Archnemesis</a>
+                        <a href="/passives">Leveling Guide</a>
                         <a href="/fossils">Fossil Locations</a>
                         <a href="/blight">Blight Towers</a>
                         <a href="/syndicate-overlay">Syndicate Overlay</a>

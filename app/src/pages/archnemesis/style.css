@@ -78,7 +78,8 @@
 }
 
 .butterflies-link {
-	stroke: #475872 !important;
+	/* stroke: #475872 !important; */
+	stroke: var(--line-color) !important;
 	stroke-width: 2px;
 }
 

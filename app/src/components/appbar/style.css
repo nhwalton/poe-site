@@ -6,8 +6,8 @@
 .pageTitle {
     font-family: unineue-heavyitalic,Helvetica Neue,arial,sans-serif!important;
     font-size: 2rem!important;
-    text-shadow: 6px 6px 0px #402300;
-    color: #f7b10a;
+    text-shadow: 4px 4px 0px var(--colorShadow);
+    color: var(--colorMain);
 }
 
 .MuiListItem-root > img {
