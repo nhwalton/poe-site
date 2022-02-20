@@ -1,29 +1,29 @@
-import { useState } from 'react';
-import Collapse from '@mui/material/Collapse';
+// import { useState } from 'react';
+// import Collapse from '@mui/material/Collapse';
 import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import { styled } from '@mui/material/styles';
+// import IconButton from '@mui/material/IconButton';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Card from '@mui/material/Card';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import './style.css';
 
-const ExpandMore = styled((props) => {
-	const { expand, ...other } = props;
-	return <IconButton variant="expand" {...other} />;
-  })(({ theme, expand }) => ({
-	transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-	margin: 'auto',
-	transition: theme.transitions.create('transform', {
-	  duration: theme.transitions.duration.shortest,
-	}),
-  }));
+// const ExpandMore = styled((props) => {
+// 	const { expand, ...other } = props;
+// 	return <IconButton variant="expand" {...other} />;
+//   })(({ theme, expand }) => ({
+// 	transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+// 	margin: 'auto',
+// 	transition: theme.transitions.create('transform', {
+// 	  duration: theme.transitions.duration.shortest,
+// 	}),
+//   }));
 
 const Home = () => {
-	const [expanded, setExpanded] = useState(false);
-	const handleExpandClick = () => {
-		setExpanded(!expanded);
-	  };
+	// const [expanded, setExpanded] = useState(false);
+	// const handleExpandClick = () => {
+	// 	setExpanded(!expanded);
+	//   };
 	
 	const PageModuleButton = (props) => { 
 		const variant = useMediaQuery('(min-width:650px)') ? 'home' : 'homeWide';
@@ -54,12 +54,8 @@ const Home = () => {
 						</div>
 						<div className="homeSection">
 							<h2>Archnemesis Recipes</h2>
-							<p>The Archnemesis Recipes display all craftable modifier recipes including sub-recipes required for complex modifiers.</p>
-							
+							<p>The Archnemesis Recipes display all craftable modifier recipes including any sub-recipes required for complex modifiers.</p>
 							<p>A fullscreen mode is available for navigating the tree of larger recipes and each item can be collapsed to remove it from view.</p>
-							
-							<p>Note: This page was designed for desktop use only and will not work well on mobile devices.</p>
-							{/* <Button variant="home"><a className="moduleLink" href="/archnemesis">Archnemesis Recipes</a></Button> */}
 							<PageModuleButton href="/archnemesis" text="Archnemesis Recipes" />
 						</div>
 						<div className="homeSection">

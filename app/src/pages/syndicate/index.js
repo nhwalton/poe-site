@@ -1,8 +1,7 @@
-import { h, Component, createRef, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
-import Switch from '@mui/material/Switch';
 import './style.css';
 import defaultJson from './table.json';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -50,7 +49,7 @@ const RowCell = (props) => {
 	const CellText = () => {
 		const styles = {
 			cellInfo: {
-				backgroundImage: `url(/images/${props.cellData.image}.png)`
+				backgroundImage: `url(/images/syndicate/${props.cellData.image}.png)`
 			}
 		}
 		let cellClass = "";
@@ -61,7 +60,7 @@ const RowCell = (props) => {
 			styles.cellInfo.backgroundImage = ""
 		} else {
 			cellClass = "cellInfo";
-			styles.cellInfo.backgroundImage = `url(/images/${props.cellData.image}.png)`
+			styles.cellInfo.backgroundImage = `url(/images/syndicate/${props.cellData.image}.png)`
 		}
 		if (props.cellRow === "headers") {
 			cellText = "cellText header";
@@ -144,7 +143,6 @@ const Syndicate = (props) => {
 
 	async function fetchScarabs() {
 		const response = await fetch('/api/scarabs');
-		console.log('response', response);
 		return response.json();
 	};
 	

@@ -1,5 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
-// import { Canvas, Node, Icon } from 'reaflow';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -26,16 +25,20 @@ const StrategyCard = (props) => {
         fullscreenActive,
     } = useFullscreen();
 	
-	function GetRecipe(recipeItem, parentObject, edges) {
+	function GetRecipe(recipeItem, parentObject, edges, nodes) {
 		id += 1;
 		let recipeLength = initialJson['modifiers'][recipeItem]['recipe'].length
 		const parentId = parentObject['id']
+		const recipe = initialJson['modifiers'][recipeItem]['recipe']
+		const title = initialJson['modifiers'][recipeItem]['title']
+		const image = initialJson['modifiers'][recipeItem]['image']
+		const rewards = initialJson['modifiers'][recipeItem]['rewards']
 		let modObject = {
 			'id': `${recipeItem}-${id}`,
 			'Class': Node,
-			content:initialJson['modifiers'][recipeItem]['title'],
-			// 'text': initialJson['modifiers'][recipeItem]['title'],
-			imageUrl: initialJson['modifiers'][recipeItem]['image'],
+			content:title,
+			imageUrl: image,
+			rewards: rewards,
 			children: [],
 			endpoints: [{
 				id: '1',
@@ -59,11 +62,14 @@ const StrategyCard = (props) => {
 		if (recipeLength > 0) {
 			parentObject['children'].push(modObject)
 			edges.push(modEdge)
-			initialJson['modifiers'][recipeItem]['recipe'].map( recipeItem => {
-				GetRecipe(recipeItem, modObject, edges)
+			nodes.push(modObject)
+			recipe.map( recipeItem => {
+				const recipe = GetRecipe(recipeItem, modObject, edges, nodes)
+				return(recipe)
 			})
 		} else {
 			edges.push(modEdge)
+			nodes.push(modObject)
 			delete modObject['children']
 			parentObject['children'].push(modObject)
 		}
@@ -73,17 +79,23 @@ const StrategyCard = (props) => {
 
 	function MapStrategy (props) {
 		let strategy = []
+		let nodes = []
 		let edges = []
 		props.strategy['order'].map( modifier => {
 			id += 1
 			const recipe = initialJson['modifiers'][modifier]['recipe']
 			const title = initialJson['modifiers'][modifier]['title']
 			const image = initialJson['modifiers'][modifier]['image']
+			const rewards = initialJson['modifiers'][modifier]['rewards']
+			const rewardMod = initialJson['modifiers'][modifier]['rewardMod']
 			let parentObject = {
 				isRoot: true,
-				id: 'Root',
+				'id': `${title}-${id}`,
 				content: title,
 				imageUrl: image,
+				// description: description,
+				rewards: rewards,
+				rewardMod: rewardMod,
 				'Class': Node,
 				endpoints: [{
 					id: '1',
@@ -97,12 +109,16 @@ const StrategyCard = (props) => {
 				children: []
 			}
 			recipe.map(function(recipeItem) {
-				GetRecipe(recipeItem, parentObject, edges)
+				const recipe = GetRecipe(recipeItem, parentObject, edges, nodes)
+				return(recipe)
 			})
+			nodes.push(parentObject)
 			strategy.push(parentObject)
+			return(null)
 		})
+		nodes = strategy[0]
 		const data = {
-			nodes: strategy[0],
+			nodes: nodes,
 			edges: edges
 		}
 		return (data)
@@ -116,6 +132,7 @@ const StrategyCard = (props) => {
 	}
 
 	const modifierTitle = initialJson['modifiers'][props.strategy['title']]['title']
+	const modifierImage = initialJson['modifiers'][props.strategy['title']]['image']
 
 	const fullscreenText = useMediaQuery('(min-width:1960px)') ? 'Enter fullscreen Mode' : 'Fullscreen';
 
@@ -126,7 +143,7 @@ const StrategyCard = (props) => {
 						{fullscreenText}
 					</Button>
 				<div className="modifierInfo">
-					<img src={initialJson['modifiers'][props.strategy['title']]['image']}></img>
+					<img src={modifierImage} alt={modifierTitle}></img>
 					<h2 className="archTitle">{modifierTitle}</h2>
 				</div>
 				<div className="modifierPickers">
@@ -173,6 +190,7 @@ const Archnemesis = (props) => {
 	const [strategy, setStrategy] = useState(defaultModifier);
 
 	function onModifier(event) {
+		// const selectedMod = JSON.parse(event.target.value)
 		const thisStrategy = {
 			'title': event.target.value,
 			'order': [event.target.value]
@@ -188,9 +206,8 @@ const Archnemesis = (props) => {
 		if (thisModifier.recipe.length !== 0) {
 			recipeModifiers[modifier] = thisModifier
 		}
+		return(null)
 	})
-
-	console.log(recipeModifiers)
 
 	const ModPicker = (props) => {
 		const recipeModifiers = props.recipeModifiers
@@ -204,11 +221,17 @@ const Archnemesis = (props) => {
 				<option	value="Select Modifier" disabled hidden> 
 				Select Modifier
 				</option>
+				{/* <option value="Custom Strat" order={`["frenzied","hexer"]`} key={`Custom Strat`}>{`Custom Strat`}</option> */}
 				{Object.keys(recipeModifiers).sort().map(function(key) {
-					const title = recipeModifiers[key]['title']
-					const value = recipeModifiers[key]['icon']
+					let value = {
+						"title": recipeModifiers[key]['title'],
+						"icon": recipeModifiers[key]['icon'],
+						"order": [recipeModifiers[key]['icon']]
+					};
+					// const title = recipeModifiers[key]['title']
+					// const value = recipeModifiers[key]['icon']
 					return(
-					<option value={value} key={key}>{title}</option>
+					<option value={value.icon} key={key}>{value.title}</option>
 					);
 				})};
 			</select>

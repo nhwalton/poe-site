@@ -37,8 +37,12 @@ class CompactBoxTree extends Component {
             getVGap(d) {
               return 40;
             },
+            rankdir: 'TB',
+            nodesep: 40,
+            ranksep: 40,
+            controlPoints: false,
           }
-        }
+        },
       });
       this.canvas.draw(data, {}, () => {
         this.canvas.focusCenterWithAnimate();

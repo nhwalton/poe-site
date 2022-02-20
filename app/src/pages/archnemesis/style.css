@@ -71,10 +71,15 @@
 .treeCanvasFull {
 	width:100vw;
 	height:100vh;
-  background-image: url(../../assets/elder_shaper.png);
+  	background-image: url(../../assets/elder_shaper.png);
 	background-repeat: no-repeat;
 	background-position:top center;
 	background-color:#111;
+}
+
+.treeCanvasFull .compact-box-tree-page {
+    background-color:#000000a1;
+    backdrop-filter: blur(2px);
 }
 
 .butterflies-link {

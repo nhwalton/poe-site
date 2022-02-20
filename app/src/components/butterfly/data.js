@@ -204,6 +204,4 @@ const mockData = {
   }]
 };
 
-console.log('data in data.js', mockData)
-
 export default mockData;
