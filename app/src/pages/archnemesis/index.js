@@ -4,10 +4,12 @@ import Card from '@mui/material/Card';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { FullscreenProvider, useFullscreen  } from '../../components/useFullscreen';
 import CompactBoxTree from '../../components/butterfly';
+import DagreTree from '../../components/dagreTree';
 
 import 'butterfly-dag/dist/index.css';
 import './style.css';
 import Node from '../../components/butterfly/node.js';
+import baseNode from '../../components/dagreTree/base_node.js';
 
 import defaultJson from './table.json';
 
@@ -35,7 +37,7 @@ const StrategyCard = (props) => {
 		const rewards = initialJson['modifiers'][recipeItem]['rewards']
 		let modObject = {
 			'id': `${recipeItem}-${id}`,
-			'Class': Node,
+			'Class': baseNode,
 			content:title,
 			imageUrl: image,
 			rewards: rewards,
@@ -81,7 +83,10 @@ const StrategyCard = (props) => {
 		let strategy = []
 		let nodes = []
 		let edges = []
-		props.strategy['order'].map( modifier => {
+		let customOrder = ["mirror-image", "treant-hoard", "assassin", "rejuvenating"]
+		let normalOrder = props.strategy['order']
+		let useOrder = normalOrder
+		useOrder.map( modifier => {
 			id += 1
 			const recipe = initialJson['modifiers'][modifier]['recipe']
 			const title = initialJson['modifiers'][modifier]['title']
@@ -116,18 +121,26 @@ const StrategyCard = (props) => {
 			strategy.push(parentObject)
 			return(null)
 		})
-		nodes = strategy[0]
 		const data = {
+			nodes: strategy[0],
+			edges: edges
+		}
+		const dagreData = {
 			nodes: nodes,
 			edges: edges
 		}
-		return (data)
+		return ([data, dagreData])
 	}
 
 	const BoxTree = () => {
 		const strategy = MapStrategy(props)
+		const boxData = strategy[0]
+		const dagreData = strategy[1]
 		return (
-			<CompactBoxTree data={strategy}/>
+			<React.Fragment>
+				<div><CompactBoxTree data={boxData}/></div>
+				{/* <DagreTree data={dagreData}/> */}
+			</React.Fragment>
 		)
 	}
 
@@ -164,7 +177,9 @@ const StrategyCard = (props) => {
 							</div>
 						) : (
 							<Card variant="arch">
-								<div className="treeCanvas"><BoxTree/></div>
+								<div className="treeCanvas">
+									<BoxTree/>
+								</div>
 							</Card>
 						)}
 				</div>
@@ -216,20 +231,17 @@ const Archnemesis = (props) => {
 			id="modName"
 			className="formField"
 			onChange={e => onModifier(e)}
-			value="Select Modifier"
+			value={defaultModifier.title}
 			>
-				<option	value="Select Modifier" disabled hidden> 
+				{/* <option	value="Select Modifier" hidden> 
 				Select Modifier
-				</option>
-				{/* <option value="Custom Strat" order={`["frenzied","hexer"]`} key={`Custom Strat`}>{`Custom Strat`}</option> */}
+				</option> */}
 				{Object.keys(recipeModifiers).sort().map(function(key) {
 					let value = {
 						"title": recipeModifiers[key]['title'],
 						"icon": recipeModifiers[key]['icon'],
 						"order": [recipeModifiers[key]['icon']]
 					};
-					// const title = recipeModifiers[key]['title']
-					// const value = recipeModifiers[key]['icon']
 					return(
 					<option value={value.icon} key={key}>{value.title}</option>
 					);

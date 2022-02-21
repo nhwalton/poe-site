@@ -35,9 +35,12 @@
 /* elder/shaper grab */
 :root {
   --background: #15191c;
+  --base-background: #1c1c15;
   --border-color: #515461;
+  --base-border-color: #5f6151;
   --line-color: #303136;
   --border: 2px solid var(--border-color);
+  --base-border: 2px solid var(--base-border-color);
   /* --box-shadow: inset 0 -0.25em var(--border-color); */
   --border-color-hover: #f581ff;
   --border-hover: 2px solid var(--border-color-hover);
@@ -51,6 +54,7 @@
     position: absolute;
     width: auto;
     max-width:360px;
+    min-width: 100px;
     display:grid;
     align-items:center;
     background-color:var(--background);
@@ -58,6 +62,11 @@
     border-radius:5px;
     padding:15px;
     box-shadow: var(--box-shadow);
+  }
+
+.iot-node.baseMod {
+    border: var(--base-border);
+    background-color:var(--base-background);
   }
 
 .iot-node:hover {
@@ -104,6 +113,7 @@
     color: var(--description-color);
     text-align: left;
     max-width:100%;
+    min-width: 200px;
     line-height: 1.7em;
     padding: 5px 0;
   }

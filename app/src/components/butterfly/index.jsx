@@ -44,9 +44,9 @@ class CompactBoxTree extends Component {
           }
         },
       });
-      this.canvas.draw(data, {}, () => {
-        this.canvas.focusCenterWithAnimate();
-      });
+    this.canvas.draw(data, {}, () => {
+      this.canvas.focusCenterWithAnimate();
+    });
     }
     render() {
         return (
