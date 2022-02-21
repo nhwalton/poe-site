@@ -5,6 +5,7 @@ import Card from '@mui/material/Card';
 import './style.css';
 import defaultJson from './table.json';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import ReactGA from "react-ga";
 
 const RowCell = (props) => {
 	let cellTitle = props.cellData.title;
@@ -27,6 +28,19 @@ const RowCell = (props) => {
 	} else {
 		useName = props.cellData.class
 	}
+
+	const hostName = window.location.hostname
+
+	useEffect(() => {
+		if (useName !== props.cellData.class && props.cellData.scarab !== true && hostName !== 'localhost') {
+			const eventDetails = {
+				category: 'Syndicate',
+				action: props.cellData.title.substr(1),
+				label: useName,
+			}
+			ReactGA.event(eventDetails);
+		}
+	}, []);
 
 	const [className, newClassName] = useState(useName);
 	useEffect(() => { newClassName(useName) }, [useName])
@@ -196,9 +210,9 @@ const Syndicate = (props) => {
 	// 	}
 	// }
 
-	let toggleDiv = "additionalInfo}"
+	let toggleDiv = "additionalInfo"
 	if (display === "tiny") {
-		toggleDiv = "additionalInfo tiny}"
+		toggleDiv = "additionalInfo tiny"
 	}
 
 	const TitleHeader = () => {
@@ -214,6 +228,9 @@ const Syndicate = (props) => {
 	return (
 		<div className={`syndicate page ${display}`}>
 			<div className={`titleWrapper ${display}`}>
+				<div className={`returnHome ${display}`}>
+					<Button variant="syn"><a href="/">Return to Main Site</a></Button>
+				</div>
 				<TitleHeader />
 				<div className="buttons">
 					{/* <Button onClick={() => toggleChallenges()}>Challenges</Button> */}

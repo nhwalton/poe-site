@@ -1,127 +1,106 @@
-import { Component } from 'react';
-import { Route } from 'react-router';
-import AppBar from '@mui/material/AppBar';
-import Drawer from '@mui/material/Drawer';
-// import List from '@mui/material/List';
-import Dialog from '@mui/material/Dialog';
-import Switch from '@mui/material/Switch';
-// import '@mui/material/Switch/style.css';
-// import '@mui/material/Dialog/style.css';
-// import '@mui/material/Drawer/style.css';
-// import '@mui/material/List/style.css';
-// import '@mui/material/AppBar/style.css';
-// import style from './style.css';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/SwipeableDrawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import MenuIcon from '@mui/icons-material/MenuRounded';
+import Exalted from '../../assets/header/Exalted_Orb.png';
+import Cameria from '../../assets/header/Cameria_the_Coldblooded.png';
+import Archnemesis from '../../assets/header/Archnemesis_League_Icon.png';
+import poeOverlay from '../../assets/header/POE_Overlay_Community_Fork.png';
+// import Fossil from '../../assets/header/Bloodstained_Fossil.png';
+// import Blight from '../../assets/header/Fireball_Tower.png';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
-export default class Header extends Component {
-	closeDrawer() {
-		this.drawer.MDComponent.open = false;
-		this.state = {
-			darkThemeEnabled: false
-		};
-	}
+import './style.css';
 
-	openDrawer = () => (this.drawer.MDComponent.open = true);
+export default function SwipeableTemporaryDrawer() {
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
 
-	openSettings = () => this.dialog.MDComponent.show();
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event &&
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
+    }
 
-	drawerRef = drawer => (this.drawer = drawer);
-	dialogRef = dialog => (this.dialog = dialog);
+    setState({ ...state, [anchor]: open });
+  };
 
-	linkTo = path => () => {
-		Route(path);
-		this.closeDrawer();
-	};
-
-	goHome = this.linkTo('/');
-	goToPassives = this.linkTo('/passives');
-	goToSyndicate = this.linkTo('/syndicate');
-	goToFossils = this.linkTo('/fossils');
-	goToBlight = this.linkTo('/blight');
-	goToOverlay = this.linkTo('/syndicate-overlay');
-	goToArchnemesis = this.linkTo('/archnemesis');
-
-	toggleDarkTheme = () => {
-		this.setState(
-			{
-				darkThemeEnabled: !this.state.darkThemeEnabled
-			},
-			() => {
-				if (this.state.darkThemeEnabled) {
-					document.body.classList.add('mdc-theme--dark');
-				}
-				else {
-					document.body.classList.remove('mdc-theme--dark');
-				}
-			}
-		);
-	}
-
-	render(props) {
-		// console.log("route",props.selectedRoute);
+  const PageTitle = () => { 
+    const title = <span className="pageTitle">poesyn.xyz</span>
+		const useTitle = useMediaQuery('(min-width:1500px)') ? title : null;
 		return (
-			<div>
-				<AppBar className="AppBar">
-					<AppBar.Row>
-						<AppBar.Section align-start>
-							<AppBar.Icon menu onClick={this.openDrawer}>
-								menu
-							</AppBar.Icon>
-							<AppBar.Title>poesyn.xyz</AppBar.Title>
-						</AppBar.Section>
-						{/* <AppBar.Section align-end shrink-to-fit onClick={this.openSettings}>
-							<AppBar.Icon>settings</AppBar.Icon>
-						</AppBar.Section> */}
-					</AppBar.Row>
-				</AppBar>
-				<Drawer modal ref={this.drawerRef}>
-					<Drawer.DrawerContent>
-						<Drawer.DrawerItem selected={props.selectedRoute === '/'} onClick={this.goHome}>
-							<img src="../../assets/header/Exalted_Orb.png" />
-							Home
-						</Drawer.DrawerItem>
-						<Drawer.DrawerItem selected={props.selectedRoute === '/syndicate'} onClick={this.goToSyndicate}>
-							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
-							<img src="../../assets/header/Cameria_the_Coldblooded.png" />
-							Syndicate
-						</Drawer.DrawerItem>
-						<Drawer.DrawerItem selected={props.selectedRoute === '/archnemesis'} onClick={this.goToArchnemesis}>
-							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
-							<img src="../../assets/header/Cameria_the_Coldblooded.png" />
-							Archnemesis
-						</Drawer.DrawerItem>
-						<Drawer.DrawerItem selected={props.selectedRoute === '/passives'} onClick={this.goToPassives}>
-							<img src="../../assets/header/Book_of_Skill.png" />
-							Leveling
-						</Drawer.DrawerItem>
-						<Drawer.DrawerItem selected={props.selectedRoute === '/fossils'} onClick={this.goToFossils}>
-							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
-							<img src="../../assets/header/Bloodstained Fossil.png" />
-							Fossils
-						</Drawer.DrawerItem>
-						<Drawer.DrawerItem selected={props.selectedRoute === '/blight'} onClick={this.goToBlight}>
-							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
-							<img src="../../assets/header/Fireball Tower.png" />
-							Blight Towers
-						</Drawer.DrawerItem>
-						<Drawer.DrawerItem selected={props.selectedRoute === '/syndicate-overlay'} onClick={this.goToOverlay}>
-							{/* <List.ItemGraphic>account_circle</List.ItemGraphic> */}
-							<img src="../../assets/header/POE_Overlay_Community_Fork.png" />
-							Syndicate Overlay
-						</Drawer.DrawerItem>
-					</Drawer.DrawerContent>
-				</Drawer>
-				<Dialog ref={this.dialogRef}>
-					<Dialog.Header>Settings</Dialog.Header>
-					<Dialog.Body>
-						<div>
-							Enable dark theme <Switch onClick={this.toggleDarkTheme} />
-						</div>
-					</Dialog.Body>
-					<Dialog.Footer>
-						<Dialog.FooterButton accept>OK</Dialog.FooterButton>
-					</Dialog.Footer>
-				</Dialog>
-			</div>
-		);
+			useTitle
+		)
 	}
+
+  const list = (anchor) => (
+    <Box
+      sx={{ width: "100%" }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+      variant="nav"
+    >
+      <List variant="nav">
+          <ListItem button key="Home" variant="nav" component="a" href="/">
+                <img src={Exalted} alt="home"/>
+            <ListItemText primary="Home" variant="nav"/>
+          </ListItem>
+          <ListItem button key="Syndicate" variant="nav" component="a" href="/syndicate">
+                <img src={Cameria} alt="syndicate" />
+            <ListItemText primary="Syndicate" variant="nav"/>
+          </ListItem>
+          <ListItem button key="Archnemesis" variant="nav" component="a" href="/archnemesis" >
+                <img src={Archnemesis} alt="archnemesis" />
+            <ListItemText primary="Archnemesis" variant="nav"/>
+          </ListItem>
+          <ListItem button key="Syndicate-Overlay" variant="navBottom" component="a" href="/syndicate-overlay" >
+                <img src={poeOverlay} alt="syndicate-overlay" />
+            <ListItemText primary="Syndicate-Overlay" variant="nav"/>
+          </ListItem>
+      </List>
+    </Box>
+  );
+
+  return (
+    <div className="menuBar">
+      {['left'].map((anchor) => (
+        <React.Fragment key={anchor}>
+
+          <Button onClick={toggleDrawer(anchor, true)} variant="menu"><MenuIcon fontSize="large" variant="hamburger"/></Button>
+          <PageTitle />
+
+          <Drawer
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+            onOpen={toggleDrawer(anchor, true)}
+            // variant="nav"
+            PaperProps={{
+                sx: {
+                  backgroundColor: "#1a1a1a",
+                  color: "#e0e0e0",
+                  width: '10%',
+                  borderRight: "2px solid var(--colorMain)",
+                }
+              }}
+          >
+            <span className="navTitle">poesyn.xyz</span>
+            {list(anchor)}
+          </Drawer>
+        </React.Fragment>
+      ))}
+    </div>
+  );
 }

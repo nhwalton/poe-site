@@ -1,0 +1,37 @@
+.menuBar {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.pageTitle {
+    font-family: unineue-heavyitalic,Helvetica Neue,arial,sans-serif!important;
+    font-size: 2rem!important;
+    text-shadow: 4px 4px 0px var(--colorShadow);
+    color: var(--colorMain);
+}
+
+.navTitle {
+    font-family: unineue-heavyitalic,Helvetica Neue,arial,sans-serif!important;
+    font-size: 2rem!important;
+    text-shadow: 4px 4px 0px var(--colorShadow);
+    color: var(--colorMain);
+    text-align:left;
+    margin:0.5em 0.8em;
+}
+
+.MuiListItem-root > img {
+    margin-right: 20px;
+    opacity: .5;
+}
+
+.MuiIcon-fontSizeLarge {
+    width:2em;
+}
+
+.MuiBox-root {
+    height:100%;
+}
+
+.MuiList-root {
+    height:100%;
+}

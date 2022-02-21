@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { FullscreenProvider, useFullscreen  } from '../../components/useFullscreen';
 import CompactBoxTree from '../../components/butterfly';
+import ReactGA from "react-ga";
 
 import 'butterfly-dag/dist/index.css';
 import './style.css';
@@ -176,20 +177,34 @@ const StrategyCard = (props) => {
 const Archnemesis = (props) => {
 	const display = props.display
 
-	let defaultModifier = {
-		"title":"heralding-minions",
-		"order":
-			["heralding-minions"]
-	}
-
 	let localMod = JSON.parse(localStorage.getItem("selectedModifier"))
-	if (localMod) {
-		defaultModifier = localMod
+	let defaultModifier = null
+
+	if (localMod !== null) {
+		defaultModifier = localMod	
+	} else {
+		defaultModifier = {
+			"title":"heralding-minions",
+			"order":
+				["heralding-minions"]
+		}
 	}
 
 	const [strategy, setStrategy] = useState(defaultModifier);
 
-	function onModifier(event) {
+	const hostName = window.location.hostname
+	useEffect(() => {
+		if (hostName !== 'localhost' | strategy !== defaultModifier) {
+			const eventDetails = {
+				category: 'archnemesis',
+				action: 'modifierChange',
+				label: strategy.title
+			}
+			ReactGA.event(eventDetails)
+		}
+	}, [strategy, hostName]);
+
+	function OnModifier(event) {
 		// const selectedMod = JSON.parse(event.target.value)
 		const thisStrategy = {
 			'title': event.target.value,
@@ -215,12 +230,12 @@ const Archnemesis = (props) => {
 			<select
 			id="modName"
 			className="formField"
-			onChange={e => onModifier(e)}
-			value="Select Modifier"
+			onChange={e => OnModifier(e)}
+			value={defaultModifier.title}
 			>
-				<option	value="Select Modifier" disabled hidden> 
+				{/* <option	value="Select Modifier" disabled hidden> 
 				Select Modifier
-				</option>
+				</option> */}
 				{/* <option value="Custom Strat" order={`["frenzied","hexer"]`} key={`Custom Strat`}>{`Custom Strat`}</option> */}
 				{Object.keys(recipeModifiers).sort().map(function(key) {
 					let value = {

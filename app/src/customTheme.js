@@ -54,7 +54,8 @@ const CustomTheme = createTheme({
           props: { variant: "menu" },
           style: {
             fontWeight: "bold",
-            color: "var(--colorMain) !important"
+            color: "#fff !important",
+            paddingLeft: "30px",
           }
         },
         {
@@ -232,6 +233,23 @@ const CustomTheme = createTheme({
             marginBottom: "1em",
             fontWeight: "bold",
             '&:hover': {
+              backgroundColor: '#121212',
+              color: '#fff',
+              boxShadow: "0 2px var(--colorMain)"
+            }
+          }
+        },
+        {
+          props: { variant: "navBottom" },
+          style: {
+            height: "3em",
+            overflow: "hidden",
+            marginBottom: "1em",
+            fontWeight: "bold",
+            position: "absolute",
+            bottom: "0",
+            marginTop: "100%",
+            '&:hover': {
               backgroundColor: '#1a1a1a',
               color: '#fff',
               boxShadow: "0 2px var(--colorMain)"
@@ -280,7 +298,7 @@ const CustomTheme = createTheme({
         {
           props: { variant: "hamburger" },
           style: {
-            width: "2em",
+            width: "1.5em",
             marginTop: "-0.2em"
           }
         }

@@ -206,7 +206,6 @@ hr {
   grid-template-columns: 1fr auto 1fr;
   grid-column-gap: 5px;
   justify-items:center;
-  margin:60px 0;
   align-items:center;
 }
 

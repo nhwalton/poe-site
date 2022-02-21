@@ -8,9 +8,10 @@ const Footer = () => {
                     <div className="siteMap">
                         <a href="/syndicate">Syndicate Cheatsheet</a>
                         <a href="/archnemesis">Archnemesis</a>
-                        <a href="/passives">Leveling Guide</a>
+                        {/* <a href="/passives">Leveling Guide</a>
                         <a href="/fossils">Fossil Locations</a>
-                        <a href="/blight">Blight Towers</a>
+                        <a href="/blight">Blight Towers</a> */}
+                        <br/>
                         <a href="/syndicate-overlay">Syndicate Overlay</a>
                     </div>
                     <span className="title">poesyn.xyz</span>

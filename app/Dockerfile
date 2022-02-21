@@ -19,10 +19,13 @@ WORKDIR /var/www/poesyn.xyz/html
 
 COPY --from=build /app/build .
 
-# RUN mkdir -p /etc/nginx/sites-enabled/poesyn.xyz
+# RUN mkdir -p /etc/nginx/sites-enabled/
 
-RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx.conf /etc/nginx/conf.d
+WORKDIR /etc/nginx/sites-available/
+# RUN rm /etc/nginx/conf.d/default.conf
+COPY poesyn.conf .
+
+RUN ln -s /etc/nginx/sites-available/poesyn.conf /etc/nginx/conf.d/
 
 EXPOSE 80
 
