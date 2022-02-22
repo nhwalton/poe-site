@@ -50,6 +50,7 @@
 	border-color:#222 !important;
 	border-radius: 7px;
     color: var(--input-background);
+	cursor:pointer;
 }
 
 .formGroup {

@@ -12,6 +12,7 @@ RUN npm run build
 FROM nginx:alpine
 
 RUN mkdir -p /var/www/poesyn.xyz/html
+RUN mkdir -p /var/www/certbot
 
 WORKDIR /var/www/poesyn.xyz/html
 
@@ -27,6 +28,6 @@ COPY poesyn.conf .
 
 RUN ln -s /etc/nginx/sites-available/poesyn.conf /etc/nginx/conf.d/
 
-EXPOSE 80
+EXPOSE 80 443
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
