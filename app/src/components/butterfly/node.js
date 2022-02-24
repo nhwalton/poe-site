@@ -14,7 +14,14 @@ class BaseNode extends TreeNode {
       rewardDiv = `<div class="rewardMod">${rewardMod}</div>`
     }
     // console.log('draw', opts);
-    let container = $('<div class="iot-node"></div>')
+    
+    let className = 'iot-node'
+
+    if (opts.options.rewardMod === undefined) {
+      className = 'iot-node-no-mod'
+    }
+
+    let container = $(`<div class="${className}"></div>`)
       .css('top', opts.top + 'px')
       .css('left', opts.left + 'px')
       .attr('id', opts.id);
@@ -22,7 +29,7 @@ class BaseNode extends TreeNode {
     let grid = $('<div class="title-grid"></div>')
 
     let titleDom = $(`
-        <div class="image ${opts.options.color}">
+        <div class="image">
             <img src='${opts.options.imageUrl}' width="60" height="60" />
         <div>`);
 
@@ -31,7 +38,7 @@ class BaseNode extends TreeNode {
           <div class="title">${opts.options.content}</div>
           ${rewardDiv}
           <div class="rewards">
-          ${rewards.map(reward => `<img src='/images/rewards/Reward-${reward}.png' width="25" height="25" />`).join('')}
+          ${rewards.map(reward => `<img src='/images/rewards/Reward-${reward}.png' width="30" height="30" />`).join('')}
           </div>
         <div>`);
 

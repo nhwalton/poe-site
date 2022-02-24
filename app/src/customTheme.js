@@ -111,6 +111,26 @@ const CustomTheme = createTheme({
             marginTop: "25px"
             // border: "1px solid var(--colorMain)!important",
           }
+        },
+        {
+          props: { variant: "addStrategy" },
+          style: {
+            fontWeight: "bold",
+            color: "#fff",
+            background: "var(--buttonGradient)",
+            width: "100%",
+            padding: "0.7em 0"
+          }
+        },
+        {
+          props: { variant: "customStrategies" },
+          style: {
+            fontWeight: "bold",
+            color: "#fff",
+            background: "var(--buttonGradient)",
+            width: "100%",
+            marginBottom: "1em"
+          }
         }
       ],
       defaultProps: {
@@ -171,7 +191,7 @@ const CustomTheme = createTheme({
             background: "rgba(20,20,20,.8)!important",
             backdropFilter: "blur(2px)",
             padding: "1.5rem",
-            width: "75%",
+            width: "98%",
             margin: "auto",
             marginTop: "25px",
             textAlign: "left"
@@ -182,8 +202,10 @@ const CustomTheme = createTheme({
           props: { variant: "modal" },
           style: {
             color: "#e0e0e0 !important",
-            border: "1px solid #444",
-            background: "rgba(20,20,20,.8)!important",
+            border: "1px solid #222",
+            borderRadius: "6px",
+            background: "rgba(20,20,20,1)!important",
+            // boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)",
             backdropFilter: "blur(2px)",
             padding: "1.5rem",
             height: "100%",
@@ -281,6 +303,23 @@ const CustomTheme = createTheme({
               boxShadow: "0 2px var(--colorMain)"
             }
           }
+        },
+        {
+          props: { variant: "localMod" },
+          style: {
+            height: "3em",
+            overflow: "hidden",
+            padding: "1.5em 0 2em 0 !important",
+            marginBottom: "1em !important",
+            fontWeight: "bold",
+            minHeight: "3em",
+            cursor: "default",
+            '&:hover': {
+              color: '#fff',
+              boxShadow: "0 2px var(--colorMain)",
+              backgroundColor: "rgb(0, 0, 0, 0.0)"
+            }
+          }
         }
       ],
       defaultProps: {
@@ -295,6 +334,13 @@ const CustomTheme = createTheme({
           props: { variant: "nav" },
           style: {
             color: "#e0e0e0 !important"
+          }
+        },
+        {
+          props: { variant: "customStrat" },
+          style: {
+            color: "#e0e0e0 !important",
+            padding: "10px 0px !important",
           }
         }
       ],
@@ -326,6 +372,21 @@ const CustomTheme = createTheme({
           style: {
             width: "1.5em",
             marginTop: "-0.2em"
+          }
+        }
+      ],
+      defaultProps: {
+        // disableElevation: false,
+        // disableFocusRipple: true,
+        // disableRipple: true
+      }
+    },
+    MuiTextField: {
+      variants: [
+        {
+          props: { variant: "stratName" },
+          style: {
+            color: "#e0e0e0 !important"
           }
         }
       ],

@@ -26,21 +26,17 @@ class CompactBoxTree extends Component {
           options: {
             direction: 'TB',
             getHeight(d) {
-              return 120;
+              return 160;
             },
             getWidth(d) {
-              return 240;
+              return 360;
             },
             getHGap(d) {
-              return 40;
+              return 20;
             },
             getVGap(d) {
               return 40;
-            },
-            rankdir: 'TB',
-            nodesep: 40,
-            ranksep: 40,
-            controlPoints: false,
+            }
           }
         },
       });

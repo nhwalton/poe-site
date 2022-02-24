@@ -6,6 +6,11 @@ import { FullscreenProvider, useFullscreen  } from '../../components/useFullscre
 import CompactBoxTree from '../../components/butterfly';
 import { Modal } from "../../components/modal";
 import ReactGA from "react-ga";
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import ListSubheader from '@mui/material/ListSubheader';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 import 'butterfly-dag/dist/index.css';
 import './style.css';
@@ -47,12 +52,14 @@ const StrategyCard = (props) => {
 		const title = initialJson['modifiers'][recipeItem]['title']
 		const image = initialJson['modifiers'][recipeItem]['image']
 		const rewards = initialJson['modifiers'][recipeItem]['rewards']
+		const rewardMod = initialJson['modifiers'][recipeItem]['rewardMod']
 		let modObject = {
 			'id': `${recipeItem}-${id}`,
 			'Class': Node,
 			content:title,
 			imageUrl: image,
 			rewards: rewards,
+			rewardMod: rewardMod,
 			children: [],
 			endpoints: [{
 				id: '1',
@@ -71,6 +78,10 @@ const StrategyCard = (props) => {
 			sourceNode: parentId,
 			targetNode: `${recipeItem}-${id}`,
 			type: 'endpoint'
+		}
+
+		if (parentObject['isRoot'] !== true) {
+			delete modObject['rewardMod']
 		}
 
 		if (recipeLength > 0) {
@@ -99,6 +110,7 @@ const StrategyCard = (props) => {
 			id += 1
 			const recipe = recipeLocation[modifier]['recipe']
 			const title = recipeLocation[modifier]['title']
+			// const description = recipeLocation[modifier]['description']
 			const image = recipeLocation[modifier]['image']
 			const rewards = recipeLocation[modifier]['rewards']
 			const rewardMod = recipeLocation[modifier]['rewardMod']
@@ -166,7 +178,7 @@ const StrategyCard = (props) => {
 					<h2 className="archTitle">{modifierTitle}</h2>
 				</div>
 				<div className="modifierPickers">
-					<Button variant="archEnterFullscreen" type="button" onClick={openModal}>
+					<Button variant="customStrategies" type="button" onClick={openModal}>
 						Custom Strategies
 					</Button>
 					<ModPicker recipeModifiers={recipeModifiers}/>
@@ -180,7 +192,7 @@ const StrategyCard = (props) => {
 									<Button variant="archExitFullscreen" type="button" onClick={exitFullscreen}>
 										Exit fullscreen mode
 									</Button>
-									<ModPicker recipeModifiers={recipeModifiers}/>
+									{/* <ModPicker recipeModifiers={recipeModifiers}/> */}
 								</div>
 								<BoxTree/>
 							</div>
@@ -267,47 +279,59 @@ const Archnemesis = (props) => {
 
 	const ModPicker = () => {
 		return(
-			<select
+			<Select
 			id="modName"
 			className="formField"
 			onChange={e => OnModifier(e)}
 			value={defaultModifier.title}
+			sx= {{
+				backgroundColor: "#1a1a1a",
+				color: "#e0e0e0",
+			  }}
 			>
-				{Object.keys(strategyModifiers).map(function(key) {
-					let value = {
-						"title": strategyModifiers[key]['title'],
-						"icon": strategyModifiers[key]['icon']
-					};
-					return(
-						<option value={value.icon} key={key}>
-							{value.title}
-						</option>
+				<ListSubheader>Custom Strategies</ListSubheader>
+					{ localStrategies === {} ? (
+						<MenuItem value="" disabled>
+							<em>None</em>
+						</MenuItem>
+					) : (
+						Object.keys(localStrategies).map(function(key) {
+							let value = {
+								"title": localStrategies[key]['title'],
+								"icon": localStrategies[key]['icon']
+							};
+							return(
+								<MenuItem className="modSelect" value={value.icon} key={key}>
+									{value.title}
+								</MenuItem>
+								);
+							})
+					)}
+				<ListSubheader>Challenges</ListSubheader>
+					{Object.keys(strategyModifiers).map(function(key) {
+						let value = {
+							"title": strategyModifiers[key]['title'],
+							"icon": strategyModifiers[key]['icon']
+						};
+						return(
+							<MenuItem className="modSelect" value={value.icon} key={key}>
+								{value.title}
+							</MenuItem>
+							);
+						})}
+				<ListSubheader>Recipes</ListSubheader>
+					{Object.keys(recipeModifiers).sort().map(function(key) {
+						let value = {
+							"title": recipeModifiers[key]['title'],
+							"icon": recipeModifiers[key]['icon']
+						};
+						return(
+							<MenuItem className="modSelect" value={value.icon} key={key}>
+								{value.title}
+							</MenuItem>
 						);
-					})}
-				{Object.keys(localStrategies).map(function(key) {
-					let value = {
-						"title": localStrategies[key]['title'],
-						"icon": localStrategies[key]['icon']
-					};
-					return(
-						<option value={value.icon} key={key}>
-							{value.title}
-						</option>
-						);
-					})}
-				<option disabled>-------------------</option>
-				{Object.keys(recipeModifiers).sort().map(function(key) {
-					let value = {
-						"title": recipeModifiers[key]['title'],
-						"icon": recipeModifiers[key]['icon']
-					};
-					return(
-						<option value={value.icon} key={key}>
-							{value.title}
-						</option>
-					);
-					})};
-			</select>
+						})};
+			</Select>
 		)
 	}
 

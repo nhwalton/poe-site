@@ -48,7 +48,7 @@
 	border-width: 1px;
 	border-style: solid;
 	border-color:#222 !important;
-	border-radius: 7px;
+	border-radius: 4px;
     color: var(--input-background);
 	cursor:pointer;
 }
@@ -149,4 +149,47 @@ h2.archTitle {
 	grid-column-start: 3;
 	width:50%;
 	margin-left:auto;
+}
+
+.Mui-focused {
+	/* color:orange !important; */
+	border: 1px solid var(--colorMain) !important;
+	/* border-right: 2px solid orange !important; */
+}
+
+fieldset {
+	border:none !important;
+}
+
+input {
+	color: #e0e0e0 !important;
+}
+
+.MuiInputBase-root {
+	background-color: #222;
+}
+
+.modSelect {
+    color: #555 !important;
+    background-color:#fff;
+    line-height: 1;
+}
+
+.modSelect:hover {
+    color: #111 !important;
+    background-color:var(--colorMain) !important;
+}
+
+.modSelect.Mui-selected {
+    color: #111 !important;
+    background-color: var(--colorSub) !important;
+}
+
+.modSelect.Mui-selected:hover {
+    color: #111 !important;
+    background-color: var(--colorSub) !important;
+}
+
+#modName {
+	padding: 0.5em 0;
 }

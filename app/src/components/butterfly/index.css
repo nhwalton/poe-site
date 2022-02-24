@@ -51,30 +51,51 @@
     position: absolute;
     width: auto;
     max-width:360px;
+    min-width: 240px;
+    min-height: 160px;
+    max-height: 160px;
     display:grid;
     align-items:center;
     background-color:var(--background);
     border: var(--border);
     border-radius:5px;
-    padding:15px;
+    padding:1.5em;
     box-shadow: var(--box-shadow);
   }
 
-.iot-node:hover {
-  box-shadow: 0px 0px 20px 0px #a2a6b11f;
-}
+  .iot-node-no-mod {
+    position: absolute;
+    width: auto;
+    display:grid;
+    align-items:center;
+    background-color:var(--background);
+    border: var(--border);
+    border-radius:5px;
+    padding:1.5em;
+    box-shadow: var(--box-shadow);
+  }
 
-  .iot-node .title {
+  .iot-node:hover {
+    box-shadow: 0px 0px 20px 0px #a2a6b11f;
+  }
+
+  .title {
     line-height: 28px;
     color: var(--text-color);
     display:grid;
     grid-template-columns: auto;
     align-items: center;
     margin:auto;
-    font-size: 0.9em;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 0.02em;
   }
 
   .iot-node .image {
+    padding: 0 10px 0 0;
+  }
+
+  .iot-node-no-mod .image {
     padding: 0 10px 0 0;
   }
 
@@ -100,7 +121,7 @@
 
   .iot-node .content .rewardMod {
     border-radius: 0 0 8.04px 8.04px;
-    font-size: 0.6em;
+    font-size: 0.7em;
     color: var(--description-color);
     text-align: left;
     max-width:100%;
@@ -108,7 +129,7 @@
     padding: 5px 0;
   }
 
-  .iot-node .expand-btn {
+  .expand-btn {
     position: absolute;
     right: 10px;
     bottom: 5px;
@@ -133,7 +154,7 @@
 
   .title-grid {
     display:grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr;
     align-items:center;
   }
 

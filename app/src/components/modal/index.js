@@ -6,6 +6,7 @@ import MenuItem from '@mui/material/MenuItem';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import IconButton from '@mui/material/IconButton';
+import TextField from '@mui/material/TextField';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -13,6 +14,12 @@ import WorkIcon from '@mui/icons-material/Work';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import FormControl from '@mui/material/FormControl';
+import Alert from '@mui/material/Alert';
+import Collapse from '@mui/material/Collapse';
+import CloseIcon from '@mui/icons-material/Close';
+
+import Button from '@mui/material/Button';
 
 import './index.css';
 
@@ -27,38 +34,40 @@ export const Modal = ({setStrategyModal, setLocalStrategies, setStrategy, initia
     };
 
     function appendModifier(newStrategyTitle, newStrategyOrder) {
-        console.log(newStrategyTitle, newStrategyOrder)
-        const strategyIcon = newStrategyTitle.toLowerCase().replace(/\s/g, "-");
-        const strategyRewardMod = newStrategyOrder.join(', ')
-        const strategyRecipe = newStrategyOrder.map(modifier => {
-            console.log(modifier)
-            return( modifier.toLowerCase().replace(/\s/g, "-") );
-        });
+        if (newStrategyTitle === '') {
+            setTitleAlert(true);
+        } else if (newStrategyOrder.indexOf('Select a Modifier') !== -1) {
+            setModAlert(true);
+        } else {
+            const strategyIcon = newStrategyTitle.toLowerCase().replace(/\s/g, "-");
+            const strategyRewardMod = newStrategyOrder.join(', ')
+            const strategyRecipe = newStrategyOrder.map(modifier => {
+                return( modifier.toLowerCase().replace(/\s/g, "-") );
+            });
 
-        const newStrategy = {
-            "title": newStrategyTitle,
-            "icon": strategyIcon,
-            "image":"images/modifiers/archnemesis-league.png",
-            "description":"",
-            "recipe": strategyRecipe,
-            "rewards":[],
-            "rewardMod": strategyRewardMod
+            const newStrategy = {
+                "title": newStrategyTitle,
+                "icon": strategyIcon,
+                "image":"images/modifiers/archnemesis-league.png",
+                "description":"",
+                "recipe": strategyRecipe,
+                "rewards":[],
+                "rewardMod": strategyRewardMod
+            }
+        
+            const localStrats = JSON.parse(localStorage.getItem('localStrategies'));
+            const thisStrategy = {
+                'title': newStrategy.icon,
+                'order': [newStrategy.icon]
+            }
+            localStrats[thisStrategy['title']] = newStrategy
+            localStorage.setItem("selectedModifier",JSON.stringify(thisStrategy))
+            localStorage.setItem('localStrategies', JSON.stringify(localStrats));
+
+            setStrategy(thisStrategy)
+            setLocalStrategies(localStrats);
+            setStrategyModal(false);
         }
-
-        console.log('new',newStrategy);
-    
-        const localStrats = JSON.parse(localStorage.getItem('localStrategies'));
-        const thisStrategy = {
-            'title': newStrategy.icon,
-            'order': [newStrategy.icon]
-        }
-        localStrats[thisStrategy['title']] = newStrategy
-        localStorage.setItem("selectedModifier",JSON.stringify(thisStrategy))
-        localStorage.setItem('localStrategies', JSON.stringify(localStrats));
-
-        setStrategy(thisStrategy)
-        setLocalStrategies(localStrats);
-        setStrategyModal(false);
     }
 
     const options = Object.keys(initialJson['modifiers']).sort().map(function(key) {
@@ -67,47 +76,71 @@ export const Modal = ({setStrategyModal, setLocalStrategies, setStrategy, initia
             "icon": initialJson['modifiers'][key]['icon']
         };
         return(
-            <MenuItem value={value.title} key={key}>
+            <MenuItem className="modSelect" value={value.title} key={key}>
                 {value.title}
             </MenuItem>
         );
     });
 
     const [newStrategyTitle, setNewStrategyTitle] = useState('');
-    const [newStrategyOrder, setNewStrategyOrder] = useState(['arakaali-touched', 'arakaali-touched', 'arakaali-touched', 'arakaali-touched']);
+    const [newStrategyOrder, setNewStrategyOrder] = useState(['Select a Modifier', 'Select a Modifier', 'Select a Modifier', 'Select a Modifier']);
+    const [titleAlert, setTitleAlert] = useState(false);
+    const [modAlert, setModAlert] = useState(false);
 
     const handleChange = (e, index) => {
-        console.log('setting',newStrategyOrder);
         let thisStrategyItem = e.target.value;
         setNewStrategyOrder(newStrategyOrder.map((value, i) => i != index ? value : thisStrategyItem));
     }
 
     const localStrats = JSON.parse(localStorage.getItem('localStrategies'));
 
-    function deleteLocal(strategy) {
-        // delete localStrats[strategy];
-        // localStorage.setItem('localStrategies', JSON.stringify(localStrats));
-        // setLocalStrategies(localStrats);
+    function deleteLocal(key) {
+        const revertModifier = {
+			"title":"heralding-minions",
+			"order":
+				["heralding-minions"]
+			}
+        const currentStrats = JSON.parse(localStorage.getItem('localStrategies'));
+        delete currentStrats[key];
+        if (Object.keys(currentStrats).length === 0) {
+            setStrategy(revertModifier)
+            localStorage.setItem("selectedModifier",JSON.stringify(revertModifier))
+        } else {
+            const nextStrat = currentStrats[Object.keys(currentStrats)[0]];
+            const setStrat = {
+                "title":nextStrat.icon,
+                "order":
+                    [nextStrat.icon]
+            }
+            console.log(setStrat)
+            setStrategy(setStrat);
+            localStorage.setItem("selectedModifier",JSON.stringify(setStrat));
+        }
+        localStorage.setItem('localStrategies', JSON.stringify(currentStrats));
+        setLocalStrategies(currentStrats);
+        return(null);
     }
 
     let stratsArr = []
     const strats = Object.keys(localStrats).map(function(key) {
         const title = localStrats[key]['title'];
-        const children = localStrats[key]['recipe']
-        console.log(key, localStrats[key])
+        const children = localStrats[key]['rewardMod']
         stratsArr.push(localStrats[key])
         return(
-            <ListItem secondaryAction = {
+            <ListItem variant="localMod" secondaryAction = {
                 <IconButton edge="end" aria-label="delete" variant="delete">
-                    <DeleteIcon onClick={deleteLocal(key)}/>
+                    <DeleteIcon onClick={() => deleteLocal(key)}/>
                 </IconButton>
                 }
-            value="key" button >
-                <ListItemText primary={title} secondary={children} variant="customStrat"/>
+            value={key} >
+                <ListItemText
+                    primary={title}
+                    secondary={children}
+                    secondaryTypographyProps={{ sx: { color: "#999" } }}
+                    variant="customStrat"/>
           </ListItem>
         );
     });
-
   return (
     <div className="container" ref={modalRef} onClick={closeModal}>
         <div className="modal">
@@ -116,13 +149,34 @@ export const Modal = ({setStrategyModal, setLocalStrategies, setStrategy, initia
                     <div className="modalLeft">
                         <h2>New Strategy</h2>
                         <div className="newStrategy">
-                            <input className="newStratItem" type="text" placeholder="Strategy Name" onChange={(e) => setNewStrategyTitle(e.target.value)}/>
-                            {[...Array(4),].map((value, index) => (
-                                <Select type="text" value='' className="newStratItem" placeholder="Strategy Name" key={index} onChange={(e) => handleChange(e, index)}>
-                                    {options}
-                                </Select>
-                            ))}
-                            <button className="newStratItem" onClick={() => appendModifier(newStrategyTitle, newStrategyOrder)}>Add Strategy</button>
+                            <FormControl sx={{ m: 0, minWidth: "100%" }} required>
+                                <TextField className="newStratItem" type="text" placeholder="Strategy Name" onChange={(e) => setNewStrategyTitle(e.target.value)}/>
+                            </FormControl>
+                                {[...Array(4),].map((value, index) => (
+                                    <FormControl sx={{ m: 0, minWidth: "100%" }}>
+                                        <Select
+                                            displayEmpty
+                                            inputProps={{ 'aria-label': 'Without label' }}
+                                            value={newStrategyOrder[index]}
+                                            className="newStratItem"
+                                            key={index}
+                                            onChange={(e) => handleChange(e, index)}>
+                                                <MenuItem value={'Select a Modifier'} disabled hidden>
+                                                    Select a Modifier
+                                                </MenuItem>
+                                                {options}
+                                        </Select>
+                                    </FormControl>
+                                ))}
+                                <div>
+                                    <Collapse in={titleAlert}>
+                                        <Alert severity="error" onClose={() => {setTitleAlert(false);}}>Please title your strategy.</Alert>
+                                    </Collapse>
+                                    <Collapse in={modAlert}>
+                                        <Alert severity="error" onClose={() => {setModAlert(false);}}>Please select all four modifiers.</Alert>
+                                    </Collapse>
+                                </div>
+                                <Button variant="addStrategy" className="newStratItem" onClick={() => appendModifier(newStrategyTitle, newStrategyOrder)}>Add Strategy</Button>
                         </div>
                     </div>
                     <div className="modalRight">
@@ -134,7 +188,11 @@ export const Modal = ({setStrategyModal, setLocalStrategies, setStrategy, initia
                         </div>
                     </div>
                 </div>
-                <button onClick={() => setStrategyModal(false)}>X</button>
+                <div className="closeIcon">
+                <IconButton edge="end" aria-label="delete" variant="delete">
+                    <CloseIcon onClick={() => setStrategyModal(false)}></CloseIcon>
+                </IconButton>
+                </div>
             </Card>
         </div>
     </div>
