@@ -179,6 +179,22 @@ const CustomTheme = createTheme({
           }
         },
         {
+          props: { variant: "modal" },
+          style: {
+            color: "#e0e0e0 !important",
+            border: "1px solid #444",
+            background: "rgba(20,20,20,.8)!important",
+            backdropFilter: "blur(2px)",
+            padding: "1.5rem",
+            height: "100%",
+            width: "100%",
+            margin: "auto",
+            padding: "1em 3em",
+            textAlign: "left"
+            // border: "1px solid var(--colorMain)!important",
+          }
+        },
+        {
           props: { variant: "archFullscreen" },
           style: {
             color: "#e0e0e0 !important",
@@ -214,6 +230,16 @@ const CustomTheme = createTheme({
           style: {
             color: "#e0e0e0 !important",
             margin: "0px !important"
+          }
+        },
+        {
+          props: { variant: "delete" },
+          style: {
+            color: "#e0e0e0 !important",
+            '&:hover': {
+              backgroundColor: 'var(--colorMain) !important',
+              color: '#121212 !important'
+            }
           }
         }
       ],

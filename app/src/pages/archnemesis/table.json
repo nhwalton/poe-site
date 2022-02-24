@@ -582,16 +582,60 @@
             "rewardMod": "Rewards are doubled"
         }
     }
-    , "strategies": [
-        {
-            "title":"Treant Combo",
-            "order":
-                ["mirror-image", "treant-hoard", "assassin", "rejuvenating"]
+    , "strategies": {
+        "challenge-1":{
+            "title":"Defeat Archnemesis III - 1",
+            "icon":"challenge-1",
+            "image":"images/modifiers/archnemesis-league.png",
+            "description":"",
+            "recipe":["arakaali-touched","empowering-minions","evocationist","solaris-touched"],
+            "rewards":[],
+            "rewardMod": "Arakaali-touched, Empowering Minions, Evocationist, Solaris-touched"
         },
-        {
-            "title":"Max Combo",
-            "order":
-                ["abberath-touched", "innocence-touched", "kitava-touched", "shakari-touched"]
+        "challenge-2":{
+            "title":"Defeat Archnemesis III - 2",
+            "icon":"challenge-2",
+            "image":"images/modifiers/archnemesis-league.png",
+            "description":"",
+            "recipe":["assassin","invulnerable","lunaris-touched","temporal-bubble"],
+            "rewards":[],
+            "rewardMod": "Assassin, Invulnerable, Lunaris-touched, Temporal Bubble"
+        },
+        "challenge-3":{
+            "title":"Defeat Archnemesis III - 3",
+            "icon":"challenge-3",
+            "image":"images/modifiers/archnemesis-league.png",
+            "description":"",
+            "recipe":["berserker","bombardier","effigy","frenzied"],
+            "rewards":[],
+            "rewardMod": "Berserker, Bombardier, Effigy, Frenzied"
+        },
+        "challenge-4":{
+            "title":"Defeat Archnemesis III - 4",
+            "icon":"challenge-4",
+            "image":"images/modifiers/archnemesis-league.png",
+            "description":"",
+            "recipe":["bloodletter","frost-strider","ice-prison","sentinel"],
+            "rewards":[],
+            "rewardMod": "Bloodletter, Frost Strider, Ice Prison, Sentinel"
+        },
+        "challenge-5":{
+            "title":"Defeat Archnemesis III - 5",
+            "icon":"challenge-5",
+            "image":"images/modifiers/archnemesis-league.png",
+            "description":"",
+            "recipe":["brine-king-touched","flame-strider","magma-barrier","shakari-touched"],
+            "rewards":[],
+            "rewardMod": "Brine King-touched, Flame Strider, Magma Barrier, Shakari-touched"
+        },
+        "challenge-6":{
+            "title":"Defeat Archnemesis III - 6",
+            "icon":"challenge-6",
+            "image":"images/modifiers/archnemesis-league.png",
+            "description":"",
+            "recipe":["executioner","mirror-image","soul-eater","treant-hoard"],
+            "rewards":[],
+            "rewardMod": "Executioner, Mirror Image, Soul Eater, Treant Hoard"
         }
-    ]
+    }
 }
