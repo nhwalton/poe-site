@@ -1,26 +1,7 @@
-import React, { useRef, useState } from "react";
-import ReactDom from "react-dom";
-import Card from '@mui/material/Card';
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import IconButton from '@mui/material/IconButton';
-import TextField from '@mui/material/TextField';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
-import DeleteIcon from '@mui/icons-material/Delete';
-import WorkIcon from '@mui/icons-material/Work';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import FormControl from '@mui/material/FormControl';
-import Alert from '@mui/material/Alert';
-import Collapse from '@mui/material/Collapse';
 import CloseIcon from '@mui/icons-material/Close';
-
-import Button from '@mui/material/Button';
-
+import DeleteIcon from '@mui/icons-material/Delete';
+import { Alert, Button, Card, Collapse, FormControl, IconButton, List, ListItem, ListItemText, MenuItem, Select, TextField } from '@mui/material';
+import React, { useRef, useState } from "react";
 import './index.css';
 
 export const Modal = ({setStrategyModal, setLocalStrategies, setStrategy, initialJson}) => {
@@ -89,7 +70,7 @@ export const Modal = ({setStrategyModal, setLocalStrategies, setStrategy, initia
 
     const handleChange = (e, index) => {
         let thisStrategyItem = e.target.value;
-        setNewStrategyOrder(newStrategyOrder.map((value, i) => i != index ? value : thisStrategyItem));
+        setNewStrategyOrder(newStrategyOrder.map((value, i) => i !== index ? value : thisStrategyItem));
     }
 
     const localStrats = JSON.parse(localStorage.getItem('localStrategies'));
@@ -112,7 +93,6 @@ export const Modal = ({setStrategyModal, setLocalStrategies, setStrategy, initia
                 "order":
                     [nextStrat.icon]
             }
-            console.log(setStrat)
             setStrategy(setStrat);
             localStorage.setItem("selectedModifier",JSON.stringify(setStrat));
         }

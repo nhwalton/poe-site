@@ -81,6 +81,7 @@ h1.homeTitle {
 	grid-gap: 20px;
 	max-width:1000px;
 	margin:auto;
+	margin-top: 5em;
 }
 
 @media only screen and (max-width: 1700px) {

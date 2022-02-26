@@ -15,13 +15,17 @@ class BaseNode extends TreeNode {
     }
     // console.log('draw', opts);
     
-    let className = 'iot-node'
+    let extraClass = ''
+    let imageSize = 80
 
-    if (opts.options.rewardMod === undefined) {
-      className = 'iot-node-no-mod'
+    if (opts.options.isRoot === true) {
+      extraClass = 'root'
+      imageSize = 100
+    } else if (opts.options.rewardMod === undefined) {
+      extraClass = 'no-mod'
     }
 
-    let container = $(`<div class="${className}"></div>`)
+    let container = $(`<div class="iot-node ${extraClass}"></div>`)
       .css('top', opts.top + 'px')
       .css('left', opts.left + 'px')
       .attr('id', opts.id);
@@ -30,7 +34,7 @@ class BaseNode extends TreeNode {
 
     let titleDom = $(`
         <div class="image">
-            <img src='${opts.options.imageUrl}' width="60" height="60" />
+            <img src='${opts.options.imageUrl}' width="${imageSize}" height="${imageSize}" />
         <div>`);
 
     let contentDom = $(`
@@ -46,7 +50,7 @@ class BaseNode extends TreeNode {
     grid.append(contentDom);
     container.append(grid);
     // container.append(rewardBlock);
-    if (typeof opts.options.children !== 'undefined') {
+    if (typeof opts.options.children !== 'undefined' && opts.options.isRoot !== true) {
       this.showExpandBtn(container);
     }
     // this.showExpandBtn(container);

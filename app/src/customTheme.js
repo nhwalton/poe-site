@@ -17,6 +17,42 @@ const CustomTheme = createTheme({
           }
         },
         {
+          props: { variant: "headerBar" },
+          style: {
+            fontWeight: "bold",
+            color: "#bbb",
+            borderRadius: "0px !important",
+            padding: "1em 3em",
+            overflow: "display",
+            // background: "var(--buttonGradient)",
+            // width: "25%",
+            '&:hover': {
+              // backgroundColor: "var(--colorMain)",
+              color: '#fff',
+              boxShadow: "0 2px var(--colorMain)",
+              backgroundColor: '#222222',
+            }
+          }
+        },
+        {
+          props: { variant: "headerBarActive" },
+          style: {
+            fontWeight: "bold",
+            color: "var(--colorMain)",
+            borderRadius: "0px !important",
+            backgroundColor: '#171717',
+            boxShadow: "0 2px #222",
+            padding: "1em 3em",
+            // background: "var(--buttonGradient)",
+            // width: "25%",
+            '&:hover': {
+              color: "var(--colorMain)",
+              boxShadow: "0 2px var(--colorMain)",
+              backgroundColor: '#222222',
+            }
+          }
+        },
+        {
           props: { variant: "home" },
           style: {
             fontWeight: "bold",
@@ -95,6 +131,7 @@ const CustomTheme = createTheme({
             marginRight: "auto",
             width: "50%",
             overflow: "hidden",
+            marginLeft: "1.75em",
             // border: "1px solid var(--colorMain)!important",
           }
         },
@@ -190,9 +227,11 @@ const CustomTheme = createTheme({
             border: "1px solid #444",
             background: "rgba(20,20,20,.8)!important",
             backdropFilter: "blur(2px)",
-            padding: "1.5rem",
-            width: "98%",
-            margin: "auto",
+            boxShadow: "none",
+            padding: "1rem",
+            margin: "0 1.5em",
+            // width: "100%",
+            // padding: "0 1em",
             marginTop: "25px",
             textAlign: "left"
             // border: "1px solid var(--colorMain)!important",
@@ -207,7 +246,6 @@ const CustomTheme = createTheme({
             background: "rgba(20,20,20,1)!important",
             // boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)",
             backdropFilter: "blur(2px)",
-            padding: "1.5rem",
             height: "100%",
             width: "100%",
             margin: "auto",

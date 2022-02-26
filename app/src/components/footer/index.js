@@ -15,7 +15,10 @@ const Footer = () => {
                         <a href="/syndicate-overlay">Syndicate Overlay</a>
                     </div>
                     <span className="title">poesyn.xyz</span>
-                    <span className="questions"><a className="homeLink" href="https://twitter.com/poesynxyz">Twitter</a></span>
+                    <div className="questions">
+                        <span><a className="homeLink" href="https://twitter.com/poesynxyz">Twitter</a></span>
+                        <span><a className="homeLink" href="https://reddit.com/u/arxv/">Reddit</a></span>
+                    </div>
                 </div>
             </div>
         </div>

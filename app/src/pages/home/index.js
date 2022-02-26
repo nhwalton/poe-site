@@ -52,10 +52,10 @@ const Home = () => {
 							<PageModuleButton href="/syndicate" text="Syndicate Cheat Sheet" />
 						</div>
 						<div className="homeSection">
-							<h2>Archnemesis Recipes</h2>
-							<p>The Archnemesis Recipes display all craftable modifier recipes including any sub-recipes required for complex modifiers.</p>
+							<h2>Archnemesis</h2>
+							<p>The Archnemesis tool allows you to view all craftable modifiers, all six league challenge combinations for "Defeat Archnemesis III", as well as custom modifier combinations.</p>
 							<p>A fullscreen mode is available for navigating the tree of larger recipes and each item can be collapsed to remove it from view.</p>
-							<PageModuleButton href="/archnemesis" text="Archnemesis Recipes" />
+							<PageModuleButton href="/archnemesis" text="Archnemesis" />
 						</div>
 						<div className="homeSection">
 							<h4>Notice of Non-Affiliation</h4>

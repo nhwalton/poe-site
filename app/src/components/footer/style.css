@@ -33,6 +33,17 @@
     grid-template-rows: auto;
 }
 
+.questions {
+    text-align:right;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.questions > span > a {
+    color:#fff;
+    text-decoration: none;
+}
+
 .footerBar > div > span.questions {
     text-align: right;
 }

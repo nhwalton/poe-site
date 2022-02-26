@@ -18,7 +18,7 @@ class CompactBoxTree extends Component {
         theme: {
           edge: {
             shapeType: 'Manhattan',
-            arrow: false
+            arrow: false,
           }
         },
         layout: {
@@ -29,7 +29,7 @@ class CompactBoxTree extends Component {
               return 160;
             },
             getWidth(d) {
-              return 360;
+              return 280;
             },
             getHGap(d) {
               return 20;

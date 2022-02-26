@@ -1,11 +1,8 @@
-import { useState, useEffect } from 'react';
-
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
+import { Button, Card, useMediaQuery } from '@mui/material';
+import { useEffect, useState } from 'react';
+import ReactGA from "react-ga";
 import './style.css';
 import defaultJson from './table.json';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import ReactGA from "react-ga";
 
 const RowCell = (props) => {
 	let cellTitle = props.cellData.title;
@@ -40,7 +37,7 @@ const RowCell = (props) => {
 			}
 			ReactGA.event(eventDetails);
 		}
-	}, []);
+	});
 
 	const [className, newClassName] = useState(useName);
 	useEffect(() => { newClassName(useName) }, [useName])

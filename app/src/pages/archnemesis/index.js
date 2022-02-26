@@ -1,23 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { FullscreenProvider, useFullscreen  } from '../../components/useFullscreen';
-import CompactBoxTree from '../../components/butterfly';
-import { Modal } from "../../components/modal";
-import ReactGA from "react-ga";
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import ListSubheader from '@mui/material/ListSubheader';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-
+import { Button, Card, ListSubheader, MenuItem, Select, useMediaQuery } from '@mui/material';
 import 'butterfly-dag/dist/index.css';
-import './style.css';
+import React, { useEffect, useState } from 'react';
+import ReactGA from "react-ga";
+import CompactBoxTree from '../../components/butterfly';
 import Node from '../../components/butterfly/node.js';
-
+import { Modal } from "../../components/modal";
+import { FullscreenProvider, useFullscreen } from '../../components/useFullscreen';
+import './style.css';
 import defaultJson from './table.json';
-import { keys } from '@mui/system';
 
 const initialJson = JSON.parse(JSON.stringify(defaultJson));
 
@@ -160,8 +150,6 @@ const StrategyCard = (props) => {
 
 	let modifierTitle = ''
 	let modifierImage = ''
-
-	console.log(recipeLocation)
 	modifierTitle = recipeLocation[props.strategy['title']]['title']
 	modifierImage = recipeLocation[props.strategy['title']]['image']
 
@@ -247,7 +235,7 @@ const Archnemesis = (props) => {
 			}
 			ReactGA.event(eventDetails)
 		}
-	}, [strategy, hostName]);
+	}, [strategy, hostName, defaultModifier]);
 
 	function OnModifier(event) {
 		const thisStrategy = {
@@ -346,7 +334,7 @@ const Archnemesis = (props) => {
 							/> : null}
 			<div className={`archnemesis page ${display}`}>
 				<div className={`titleWrapper archnemesis ${display}`}>
-					<h1>Archnemesis Recipes</h1>
+					<h1>Archnemesis</h1>
 				</div>
 				<div>
 					<div>

@@ -1,19 +1,10 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/SwipeableDrawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/MenuRounded';
-import Exalted from '../../assets/header/Exalted_Orb.png';
-import Cameria from '../../assets/header/Cameria_the_Coldblooded.png';
+import { Box, Button, Drawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
+import * as React from 'react';
 import Archnemesis from '../../assets/header/Archnemesis_League_Icon.png';
+import Cameria from '../../assets/header/Cameria_the_Coldblooded.png';
+import Exalted from '../../assets/header/Exalted_Orb.png';
 import poeOverlay from '../../assets/header/POE_Overlay_Community_Fork.png';
-// import Fossil from '../../assets/header/Bloodstained_Fossil.png';
-// import Blight from '../../assets/header/Fireball_Tower.png';
-import useMediaQuery from '@mui/material/useMediaQuery';
-
 import './style.css';
 
 export default function SwipeableTemporaryDrawer() {
@@ -37,7 +28,7 @@ export default function SwipeableTemporaryDrawer() {
   };
 
   const PageTitle = () => { 
-    const title = <span className="pageTitle">poesyn.xyz</span>
+    const title = <span className="pageTitle"><a href="/">poesyn.xyz</a></span>
 		const useTitle = useMediaQuery('(min-width:1500px)') ? title : null;
 		return (
 			useTitle
@@ -73,13 +64,30 @@ export default function SwipeableTemporaryDrawer() {
     </Box>
   );
 
+
+  let pages = ['Syndicate', 'Archnemesis'];
+  let page = window.location.pathname.split('/')[1];
+
   return (
     <div className="menuBar">
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-
-          <Button onClick={toggleDrawer(anchor, true)} variant="menu"><MenuIcon fontSize="large" variant="hamburger"/></Button>
-          <PageTitle />
+          <div className="headerBar">
+            <div className="headerBarLeft">
+              <Button onClick={toggleDrawer(anchor, true)} variant="menu"><MenuIcon fontSize="large" variant="hamburger"/></Button>
+              <PageTitle />
+            </div>
+            <div className="headerBarCenter">
+              {pages.map((thisPage) => {
+                  if (thisPage.toLowerCase() === page) {
+                    return(<Button disableRipple variant="headerBarActive" component="a" href={`/${thisPage.toLowerCase()}`}>{thisPage}</Button>)
+                } else {
+                    return(<Button disableRipple variant="headerBar" component="a" href={`/${thisPage.toLowerCase()}`}>{thisPage}</Button>)
+                }
+              })}
+              {/* <Button disableRipple variant="headerBar" component="a" href="/archnemesis">Archnemesis</Button> */}
+            </div>
+          </div>
 
           <Drawer
             anchor={anchor}

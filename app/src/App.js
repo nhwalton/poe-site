@@ -1,17 +1,14 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
-import './App.css';
+import React, { useEffect } from 'react';
 import ReactGA from "react-ga";
-
-import Header from './components/header';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import './App.css';
 import Footer from './components/footer';
+import Header from './components/header';
+import { CustomTheme } from "./customTheme";
+import Archnemesis from './pages/archnemesis/';
 import Home from './pages/home/';
 import Syndicate from './pages/syndicate/';
-import Archnemesis from './pages/archnemesis/';
-
-import { CustomTheme } from "./customTheme";
 
 ReactGA.initialize("UA-158247637-1", {
 		// debug: true,

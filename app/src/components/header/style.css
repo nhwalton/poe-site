@@ -1,12 +1,28 @@
 .menuBar {
     text-align: left;
-    margin-top: 1rem;
+    /* padding: 0.5em 0; */
+    background: rgb(17, 17, 17);
+    border-bottom: 2px solid #222;
+}
+
+.headerBar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.headerBarCenter {
+    margin:0 auto;
 }
 
 .pageTitle {
     font-family: unineue-heavyitalic,Helvetica Neue,arial,sans-serif!important;
     font-size: 2rem!important;
     text-shadow: 4px 4px 0px var(--colorShadow);
+    color: var(--colorMain);
+}
+
+.pageTitle a {
+    text-decoration: none;
     color: var(--colorMain);
 }
 
