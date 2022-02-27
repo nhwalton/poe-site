@@ -7,9 +7,16 @@ npm-debug.log
 flask-api/api/bin/*
 flask-api/api/lib/*
 flask-api/__pycache__
+flask-api/memory.db
 
 *.sqlite
 flask-api/.vscode/*
 flask-api/file::memory:?cache=shared
 docker-build-push
 flask-api/api/*
+
+app/poe-syn.psd
+
+init-letsencrypt.sh
+/data/*
+site/size-plugin.json

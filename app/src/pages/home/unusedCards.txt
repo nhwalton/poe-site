@@ -1,0 +1,28 @@
+<Card>
+    <div className="cardBody">
+        <h2>Blight Towers</h2>
+        <p>The Blight Towers cheatsheet offers suggested upgrade tiers and placement for towers during Blight encounters and in Blighted Maps. There are also notes referencing alternative use cases when towers can be used outside their usual recommendation.
+        </p>
+        <a className="moduleLink" href="/blight"><Button raised ripple>Blight Towers</Button></a>
+    </div>
+</Card>
+<Card>
+    <div className="cardBody">
+        <h2>Fossil Locations</h2>
+        <p>The Fossil cheatsheet notes fossil availability in Delve based on the Delve zone/biome as well as the modifier for each type of fossil.
+        </p>
+        <a className="moduleLink" href="/fossils"><Button raised ripple>Fossil Locations</Button></a>
+    </div>
+</Card>
+<Card>
+    <div className="cardBody">
+        <h2>Leveling Guide</h2>
+        <p>
+        Note: The leveling guide is outdated and does not feature new gems from the last couple of leagues. It may be updated in the future, but it's still handy if you're using skil
+        <br></br>
+        <br></br>
+        The leveling guide has all passive missions and lab locations to make sure you don't miss anything while leveling your character. Additionally, if you are following a build, you are able to enter the POB Pastebin and track which gems you need to pick up and where. If there are gems you know you want to pick up that aren't in your end game POB, you can select a gem and class and manually add it to the guide.
+        </p>
+        <a className="moduleLink" href="/passives"><Button raised ripple>Leveling Guide</Button></a>
+    </div>
+</Card>

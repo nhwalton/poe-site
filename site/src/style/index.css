@@ -335,10 +335,3 @@ hr {
   border-left-color:#4195a3;
   background-color:#4195a320;
 }
-
-.mdc-button {
-  color: #f7b10a !important;
-  border: solid 1px #f7b10a !important;
-  backdrop-filter: blur(2px) !important;
-  border-radius:3px;
-}

@@ -1,11 +1,24 @@
 version: "3"
 
 services:
-  site:
-    image: site:latest
-    ports: ["8080:8080"]
-
+  nginx:
+    image: nhwalton/poe-app:latest
+    ports: 
+        - "80:80"
+        - "443:443"
+    volumes: 
+        - ./app:/opt
+        - /app/node_modules
+        - ./data/certbot/conf:/etc/letsencrypt
+        - ./data/certbot/www:/var/www/certbot
+    depends_on:
+        - flask-api
   flask-api:
-    image: flask-api:latest
+    image: nhwalton/poe-api:latest
     ports: ["6000:6000"]
     restart: "unless-stopped"
+  certbot:
+    image: certbot/certbot
+    volumes:
+        - ./data/certbot/conf:/etc/letsencrypt
+        - ./data/certbot/www:/var/www/certbot
