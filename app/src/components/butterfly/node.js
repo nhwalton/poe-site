@@ -20,7 +20,7 @@ class BaseNode extends TreeNode {
 
     if (opts.options.isRoot === true) {
       extraClass = 'root'
-      imageSize = 100
+      imageSize = 80
     } else if (opts.options.rewardMod === undefined) {
       extraClass = 'no-mod'
     }
