@@ -156,9 +156,15 @@ const Syndicate = (props) => {
 		const response = await fetch('/api/scarabs');
 		return response.json();
 	};
+
+	async function getChroms() {
+		const chrom = await fetch('/api/chromatic_calculator?strength=0&dexterity=50&intelligence=50&red=2&green=3&blue=1&sockets=6');
+		return chrom.json();
+	};
 	
 	useEffect(() => {
 		fetchScarabs().then(result => setScarabs(result))
+		getChroms().then(result => console.log(result))
 	}, []);
 
 	useEffect(() => {

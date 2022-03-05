@@ -9,6 +9,7 @@ import { CustomTheme } from "./customTheme";
 import Archnemesis from './pages/archnemesis/';
 import Home from './pages/home/';
 import Syndicate from './pages/syndicate/';
+import Passives from './pages/passives/';
 
 ReactGA.initialize("UA-158247637-1", {
 		// debug: true,
@@ -25,6 +26,8 @@ function App() {
 				<Route path="/syndicate-overlay" element={<Syndicate display={display}/>}>
 				</Route>
 				<Route path="/archnemesis" element={<Archnemesis />}>
+				</Route>
+				<Route exact path="/passives" element={<Passives />}>
 				</Route>
 				<Route exact path="/" element={<Home />}>
 				</Route>

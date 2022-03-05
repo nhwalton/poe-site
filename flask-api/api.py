@@ -15,6 +15,7 @@ from flask_cors import CORS, cross_origin
 from waitress import serve
 
 from functions import return_info, get_gem_info, get_current_league
+from chrom import calculate
 
 app = flask.Flask(__name__)
 
@@ -162,6 +163,24 @@ def scarabs():
         scarabs = df.to_dict('records')
         scarab_cache['scarabs'] = scarabs
     return(jsonify(scarabs))
+
+@app.route('/api/chromatic_calculator', methods=['GET'])
+@cross_origin()
+def chromatic_calculator():
+    strength_requirement = int(request.args.get('strength'))
+    dexterity_requirement = int(request.args.get('dexterity'))
+    intelligence_requirement = int(request.args.get('intelligence'))
+    desired_red = int(request.args.get('red'))
+    desired_green = int(request.args.get('green'))
+    desired_blue = int(request.args.get('blue'))
+    total_sockets = int(request.args.get('sockets'))
+    
+    response = calculate(strength_requirement, dexterity_requirement, intelligence_requirement, desired_red, desired_green, desired_blue, total_sockets)
+    print(response)
+    return(jsonify(response))
+    
+    
+
 
 if __name__ == "__main__":
     if is_dev == 'dev':

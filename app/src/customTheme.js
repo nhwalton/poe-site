@@ -168,6 +168,16 @@ const CustomTheme = createTheme({
             width: "100%",
             marginBottom: "1em"
           }
+        },
+        {
+          props: { variant: "passives" },
+          style: {
+            fontWeight: "bold",
+            color: "#fff",
+            background: "var(--buttonGradient)",
+            minWidth: "25%",
+            // width: "50%",
+          }
         }
       ],
       defaultProps: {
@@ -230,6 +240,23 @@ const CustomTheme = createTheme({
             boxShadow: "none",
             padding: "1rem",
             margin: "0 1.5em",
+            // width: "100%",
+            // padding: "0 1em",
+            marginTop: "25px",
+            textAlign: "left"
+            // border: "1px solid var(--colorMain)!important",
+          }
+        },
+        {
+          props: { variant: "passives" },
+          style: {
+            color: "#e0e0e0 !important",
+            border: "1px solid #444",
+            background: "#292929cc !important",
+            backdropFilter: "blur(2px)",
+            boxShadow: "none",
+            padding: "2em",
+            // margin: "0 1.5em",
             // width: "100%",
             // padding: "0 1em",
             marginTop: "25px",

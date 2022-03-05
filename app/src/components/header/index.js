@@ -2,6 +2,7 @@ import MenuIcon from '@mui/icons-material/MenuRounded';
 import { Box, Button, Drawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
 import * as React from 'react';
 import Archnemesis from '../../assets/header/Archnemesis_League_Icon.png';
+import Passives from '../../assets/header/Book_of_Skill.png';
 import Cameria from '../../assets/header/Cameria_the_Coldblooded.png';
 import Exalted from '../../assets/header/Exalted_Orb.png';
 import poeOverlay from '../../assets/header/POE_Overlay_Community_Fork.png';
@@ -56,6 +57,10 @@ export default function SwipeableTemporaryDrawer() {
                 <img src={Archnemesis} alt="archnemesis" />
             <ListItemText primary="Archnemesis" variant="nav"/>
           </ListItem>
+          <ListItem button key="Passives" variant="nav" component="a" href="/passives" >
+                <img src={Passives} alt="Leveling" />
+            <ListItemText primary="Leveling" variant="nav"/>
+          </ListItem>
           <ListItem button key="Syndicate-Overlay" variant="navBottom" component="a" href="/syndicate-overlay" >
                 <img src={poeOverlay} alt="syndicate-overlay" />
             <ListItemText primary="Syndicate-Overlay" variant="nav"/>
@@ -64,9 +69,22 @@ export default function SwipeableTemporaryDrawer() {
     </Box>
   );
 
-
-  let pages = ['Syndicate', 'Archnemesis'];
-  let page = window.location.pathname.split('/')[1];
+  let pages = [
+    {
+      title: "Syndicate",
+      url: "syndicate"
+    },
+    {
+      title: "Archnemesis",
+      url: "archnemesis"
+    },
+    {
+      title: "Leveling",
+      url: "passives"
+    },
+  ]
+  let page = window.location.pathname.split("/")[1];
+  console.log(page.split("/")[1])
 
   return (
     <div className="menuBar">
@@ -79,10 +97,10 @@ export default function SwipeableTemporaryDrawer() {
             </div>
             <div className="headerBarCenter">
               {pages.map((thisPage) => {
-                  if (thisPage.toLowerCase() === page) {
-                    return(<Button disableRipple variant="headerBarActive" component="a" href={`/${thisPage.toLowerCase()}`}>{thisPage}</Button>)
+                  if (thisPage.url === page) {
+                    return(<Button disableRipple variant="headerBarActive" component="a" href={`/${thisPage.url}`}>{thisPage.title}</Button>)
                 } else {
-                    return(<Button disableRipple variant="headerBar" component="a" href={`/${thisPage.toLowerCase()}`}>{thisPage}</Button>)
+                    return(<Button disableRipple variant="headerBar" component="a" href={`/${thisPage.url}`}>{thisPage.title}</Button>)
                 }
               })}
               {/* <Button disableRipple variant="headerBar" component="a" href="/archnemesis">Archnemesis</Button> */}
