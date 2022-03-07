@@ -6,13 +6,14 @@ const Footer = () => {
             <div className="footerBar">
                 <div>
                     <div className="siteMap">
-                        <a href="/syndicate">Syndicate Cheatsheet</a>
                         <a href="/archnemesis">Archnemesis</a>
+                        <a href="/chromatic">Chromatic Calculator</a>
+                        <a href="/passives">Leveling Guide</a>
+                        <a href="/syndicate">Syndicate Cheatsheet</a>
+                        <a href="/syndicate-overlay">Syndicate Overlay</a>
                         {/* <a href="/passives">Leveling Guide</a>
                         <a href="/fossils">Fossil Locations</a>
                         <a href="/blight">Blight Towers</a> */}
-                        <br/>
-                        <a href="/syndicate-overlay">Syndicate Overlay</a>
                     </div>
                     <span className="title">poesyn.xyz</span>
                     <div className="questions">

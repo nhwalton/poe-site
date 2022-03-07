@@ -16,6 +16,9 @@ docker-build-push
 flask-api/api/*
 
 app/poe-syn.psd
+gem_image_getter.py
+gem_images/*
+app/build.zip
 
 init-letsencrypt.sh
 /data/*

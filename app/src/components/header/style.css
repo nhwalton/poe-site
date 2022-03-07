@@ -7,7 +7,14 @@
 
 .headerBar {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr auto 1fr;
+}
+
+.headerBarLeft {
+    /* min-height: 50px; */
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
 }
 
 .headerBarCenter {
@@ -16,9 +23,10 @@
 
 .pageTitle {
     font-family: unineue-heavyitalic,Helvetica Neue,arial,sans-serif!important;
-    font-size: 2rem!important;
+    font-size: 2em!important;
     text-shadow: 4px 4px 0px var(--colorShadow);
     color: var(--colorMain);
+    padding-bottom:5px;
 }
 
 .pageTitle a {

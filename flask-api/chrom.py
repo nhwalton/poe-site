@@ -1,3 +1,4 @@
+from cmath import inf
 import math
 from numpy import count_nonzero, clip
 import random
@@ -48,7 +49,7 @@ class Recipe(Colored):
         super().__init__(red, green, blue)
         self.cost = cost
         if (description == None):
-            self.description = "Vorici" + (f"{red}R" if red >= 1 else "") + (f"{green}G" if green >= 1 else "") + (f"{blue}B" if blue >= 1 else "")
+            self.description = "Craft " + (f"{red}R" if red >= 1 else "") + (f"{green}G" if green >= 1 else "") + (f"{blue}B" if blue >= 1 else "")
         else:
             self.description = description
 
@@ -83,8 +84,11 @@ def get_color_chances(item_base):
     max_chance = 0.9
     requirements = {'red':item_base.strength, 'green':item_base.dexterity, 'blue':item_base.intelligence}
     total_requirements = sum(requirements.values())
-    number_of_requirements = count_nonzero([item_base.strength, item_base.intelligence, item_base.dexterity])
-    def single(requirement, x=x, c=c, max_chance=max_chance, total_requirements=total_requirements, number_of_requirements=number_of_requirements):
+    try:
+        number_of_requirements = count_nonzero([item_base.strength, item_base.intelligence, item_base.dexterity])
+    except:
+        number_of_requirements = 3
+    def single(requirement, x=x, c=c, max_chance=max_chance, total_requirements=total_requirements):
         if requirement > 0:
             # The real meat.
             # The chance for rolling an on-color socket for a mono-requirement item is
@@ -154,7 +158,9 @@ def chrom_simulation(color_chances, total_sockets):
 def get_probabilities(item_base, recipes):
     probs = []
     color_chances = get_color_chances(item_base)
-    chrom_simulation(color_chances, item_base.total_sockets)
+    # chrom_simulation(color_chances, item_base.total_sockets)
+    cheapest_cost = inf
+    cheapest_recipe = None
 
     for recipe in recipes: 
         if recipe.red <= item_base.red and recipe.green <= item_base.green and recipe.blue <= item_base.blue:
@@ -167,16 +173,24 @@ def get_probabilities(item_base, recipes):
                 collision_chance = calc_chrom_bonus(color_chances, Colored(item_base.red, item_base.green, item_base.blue), item_base.total_sockets)
                 chance /= 1 - collision_chance
             
+            if (recipe.cost / chance) < cheapest_cost:
+                cheapest_cost = recipe.cost / chance
+                cheapest_recipe = recipe
             probs.append(
                 Probability(
                     recipe_name = recipe.description,
-                    chance = "{:.4f}".format(chance * 100),
-                    average_tries = "{:.4f}".format((1 / chance)),
+                    chance = "{:.2f}%".format(chance * 100),
+                    average_tries = "{:.0f}".format((1 / chance)),
                     recipe_cost = "-" if recipe.description == "Drop Rate" else (recipe.cost),
-                    average_cost = "-" if recipe.description == "Drop Rate" else "{:.4f}".format((recipe.cost / chance)),
-                    std_dev = "{:.4f}".format(math.sqrt(clip((1 - chance), 0, 1) / (chance * chance))),
+                    average_cost = "-" if recipe.description == "Drop Rate" else "{:,.0f}".format((recipe.cost / chance)),
+                    std_dev = "{:.2f}".format(math.sqrt(clip((1 - chance), 0, 1) / (chance * chance))),
                 )
             )
+
+    for probability in probs:
+        if probability.recipe_name == cheapest_recipe.description:
+            probability.cheapest = True
+            
     return(probs)
 
 def multinomial(color_chances, desired, free, pos = 1):
@@ -220,17 +234,3 @@ def calculate(strength, dexterity, intelligence, red, green, blue, total_sockets
 
 if __name__ == "__main__":
     print("This is a meant to be run as a function, not a script.")
-
-
-
-# # from scipy.stats import multinomial
-# item_base = Item_Base(0,50,50,2,2,1,6)
-# color_chances = get_color_chances(item_base)
-# desired = Colored(item_base.red, item_base.green, item_base.blue)
-# free = item_base.free
-# total = item_base.total_sockets
-# pos = 1
-# multi = multinomial(color_chances, Colored(item_base.red, item_base.green, item_base.blue), item_base.free)
-# collision_chance = calc_chrom_bonus(color_chances, Colored(item_base.red, item_base.green, item_base.blue), total)
-# multi2 = multi / (1 - collision_chance)
-# multi, multi2

@@ -77,12 +77,3 @@
     text-align:center;
     margin-top:1.5em;
 }
-
-.MuiAlert-standardError {
-    background-color: rgb(253 248 237) !important;
-    color: var(--colorShadow);
-}
-
-.MuiAlert-icon {
-    color: var(--colorShadow) !important;
-}

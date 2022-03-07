@@ -22,6 +22,14 @@
   margin: 0 auto;
 }
 
+hr {
+    width:100%;
+    background: linear-gradient(90deg, transparent 0%, #1e1e1e 5%, #1e1e1e 95%, transparent 100%);
+    border: none;
+    height:2px;
+    margin-top:10px;
+  }
+
 #pobInput {
     display:grid;
     grid-template-columns: 40% 30% 25%;
@@ -54,7 +62,8 @@ label, input, button {
 .actCard {
     padding:20px;
     border: 1px solid #444;
-    background-color:#292929cc;
+    /* background-color:#292929cc; */
+    background-color: rgba(24, 24, 24,.8)!important;
     width:100%;
 }
 
@@ -161,23 +170,6 @@ label, input, button {
 
 .chip.green {
     background: #4B8F39;
-}
-
-.formField {
-    display: block;
-    width: 100%;
-    padding: 0px 16px;
-    line-height: 50px;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: inherit;
-    border-radius: 5px;
-    -webkit-appearance: none;
-    color: var(--input-color);
-    /* border: 0px solid var(--input-border); */
-    background: var(--input-background);
-    /* transition: border 0.3s ease; */
-    margin:0;
 }
 
 .formField::placeholder {

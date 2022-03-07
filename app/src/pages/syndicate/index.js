@@ -156,15 +156,9 @@ const Syndicate = (props) => {
 		const response = await fetch('/api/scarabs');
 		return response.json();
 	};
-
-	async function getChroms() {
-		const chrom = await fetch('/api/chromatic_calculator?strength=0&dexterity=50&intelligence=50&red=2&green=3&blue=1&sockets=6');
-		return chrom.json();
-	};
 	
 	useEffect(() => {
 		fetchScarabs().then(result => setScarabs(result))
-		getChroms().then(result => console.log(result))
 	}, []);
 
 	useEffect(() => {
@@ -283,12 +277,12 @@ const Syndicate = (props) => {
 				<div className={`${display}`}>
 					<h2>Additional Info</h2>
 				</div>
-				<Card variant={infoVariant}>
-					<div className="info">
+				<Card variant="infoVariant">
+					{/* <div className="info"> */}
 					<p>The above table is a customizable Syndicate Cheat Sheet for POE 3.17 and shows the possible rewards for running a Syndicate safehouse (Transportation, Fortification, Research and Intervention) with a given member in a certain safehouse. For example, when running an Intervention safehouse while Cameria is present, one of the safehouse reward chests will contain Sulphite Scarabs. Each Syndicate member has tiers of rewards based on their rank -- Sergeant, Lieutenant, or Captain -- when you run their safehouse, though there is a fourth tier achievable if the Mastermind is run while a member is Captain. The default color associated with each member assumes they are ran at their highest rank (Captain) as certain members are less valuable at lower ranks. For a more detailed list of rewards, visit the <a href="https://pathofexile.gamepedia.com/Immortal_Syndicate">Path of Exile Wiki</a>. </p>
 					<p>Starting cell colors are based around Softcore Trade League and you can change the color of any reward by simply clicking on it's cell. It is important to note that the default ratings are only a starting point and each player will value certain combinations over others. Some of the default values are based on worth to the player OR the relative worth when selling the member's crafting bench to other players. With this in mind, Solo Self Found and Hardcore players will find less value in certain rewards due to not being in Softcore Trade League.</p>
 					<p>A common strategy for making chaos from Syndicate is to only run Research and Intervention. If you are looking for the easiest setup to sell rewards, the Auto Priced Scarab feature will be useful as it checks current scarab pricing and rates them based on price with the top three most expensive being green, the next three yellow, and the rest gray. Again, because we are assuming each member is rank Captain, the pricing only takes Gilded Scarabs into account. </p>
-					</div>
+					{/* </div> */}
 				</Card>
 			</div>
 		</div>

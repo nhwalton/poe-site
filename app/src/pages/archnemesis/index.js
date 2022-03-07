@@ -336,11 +336,7 @@ const Archnemesis = (props) => {
 				<div className={`titleWrapper archnemesis ${display}`}>
 					<h1>Archnemesis</h1>
 				</div>
-				<div>
-					<div>
-						<StrategyCard strategy={strategy} ModPicker={ModPicker} openModal={openModal}/>
-					</div>
-				</div>
+				<StrategyCard strategy={strategy} ModPicker={ModPicker} openModal={openModal}/>
 			</div>
 		</FullscreenProvider>
 	);

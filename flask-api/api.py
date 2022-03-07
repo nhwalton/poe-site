@@ -164,16 +164,17 @@ def scarabs():
         scarab_cache['scarabs'] = scarabs
     return(jsonify(scarabs))
 
-@app.route('/api/chromatic_calculator', methods=['GET'])
+@app.route('/api/chromatic_calculator', methods=['POST'])
 @cross_origin()
 def chromatic_calculator():
-    strength_requirement = int(request.args.get('strength'))
-    dexterity_requirement = int(request.args.get('dexterity'))
-    intelligence_requirement = int(request.args.get('intelligence'))
-    desired_red = int(request.args.get('red'))
-    desired_green = int(request.args.get('green'))
-    desired_blue = int(request.args.get('blue'))
-    total_sockets = int(request.args.get('sockets'))
+    print(request.json)
+    strength_requirement = int(request.json['strength'])
+    dexterity_requirement = int(request.json['dexterity'])
+    intelligence_requirement = int(request.json['intelligence'])
+    desired_red = int(request.json['red'])
+    desired_green = int(request.json['green'])
+    desired_blue = int(request.json['blue'])
+    total_sockets = int(request.json['sockets'])
     
     response = calculate(strength_requirement, dexterity_requirement, intelligence_requirement, desired_red, desired_green, desired_blue, total_sockets)
     print(response)

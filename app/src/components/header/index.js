@@ -5,6 +5,7 @@ import Archnemesis from '../../assets/header/Archnemesis_League_Icon.png';
 import Passives from '../../assets/header/Book_of_Skill.png';
 import Cameria from '../../assets/header/Cameria_the_Coldblooded.png';
 import Exalted from '../../assets/header/Exalted_Orb.png';
+import Chromatic from '../../assets/header/Chromatic_Orb.png';
 import poeOverlay from '../../assets/header/POE_Overlay_Community_Fork.png';
 import './style.css';
 
@@ -61,6 +62,10 @@ export default function SwipeableTemporaryDrawer() {
                 <img src={Passives} alt="Leveling" />
             <ListItemText primary="Leveling" variant="nav"/>
           </ListItem>
+          <ListItem button key="Chromatic Calculator" variant="nav" component="a" href="/chromatic" >
+                <img src={Chromatic} alt="Chromatic Calculator" />
+            <ListItemText primary="Chromatic Calculator" variant="nav"/>
+          </ListItem>
           <ListItem button key="Syndicate-Overlay" variant="navBottom" component="a" href="/syndicate-overlay" >
                 <img src={poeOverlay} alt="syndicate-overlay" />
             <ListItemText primary="Syndicate-Overlay" variant="nav"/>
@@ -72,19 +77,16 @@ export default function SwipeableTemporaryDrawer() {
   let pages = [
     {
       title: "Syndicate",
-      url: "syndicate"
-    },
-    {
+      url: "syndicate"},{
       title: "Archnemesis",
-      url: "archnemesis"
-    },
-    {
+      url: "archnemesis"},{
       title: "Leveling",
-      url: "passives"
+      url: "passives"},{
+      title: "Chromatic",
+      url: "chromatic"
     },
   ]
   let page = window.location.pathname.split("/")[1];
-  console.log(page.split("/")[1])
 
   return (
     <div className="menuBar">
@@ -117,7 +119,6 @@ export default function SwipeableTemporaryDrawer() {
                 sx: {
                   backgroundColor: "#1a1a1a",
                   color: "#e0e0e0",
-                  width: '10%',
                   borderRight: "2px solid var(--colorMain)",
                 }
               }}
