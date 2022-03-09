@@ -315,3 +315,7 @@ div.start > div > div > div {
 .additionalInfo.tiny {
 	display:none;
 }
+
+.MuiAlert-action {
+	margin-left: 0 !important;
+}

@@ -507,6 +507,49 @@ const CustomTheme = createTheme({
         // disableFocusRipple: true,
         // disableRipple: true
       }
+    },
+    MuiAlert: {
+      variants: [
+        {
+          props: { variant: "scarabError" },
+          style: {
+            color: "#e0e0e0 !important",
+            position: "absolute",
+            top: "0em",
+            right: "0em",
+            width: "100%",
+            float: "right",
+            transform: "translate(0%, 0%)",
+            backgroundColor: "#d32f2f",
+            border: "2px solid rgb(185 50 50)",
+            height: "54.5px",
+            opacity: 1,
+            justifyContent: "center",
+            animationName: "fadeInOpacity",
+            animationIterationCount: 1,
+            animationTimingFunction: "ease-in",
+            animationDuration: "1s",
+            textTransform: "uppercase",
+            fontWeight: "bold",
+            ["@keyframes fadeInOpacity"]: {
+                ["0%"]: {
+                  transform: "translate(0%, -200%)",
+                },
+                ["80%"]: {
+                  transform: "translate(0%, -100%)",
+                },
+                ["100%"]: {
+                  transform: "translate(0%, 0%)",
+                }
+            }
+          }
+        }
+      ],
+      defaultProps: {
+        // disableElevation: false,
+        // disableFocusRipple: true,
+        // disableRipple: true
+      }
     }
   }
 });

@@ -1,4 +1,4 @@
-import { Button, Card, useMediaQuery } from '@mui/material';
+import { Button, Card, useMediaQuery, Collapse, Alert } from '@mui/material';
 import { useEffect, useState } from 'react';
 import ReactGA from "react-ga";
 import './style.css';
@@ -123,6 +123,7 @@ const Syndicate = (props) => {
 	const [scarabs, setScarabs] = useState('');
 	const [scarabPricing, setScarabPricing] = useState(true);
 	const [scarabButton, setScarabButton] = useState("Auto Scarabs")
+	const [scarabError, setScarabError] = useState(false);
 
 	let initColor = localStorage.getItem("currentColor");
 
@@ -158,8 +159,32 @@ const Syndicate = (props) => {
 	};
 	
 	useEffect(() => {
-		fetchScarabs().then(result => setScarabs(result))
-	}, []);
+		fetchScarabs().then(result => {
+			if (result !== 'Error') {
+				console.log('no error', result)
+				setScarabs(result)
+			}
+			else {
+				console.log('error', result)
+				setScarabs('')
+				setScarabPricing(false)
+				setScarabButton("Manual")
+				if (localStorage.getItem("scarabPricing") !== 'false') {
+					console.log(localStorage.getItem("scarabPricing") !== false)
+					setScarabError(true)
+					localStorage.setItem("scarabPricing", false)
+					if (window.location.hostname !== 'localhost') {
+					const eventDetails = {
+						category: 'Error',
+						action: 'Syndicate-Fetch-Scarabs',
+						label: 'None',
+					}
+					ReactGA.event(eventDetails);
+					}
+				}
+			}
+		})
+	}, [scarabPricing]);
 
 	useEffect(() => {
 		const localScarab = JSON.parse(localStorage.getItem("scarabPricing"));
@@ -234,6 +259,9 @@ const Syndicate = (props) => {
 					<Button variant="syn" onClick={() => cycleColor()}>Color Mode: {useColor}</Button>
 					<Button variant="syn" onClick={() => toggleScarabs()}>Scarab Scoring: {scarabButton}</Button>
 					<Button variant="syn" onClick={() => ResetColors()}>Reset</Button>
+					<Collapse in={scarabError} sx={{width:"100%"}}>
+						<Alert variant="scarabError" severity="error" onClose={() => {setScarabError(false);}}>Failed to scarab fetch pricing.</Alert>
+					</Collapse>
 				</div>
 			</div>
 			<div className="tableCenter">

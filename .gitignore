@@ -19,7 +19,9 @@ app/poe-syn.psd
 gem_image_getter.py
 gem_images/*
 app/build.zip
+gems.json
 
 init-letsencrypt.sh
 /data/*
+/site/*
 site/size-plugin.json
