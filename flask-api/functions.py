@@ -88,6 +88,7 @@ def _parse_skills(xml_skills):
         if swap == False:
             for gem in skill:
                 gems.append({'name':gem.attrib['nameSpec'],'level':gem.attrib['level']})
+                print({'name':gem.attrib['nameSpec'],'level':gem.attrib['level']})
         else:
             continue
     return gems
@@ -98,6 +99,7 @@ def return_info(pastebin):
         xml = decode_to_xml(raw)
         gems = _parse_skills(xml.find('Skills'))
         class_name = xml.find('Build').attrib['className']
+        print(gems,class_name)
         return(gems,class_name)
     except:
         raise(Exception("Error processing pastebin. Are you sure it's a POE build?"))
@@ -117,6 +119,8 @@ def get_gem_info(cur, gem, class_name):
         gem_name = vaal_match[0]
     elif awakened_match:
         gem_name = awakened_match[0]
+
+    gem_name = gem_name.replace(" ", "_")
 
     call = """ SELECT * 
                 FROM gems

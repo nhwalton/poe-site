@@ -48,14 +48,15 @@ const Trials = ({ trial }) => {
 };
 
 const Gems = ({ gemDetails }) => {
+    const gem_name = gemDetails.gem_name.replace(/_/g, ' ');;
     return (
         <div className="singleGem">
             <img 
-                src={'/images/gems/gemname.png'.replace('gemname', gemDetails.gem_name.replace(/ /g, '_'))}
+                src={'/images/gems/gemname.png'.replace('gemname', gem_name.replace(/ /g, '_'))}
                 style={{maxWidth:"100%"}}
                 />
             <div className="itemDetails">
-              <span className="pill blue">{gemDetails.gem_name}</span>
+              <span className="pill blue">{gem_name}</span>
               { gemDetails.level !== 'N/A' ? <span className="pill red">Level to {gemDetails.level}</span> : null }
               <span className="pill orange">{gemDetails.mission}</span>
               <span className="pill green">{gemDetails.vendor}</span>
@@ -172,6 +173,7 @@ const Passives = () => {
 
   const handleGem = async () => {
     const singleGem = await getSingleGem(singleGemName, singleGemClass);
+    singleGem['gem_name'] = singleGem['gem_name'].replace(/_/g, ' ');
     // const addedGems = addedGems;
     const thisAct = singleGem['act'];
     const index = response.findIndex(element => element.act === thisAct);
@@ -237,9 +239,13 @@ const Passives = () => {
                           color: "#e0e0e0",
                           }}
                         >
-                          {gemNames.map(gemName => (
-                            <MenuItem value={gemName} key={gemName}>{gemName}</MenuItem>
-                          )
+                          {gemNames.map(function(gemName) {
+                            const newName = gemName.replace(/_/g, ' ');
+                            const otherName = gemName
+                            return(
+                              <MenuItem value={otherName} key={otherName}>{newName}</MenuItem>
+                            )
+                          }
                           )};
                       </Select>
                       <Select
@@ -265,7 +271,7 @@ const Passives = () => {
           </div>
           <div id="acts">
               {response.map(data => (
-              <ActCard data={data} />
+                <ActCard data={data} />
               ))}
           </div>
       </div>
