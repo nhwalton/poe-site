@@ -151,11 +151,11 @@ const Passives = () => {
     }
   }, [localBuildResponse, localBuild]);
 
-  const handlePOB = useCallback(async () => {
+  const handlePOB = useCallback(async (build) => {
       const newResponse = await fetchBuildPassives(build);
       if (typeof newResponse == "string") {
+        localStorage.removeItem("build");
         alert(newResponse)
-        localStorage.setItem("build", "")
       } else {
         setResponse(newResponse);
         localStorage.setItem("buildResponse", JSON.stringify(newResponse));
@@ -186,12 +186,15 @@ const Passives = () => {
   const resetPassives = () => {
     const resetResponse = JSON.parse(JSON.stringify(defaultResponse))
     setResponse(resetResponse);
-    localStorage.setItem("build","");
+    localStorage.removeItem("build");
     localStorage.removeItem("buildResponse");
     document.getElementById("build").value = "";
   }
 
-  const onBuildChange = event => setBuild(event.target.value);
+  const onBuildChange = event => {
+    localStorage.setItem("build", event.target.value);
+    setBuild(event.target.value);
+  }
   // const onGemAdd = event => setBuild(event.target.value);
   const onGemName = event => setSingleGemName(event.target.value);
   const onGemClass = event => setSingleGemClass(event.target.value);
@@ -206,8 +209,6 @@ const Passives = () => {
     return await response.json();
   }
 
-  console.log(gemNames)
-
   return(
       <div className="passives page">
           <div className="titleWrapper">
@@ -221,10 +222,9 @@ const Passives = () => {
                         type="text"
                         placeholder="http://pastebin.com/XYZ"
                         onChange={e => onBuildChange(e)}
-                        value={localBuild}
                         />
                   </div>
-                  <Button variant="passives" className="buildButton" raised ripple onClick={() => handlePOB()}>Submit</Button>
+                  <Button variant="passives" className="buildButton" raised ripple onClick={() => handlePOB(build)}>Submit</Button>
                   <Button variant="passives" className="buildButton" raised ripple onClick={() => resetPassives()}>Reset</Button>
               </div>
               <div id="pobInput">

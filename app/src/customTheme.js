@@ -73,6 +73,23 @@ const CustomTheme = createTheme({
           }
         },
         {
+          props: { variant: "help" },
+          style: {
+            fontWeight: "bold",
+            // color: "var(--colorMain) !important",
+            color: "#e0e0e0",
+            // background: "linear-gradient(45deg, var(--colorMain) 30%, var(--colorSub) 90%)",
+            background: "#444",
+            width: "10em",
+            '&:hover': {
+              backgroundColor: '#333',
+              color: '#fff',
+            }
+            // marginTop:"1em"
+            // border: "1px solid var(--colorMain)!important",
+          }
+        },
+        {
           props: { variant: "homeWide" },
           style: {
             fontWeight: "bold",
@@ -97,6 +114,17 @@ const CustomTheme = createTheme({
             paddingLeft: "30px",
             minHeight: "45px",
             alignItems: "flex-end",
+          }
+        },
+        {
+          props: { variant: "settings" },
+          style: {
+            fontWeight: "bold",
+            color: "#fff !important",
+            paddingLeft: "30px",
+            minHeight: "45px",
+            alignItems: "flex-end",
+            height: "100%",
           }
         },
         {
@@ -307,7 +335,8 @@ const CustomTheme = createTheme({
             // padding: "0 1em",
             textAlign: "left",
             width: "75%",
-            margin: "0 auto"
+            margin: "0 auto",
+            fontSize: "18px",
             // border: "1px solid var(--colorMain)!important",
           }
         },
@@ -514,9 +543,6 @@ const CustomTheme = createTheme({
           props: { variant: "scarabError" },
           style: {
             color: "#e0e0e0 !important",
-            position: "absolute",
-            top: "0em",
-            right: "0em",
             width: "100%",
             float: "right",
             transform: "translate(0%, 0%)",
@@ -528,9 +554,10 @@ const CustomTheme = createTheme({
             animationName: "fadeInOpacity",
             animationIterationCount: 1,
             animationTimingFunction: "ease-in",
-            animationDuration: "1s",
-            textTransform: "uppercase",
-            fontWeight: "bold",
+            animationDuration: "0.5s",
+            // textTransform: "uppercase",
+            // fontWeight: "bold",
+            alignItems: "center",
             ["@keyframes fadeInOpacity"]: {
                 ["0%"]: {
                   transform: "translate(0%, -200%)",

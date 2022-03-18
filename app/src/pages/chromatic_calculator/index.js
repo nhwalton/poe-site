@@ -136,25 +136,21 @@ const ItemInfo = (props) => {
         const desiredSocketCount = item['red'] + item['green'] + item['blue'];
 
         if (item['sockets'] > 6) {
-            console.log('1')
             setDesiredSocketsAlert(false);
             setRequirementsAlert(false);
             setDesiredTotalAlert(false);
             setTotalSocketsAlert(true);
         } else if (item['strength'] === 0 && item['dexterity'] === 0 && item['intelligence'] === 0 ) {
-            console.log('2')
             setTotalSocketsAlert(false);
             setDesiredSocketsAlert(false);
             setDesiredTotalAlert(false);
             setRequirementsAlert(true);
         } else if (desiredSocketCount > 6) {
-            console.log('3')
             setTotalSocketsAlert(false);
             setRequirementsAlert(false);
             setDesiredTotalAlert(false);
             setDesiredSocketsAlert(true);
         } else if (item['sockets'] !== null && desiredSocketCount > item['sockets']) {
-            console.log('4')
             setTotalSocketsAlert(false);
             setRequirementsAlert(false);
             setDesiredSocketsAlert(false);

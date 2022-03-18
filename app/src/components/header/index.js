@@ -1,4 +1,5 @@
 import MenuIcon from '@mui/icons-material/MenuRounded';
+import SettingsIcon from '@mui/icons-material/Settings';
 import { Box, Button, Drawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
 import * as React from 'react';
 import Archnemesis from '../../assets/header/Archnemesis_League_Icon.png';
@@ -30,7 +31,7 @@ export default function SwipeableTemporaryDrawer() {
   };
 
   const PageTitle = () => { 
-    const title = <span className="pageTitle"><a href="/">poesyn.xyz</a></span>
+    const title = <span id="pageTitle" className="pageTitle"><a href="/">poesyn.xyz</a></span>
 		const useTitle = useMediaQuery('(min-width:1500px)') ? title : null;
 		return (
 			useTitle
@@ -90,11 +91,10 @@ export default function SwipeableTemporaryDrawer() {
 
   return (
     <div className="menuBar">
-      {['left'].map((anchor) => (
-        <React.Fragment key={anchor}>
+        <React.Fragment key="headerBar">
           <div className="headerBar">
             <div className="headerBarLeft">
-              <Button onClick={toggleDrawer(anchor, true)} variant="menu"><MenuIcon fontSize="large" variant="hamburger"/></Button>
+              <Button onClick={toggleDrawer('left', true)} variant="menu"><MenuIcon fontSize="large" variant="hamburger"/></Button>
               <PageTitle />
             </div>
             <div className="headerBarCenter">
@@ -107,13 +107,15 @@ export default function SwipeableTemporaryDrawer() {
               })}
               {/* <Button disableRipple variant="headerBar" component="a" href="/archnemesis">Archnemesis</Button> */}
             </div>
+            <div className="headerBarRight">
+            </div>
           </div>
 
           <Drawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-            onOpen={toggleDrawer(anchor, true)}
+            anchor={'left'}
+            open={state['left']}
+            onClose={toggleDrawer('left', false)}
+            onOpen={toggleDrawer('left', true)}
             // variant="nav"
             PaperProps={{
                 sx: {
@@ -124,10 +126,9 @@ export default function SwipeableTemporaryDrawer() {
               }}
           >
             <span className="navTitle">poesyn.xyz</span>
-            {list(anchor)}
+            {list('left')}
           </Drawer>
         </React.Fragment>
-      ))}
     </div>
   );
 }

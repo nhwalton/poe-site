@@ -21,6 +21,12 @@
     margin:0 auto;
 }
 
+.headerBarRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .pageTitle {
     font-family: unineue-heavyitalic,Helvetica Neue,arial,sans-serif!important;
     font-size: 2em!important;

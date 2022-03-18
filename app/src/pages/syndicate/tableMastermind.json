@@ -1,219 +1,219 @@
 {
     "headers":[    
         {
-            "title":"individual-logo",
+            "title":"mastermind-logo",
             "image":"poe_syndicate_01.png",
             "class":"start",
             "text":""
         },
         {
-            "title":"individual-aisling",
+            "title":"mastermind-aisling",
             "image":"poe_syndicate_02.png",
-            "class":"gray",
+            "class":"green",
             "text":"Aisling"
         },
         {
-            "title":"individual-cameria",
+            "title":"mastermind-cameria",
             "image":"poe_syndicate_03.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Cameria"
         },
         {
-            "title":"individual-elreon",
+            "title":"mastermind-elreon",
             "image":"poe_syndicate_04.png",
             "class":"gray",
             "text":"Elreon"
         },
         {
-            "title":"individual-gravicius",
+            "title":"mastermind-gravicius",
             "image":"poe_syndicate_05.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Gravicius"
         },
         {
-            "title":"individual-guff",
+            "title":"mastermind-guff",
             "image":"poe_syndicate_06.png",
-            "class":"red",
+            "class":"gray",
             "text":"Guff"
         },
         {
-            "title":"individual-haku",
+            "title":"mastermind-haku",
             "image":"poe_syndicate_07.png",
-            "class":"red",
+            "class":"gray",
             "text":"Haku"
         },
         {
-            "title":"individual-hillock",
+            "title":"mastermind-hillock",
             "image":"poe_syndicate_08.png",
             "class":"green",
             "text":"Hillock"
         },
         {
-            "title":"individual-it-that-fled",
+            "title":"mastermind-it-that-fled",
             "image":"poe_syndicate_09.png",
             "class":"green",
             "text":"It That Fled"
         },
         {
-            "title":"individual-janus",
+            "title":"mastermind-janus",
             "image":"poe_syndicate_10.png",
             "class":"gray",
             "text":"Janus"
         },
         {
-            "title":"individual-jorgin",
+            "title":"mastermind-jorgin",
             "image":"poe_syndicate_11.png",
-            "class":"green",
+            "class":"gray",
             "text":"Jorgin"
         },
         {
-            "title":"individual-korell",
+            "title":"mastermind-korell",
             "image":"poe_syndicate_12.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Korell"
         },
         {
-            "title":"individual-leo",
+            "title":"mastermind-leo",
             "image":"poe_syndicate_13.png",
-            "class":"green",
+            "class":"yellow",
             "text":"Leo"
         },
         {
-            "title":"individual-riker",
+            "title":"mastermind-riker",
             "image":"poe_syndicate_14.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Riker"
         },
         {
-            "title":"individual-rin",
+            "title":"mastermind-rin",
             "image":"poe_syndicate_15.png",
             "class":"gray",
             "text":"Rin"
         },
         {
-            "title":"individual-tora",
+            "title":"mastermind-tora",
             "image":"poe_syndicate_16.png",
-            "class":"green",
+            "class":"gray",
             "text":"Tora"
         },
         {
-            "title":"individual-vagan",
+            "title":"mastermind-vagan",
             "image":"poe_syndicate_17.png",
-            "class":"green",
+            "class":"gray",
             "text":"Vagan"
         },
         {
-            "title":"individual-vorici",
+            "title":"mastermind-vorici",
             "image":"poe_syndicate_18.png",
-            "class":"green",
+            "class":"yellow",
             "text":"Vorici"
         }
     ],
     "transportation":[    
         {
-            "title":"individual-transportation",
+            "title":"mastermind-transportation",
             "image":"poe_syndicate_19.png",
             "class":"start",
             "text":""
         },
         {
-            "title":"individual-aisling-transportation",
+            "title":"mastermind-aisling-transportation",
             "image":"poe_syndicate_20.png",
             "class":"gray",
             "text":"Double Veiled Weapon & Jewelery"
         },
         {
-            "title":"individual-cameria-transportation",
+            "title":"mastermind-cameria-transportation",
             "image":"poe_syndicate_21.png",
             "class":"gray",
             "text":"League Specific Unique"
         },
         {
-            "title":"individual-elreon-transportation",
+            "title":"mastermind-elreon-transportation",
             "image":"poe_syndicate_22.png",
             "class":"gray",
             "text":"Unique Weapon"
         },
         {
-            "title":"individual-gravicius-transportation",
+            "title":"mastermind-gravicius-transportation",
             "image":"poe_syndicate_23.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Full Stack Divination Cards"
         },
         {
-            "title":"individual-guff-transportation",
+            "title":"mastermind-guff-transportation",
             "image":"poe_syndicate_24.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Craft Chaos Spam"
         },
         {
-            "title":"individual-haku-transportation",
+            "title":"mastermind-haku-transportation",
             "image":"poe_syndicate_25.png",
-            "class":"red",
+            "class":"gray",
             "text":"Rare Items"
         },
         {
-            "title":"individual-hillock-transportation",
+            "title":"mastermind-hillock-transportation",
             "image":"poe_syndicate_26.png",
             "class":"green",
-            "text":"Weapon Quality (28%)"
+            "text":"Weapon Quality (30%)"
         },
         {
-            "title":"individual-it-that-fled-transportation",
+            "title":"mastermind-it-that-fled-transportation",
             "image":"poe_syndicate_27.png",
             "class":"gray",
             "text":"Breach Splinters"
         },
         {
-            "title":"individual-janus-transportation",
+            "title":"mastermind-janus-transportation",
             "image":"poe_syndicate_28.png",
             "class":"gray",
             "text":"Quality Currency"
         },
         {
-            "title":"individual-jorgin-transportation",
+            "title":"mastermind-jorgin-transportation",
             "image":"poe_syndicate_29.png",
             "class":"gray",
             "text":"Talismans"
         },
         {
-            "title":"individual-korell-transportation",
+            "title":"mastermind-korell-transportation",
             "image":"poe_syndicate_30.png",
             "class":"gray",
             "text":"Essences"
         },
         {
-            "title":"individual-leo-transportation",
+            "title":"mastermind-leo-transportation",
             "image":"poe_syndicate_31.png",
             "class":"gray",
             "text":"Catalysts"
         },
         {
-            "title":"individual-riker-transportation",
+            "title":"mastermind-riker-transportation",
             "image":"poe_syndicate_32.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Take One (Currency)"
         },
         {
-            "title":"individual-rin-transportation",
+            "title":"mastermind-rin-transportation",
             "image":"poe_syndicate_33.png",
             "class":"gray",
             "text":"Normal Maps"
         },
         {
-            "title":"individual-tora-transportation",
+            "title":"mastermind-tora-transportation",
             "image":"poe_syndicate_34.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Timed Item Traps"
         },
         {
-            "title":"individual-vagan-transportation",
+            "title":"mastermind-vagan-transportation",
             "image":"poe_syndicate_35.png",
-            "class":"green",
+            "class":"gray",
             "text":"Legion Splinters"
         },
         {
-            "title":"individual-vorici-transportation",
+            "title":"mastermind-vorici-transportation",
             "image":"poe_syndicate_36.png",
             "class":"gray",
             "text":"Quality Gems"
@@ -221,350 +221,350 @@
     ],
     "fortification":[    
         {
-            "title":"individual-fortification",
+            "title":"mastermind-fortification",
             "image":"poe_syndicate_37.png",
             "class":"start",
             "text":""
         },
         {
-            "title":"individual-aisling-fortification",
+            "title":"mastermind-aisling-fortification",
             "image":"poe_syndicate_38.png",
             "class":"gray",
             "text":"Double Veiled Armour & Jewelery"
         },
         {
-            "title":"individual-cameria-fortification",
+            "title":"mastermind-cameria-fortification",
             "image":"poe_syndicate_39.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Harbinger Orbs"
         },
         {
-            "title":"individual-elreon-fortification",
+            "title":"mastermind-elreon-fortification",
             "image":"poe_syndicate_40.png",
             "class":"gray",
             "text":"Unique Armour"
         },
         {
-            "title":"individual-gravicius-fortification",
+            "title":"mastermind-gravicius-fortification",
             "image":"poe_syndicate_41.png",
             "class":"gray",
             "text":"Random Divination Cards"
         },
         {
-            "title":"individual-guff-fortification",
+            "title":"mastermind-guff-fortification",
             "image":"poe_syndicate_42.png",
             "class":"gray",
             "text":"Craft Essence Spam"
         },
         {
-            "title":"individual-haku-fortification",
+            "title":"mastermind-haku-fortification",
             "image":"poe_syndicate_43.png",
-            "class":"red",
+            "class":"gray",
             "text":"Random Strongbox"
         },
         {
-            "title":"individual-hillock-fortification",
+            "title":"mastermind-hillock-fortification",
             "image":"poe_syndicate_44.png",
             "class":"green",
-            "text":"Armor Quality (28%)"
+            "text":"Armor Quality (30%)"
         },
         {
-            "title":"individual-it-that-fled-fortification",
+            "title":"mastermind-it-that-fled-fortification",
             "image":"poe_syndicate_45.png",
             "class":"gray",
             "text":"Enchanted Maps (Extra Breach)"
         },
         {
-            "title":"individual-janus-fortification",
+            "title":"mastermind-janus-fortification",
             "image":"poe_syndicate_46.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Currency Shards"
         },
         {
-            "title":"individual-jorgin-fortification",
+            "title":"mastermind-jorgin-fortification",
             "image":"poe_syndicate_47.png",
             "class":"gray",
             "text":"Items with Bestiary Affixes"
         },
         {
-            "title":"individual-korell-fortification",
+            "title":"mastermind-korell-fortification",
             "image":"poe_syndicate_48.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Map Fragments"
         },
         {
-            "title":"individual-leo-fortification",
+            "title":"mastermind-leo-fortification",
             "image":"poe_syndicate_49.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Random Currency"
         },
         {
-            "title":"individual-riker-fortification",
+            "title":"mastermind-riker-fortification",
             "image":"poe_syndicate_50.png",
             "class":"gray",
             "text":"Take One (Unique)"
         },
         {
-            "title":"individual-rin-fortification",
+            "title":"mastermind-rin-fortification",
             "image":"poe_syndicate_51.png",
             "class":"gray",
             "text":"Rare Maps"
         },
         {
-            "title":"individual-tora-fortification",
+            "title":"mastermind-tora-fortification",
             "image":"poe_syndicate_52.png",
             "class":"gray",
             "text":"Enchanted Item"
         },
         {
-            "title":"individual-vagan-fortification",
+            "title":"mastermind-vagan-fortification",
             "image":"poe_syndicate_53.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Legion Chests"
         },
         {
-            "title":"individual-vorici-fortification",
+            "title":"mastermind-vorici-fortification",
             "image":"poe_syndicate_54.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Socket Currency"
         }
     ],
     "research":[    
     {
-            "title":"individual-research",
+            "title":"mastermind-research",
             "image":"poe_syndicate_55.png",
             "class":"start",
             "text":""
         },
         {
-            "title":"individual-aisling-research",
+            "title":"mastermind-aisling-research",
             "image":"poe_syndicate_56.png",
             "class":"green",
-            "text":"Veiled Chaos Orb",
+            "text":"Remove Mod + Add Veiled Mod",
             "challenge":true
         },
         {
-            "title":"individual-cameria-research",
+            "title":"mastermind-cameria-research",
             "image":"poe_syndicate_57.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Orbs of Unmaking"
         },
         {
-            "title":"individual-elreon-research",
+            "title":"mastermind-elreon-research",
             "image":"poe_syndicate_58.png",
             "class":"gray",
             "text":"Unique Jewelery & Flasks"
         },
         {
-            "title":"individual-gravicius-research",
+            "title":"mastermind-gravicius-research",
             "image":"poe_syndicate_59.png",
-            "class":"red",
+            "class":"gray",
             "text":"Swap Divination Card"
         },
         {
-            "title":"individual-guff-research",
+            "title":"mastermind-guff-research",
             "image":"poe_syndicate_60.png",
             "class":"gray",
             "text":"Craft Annul/Exalt Spam"
         },
         {
-            "title":"individual-haku-research",
+            "title":"mastermind-haku-research",
             "image":"poe_syndicate_61.png",
-            "class":"red",
+            "class":"gray",
             "text":"Rare Items with Quality"
         },
         {
-            "title":"individual-hillock-research",
+            "title":"mastermind-hillock-research",
             "image":"poe_syndicate_62.png",
             "class":"green",
-            "text":"Flask Quality (26%)"
+            "text":"Flask Quality (28%)"
         },
         {
-            "title":"individual-it-that-fled-research",
+            "title":"mastermind-it-that-fled-research",
             "image":"poe_syndicate_63.png",
             "class":"green",
-            "text":"Upgrade Breachstone",
+            "text":"Upgrade Breachstone x2",
             "challenge":true
         },
         {
-            "title":"individual-janus-research",
+            "title":"mastermind-janus-research",
             "image":"poe_syndicate_64.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Expedition Currency"
         },
         {
-            "title":"individual-jorgin-research",
+            "title":"mastermind-jorgin-research",
             "image":"poe_syndicate_65.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Amulet to Talisman",
             "challenge":true
         },
         {
-            "title":"individual-korell-research",
+            "title":"mastermind-korell-research",
             "image":"poe_syndicate_66.png",
-            "class":"yellow",
+            "class":"gray",
             "text":"Fossils"
         },
         {
-            "title":"individual-leo-research",
+            "title":"mastermind-leo-research",
             "image":"poe_syndicate_67.png",
-            "class":"green",
-            "text":"Exalt Slam x1"
+            "class":"yellow",
+            "text":"Exalt Slam x2"
         },
         {
-            "title":"individual-riker-research",
+            "title":"mastermind-riker-research",
             "image":"poe_syndicate_68.png",
-            "class":"red",
+            "class":"gray",
             "text":"Take One (Veiled Rare iLvl 100)"
         },
         {
-            "title":"individual-rin-research",
+            "title":"mastermind-rin-research",
             "image":"poe_syndicate_69.png",
             "class":"gray",
             "text":"Unique Maps"
         },
         {
-            "title":"individual-tora-research",
+            "title":"mastermind-tora-research",
             "image":"poe_syndicate_70.png",
-            "class":"green",
+            "class":"gray",
             "text":"Gem Experience",
             "challenge":true
         },
         {
-            "title":"individual-vagan-research",
+            "title":"mastermind-vagan-research",
             "image":"poe_syndicate_71.png",
             "class":"gray",
             "text":"Incubators"
         },
         {
-            "title":"individual-vorici-research",
+            "title":"mastermind-vorici-research",
             "image":"poe_syndicate_72.png",
-            "class":"green",
-            "text":"White Sockets (1-3)",
+            "class":"yellow",
+            "text":"White Sockets (1-6)",
             "challenge":true
         }
     ],
     "intervention":[    
         {
-            "title":"individual-intervention",
+            "title":"mastermind-intervention",
             "image":"poe_syndicate_73.png",
             "class":"start",
             "text":""
         },
         {
-            "title":"individual-aisling-intervention",
-            "image":"poe_syndicate_74.png",
+            "title":"mastermind-aisling-intervention",
+            "image":"poe_syndicate_74_winged.png",
             "class":"gray",
             "text":"Torment Scarab",
             "scarab":true
         },
         {
-            "title":"individual-cameria-intervention",
-            "image":"poe_syndicate_75.png",
+            "title":"mastermind-cameria-intervention",
+            "image":"poe_syndicate_75_winged.png",
             "class":"gray",
             "text":"Sulphite Scarab",
             "scarab":true
         },
         {
-            "title":"individual-elreon-intervention",
-            "image":"poe_syndicate_76.png",
+            "title":"mastermind-elreon-intervention",
+            "image":"poe_syndicate_76_winged.png",
             "class":"yellow",
             "text":"Reliquary Scarab",
             "scarab":true
         },
         {
-            "title":"individual-gravicius-intervention",
-            "image":"poe_syndicate_77.png",
-            "class":"yellow",
+            "title":"mastermind-gravicius-intervention",
+            "image":"poe_syndicate_77_winged.png",
+            "class":"green",
             "text":"Divination Scarab",
             "scarab":true
         },
         {
-            "title":"individual-guff-intervention",
+            "title":"mastermind-guff-intervention",
             "image":"poe_syndicate_78.png",
             "class":"gray",
             "text":"Craft Alteration Spam"
         },
         {
-            "title":"individual-haku-intervention",
-            "image":"poe_syndicate_79.png",
-            "class":"gray",
+            "title":"mastermind-haku-intervention",
+            "image":"poe_syndicate_79_winged.png",
+            "class":"yellow",
             "text":"Ambush Scarab",
             "scarab":true
         },
         {
-            "title":"individual-hillock-intervention",
-            "image":"poe_syndicate_80.png",
-            "class":"gray",
+            "title":"mastermind-hillock-intervention",
+            "image":"poe_syndicate_80_winged.png",
+            "class":"green",
             "text":"Abyss Scarab",
             "scarab":true
         },
         {
-            "title":"individual-it-that-fled-intervention",
-            "image":"poe_syndicate_81.png",
-            "class":"gray",
+            "title":"mastermind-it-that-fled-intervention",
+            "image":"poe_syndicate_81_winged.png",
+            "class":"yellow",
             "text":"Breach Scarab",
             "scarab":true
         },
         {
-            "title":"individual-janus-intervention",
-            "image":"poe_syndicate_82.png",
-            "class":"green",
+            "title":"mastermind-janus-intervention",
+            "image":"poe_syndicate_82_winged.png",
+            "class":"gray",
             "text":"Expedition Scarab",
             "scarab":true
         },
         {
-            "title":"individual-jorgin-intervention",
-            "image":"poe_syndicate_83.png",
+            "title":"mastermind-jorgin-intervention",
+            "image":"poe_syndicate_83_winged.png",
             "class":"gray",
             "text":"Bestiary Scarab",
             "scarab":true
         },
         {
-            "title":"individual-korell-intervention",
-            "image":"poe_syndicate_84.png",
+            "title":"mastermind-korell-intervention",
+            "image":"poe_syndicate_84_winged.png",
             "class":"gray",
             "text":"Elder Scarab",
             "scarab":true
         },
         {
-            "title":"individual-leo-intervention",
-            "image":"poe_syndicate_85.png",
+            "title":"mastermind-leo-intervention",
+            "image":"poe_syndicate_85_winged.png",
             "class":"gray",
             "text":"Metamorph Scarab",
             "scarab":true
         },
         {
-            "title":"individual-riker-intervention",
-            "image":"poe_syndicate_86.png",
+            "title":"mastermind-riker-intervention",
+            "image":"poe_syndicate_86_winged.png",
             "class":"gray",
             "text":"Blight Scarab",
             "scarab":true
         },
         {
-            "title":"individual-rin-intervention",
-            "image":"poe_syndicate_87.png",
+            "title":"mastermind-rin-intervention",
+            "image":"poe_syndicate_87_winged.png",
             "class":"gray",
             "text":"Cartography Scarab",
             "scarab":true
         },
         {
-            "title":"individual-tora-intervention",
-            "image":"poe_syndicate_88.png",
+            "title":"mastermind-tora-intervention",
+            "image":"poe_syndicate_88_winged.png",
             "class":"green",
             "text":"Harbinger Scarab",
             "scarab":true
         },
         {
-            "title":"individual-vagan-intervention",
-            "image":"poe_syndicate_89.png",
-            "class":"yellow",
+            "title":"mastermind-vagan-intervention",
+            "image":"poe_syndicate_89_winged.png",
+            "class":"gray",
             "text":"Legion Scarab",
             "scarab":true
         },
         {
-            "title":"individual-vorici-intervention",
-            "image":"poe_syndicate_90.png",
+            "title":"mastermind-vorici-intervention",
+            "image":"poe_syndicate_90_winged.png",
             "class":"gray",
             "text":"Shaper Scarab",
             "scarab":true

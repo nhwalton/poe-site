@@ -347,6 +347,10 @@ h3 {
   color: #e0e0e0 !important;
 }
 
+.noDecoration {
+  text-decoration: none !important;
+}
+
 * {
   scrollbar-width: auto;
   scrollbar-color: rgb(65, 65, 65) #111111;

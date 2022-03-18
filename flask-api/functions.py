@@ -88,7 +88,6 @@ def _parse_skills(xml_skills):
         if swap == False:
             for gem in skill:
                 gems.append({'name':gem.attrib['nameSpec'],'level':gem.attrib['level']})
-                print({'name':gem.attrib['nameSpec'],'level':gem.attrib['level']})
         else:
             continue
     return gems
@@ -99,9 +98,10 @@ def return_info(pastebin):
         xml = decode_to_xml(raw)
         gems = _parse_skills(xml.find('Skills'))
         class_name = xml.find('Build').attrib['className']
-        print(gems,class_name)
+        print(f"\n* Success: Got build [{pastebin}] of class [{class_name}].\n")
         return(gems,class_name)
     except:
+        print(f"\n* Error: Could not get build [{pastebin}] of class [{class_name}].\n")
         raise(Exception("Error processing pastebin. Are you sure it's a POE build?"))
 
 def get_gem_info(cur, gem, class_name):

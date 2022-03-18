@@ -6,7 +6,6 @@
 }
 
 .tiny {
-	padding-top: 20px;
 	min-height: 100%;
 	width: 100%;
 	font-family: Roboto, sans-serif;;
@@ -37,9 +36,8 @@
 .returnHome.tiny {
 	display: flex;
     justify-content: flex-start;
-    padding-left: 25px;
-    /* align-content: flex-start; */
-    align-items: flex-end;
+    padding-left: 2rem;
+    align-items: center;
 }
 
 .returnHome.tiny a {
@@ -318,4 +316,17 @@ div.start > div > div > div {
 
 .MuiAlert-action {
 	margin-left: 0 !important;
+	padding: 0 !important;
+}
+
+.MuiSwitch-switchBase.Mui-checked {
+	color: var(--colorMain) !important;
+}
+
+.MuiSwitch-track {
+	background-color: #fff !important;
+}
+
+.MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track {
+	background-color: var(--colorMain) !important;
 }
