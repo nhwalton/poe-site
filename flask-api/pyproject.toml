@@ -7,7 +7,7 @@ authors = ["Nick Walton <nicholas.h.walton@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 "flask" = "^1.1.1"
-flask-cors = "3.0.8"
+flask-cors = "^3.0.8"
 pandas = "1.0.1"
 defusedxml = "0.6.0"
 requests = "2.23.0"

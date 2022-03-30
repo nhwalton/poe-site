@@ -7,18 +7,32 @@
 
 .headerBar {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr auto 1fr;
+}
+
+.headerBarLeft {
+    /* min-height: 50px; */
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
 }
 
 .headerBarCenter {
     margin:0 auto;
 }
 
+.headerBarRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .pageTitle {
     font-family: unineue-heavyitalic,Helvetica Neue,arial,sans-serif!important;
-    font-size: 2rem!important;
+    font-size: 2em!important;
     text-shadow: 4px 4px 0px var(--colorShadow);
     color: var(--colorMain);
+    padding-bottom:5px;
 }
 
 .pageTitle a {
@@ -51,3 +65,75 @@
 .MuiList-root {
     height:100%;
 }
+
+button.headerIcon {
+    padding: 0 !important;
+    min-width: 42px !important;
+}
+
+.headerBarRight .headerIcon {
+    margin-right: 0.5em;
+}
+
+.headerBarRight > .headerIcon {
+    margin-right: 2em;
+}
+
+.headerIcon.tiny {
+    display: none;
+}
+
+.settingsIcon,
+.helpButton,
+.settingsIcon:hover,
+.helpButton:hover {
+    background-color:#ffffff00 !important;
+}
+
+.settingsIcon path:first-of-type {
+    color:#e0e0e0;
+}
+
+.settingsIcon:hover path:first-of-type {
+    color:#fff;
+    animation-name: rotate;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    transform-origin: 50% 50%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(120deg);
+    }
+}
+/* ,
+        {
+          props: { variant: "cog" },
+          style: {
+            color: "#ff00ff !important",
+            alignItems: "flex-end",
+            border: "3px solid #fff !important",
+            backgroundColor: "red",
+            "&:hover": {
+              backgroundColor: '#fff !important',
+              "svg > path:first-of-type": {
+                animationName: "rotate",
+                animationIterationCount: 1,
+                animationDuration: "1s",
+                alignItems: "center",
+                ["@keyframes rotate"]: {
+                  ["0%"]: {
+                    transform: "rotate(0deg)",
+                  },
+                  ["100%"]: {
+                    transform: "rotate(180deg) translate(2px, 0)",
+                  }
+                },
+              },
+            },
+          }
+        }, */

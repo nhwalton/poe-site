@@ -29,8 +29,17 @@
 
 .siteMap {
     text-align:left;
-    display: grid;
-    grid-template-rows: auto;
+    text-align: left;
+    display: flex;
+    flex-flow: row;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height:50px;
+    align-content: flex-start;
+}
+
+.siteMap > a {
+    margin-right: 2em;
 }
 
 .questions {

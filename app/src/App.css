@@ -4,6 +4,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: #333;
+  background-image: url(./assets/elder_shaper.png);
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position:top center;
+  background-color:#111;
 }
 
 .App-logo {

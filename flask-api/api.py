@@ -5,6 +5,7 @@ import os
 import re
 import sqlite3
 import sys
+import datetime
 
 import flask
 import pandas as pd
@@ -14,7 +15,8 @@ from flask import jsonify, request, send_file
 from flask_cors import CORS, cross_origin
 from waitress import serve
 
-from functions import return_info, get_gem_info, get_current_league
+from functions import return_info, get_gem_info, get_current_league, get_use_time
+from chrom import calculate
 
 app = flask.Flask(__name__)
 
@@ -39,7 +41,8 @@ except:
 
 conn.commit()
 
-scarab_cache = ExpiringDict(max_len=1, max_age_seconds=21600)
+scarab_cache = ExpiringDict(max_len=2, max_age_seconds=21600)
+scarab_timing = {'last_updated': datetime.datetime.now()}
 
 current_league = None
 
@@ -79,7 +82,6 @@ def gems():
             try:
                 regex = r"(?:pastebin.com\/)([A-Za-z0-9]*)"
                 match = re.findall(regex, pastebin)
-                print(match)
                 if (match != []) & (match != ['']) :
                     pastebin_code = match[0]
                 else:
@@ -88,7 +90,6 @@ def gems():
                 return jsonify("Error: Not a valid pastebin link.")
             try:
                 returned = return_info(pastebin_code)
-                # print(returned)
             except:
                 return jsonify("Error while processing pastebin. Are you sure it's a POE build?")
 
@@ -127,41 +128,73 @@ def gems():
 @app.route('/api/scarabs', methods=['GET'])
 @cross_origin()
 def scarabs():
-    if scarab_cache.get('scarabs'):
-        print("Cache Exists \n")
-        scarabs = scarab_cache.get('scarabs')
-    else:
-        print("Cache Does Not Exist \n")
-        # current_league = None
-        current_league = get_current_league()
-        print('Current League',current_league)
-        r = requests.get('https://poe.ninja/api/data/itemoverview?league={}&type=Scarab&language=en'.format(current_league)).json()
-        print('Got Scarabs')
-        scarabs = []
-        regex = r"(?:Gilded\s)(.*)"
-        for scarab in r["lines"]:
-            match = re.findall(regex, scarab["name"])
-            if match:
-                name = match[0]
+    try: 
+        if 'tier' in request.args:
+            scarab_type = request.args['tier'].capitalize()
+        else:
+            scarab_type = 'Gilded'
+        if scarab_cache.get(scarab_type):
+            use_time = get_use_time(scarab_timing)
+            scarabs = scarab_cache.get(scarab_type)
+            print(f"\n* Cache Exists: Using [{scarab_type}] scarab pricing from [{use_time}].\n")
+        else:
+            print(f"\n* Cache Does Not Exist: Attempting to get updated pricing for [{scarab_type}] scarabs. \n")
+            current_league = get_current_league()
+            r = requests.get('https://poe.ninja/api/data/itemoverview?league={}&type=Scarab&language=en'.format(current_league)).json()
+            scarabs = []
+            if scarab_type == 'Gilded':
+                regex = r"(?:Gilded\s)(.*)"
             else:
-                continue
-            value = scarab["chaosValue"]
-            scarabs.append({"name":name,"value":value})
-        df = pd.DataFrame(scarabs)
-        df['rank'] = df['value'].rank(method='max', ascending=False)
-        def rank_scarabs(row):
-            rank = row['rank']
-            if 0 < rank <= 3:
-                color = "green"
-            elif 3 < rank <= 6:
-                color = "yellow"
+                regex = r"(?:Winged\s)(.*)"
+            for scarab in r["lines"]:
+                match = re.findall(regex, scarab["name"])
+                if match:
+                    name = match[0]
+                else:
+                    continue
+                value = scarab["chaosValue"]
+                scarabs.append({"name":name,"value":value})
+            df = pd.DataFrame(scarabs)
+            df['rank'] = df['value'].rank(method='max', ascending=False)
+            if 6 in df['rank'].values:
+                yellow_limit = 6
             else:
-                color = "gray"
-            return(color)
-        df['color'] = df.apply(lambda row: rank_scarabs(row), axis=1)
-        scarabs = df.to_dict('records')
-        scarab_cache['scarabs'] = scarabs
-    return(jsonify(scarabs))
+                yellow_limit = 7
+            print(df)
+            def rank_scarabs(row):
+                rank = row['rank']
+                if 0 < rank <= 3:
+                    color = "green"
+                elif 3 < rank <= yellow_limit:
+                    color = "yellow"
+                else:
+                    color = "gray"
+                return(color)
+            df['color'] = df.apply(lambda row: rank_scarabs(row), axis=1)
+            scarabs = df.to_dict('records')
+            scarab_cache[scarab_type] = scarabs
+            scarab_timing['last_updated'] = datetime.datetime.today()
+            print(f"* Success: Got [{scarab_type}] scarab pricing for [{current_league}]. Cache expires in [6] hours.\n")
+        return(jsonify(scarabs))
+    except:
+        return(jsonify('Error'))
+
+@app.route('/api/chromatic_calculator', methods=['POST'])
+@cross_origin()
+def chromatic_calculator():
+    strength_requirement = int(request.json['strength'])
+    dexterity_requirement = int(request.json['dexterity'])
+    intelligence_requirement = int(request.json['intelligence'])
+    desired_red = int(request.json['red'])
+    desired_green = int(request.json['green'])
+    desired_blue = int(request.json['blue'])
+    total_sockets = int(request.json['sockets'])
+    
+    response = calculate(strength_requirement, dexterity_requirement, intelligence_requirement, desired_red, desired_green, desired_blue, total_sockets)
+    return(jsonify(response))
+    
+    
+
 
 if __name__ == "__main__":
     if is_dev == 'dev':

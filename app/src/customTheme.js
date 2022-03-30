@@ -24,14 +24,14 @@ const CustomTheme = createTheme({
             borderRadius: "0px !important",
             padding: "1em 3em",
             overflow: "display",
-            // background: "var(--buttonGradient)",
-            // width: "25%",
             '&:hover': {
-              // backgroundColor: "var(--colorMain)",
               color: '#fff',
               boxShadow: "0 2px var(--colorMain)",
               backgroundColor: '#222222',
-            }
+            },
+            ["@media (max-width:1000px)"]: {
+              fontSize: "12px !important",
+            },
           }
         },
         {
@@ -49,7 +49,10 @@ const CustomTheme = createTheme({
               color: "var(--colorMain)",
               boxShadow: "0 2px var(--colorMain)",
               backgroundColor: '#222222',
-            }
+            },
+            ["@media (max-width:1000px)"]: {
+              fontSize: "12px !important",
+            },
           }
         },
         {
@@ -63,6 +66,23 @@ const CustomTheme = createTheme({
             width: "50%",
             '&:hover': {
               backgroundColor: 'var(--colorSub)',
+              color: '#fff',
+            }
+            // marginTop:"1em"
+            // border: "1px solid var(--colorMain)!important",
+          }
+        },
+        {
+          props: { variant: "help" },
+          style: {
+            fontWeight: "bold",
+            // color: "var(--colorMain) !important",
+            color: "#e0e0e0",
+            // background: "linear-gradient(45deg, var(--colorMain) 30%, var(--colorSub) 90%)",
+            background: "#444",
+            width: "10em",
+            '&:hover': {
+              backgroundColor: '#333',
               color: '#fff',
             }
             // marginTop:"1em"
@@ -92,6 +112,8 @@ const CustomTheme = createTheme({
             fontWeight: "bold",
             color: "#fff !important",
             paddingLeft: "30px",
+            minHeight: "45px",
+            alignItems: "flex-end",
           }
         },
         {
@@ -168,6 +190,26 @@ const CustomTheme = createTheme({
             width: "100%",
             marginBottom: "1em"
           }
+        },
+        {
+          props: { variant: "passives" },
+          style: {
+            fontWeight: "bold",
+            color: "#fff",
+            background: "var(--buttonGradient)",
+            minWidth: "25%",
+            // width: "50%",
+          }
+        },
+        {
+          props: { variant: "chromCalc" },
+          style: {
+            fontWeight: "bold",
+            color: "#fff",
+            background: "var(--buttonGradient)",
+            width: "100%",
+            margin: "1em 0 0 0",
+          }
         }
       ],
       defaultProps: {
@@ -188,6 +230,21 @@ const CustomTheme = createTheme({
             backdropFilter: "blur(2px)",
             // padding: "1rem 3rem",
             textAlign: "left"
+            // border: "1px solid var(--colorMain)!important",
+          }
+        },
+        {
+          props: { variant: "chrom" },
+          style: {
+            color: "#d1d1d1 !important",
+            border: "1px solid #2e2e2e",
+            background: "rgba(24, 24, 24,.8)!important",
+            borderRadius: "7px",
+            backdropFilter: "blur(2px)",
+            // padding: "1rem 3rem",
+            textAlign: "left",
+            padding: "2em",
+            textAlign: "center",
             // border: "1px solid var(--colorMain)!important",
           }
         },
@@ -224,7 +281,7 @@ const CustomTheme = createTheme({
           props: { variant: "arch" },
           style: {
             color: "#e0e0e0 !important",
-            border: "1px solid #444",
+            border: "1px solid #2e2e2e",
             background: "rgba(20,20,20,.8)!important",
             backdropFilter: "blur(2px)",
             boxShadow: "none",
@@ -234,6 +291,41 @@ const CustomTheme = createTheme({
             // padding: "0 1em",
             marginTop: "25px",
             textAlign: "left"
+            // border: "1px solid var(--colorMain)!important",
+          }
+        },
+        {
+          props: { variant: "passives" },
+          style: {
+            color: "#e0e0e0 !important",
+            border: "1px solid #2e2e2e",
+            background: "rgba(24, 24, 24,.8)!important",
+            backdropFilter: "blur(2px)",
+            boxShadow: "none",
+            padding: "2em",
+            // margin: "0 1.5em",
+            // width: "100%",
+            // padding: "0 1em",
+            textAlign: "left"
+            // border: "1px solid var(--colorMain)!important",
+          }
+        },
+        {
+          props: { variant: "infoVariant" },
+          style: {
+            color: "#e0e0e0 !important",
+            border: "1px solid #2e2e2e",
+            background: "rgba(24, 24, 24,.8)!important",
+            backdropFilter: "blur(2px)",
+            boxShadow: "none",
+            padding: "2em",
+            // margin: "0 1.5em",
+            // width: "100%",
+            // padding: "0 1em",
+            textAlign: "left",
+            width: "75%",
+            margin: "0 auto",
+            fontSize: "18px",
             // border: "1px solid var(--colorMain)!important",
           }
         },
@@ -425,6 +517,47 @@ const CustomTheme = createTheme({
           props: { variant: "stratName" },
           style: {
             color: "#e0e0e0 !important"
+          }
+        }
+      ],
+      defaultProps: {
+        // disableElevation: false,
+        // disableFocusRipple: true,
+        // disableRipple: true
+      }
+    },
+    MuiAlert: {
+      variants: [
+        {
+          props: { variant: "scarabError" },
+          style: {
+            color: "#e0e0e0 !important",
+            width: "100%",
+            float: "right",
+            transform: "translate(0%, 0%)",
+            backgroundColor: "#d32f2f",
+            border: "2px solid rgb(185 50 50)",
+            height: "54.5px",
+            opacity: 1,
+            justifyContent: "center",
+            animationName: "fadeInOpacity",
+            animationIterationCount: 1,
+            animationTimingFunction: "ease-in",
+            animationDuration: "0.5s",
+            // textTransform: "uppercase",
+            // fontWeight: "bold",
+            alignItems: "center",
+            ["@keyframes fadeInOpacity"]: {
+                ["0%"]: {
+                  transform: "translate(0%, -200%)",
+                },
+                ["80%"]: {
+                  transform: "translate(0%, -100%)",
+                },
+                ["100%"]: {
+                  transform: "translate(0%, 0%)",
+                }
+            }
           }
         }
       ],

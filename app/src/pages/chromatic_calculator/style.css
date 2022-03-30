@@ -1,0 +1,122 @@
+.chromWrapper {
+	display:grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 20px;
+    width:60%;
+	margin: 0 auto auto auto;
+}
+
+.itemInfo {
+    display:grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1em;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.itemInfoRow {
+    display:grid;
+    grid-template-columns: 33% 1fr 1fr 1fr;
+    grid-gap: 1em;
+    justify-items: start;
+}
+
+.itemInfoRow > h4 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: auto 0em;
+}
+
+.formField.item {
+    width: 75px;
+}
+
+.formField.item > div > input {
+    text-align:center;
+    border-radius: 4px;
+    border: 2px solid #333;
+    background-color: #333;
+    padding: 10px 15px !important;
+}
+
+.formField.item > div > input:focus {
+    background-color: #222;
+}
+
+.str > div > input {
+    background-color: var(--redInput) !important;
+    border-radius: 4px;
+    border: 2px solid var(--redInput) !important;
+}
+
+.str > div > input:focus {
+    background-color: var(--redInputActive) !important;
+}
+
+.dex > div > input {
+    background-color: var(--greenInput) !important;
+    border-radius: 4px;
+    border: 2px solid var(--greenInput) !important;
+}
+
+.dex > div > input:focus {
+    background-color: var(--greenInputActive) !important;
+}
+
+.int > div > input {
+    background-color: var(--blueInput) !important;
+    border-radius: 4px;
+    border: 2px solid var(--blueInput) !important;
+}
+
+.int > div > input:focus {
+    background-color: var(--blueInputActive) !important;
+}
+
+.MuiTableCell {
+    font-size: 1em;
+    color: #e0e0e0 !important;
+}
+
+.recipeTable {
+    margin: 1em 0 0 0;
+}
+
+.tableContainer {
+    background-color: #000 !important;
+    border-radius: 6px !important;
+}
+
+.cheapest {
+    background-color: var(--greenInput) !important;
+    border-radius: 6px !important;
+}
+
+.itemInfoRow > div > div.Mui-focused {
+	/* color:orange !important; */
+	border: 0px solid var(--colorShadow) !important;
+	/* border-right: 2px solid orange !important; */
+    /* border: 1px; */
+}
+
+@media (max-width: 1300px) {
+	.chromWrapper {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1000px) {
+	.chromWrapper {
+        width: 100%;
+        margin: 1em 0;
+    }
+}
+
+.additionalInfo {
+    margin-top: 3em;
+}
+
+.tableContainer.calcInfo {
+    width:60% !important;
+    margin: 0 auto;
+}

@@ -1,0 +1,229 @@
+:root {
+    --input-color: #8d8d8d;
+    --input-background: #fff;
+  }
+
+* {
+    box-sizing: border-box;
+} 
+
+.passives {
+    padding: 20px 60px;
+	min-height: 100%;
+	width: 100%;
+}
+
+.cardHeader {
+  padding: 16px;
+}
+
+.cardBody {
+  padding: 16px;
+  margin: 0 auto;
+}
+
+hr {
+    width:100%;
+    background: linear-gradient(90deg, transparent 0%, #1e1e1e 5%, #1e1e1e 95%, transparent 100%);
+    border: none;
+    height:2px;
+    margin-top:10px;
+  }
+
+#pobInput {
+    display:grid;
+    grid-template-columns: 40% 30% 25%;
+    grid-gap: 1em;
+    position:relative;
+    align-items:center;
+    justify-content:center;
+    /* margin-bottom:0.5em; */
+    font-size: 1em;
+    /* height:auto; */
+}
+
+label, input, button {
+    font-size: inherit;
+    padding: 0.2em;
+    margin: 0.1em 0.2em;
+    /* the following ensures they're all using the same box-model for rendering */
+    -moz-box-sizing: content-box; /* or `border-box` */
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+#acts {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 1.5em;
+    grid-gap:20px;
+}
+
+.actCard {
+    padding:20px;
+    border: 1px solid #444;
+    /* background-color:#292929cc; */
+    background-color: rgba(24, 24, 24,.8)!important;
+    width:100%;
+}
+
+@media only screen and (max-width: 1100px) {
+    .passives {
+        padding: 20px 40px;
+    }
+
+	#acts {
+		grid-template-columns: repeat(2, auto);
+	}
+}
+
+@media only screen and (max-width: 750px) {
+    .passives {
+        padding: 20px;
+    }
+	#acts {
+		grid-template-columns: repeat(1, auto);
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.itemsWrapper {
+        display:grid;
+        grid-template-rows: 1fr;
+    }
+}
+
+.buildButton {
+    height:100%;
+    margin:0 0 0 15px;
+}
+
+.itemsWrapper {
+    display:grid;
+    grid-template-rows: repeat(3, auto);
+    color: #e0e0e0;
+    /* min-height:18vh; */
+}
+
+.singleItem {
+    display:grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    margin-bottom:20px;
+}
+
+.gemsWrapper {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: left space-around;
+    margin-right:-10px;
+    width:100%;
+}
+
+.singleGem {
+    display:flex;
+    justify-content: left space-around;
+    margin-right:-10px;
+    width:100%;
+    margin-bottom:20px;
+    align-items:center;
+}
+
+.itemDetails {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:left;
+    align-content:center;
+    margin-left:10px;
+}
+
+.singleGem > img {
+    max-width:50px;
+    max-height:50px;
+}
+
+.chip {
+    background: #555;
+    display: block;
+    padding: 3px 12px;
+    border-radius: .2rem;
+    font-size: .8em;
+    margin:5px;
+  }
+
+.chip.quest {
+    margin-right:auto;
+}
+
+.chip.blue {
+    background: #314F6F
+    ;
+}
+
+.chip.red {
+    background: #A3414D;
+}
+
+.chip.orange {
+    background: #c96036;
+}
+
+.chip.green {
+    background: #4B8F39;
+}
+
+.formField::placeholder {
+    color: var(--input-placeholder);
+}
+
+.formGroup {
+    position: relative;
+    display: flex;
+    width: 100%;
+    font-family:Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 0.875rem;
+    font-weight: 500;
+    /* text-transform: uppercase; */
+}
+
+.formGroup.gemGroup {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 10px;
+}
+
+
+.formGroup .formField {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.inputWrapper {
+    width:50%;
+    padding-left: 0 !important;
+    display:grid;
+    grid-template-rows:auto;
+    grid-gap: 1em;
+}
+
+#gemName {
+    padding: 0.5em 0 !important;
+}
+
+#gemClass {
+    padding: 0.5em 0 !important;
+}
+
+#build {
+    padding: 0.5em 1em !important;
+}
+
+#acts > div > h2 {
+    text-align:center;
+    margin: 0.4em 0;
+}

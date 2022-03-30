@@ -1,9 +1,9 @@
 import base64
+import datetime
 import json
 import re
 import urllib
 import zlib
-from logging import log
 from urllib.request import Request
 
 import defusedxml.ElementTree as ET
@@ -17,11 +17,9 @@ class CaptchaError(Exception):
 def get_current_league():
     soup = BeautifulSoup(requests.get('https://poe.ninja').text,'html.parser')
     challenge = soup.find(string=re.compile("challenge"))
-    print(challenge)
     challenge = re.findall(r'(\[.*\])',challenge)
     challenge = challenge[0].split(';')[0]
     challenge = json.loads(challenge)
-    print(challenge)
     for k in challenge:
         if k['url'] == 'challenge':
             current_league = k['name']
@@ -62,7 +60,6 @@ def decode_to_xml(enc, encoding='windows-1252'):
     xml = None
     try:
         xml = ET.fromstring(xml_str.decode(encoding))
-        # print(xml_str)
     except TypeError as err:
         raise(f"Could not parse the pastebin as xml msg={err}")
  
@@ -84,12 +81,10 @@ def _parse_skills(xml_skills):
         try:
             if "swap" in skill.attrib['slot']:
                 swap = True
-                # print("Is a Swap", skill.attrib['slot'])
             else:
                 swap = False
         except:
             swap = False
-            # print("Not a Swap")
         if swap == False:
             for gem in skill:
                 gems.append({'name':gem.attrib['nameSpec'],'level':gem.attrib['level']})
@@ -103,8 +98,10 @@ def return_info(pastebin):
         xml = decode_to_xml(raw)
         gems = _parse_skills(xml.find('Skills'))
         class_name = xml.find('Build').attrib['className']
+        print(f"\n* Success: Got build [{pastebin}] of class [{class_name}].\n")
         return(gems,class_name)
     except:
+        print(f"\n* Error: Could not get build [{pastebin}] of class [{class_name}].\n")
         raise(Exception("Error processing pastebin. Are you sure it's a POE build?"))
 
 def get_gem_info(cur, gem, class_name):
@@ -123,6 +120,8 @@ def get_gem_info(cur, gem, class_name):
     elif awakened_match:
         gem_name = awakened_match[0]
 
+    gem_name = gem_name.replace(" ", "_")
+
     call = """ SELECT * 
                 FROM gems
                 WHERE class_name = "{}"
@@ -132,8 +131,6 @@ def get_gem_info(cur, gem, class_name):
     cur.execute(call)
 
     rows = cur.fetchall()
-    print(gem_name, gem_level)
-    print(rows)
 
     earliest = None
 
@@ -143,11 +140,9 @@ def get_gem_info(cur, gem, class_name):
         elif earliest == None:
             earliest = row
         if row[0] < earliest[0]:
-            print(row[0], earliest[0])
             earliest = row
             
     if earliest != None:
-        print(earliest)
         gem_details = {
             "act":earliest[0],
             "vendor":earliest[1],
@@ -156,3 +151,20 @@ def get_gem_info(cur, gem, class_name):
             "level":gem_level
             }
     return gem_details
+
+def get_use_time(scarab_timing):
+    now = datetime.datetime.now()
+    diff = now - scarab_timing['last_updated']
+    diff_hours = diff.seconds / 3600
+    diff_minutes = diff.seconds / 60
+    if diff_hours > 1:
+        use_time = f'{diff_hours} hours ago'
+    elif 2 > diff_hours > 1:
+        use_time = f'{diff_hours} hour ago'
+    elif diff_minutes > 1:
+        use_time = f'{diff_minutes} minutes ago'
+    elif 2 > diff_minutes > 1:
+        use_time = f'{diff_minutes} minute ago'
+    else:
+        use_time = f'{diff.seconds} seconds ago'
+    return(use_time)

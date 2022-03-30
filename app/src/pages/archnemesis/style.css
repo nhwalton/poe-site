@@ -40,7 +40,7 @@
     font-weight: 500;
     font-family: inherit;
     -webkit-appearance: none;
-    background: var(--input-color);
+    /* background: var(--input-color); */
     transition: border 0.3s ease;
     margin:0;
 	margin-top:auto;
@@ -61,7 +61,7 @@
     -webkit-font-smoothing: antialiased;
     font-size: 0.875rem;
     font-weight: 500;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .treeCanvas {

@@ -17,6 +17,18 @@ flask-api/api/*
 
 app/poe-syn.psd
 
+gem_image_getter.py
+missing_gem_script.py
+gem_availabilities.csv
+flask-api/gem_availability_backup.csv
+
+gem_images/*
+
+app/build.zip
+
+gems.json
+
 init-letsencrypt.sh
 /data/*
+/site/*
 site/size-plugin.json
