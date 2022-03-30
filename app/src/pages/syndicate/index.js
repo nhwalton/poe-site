@@ -1,4 +1,5 @@
 import SettingsIcon from '@mui/icons-material/Settings';
+import HelpCenterRoundedIcon from '@mui/icons-material/HelpCenterRounded';
 import { Box, Drawer, Button, Card, useMediaQuery, Collapse, Alert, Switch } from '@mui/material';
 import { FormLabel, FormControl, FormGroup, FormControlLabel } from '@mui/material';
 import React, { useEffect, useState } from 'react';
@@ -36,7 +37,7 @@ const RowCell = (props) => {
 		if (useName !== props.cellData.class && props.cellData.scarab !== true && hostName !== 'localhost') {
 			const eventDetails = {
 				category: 'Syndicate',
-				action: props.cellData.title.substr(1),
+				action: props.cellData.title,
 				label: useName,
 			}
 			ReactGA.event(eventDetails);
@@ -215,8 +216,9 @@ const Syndicate = (props) => {
 	function ResetColors() {
 		const resetJson = useJson;
 		setSyndicate(resetJson);
-		const keyPrefix = (mastermindMode === 'true') ? "mastermind" : "individual";
+		const keyPrefix = (mastermindMode === true) ? "mastermind-" : "individual-";
 		for (var key in localStorage) {
+			console.log(keyPrefix, key, key.indexOf(keyPrefix));
 			if (key.indexOf(keyPrefix) === 0) {
 				localStorage.removeItem(key);
 			}
@@ -270,7 +272,14 @@ const Syndicate = (props) => {
 	const SettingsButton = () => {
 		return(
 			<React.Fragment>
-				<Button onClick={toggleDrawer('right', true, settingsDrawer, setSettingsDrawer)} variant="settings"><SettingsIcon fontSize="large"/></Button>
+				<a className="noDecoration" href="#additionalInfo">
+					<Button className={`headerIcon ${display}`}>
+						<HelpCenterRoundedIcon className="helpButton" fontSize="large"/>
+					</Button>
+				</a>
+				<Button className="headerIcon" onClick={toggleDrawer('right', true, settingsDrawer, setSettingsDrawer)}>
+					<SettingsIcon className="settingsIcon" fontSize="large"/>
+				</Button>
 			</React.Fragment>
 		)
 	}
@@ -356,7 +365,6 @@ const Syndicate = (props) => {
 				</div>
 				<TitleHeader />
 				<div className="buttons">
-				<a class="noDecoration" href="#additionalInfo"><Button variant="help">Help</Button></a>
 					{/* <Button onClick={() => toggleChallenges()}>Challenges</Button> */}
 					{/* <Button variant="syn" onClick={() => toggleMastermind()}>Safehouse: {mastermindMode}</Button>
 					<Button variant="syn" onClick={() => toggleScarabs()}>Scarab Scoring: {scarabButton}</Button>

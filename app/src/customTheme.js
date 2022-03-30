@@ -117,17 +117,6 @@ const CustomTheme = createTheme({
           }
         },
         {
-          props: { variant: "settings" },
-          style: {
-            fontWeight: "bold",
-            color: "#fff !important",
-            paddingLeft: "30px",
-            minHeight: "45px",
-            alignItems: "flex-end",
-            height: "100%",
-          }
-        },
-        {
           props: { variant: "syn" },
           style: {
             fontWeight: "bold",

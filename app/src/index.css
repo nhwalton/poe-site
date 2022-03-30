@@ -351,6 +351,18 @@ h3 {
   text-decoration: none !important;
 }
 
+.noDecoration > button {
+  color: #e0e0e0 !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.875rem;
+  background-color: #00000000 !important;
+}
+
+.noDecoration > button:hover {
+  color: #fff !important;
+}
+
 * {
   scrollbar-width: auto;
   scrollbar-color: rgb(65, 65, 65) #111111;
