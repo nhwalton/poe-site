@@ -102,6 +102,7 @@ const StrategyCard = (props) => {
 			const title = recipeLocation[modifier]['title']
 			// const description = recipeLocation[modifier]['description']
 			const image = recipeLocation[modifier]['image']
+			console.log(image)
 			const rewards = recipeLocation[modifier]['rewards']
 			const rewardMod = recipeLocation[modifier]['rewardMod']
 			let parentObject = {
@@ -157,6 +158,7 @@ const StrategyCard = (props) => {
 
 	return (
 		<React.Fragment>
+			<link rel="stylesheet" href={`https://poesynx.imgix.net/${modifierImage}?palette=css&colors=4`} />
 			<div className="modifierHeader">
 					<Button variant="archEnterFullscreen" type="button" onClick={enterFullscreen}>
 						{fullscreenText}

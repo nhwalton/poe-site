@@ -33,7 +33,7 @@ const Home = () => {
 		<div className="home page">
 			<div className="homeWrapper">
 				<Card variant="home">
-					<div className="homeHeader" style={{backgroundImage:"url(/images/leaguelogo.png)"}}>
+					<div className="homeHeader" style={{backgroundImage:"url(https://poesynx.imgix.net/leaguelogo.png)"}}>
 						<img src={PoeSyn} alt="poesyn" />
 						<h1 className="homeTitle">poesyn.xyz</h1>
 					</div>

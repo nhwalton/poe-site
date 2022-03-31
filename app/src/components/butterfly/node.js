@@ -42,7 +42,7 @@ class BaseNode extends TreeNode {
           <div class="title">${opts.options.content}</div>
           ${rewardDiv}
           <div class="rewards">
-          ${rewards.map(reward => `<img src='/images/rewards/Reward-${reward}.png' width="30" height="30" />`).join('')}
+          ${rewards.map(reward => `<img src='https://poesynx.imgix.net/rewards/Reward-${reward}.png' width="30" height="30" />`).join('')}
           </div>
         <div>`);
 

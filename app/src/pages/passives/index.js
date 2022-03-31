@@ -52,7 +52,7 @@ const Gems = ({ gemDetails }) => {
     return (
         <div className="singleGem">
             <img 
-                src={'/images/gems/gemname.png'.replace('gemname', gem_name.replace(/ /g, '_'))}
+                src={'https://poesynx.imgix.net/gems/gemname.png'.replace('gemname', gem_name.replace(/ /g, '_'))}
                 style={{maxWidth:"100%"}}
                 />
             <div className="itemDetails">

@@ -1,10 +1,10 @@
-import SettingsIcon from '@mui/icons-material/Settings';
 import HelpCenterRoundedIcon from '@mui/icons-material/HelpCenterRounded';
-import { Box, Drawer, Button, Card, useMediaQuery, Collapse, Alert, Switch } from '@mui/material';
-import { FormLabel, FormControl, FormGroup, FormControlLabel } from '@mui/material';
+import SettingsIcon from '@mui/icons-material/Settings';
+import { Alert, Box, Button, Card, Collapse, Drawer, FormControl, FormControlLabel, FormGroup, Switch, useMediaQuery } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { render } from 'react-dom';
 import ReactGA from "react-ga";
+import { Background } from "react-imgix";
 import './style.css';
 import defaultJson from './table.json';
 import defaultJsonMastermind from './tableMastermind.json';
@@ -65,30 +65,38 @@ const RowCell = (props) => {
 	const CellText = () => {
 		const styles = {
 			cellInfo: {
-				backgroundImage: `url(/images/syndicate/${props.cellData.image})`
+				backgroundSize:'contain',
+				backgroundRepeat: 'no-repeat',
+				backgroundPosition: 'center top',
 			}
 		}
-		let cellClass = "";
+		const backgroundSource = (props.cellData.image.length === 0) ? '' : `https://poesynx.imgix.net/syndicate/${props.cellData.image}`;
+		let cellClass = "cellInfo";
 		let cellText = "";
-		// let cellStyle = "";
-		if (props.cellData.image.length === 0) {
-			cellClass = "cellInfo cellCentered";
-			styles.cellInfo.backgroundImage = ""
-		} else {
-			cellClass = "cellInfo";
-			styles.cellInfo.backgroundImage = `url(/images/syndicate/${props.cellData.image})`
-		}
 		if (props.cellRow === "headers") {
 			cellText = "cellText header";
 		} else {
 			cellText = "cellText";
 		}
 		return (
-			<div className={cellClass} style={styles.cellInfo}>
-				<div className={cellText}>
-					<p className="noSelect">{props.cellData.text}</p>
-				</div>
-			</div>
+			<Background
+				className={cellClass}
+				src={backgroundSource}
+				style={styles.cellInfo}
+				imgixParams={{
+					fit:"fill",
+					fm:"webp",
+				}}
+				htmlAttributes={{
+					style: {
+						backgroundSize:'auto',
+					}
+				}}
+				>
+					<div className={cellText}>
+						<p className="noSelect">{props.cellData.text}</p>
+					</div>
+			</Background>
 			);
 	}
     return (
