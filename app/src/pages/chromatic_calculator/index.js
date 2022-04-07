@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import ReactGA from "react-ga";
 import { styled } from '@mui/material/styles';
 import { tableCellClasses } from '@mui/material/TableCell';
-import { Button, Card, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TextField, Alert, Collapse, IconButton } from '@mui/material';
+import { Button, Card, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TextField, Alert, Collapse, IconButton, FormControl } from '@mui/material';
 import './style.css';
 import defaultChroms from './defaultChroms.js'
+import items from '../../assets/items.json';
 
 const RecipeTable = (props) => {
 
     const rows = props.rows
-    const display = props.display
 
     let thAlign = "center"
     let costWeight = "bold"
@@ -112,18 +112,36 @@ const ItemInfo = (props) => {
     const [requirementsAlert, setRequirementsAlert] = useState(false);
     const [totalSocketsAlert, setTotalSocketsAlert] = useState(false);
     const [desiredTotalAlert, setDesiredTotalAlert] = useState(false);
+    const [itemPasteAlert, setItemPasteAlert] = useState(false);
+    const [itemStrength, setItemStrength] = useState(0);
+    const [itemDexterity, setItemDexterity] = useState(0);
+    const [itemIntelligence, setItemIntelligence] = useState(0);
+    const [itemRed, setItemRed] = useState(0);
+    const [itemGreen, setItemGreen] = useState(0);
+    const [itemBlue, setItemBlue] = useState(0);
+    const [itemSockets, setItemSockets] = useState(0);
 
-    const [item, setItem] = useState({
-        strength: null,
-        dexterity: null,
-        intelligence: null,
-        red: null,
-        green: null,
-        blue: null,
-        sockets: null
-    });
+    // const [item, setItem] = useState({
+    //     strength: null,
+    //     dexterity: null,
+    //     intelligence: null,
+    //     red: null,
+    //     green: null,
+    //     blue: null,
+    //     sockets: null
+    // });
 
-    async function getChroms(item) {
+    async function getChroms() {
+
+        const item = {
+            strength: itemStrength,
+            dexterity: itemDexterity,
+            intelligence: itemIntelligence,
+            red: itemRed,
+            green: itemGreen,
+            blue: itemBlue,
+            sockets: itemSockets
+        }
 
         Object.keys(item).forEach(function(key) {
             if (key !== "sockets") {
@@ -189,89 +207,233 @@ const ItemInfo = (props) => {
             };
         }
 
+	const [showcaseItem, setShowcaseItem] = useState();
+	const [showcaseItemImage, setShowcaseItemImage] = useState();
+
+    function pasteRequirements (text) {
+        const dex = text.match(/Dex: (\d+)/);
+        const str = text.match(/Str: (\d+)/);
+        const int = text.match(/Int: (\d+)/);
+        const dexField = document.getElementById('dexterity')
+        const strField = document.getElementById('strength')
+        const intField = document.getElementById('intelligence')
+        if (dex !== null && dex.length > 1) {
+            dexField.value = dex[1];
+            setItemDexterity(dex[1]);
+        } else {
+            dexField.value = 0;
+            setItemDexterity(0);
+        }
+        if (str !== null && str.length > 1) {
+            strField.value = str[1];
+            setItemStrength(str[1]);
+        } else {
+            strField.value = 0;
+            setItemStrength(0);
+        }
+        if (int !== null && int.length > 1) {
+            intField.value = int[1];
+            setItemIntelligence(int[1]);
+        } else {
+            intField.value = 0;
+            setItemIntelligence(0);
+        }
+    }
+
+    function pasteSocketCount (text) {
+        const sockets = text.match(/Sockets: (.*)/);
+        if (sockets !== null && sockets.length > 1) {
+            const socketStrip = sockets[1].replace(/[-\s]/g, '');
+            const socketCount = socketStrip.length;
+            const socketField = document.getElementById('sockets')
+            socketField.value = socketCount;
+            setItemSockets(socketCount);
+            pasteSocketColors(socketStrip);
+        }
+    }
+
+    function pasteSocketColors (socketColors) {
+        const redCount = socketColors.match(/R/g);
+        const greenCount = socketColors.match(/G/g);
+        const blueCount = socketColors.match(/B/g);
+        const redField = document.getElementById('red')
+        const greenField = document.getElementById('green')
+        const blueField = document.getElementById('blue')
+        if (redCount !== null) {
+            redField.value = redCount.length;
+            setItemRed(redCount.length);
+        } else {
+            redField.value = 0;
+            setItemRed(0);
+        }
+        if (greenCount !== null) {
+            greenField.value = greenCount.length;
+            setItemGreen(greenCount.length);
+        } else {
+            greenField.value = 0;
+            setItemGreen(0);
+        }
+        if (blueCount !== null) {
+            blueField.value = blueCount.length;
+            setItemBlue(blueCount.length);
+        } else {
+            blueField.value = 0;
+            setItemBlue(0);
+        }
+    } 
+
+	const pasteHandler = (e) => {
+		e.preventDefault();
+        const paste = document.querySelector("#paste");
+        paste.blur();
+		let text = e.clipboardData.getData('text');
+		console.log(text);
+		const re = /(?:Rarity:\s[A-Za-z]*\r\n)(.*)\r\n(.*)/g;
+        const match = re.exec(text);
+        if (match !== null) {
+            setShowcaseItem(text);
+            const long_match = match[1] + ' ' + match[2];
+            const short_match = match[2];
+            const image = (items[long_match]) ? items[long_match] : items[short_match];
+            setShowcaseItemImage(image);
+            pasteRequirements(text);
+            pasteSocketCount(text);
+        }
+        else {
+            setItemPasteAlert(true);
+        }
+	}
+
+	const ItemShowcase = () => {
+		return(
+			<React.Fragment>
+				{showcaseItem !== undefined ?
+					<div className="itemShowcase">
+						<poe-item as-icon reference="pasted-item" label-text={null} icon-size="auto"></poe-item>
+						{window.HoradricHelper.PathOfExile.applyConfig({
+							reference: "pasted-item",
+							iconUrl: showcaseItemImage,
+							data: showcaseItem,
+							})}
+					</div>
+					:
+					null}
+			</React.Fragment>
+		)
+	}
+
     return (
         <div className="itemInfo">
-            <div className="itemInfoRow">
-                <h4>Total Sockets</h4>
-                <TextField
-                    id="sockets"
-                    className="formField item"
-                    type="text"
-                    placeholder="#"
-                    onChange={(e) => setItem({ ...item, sockets: parseInt(e.target.value) })}
-                    autoComplete="off"
-                />
+            <div className="itemInfoInputs">
+                <div className="itemInfoRow">
+                    <h4>Total Sockets</h4>
+                    <TextField
+                        id="sockets"
+                        className="formField item"
+                        type="text"
+                        placeholder="#"
+                        onChange={(e) => { setItemSockets(parseInt(e.target.value)); }}
+                        autoComplete="off"
+                    />
+                </div>
+                <div className="itemInfoRow">
+                    <h4>Requirements</h4>
+                    <TextField
+                        id="strength"
+                        className="formField item str"
+                        type="text"
+                        placeholder="str"
+                        onChange={(e) => { setItemStrength(parseInt(e.target.value)); }}
+                        autoComplete="off"
+                    />
+                    <TextField
+                        id="dexterity"
+                        className="formField item dex"
+                        type="text"
+                        placeholder="dex"
+                        onChange={(e) => { setItemDexterity(parseInt(e.target.value)); }}
+                        autoComplete="off"
+                    />
+                    <TextField
+                        id="intelligence"
+                        className="formField item int"
+                        type="text"
+                        placeholder="int"
+                        onChange={(e) => { setItemIntelligence(parseInt(e.target.value)); }}
+                        autoComplete="off"
+                    />
+                </div>
+                <div className="itemInfoRow">
+                    <h4>Desired Colors</h4>
+                    <TextField
+                        id="red"
+                        className="formField item str"
+                        type="text"
+                        placeholder="R"
+                        onChange={(e) => { setItemRed(parseInt(e.target.value)); }}
+                        autoComplete="off"
+                    />
+                    <TextField
+                        id="green"
+                        className="formField item dex"
+                        type="text"
+                        placeholder="G"
+                        onChange={(e) => { setItemGreen(parseInt(e.target.value)); }}
+                        autoComplete="off"
+                    />
+                    <TextField
+                        id="blue"
+                        className="formField item int"
+                        type="text"
+                        placeholder="B"
+                        onChange={(e) => { setItemBlue(parseInt(e.target.value)); }}
+                        autoComplete="off"
+                    />
+                </div>
+                <div>
+                    <Button variant="chromCalc" onClick={() => getChroms()}>Calculate</Button>
+                </div>
+                <div>
+                    <Collapse in={requirementsAlert}>
+                        <Alert severity="error" onClose={() => {setRequirementsAlert(false);}}>At least one requirement should be greater than zero.</Alert>
+                    </Collapse>
+                    <Collapse in={desiredSocketAlert}>
+                        <Alert severity="error" onClose={() => {setDesiredSocketsAlert(false);}}>Total desired colors cannot be greater than 6.</Alert>
+                    </Collapse>
+                    <Collapse in={totalSocketsAlert}>
+                        <Alert severity="error" onClose={() => {setTotalSocketsAlert(false);}}>Total sockets cannot be greater than 6.</Alert>
+                    </Collapse>
+                    <Collapse in={desiredTotalAlert}>
+                        <Alert severity="error" onClose={() => {setDesiredTotalAlert(false);}}>Desired sockets cannot be greater than total sockets.</Alert>
+                    </Collapse>
+                    <Collapse in={itemPasteAlert}>
+                        <Alert severity="error" onClose={() => {setItemPasteAlert(false);}}>Error parsing pasted item.</Alert>
+                    </Collapse>
+                </div>
             </div>
-            <div className="itemInfoRow">
-                <h4>Requirements</h4>
+            <div className="itemInfoPaste">
+                <ItemShowcase />
                 <TextField
-                    id="strength"
-                    className="formField item str"
-                    type="text"
-                    placeholder="str"
-                    onChange={(e) => setItem({ ...item, strength: parseInt(e.target.value) })}
-                    autoComplete="off"
-                />
-                <TextField
-                    id="dexterity"
-                    className="formField item dex"
-                    type="text"
-                    placeholder="dex"
-                    onChange={(e) => setItem({ ...item, dexterity: parseInt(e.target.value) })}
-                    autoComplete="off"
-                />
-                <TextField
-                    id="intelligence"
-                    className="formField item int"
-                    type="text"
-                    placeholder="int"
-                    onChange={(e) => setItem({ ...item, intelligence: parseInt(e.target.value) })}
-                    autoComplete="off"
-                />
-            </div>
-            <div className="itemInfoRow">
-                <h4>Desired Colors</h4>
-                <TextField
-                    id="red"
-                    className="formField item str"
-                    type="text"
-                    placeholder="R"
-                    onChange={(e) => setItem({ ...item, red: parseInt(e.target.value) })}
-                    autoComplete="off"
-                />
-                <TextField
-                    id="green"
-                    className="formField item dex"
-                    type="text"
-                    placeholder="G"
-                    onChange={(e) => setItem({ ...item, green: parseInt(e.target.value) })}
-                    autoComplete="off"
-                />
-                <TextField
-                    id="blue"
-                    className="formField item int"
-                    type="text"
-                    placeholder="B"
-                    onChange={(e) => setItem({ ...item, blue: parseInt(e.target.value) })}
-                    autoComplete="off"
-                />
-            </div>
-            <div>
-                <Button variant="chromCalc" onClick={() => getChroms(item)}>Calculate</Button>
-            </div>
-            <div>
-                <Collapse in={requirementsAlert}>
-                    <Alert severity="error" onClose={() => {setRequirementsAlert(false);}}>At least one requirement should be greater than zero.</Alert>
-                </Collapse>
-                <Collapse in={desiredSocketAlert}>
-                    <Alert severity="error" onClose={() => {setDesiredSocketsAlert(false);}}>Total desired colors cannot be greater than 6.</Alert>
-                </Collapse>
-                <Collapse in={totalSocketsAlert}>
-                    <Alert severity="error" onClose={() => {setTotalSocketsAlert(false);}}>Total sockets cannot be greater than 6.</Alert>
-                </Collapse>
-                <Collapse in={desiredTotalAlert}>
-                    <Alert severity="error" onClose={() => {setDesiredTotalAlert(false);}}>Desired sockets cannot be greater than total sockets.</Alert>
-                </Collapse>
+                    id="paste"
+                    className='pasteForm'
+                    inputProps={{
+                        autoComplete: 'off',
+                        style: {
+                            textAlign: 'center',
+                            cursor: 'pointer',
+                            caretColor: 'transparent',
+                            padding: '0.45em 0.5em'
+                        },
+                        form: {
+                        autoComplete: 'off',
+                        },
+                    }}
+                    autocomplete="off"
+                    placeholder='Paste Item'
+                    onPaste={pasteHandler}
+                >
+                        test
+                </TextField>
             </div>
         </div>
     )
@@ -382,8 +544,12 @@ const Chromatic = (props) => {
                         <ItemInfo setChroms={setChroms}/>
                         <RecipeTable rows={chroms} display={display}/>
                         <div className="additionalInfo">
+                            <p><b>
+                                Item paste only supports items copied from the game or trade site as Path of Building does not provide attribute requirements on copy.
+                                <br/>If copying from game, please remember to remove all gems from the item as they will affect the reported requirements.
+                            </b></p>
                             <p><i>
-                                This page is a port of <a href="https://siveran.github.io/calc.html">Siveran's Chromatic Calculator</a>, which is distributed publicly under <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC0</a>. All credit for the design, math, and calculations go to them.
+                                This page is a adaptation of <a href="https://siveran.github.io/calc.html">Siveran's Chromatic Calculator</a>, which is distributed publicly under <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC0</a>. All credit for the design, math, and calculations go to them.
                             </i></p>
                             <p><i>
                                 The info below is taken from their calculator and shown here for reference.

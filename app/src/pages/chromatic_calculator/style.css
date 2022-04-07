@@ -7,11 +7,23 @@
 }
 
 .itemInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.itemInfoInputs {
     display:grid;
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 1em;
     justify-content: space-around;
     margin: 0;
+    grid-column-start: 2;
+}
+
+.itemInfoPaste {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: center;
 }
 
 .itemInfoRow {
@@ -27,8 +39,17 @@
     margin: auto 0em;
 }
 
+.pasteForm {
+    width: 50%;
+    margin: 1em auto !important;
+}
+
+.pasteField {
+    text-align: center;
+}
+
 .formField.item {
-    width: 75px;
+    /* width: 75px; */
 }
 
 .formField.item > div > input {
