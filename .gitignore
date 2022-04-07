@@ -14,6 +14,8 @@ flask-api/.vscode/*
 flask-api/file::memory:?cache=shared
 docker-build-push
 flask-api/api/*
+flask-api/crawler.py
+flask-api/items.json
 
 app/poe-syn.psd
 
