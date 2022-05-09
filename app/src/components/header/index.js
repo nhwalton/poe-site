@@ -1,133 +1,161 @@
+import { useState } from 'react';
 import MenuIcon from '@mui/icons-material/MenuRounded';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { Box, Button, Drawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
+// import { Box, Button, Drawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
+import { useMediaQuery } from '@mui/material';
+import { Button, ListGroup, Nav, Offcanvas, Image } from 'react-bootstrap';
 import * as React from 'react';
 import Archnemesis from '../../assets/header/Archnemesis_League_Icon.png';
 import Passives from '../../assets/header/Book_of_Skill.png';
 import Cameria from '../../assets/header/Cameria_the_Coldblooded.png';
 import Exalted from '../../assets/header/Exalted_Orb.png';
 import Chromatic from '../../assets/header/Chromatic_Orb.png';
+import ExileGuide from '../../assets/header/Victario_Book.png';
 import poeOverlay from '../../assets/header/POE_Overlay_Community_Fork.png';
 import './style.css';
 
 export default function SwipeableTemporaryDrawer() {
-  const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
-    right: false,
-  });
+    const [state, setState] = React.useState({
+        top: false,
+        left: false,
+        bottom: false,
+        right: false,
+    });
 
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (
-      event &&
-      event.type === 'keydown' &&
-      (event.key === 'Tab' || event.key === 'Shift')
-    ) {
-      return;
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (
+            event &&
+            event.type === 'keydown' &&
+            (event.key === 'Tab' || event.key === 'Shift')
+        ) {
+            return;
+        }
+
+        setState({ ...state, [anchor]: open });
+    };
+
+    const PageTitle = () => { 
+        const title = <span id="pageTitle" className="pageTitle"><a href="/">poesyn.xyz</a></span>
+        const useTitle = useMediaQuery('(min-width:1500px)') ? title : null;
+        return (
+            useTitle
+        )
     }
 
-    setState({ ...state, [anchor]: open });
-  };
+    let pages = [
+        {
+            // title: "Exile Guide",
+            // url: "cheatsheet"},{
+            title: "Syndicate",
+            url: "syndicate"},{
+            title: "Leveling",
+            url: "passives"},{
+            title: "Chromatic",
+            url: "chromatic"
+        },
+    ]
+    let page = window.location.pathname.split("/")[1];
 
-  const PageTitle = () => { 
-    const title = <span id="pageTitle" className="pageTitle"><a href="/">poesyn.xyz</a></span>
-		const useTitle = useMediaQuery('(min-width:1500px)') ? title : null;
-		return (
-			useTitle
-		)
-	}
+    const [show, setShow] = useState(false);
 
-  const list = (anchor) => (
-    <Box
-      sx={{ width: "100%" }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-      variant="nav"
-    >
-      <List variant="nav">
-          <ListItem button key="Home" variant="nav" component="a" href="/">
-                <img src={Exalted} alt="home"/>
-            <ListItemText primary="Home" variant="nav"/>
-          </ListItem>
-          <ListItem button key="Syndicate" variant="nav" component="a" href="/syndicate">
-                <img src={Cameria} alt="syndicate" />
-            <ListItemText primary="Syndicate" variant="nav"/>
-          </ListItem>
-          <ListItem button key="Archnemesis" variant="nav" component="a" href="/archnemesis" >
-                <img src={Archnemesis} alt="archnemesis" />
-            <ListItemText primary="Archnemesis" variant="nav"/>
-          </ListItem>
-          <ListItem button key="Passives" variant="nav" component="a" href="/passives" >
-                <img src={Passives} alt="Leveling" />
-            <ListItemText primary="Leveling" variant="nav"/>
-          </ListItem>
-          <ListItem button key="Chromatic Calculator" variant="nav" component="a" href="/chromatic" >
-                <img src={Chromatic} alt="Chromatic Calculator" />
-            <ListItemText primary="Chromatic Calculator" variant="nav"/>
-          </ListItem>
-          <ListItem button key="Syndicate-Overlay" variant="navBottom" component="a" href="/syndicate-overlay" >
-                <img src={poeOverlay} alt="syndicate-overlay" />
-            <ListItemText primary="Syndicate-Overlay" variant="nav"/>
-          </ListItem>
-      </List>
-    </Box>
-  );
-
-  let pages = [
-    {
-      title: "Syndicate",
-      url: "syndicate"},{
-      title: "Archnemesis",
-      url: "archnemesis"},{
-      title: "Leveling",
-      url: "passives"},{
-      title: "Chromatic",
-      url: "chromatic"
-    },
-  ]
-  let page = window.location.pathname.split("/")[1];
+    function OffCanvasExample({ name, ...props }) {
+        // const [show, setShow] = useState(false);
+      
+        const handleClose = () => setShow(false);
+        const handleShow = () => setShow(true);
+      
+        return (
+            <>
+                {/* <Button onClick={handleShow} variant="menu"><MenuIcon fontSize="large" variant="hamburger"/></Button> */}
+                <Offcanvas show={show} onHide={handleClose} {...props}>
+                    <Offcanvas.Header closeButton closeVariant="white" >
+                        <PageTitle />
+                    </Offcanvas.Header>
+                    <Offcanvas.Body>
+                        <Nav className="justify-content-end flex-grow-1">
+                            <Nav.Link button className="ps-2" key="Home" as="a" href="/">
+                                <Image fluid className="me-4" src={Exalted} alt="home"/>
+                                Home
+                            </Nav.Link>
+                            {/* <Nav.Link button className="ps-2" key="Exile Guide" as="a" href="/cheatsheet" >
+                                <Image fluid className="me-4" src={ExileGuide} alt="cheatsheet" />
+                                Exile Guide
+                            </Nav.Link> */}
+                            <Nav.Link button className="ps-2" key="Syndicate" as="a" href="/syndicate">
+                                <Image fluid className="me-4" src={Cameria} alt="syndicate" />
+                                Syndicate
+                            </Nav.Link>
+                            <Nav.Link button className="ps-2" key="Passives" as="a" href="/passives" >
+                                <Image fluid className="me-4" src={Passives} alt="Leveling" />
+                                Leveling
+                            </Nav.Link>
+                            <Nav.Link button className="ps-2" key="Chromatic Calculator" as="a" href="/chromatic" >
+                                <Image fluid className="me-4" src={Chromatic} alt="Chromatic Calculator" />
+                                Chromatic Calculator
+                            </Nav.Link>
+                            <Nav.Link button className="ps-2 bottom" key="Syndicate-Overlay" as="a" href="/syndicate-overlay" >
+                                <Image fluid className="me-4" src={poeOverlay} alt="syndicate-overlay" />
+                                Syndicate-Overlay
+                            </Nav.Link>
+                            <Nav.Link button className="ps-2" key="Archnemesis" as="a" href="/archnemesis" >
+                                <Image fluid className="me-4" src={Archnemesis} alt="archnemesis" />
+                                Archnemesis [Deprecated]
+                            </Nav.Link>
+                        </Nav>
+                    </Offcanvas.Body>
+                </Offcanvas>
+            </>
+        );
+    }
 
   return (
     <div className="menuBar">
         <React.Fragment key="headerBar">
-          <div className="headerBar">
-            <div className="headerBarLeft">
-              <Button onClick={toggleDrawer('left', true)} variant="menu"><MenuIcon fontSize="large" variant="hamburger"/></Button>
-              <PageTitle />
+            <div className="headerBar">
+                <div className="headerBarLeft">
+                    <Button onClick={() => setShow(true)} variant="menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                    </Button>
+                    <PageTitle />
+                </div>
+                <div className="headerBarCenter">
+                    {pages.map((thisPage) => {
+                        if (thisPage.url === page) {
+                          return(<Button disableRipple variant="headerBar active" component="a" href={`/${thisPage.url}`}>{thisPage.title}</Button>)
+                      } else {
+                          return(<Button disableRipple variant="headerBar" component="a" href={`/${thisPage.url}`}>{thisPage.title}</Button>)
+                      }
+                    })}
+                    {/* <Button disableRipple variant="headerBar" component="a" href="/archnemesis">Archnemesis</Button> */}
+                </div>
+                <div className="headerBarRight">
+                </div>
             </div>
-            <div className="headerBarCenter">
-              {pages.map((thisPage) => {
-                  if (thisPage.url === page) {
-                    return(<Button disableRipple variant="headerBarActive" component="a" href={`/${thisPage.url}`}>{thisPage.title}</Button>)
-                } else {
-                    return(<Button disableRipple variant="headerBar" component="a" href={`/${thisPage.url}`}>{thisPage.title}</Button>)
-                }
-              })}
-              {/* <Button disableRipple variant="headerBar" component="a" href="/archnemesis">Archnemesis</Button> */}
-            </div>
-            <div className="headerBarRight">
-            </div>
-          </div>
-
-          <Drawer
-            anchor={'left'}
-            open={state['left']}
-            onClose={toggleDrawer('left', false)}
-            onOpen={toggleDrawer('left', true)}
-            // variant="nav"
-            PaperProps={{
-                sx: {
-                  backgroundColor: "#1a1a1a",
-                  color: "#e0e0e0",
-                  borderRight: "2px solid var(--colorMain)",
-                }
-              }}
-          >
-            <span className="navTitle">poesyn.xyz</span>
-            {list('left')}
-          </Drawer>
+            <OffCanvasExample
+                placement="start"
+                name="Menu"
+                setShow = {setShow}
+                show = {show}
+            />
+            {/* <Drawer
+                anchor={'left'}
+                open={state['left']}
+                onClose={toggleDrawer('left', false)}
+                onOpen={toggleDrawer('left', true)}
+                // variant="nav"
+                PaperProps={{
+                    sx: {
+                        backgroundColor: "#1a1a1a",
+                        color: "#e0e0e0",
+                        borderRight: "2px solid var(--colorMain)",
+                    }
+                  }}
+            >
+                <span className="navTitle">poesyn.xyz</span>
+                {list('left')}
+            </Drawer> */}
         </React.Fragment>
     </div>
   );

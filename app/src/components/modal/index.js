@@ -122,11 +122,11 @@ export const Modal = ({setStrategyModal, setLocalStrategies, setStrategy, initia
         );
     });
   return (
-    <div className="container" ref={modalRef} onClick={closeModal}>
-        <div className="modal">
-            <Card variant="modal">
-                <div className="modalContainer">
-                    <div className="modalLeft">
+    <div className="archModalWrapper" ref={modalRef} onClick={closeModal}>
+        <div className="archModal">
+            <Card variant="archModal">
+                <div className="archModalContainer">
+                    <div className="archModalLeft">
                         <h2>New Strategy</h2>
                         <div className="newStrategy">
                             <FormControl sx={{ m: 0, minWidth: "100%" }} required>
@@ -159,7 +159,7 @@ export const Modal = ({setStrategyModal, setLocalStrategies, setStrategy, initia
                                 <Button variant="addStrategy" className="newStratItem" onClick={() => appendModifier(newStrategyTitle, newStrategyOrder)}>Add Strategy</Button>
                         </div>
                     </div>
-                    <div className="modalRight">
+                    <div className="archModalRight">
                         <h2>Custom Strategies</h2>
                         <div className="localList">
                             <List type="test" className="localSelect" value={[]}>

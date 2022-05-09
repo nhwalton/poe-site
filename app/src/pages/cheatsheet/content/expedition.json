@@ -1,0 +1,53 @@
+{
+    "type": "guide",
+    "name": "Early Map Progression",
+    "image": "AtlasPassiveMasteryMap",
+    "steps": [
+        "In this Chapter of the Series, I want to talk about Expedition and how farm Logbooks and reroll currencies.",
+        "Below are the expected returns of running Expedition Scarabs over the course of roughly 400 maps.",
+        "* These values are considering **selling** reroll currencies & iIgnoring all artifacts",
+        "* If you use the reroll currencies (except Astragalis), you can double that number easily",
+        "* This is also considering selling Logbooks, running them would net you far more profit!",
+        "-----------------------------------------------",
+        {
+            "type": "price import",
+            "items": [
+                {
+                    "name": "Rusted Expedition Scarab",
+                    "index": "37"
+                },
+                {
+                    "name": "Expedition Winged + Sextant",
+                    "index": "38"
+                }
+            ]
+        },
+        "-----------------------------------------------",
+        "### Finding Expeditions",
+        "The only way to get Expedition to spawn on your maps reliably is Scarabs.",
+        "#### [Link to purchase Expedition Scarabs](https://www.pathofexile.com/trade/exchange/Archnemesis/JLYb5lvUl)",
+        "Next, let's go over the required nodes on the Atlas Passive tree which benefit Expedition.",
+        "The main money-making when it comes to Expedition is logbooksThis will make up for the majority of your currency made alongside reroll currenciesBecause of this, we want to focus on getting as many logbooks as possible.The Buried Knowledge passive will increase logbooks dropped by 50% from Runic Monsters (the only monsters which drop logbooks anyways).",
+        "If you don't know what Runic Monsters look like, they are basically the tall Skulls on pikesThis is what you are looking for:",
+        "Note that Siege of the Atlas introduced an extremely powerful Sextant modifier for Expedition farming;",
+        "Area contains 100% increased number of Runic Monster Markers - This is basically doubling the value of every single Expedition encounter you will complete and also basically doubling your logbook returns",
+        "You can find this Sextant prerolled here: https://www.pathofexile.com/trade/search/Archnemesis/bWBKMEDuLThe other mandatory passives are the ones which will increase the total amount of area which you can cover with your explosivesWith the following two passives, you will basically be able to cover the entire surface area of Expeditions.",
+        "We also need to cover Remnants and their modifiersThe Remnants are basically modifiers which add extra rewards at the cost of difficulty in your ExpeditionsThey can drastically change how rewarding an Expedition encounter isThis is what they look like: Pay attention to the color of the text as the YELLOW text will involve some sort of Immunity which can make it impossible to complete depending on your build!",
+        "Remnant modifiers you absolutely want to prioritize:#1 Priority: 50% increased Quantity of Expedition Logbooks dropped by Runic Monsters ",
+        "#1.1 Priority: Runic Monsters are Duplicated - This is actually the only PREFIX, so the text color will actually be Dark Blue instead of Light Blue, so it's easy to missTry and be mindful as this is extremely rare!2nd: 40% increased Quantity of Items Dropped by Monsters - This does affect Logbook drops so it's very strong paired with the 50% increased mentioned above.After these two, any of the following in no real particular order:",
+        "50% increased Quantity of Artifacts dropped by Monsters",
+        "Runic Monsters / Excavated Chests have 35% chance to drop an additional Stacked Deck",
+        "Runic Monsters / Excavated Chests have 35% chance to drop an additional Fractured Item",
+        "Runic Monsters / Excavated Chests have 35% chance to drop an additional Influenced Item",
+        "Unlike certain other mechanics such as Blight, quantity matters A TON when it comes to farming ExpeditionYou want your maps to have as much quantity as humanly possible, as the monsters are going to be affected and obviously,",
+        "this will mean significantly more rewards and overall logbooks as well!Map tier matters when it comes to Expedition! The logbook ilvl will inherit the zone ilvl and this will drastically change the value of one logbook to the next! Therefore, you will want to be farming T14+ maps for this strategy!",
+        "When it comes to quantity stacking on your maps, there are a few things you can do; ",
+        "Roll your maps properly and vaal them for potentially 8 mod maps.",
+        "Use Sacrifice Fragments on your map device, each fragment will add 5% quantity to your map.",
+        "Grab as many of the following small passives on your atlas '2% increased effect of Modifiers on non-unique Maps'",
+        "A certain Altar modifier can actually increase global quantity in your maps, so look out for it: ",
+        "Packsize will increase total Altars found which will increase the odds of finding the Altar modifier above, so grabbing the following Atlas passive and using Fortune Favour the Brave on your map device is a solid choice.",
+        "The order in which you set your explosives in Expedition is EXTREMELY important! Reason being that every subsequent explosion and monsters which spawn from those explosions will inherit all previous modifiers.",
+        "Because of this, we want to start off by grabbing all the Remnants (see above) which we care about and finish off with as many Runic Monsters (see above) as possibleThis is how to maximise your odds of finding logbooks!"
+    ]
+}

@@ -11,6 +11,7 @@ import Home from './pages/home/';
 import Syndicate from './pages/syndicate/';
 import Passives from './pages/passives/';
 import Chromatic from './pages/chromatic_calculator/';
+import Cheatsheet from './pages/cheatsheet/';
 
 ReactGA.initialize("UA-158247637-1", {
 		// debug: true,
@@ -22,17 +23,23 @@ function App() {
 		const display = props.display
 		return (
 			<Routes>
-				<Route path="/syndicate" element={<Syndicate />}>
+				{/* Static Routes */}
+				<Route exact path="/" element={<Home />}>
 				</Route>
-				<Route path="/syndicate-overlay" element={<Syndicate display={display}/>}>
-				</Route>
-				<Route path="/archnemesis" element={<Archnemesis />}>
-				</Route>
-				<Route exact path="/passives" element={<Passives />}>
+				<Route exact path="/archnemesis" element={<Archnemesis />}>
 				</Route>
 				<Route exact path="/chromatic" element={<Chromatic />}>
 				</Route>
-				<Route exact path="/" element={<Home />}>
+				<Route exact path="/passives" element={<Passives />}>
+				</Route>
+				<Route exact path="/syndicate" element={<Syndicate />}>
+				</Route>
+				<Route exact path="/syndicate-overlay" element={<Syndicate display={display}/>}>
+				</Route>
+				<Route exact path="/cheatsheet" element={<Cheatsheet />}>
+				</Route>
+				{/* Dynamic Routes */}
+				<Route path="/cheatsheet/:guide" element={<Cheatsheet />}>
 				</Route>
 			</Routes>
 		)
@@ -68,6 +75,7 @@ function App() {
 						<Router>
 							<MyLayout />
 						</Router>
+						
 					</div>
 				</ThemeProvider>
 			);

@@ -1,0 +1,1909 @@
+{
+  "Abyss Monster Count": {
+    "name": "Abyss Monster Count",
+    "notable": false,
+    "image_name": "AbyssNode1",
+    "text": ["Abysses in Area spawn 10% increased Monsters"]
+  },
+  "Underground Kingdom": {
+    "name": "Underground Kingdom",
+    "notable": true,
+    "image_name": "AbyssNotable2",
+    "text": [
+      "Areas have 1% chance to contain an Abyss per 2% increased Pack Size"
+    ]
+  },
+  "Abyss Chance": {
+    "name": "Abyss Chance",
+    "notable": false,
+    "image_name": "AbyssNode1",
+    "text": ["Areas have +1% chance to contain an Abyss"]
+  },
+  "Abyssal Army": {
+    "name": "Abyssal Army",
+    "notable": true,
+    "image_name": "AbyssNotable5",
+    "text": [
+      "Abyss Monsters in Areas grant 50% increased Experience",
+      "Abysses in Area spawn 100% increased Monsters"
+    ]
+  },
+  "Abyssal Depths Item Quantity": {
+    "name": "Abyssal Depths Item Quantity",
+    "notable": false,
+    "image_name": "AbyssNode1",
+    "text": [
+      "10% increased Quantity of Items dropped in Abyssal Depths in Areas"
+    ]
+  },
+  "Votive Hoard": {
+    "name": "Votive Hoard",
+    "notable": true,
+    "image_name": "AbyssNotable6",
+    "text": [
+      "Abyssal Troves in Areas have 20% chance to drop a Rare Item with an Abyssal Socket"
+    ]
+  },
+  "Corrupted Gaze": {
+    "name": "Corrupted Gaze",
+    "notable": true,
+    "image_name": "AbyssNotable",
+    "text": [
+      "Abyss Jewels found in Areas have 20% chance to be Corrupted and have 5 or 6 random Modifiers"
+    ]
+  },
+  "Lightless Legion": {
+    "name": "Lightless Legion",
+    "notable": true,
+    "image_name": "AbyssNotable3",
+    "text": [
+      "Abyssal Depths in Areas have +3 to Monster Level",
+      "Abyssal Depths in Areas have 100% more Magic Monsters",
+      "Abyssal Depths in Areas have 100% more Rare Monsters",
+      "Abyssal Depths in Areas have 30% increased Pack Size"
+    ]
+  },
+  "Abyss and Abyssal Depths Chances": {
+    "name": "Abyss and Abyssal Depths Chances",
+    "notable": false,
+    "image_name": "AbyssNode1",
+    "text": [
+      "Areas have +1% chance to contain an Abyss",
+      "Abysses in Areas have 10% increased chance to lead to an Abyssal Depths"
+    ]
+  },
+  "Awakened Depths": {
+    "name": "Awakened Depths",
+    "notable": true,
+    "image_name": "AbyssNotable5",
+    "text": [
+      "Abysses in Areas have 50% increased chance to lead to an Abyssal Depths",
+      "Abyssal Depths in Areas have 100% increased chance to contain a Lich"
+    ]
+  },
+  "Incursion Item Quantity": {
+    "name": "Incursion Item Quantity",
+    "notable": false,
+    "image_name": "AlvaNode",
+    "text": ["5% increased Quantity of Items dropped in Incursions in Areas"]
+  },
+  "The Perpetual Search": {
+    "name": "The Perpetual Search",
+    "notable": true,
+    "image_name": "AlvaNotable4",
+    "text": [
+      "Areas have 4% chance to grant an additional Alva Mission on Completion"
+    ]
+  },
+  "Incursion Pack Size": {
+    "name": "Incursion Pack Size",
+    "notable": false,
+    "image_name": "AlvaNode",
+    "text": ["Incursions in Areas have 5% increased Pack Size"]
+  },
+  "Incursion Upgrade Chance": {
+    "name": "Incursion Upgrade Chance",
+    "notable": false,
+    "image_name": "AlvaNode",
+    "text": [
+      "Killing non-resident Architects in Areas has 10% chance to addan additional Upgrade Tier to the surviving Architect's Room"
+    ]
+  },
+  "Resource Reallocation": {
+    "name": "Resource Reallocation",
+    "notable": true,
+    "image_name": "AlvaNotable2",
+    "text": [
+      "Killing non-resident Architects in Areas has 40% chance to addan additional Upgrade Tier to the surviving Architect's Room"
+    ]
+  },
+  "Contested Development": {
+    "name": "Contested Development",
+    "notable": true,
+    "image_name": "AlvaNotable3",
+    "text": [
+      "Killing resident Architects in Areas adds their Upgrade Tier to the surviving Architect's Room"
+    ]
+  },
+  "Incursion Rare Chance": {
+    "name": "Incursion Rare Chance",
+    "notable": false,
+    "image_name": "AlvaNode",
+    "text": [
+      "Incursion Architects in Areas have a 20% chance to drop an additional Rare Incursion Item"
+    ]
+  },
+  "Vaal Oligarchs": {
+    "name": "Vaal Oligarchs",
+    "notable": true,
+    "image_name": "VaalNotable1",
+    "text": ["Incursions in Areas contain a Vaal Flesh Merchant"]
+  },
+  "Artefacts of the Vaal": {
+    "name": "Artefacts of the Vaal",
+    "notable": true,
+    "image_name": "AlvaNode2",
+    "text": [
+      "Areas have 3% chance to grant an additional Alva Mission on Completion",
+      "Incursion Architects in Areas have a 60% chance to drop an additional Rare Incursion Item"
+    ]
+  },
+  "Incursion Mission Chance": {
+    "name": "Incursion Mission Chance",
+    "notable": false,
+    "image_name": "AlvaNode2",
+    "text": [
+      "Areas have 1% chance to grant an additional Alva Mission on Completion"
+    ]
+  },
+  "Time Dilation": {
+    "name": "Time Dilation",
+    "notable": true,
+    "image_name": "VaalNotable2",
+    "text": [
+      "Incursions in Areas have 33% chance for all Monsters to be at least Magic",
+      "Time gained from kills is Doubled for Incursions in Areas"
+    ]
+  },
+  "Exile Pair Chance": {
+    "name": "Exile Pair Chance",
+    "notable": false,
+    "image_name": "AnarchyNode1",
+    "text": ["10% chance for Rogue Exiles in Areas to appear in Pairs"]
+  },
+  "Ruckus": {
+    "name": "Ruckus",
+    "notable": true,
+    "image_name": "AnarchyNotable1",
+    "text": ["Areas have a 8% chance to contain 20 additional Rogue Exiles"]
+  },
+  "Exiled Will": {
+    "name": "Exiled Will",
+    "notable": true,
+    "image_name": "Anarchy4",
+    "text": [
+      "Rogue Exiles in Areas have 100% chance to be Possessed by a Tormented Spirit"
+    ]
+  },
+  "Additional Exile Spawn Chance": {
+    "name": "Additional Exile Spawn Chance",
+    "notable": false,
+    "image_name": "AnarchyNode1",
+    "text": ["Areas have a 10% chance to contain an additional Rogue Exile"]
+  },
+  "Rogue Trader": {
+    "name": "Rogue Trader",
+    "notable": true,
+    "image_name": "AnarchyNotable2",
+    "text": [
+      "Wild Rogue Exiles in Areas have 50% chance to have additional Rewards",
+      "Rogue Exiles have 100% more Maximum Life"
+    ]
+  },
+  "Exile Currency Chance": {
+    "name": "Exile Currency Chance",
+    "notable": false,
+    "image_name": "AnarchyNode1",
+    "text": [
+      "Rogue Exiles in Areas have 5% chance to drop an additional Currency Item"
+    ]
+  },
+  "Royal Guard": {
+    "name": "Royal Guard",
+    "notable": true,
+    "image_name": "Anarchy5",
+    "text": [
+      "Map Bosses have 20% chance to be accompanied by two Rogue Exile Bodyguards"
+    ]
+  },
+  "Bestiary Yellow Beast Amount": {
+    "name": "Bestiary Yellow Beast Amount",
+    "notable": false,
+    "image_name": "BestiaryNode1",
+    "text": [
+      "Areas that contain capturable Beasts have 1 additional Yellow Beast"
+    ]
+  },
+  "Animal Companion": {
+    "name": "Animal Companion",
+    "notable": true,
+    "image_name": "BestiaryNotable2",
+    "text": [
+      "Areas have 4% chance to grant an additional Einhar Mission on Completion"
+    ]
+  },
+  "Bestiary Mission Chance": {
+    "name": "Bestiary Mission Chance",
+    "notable": false,
+    "image_name": "BestiaryNode1",
+    "text": [
+      "Areas have 1% chance to grant an additional Einhar Mission on Completion"
+    ]
+  },
+  "Bestiary Beast Duplication Chance": {
+    "name": "Bestiary Beast Duplication Chance",
+    "notable": false,
+    "image_name": "BestiaryNode1",
+    "text": ["3% chance to create a copy of Beasts Captured in Areas"]
+  },
+  "Great Migration": {
+    "name": "Great Migration",
+    "notable": true,
+    "image_name": "BestiaryNotable5",
+    "text": [
+      "Areas with Einhar Missions have 8% chance to contain additional Packs of Beasts instead of other Monsters"
+    ]
+  },
+  "Bestiary Red Beast Chance": {
+    "name": "Bestiary Red Beast Chance",
+    "notable": false,
+    "image_name": "BestiaryNode1",
+    "text": [
+      "Areas that contain capturable Beasts have 5% chance to contain an additional Red Beast"
+    ]
+  },
+  "The Hunt for Craiceann": {
+    "name": "The Hunt for Craiceann",
+    "notable": true,
+    "image_name": "Bestiarybosses3",
+    "text": [
+      "Red Beasts in Areas have 100% increased chance to be from The Deep"
+    ]
+  },
+  "The Hunt for Farrul": {
+    "name": "The Hunt for Farrul",
+    "notable": true,
+    "image_name": "Bestiarybosses2",
+    "text": [
+      "Red Beasts in Areas have 100% increased chance to be from The Wilds"
+    ]
+  },
+  "The Hunt for Fenumus": {
+    "name": "The Hunt for Fenumus",
+    "notable": true,
+    "image_name": "Bestiarybosses4",
+    "text": [
+      "Red Beasts in Areas have 100% increased chance to be from The Caverns"
+    ]
+  },
+  "The Hunt for Saqawal": {
+    "name": "The Hunt for Saqawal",
+    "notable": true,
+    "image_name": "Bestiarybosses1",
+    "text": [
+      "Red Beasts in Areas have 100% increased chance to be from The Sands"
+    ]
+  },
+  "Natural Selection": {
+    "name": "Natural Selection",
+    "notable": true,
+    "image_name": "BestiaryNotable1",
+    "text": ["Beasts in Areas are more likely to be less common varieties"]
+  },
+  "Bestiary Red Beast Pair Chance": {
+    "name": "Bestiary Red Beast Pair Chance",
+    "notable": false,
+    "image_name": "BestiaryNode1",
+    "text": ["Red Beasts in Areas have 4% chance to appear in Pairs"]
+  },
+  "Mighty Hunter": {
+    "name": "Mighty Hunter",
+    "notable": true,
+    "image_name": "BestiaryNotable3",
+    "text": [
+      "Einhar has 100% increased Cooldown Recovery Rate in Areas",
+      "Einhar deals 1000% more Damage to Unique Monsters in Areas",
+      "Einhar remains in Areas after his Mission is Complete"
+    ]
+  },
+  "Big Game": {
+    "name": "Big Game",
+    "notable": true,
+    "image_name": "BestiaryNotable4",
+    "text": [
+      "Yellow Beasts in Areas have 15% chance to be replaced with Red Beasts"
+    ]
+  },
+  "Beyond Demon Experience": {
+    "name": "Beyond Demon Experience",
+    "notable": false,
+    "image_name": "BeyondNode1",
+    "text": ["Beyond Demons in Areas grant 10% increased Experience"]
+  },
+  "Scent of Blood": {
+    "name": "Scent of Blood",
+    "notable": true,
+    "image_name": "BeyondNotable2",
+    "text": [
+      "Slaying Enemies close together in Areas has a 3% chance to attract monsters from Beyond"
+    ]
+  },
+  "Beyond Demon Chance": {
+    "name": "Beyond Demon Chance",
+    "notable": false,
+    "image_name": "BeyondNode1",
+    "text": [
+      "Beyond Portals in Areas have 5% chance to spawn an additional Beyond Demon"
+    ]
+  },
+  "Beyond Portal Merging Radius": {
+    "name": "Beyond Portal Merging Radius",
+    "notable": false,
+    "image_name": "BeyondNode1",
+    "text": ["Beyond Portals in Areas have 10% increased Merging Radius"]
+  },
+  "Torn Veil": {
+    "name": "Torn Veil",
+    "notable": true,
+    "image_name": "BeyondNotable3",
+    "text": [
+      "Powerful Beyond Demons require 1 fewer Portal to summon in Areas",
+      "Beyond Portals in Areas have 30% increased Merging Radius"
+    ]
+  },
+  "Beyond Demon Item Quantity": {
+    "name": "Beyond Demon Item Quantity",
+    "notable": false,
+    "image_name": "BeyondNode1",
+    "text": ["8% increased Quantity of Items dropped by Beyond Demons in Areas"]
+  },
+  "Fiendish Opulence": {
+    "name": "Fiendish Opulence",
+    "notable": true,
+    "image_name": "BeyondNotable5",
+    "text": [
+      "Rare Beyond Demons in Areas have 25% chance to drop an additional Basic Currency Item"
+    ]
+  },
+  "Blight Encounter Chance": {
+    "name": "Blight Encounter Chance",
+    "notable": false,
+    "image_name": "BlightNotable1",
+    "text": ["Areas have +1% chance to contain a Blight Encounter"]
+  },
+  "Mycelial Swarm": {
+    "name": "Mycelial Swarm",
+    "notable": true,
+    "image_name": "BlightNotable6",
+    "text": [
+      "Areas with Blight Encounters have 20% chance to contain an additional Blight Encounter"
+    ]
+  },
+  "Blighted Map and Oil Chance": {
+    "name": "Blighted Map and Oil Chance",
+    "notable": false,
+    "image_name": "BlightNode1",
+    "text": [
+      "Blight Chests in Areas have 10% increased chance to contain Blighted Maps or Oils"
+    ]
+  },
+  "Epidemiology": {
+    "name": "Epidemiology",
+    "notable": true,
+    "image_name": "BlightNotable4",
+    "text": [
+      "25% increased effect of Modifiers on Blighted Maps",
+      "Blight Chests in Areas have 80% more chance to contain Blighted Maps"
+    ]
+  },
+  "Lucky Blight Chests": {
+    "name": "Lucky Blight Chests",
+    "notable": false,
+    "image_name": "BlightNode1",
+    "text": [
+      "Varieties of Items contained in 1 Blight Chest in Areas are Lucky"
+    ]
+  },
+  "Spores on the Wind": {
+    "name": "Spores on the Wind",
+    "notable": true,
+    "image_name": "BlightNotable2",
+    "text": [
+      "Maps found in Areas have 3% chance to have an 'Area contains a Blight Encounter'Enchantment Modifier"
+    ]
+  },
+  "Distilled Fungus": {
+    "name": "Distilled Fungus",
+    "notable": true,
+    "image_name": "BlightInjectorNotable",
+    "text": [
+      "Blight Bosses in Areas drop an additional Anointed Jewellery Item",
+      "Blight Chests in Areas have 10% chance to contain an Oil Extractor"
+    ]
+  },
+  "Blightspawn": {
+    "name": "Blightspawn",
+    "notable": true,
+    "image_name": "BlightNotable3",
+    "text": [
+      "Oils found in Areas have 25% chance to be 1 tier higher",
+      "Blight Encounters in Areas contain up to 1 additional Blight Boss"
+    ]
+  },
+  "Additional Blight Chest Chance": {
+    "name": "Additional Blight Chest Chance",
+    "notable": false,
+    "image_name": "BlightNode1",
+    "text": [
+      "Lanes of Blight Encounters in Areas have 5% chance for an additional Reward Chest"
+    ]
+  },
+  "Immune Response": {
+    "name": "Immune Response",
+    "notable": true,
+    "image_name": "BlightNotable5",
+    "text": [
+      "Blight Encounters in Areas spawn 100% more Non-Unique Monsters",
+      "Blight Monsters in Areas spawn 150% faster"
+    ]
+  },
+  "Map Boss Rarity": {
+    "name": "Map Boss Rarity",
+    "notable": false,
+    "image_name": "MapBossnode",
+    "text": ["25% increased Rarity of Items dropped by Map Bosses"]
+  },
+  "Enriched Entities": {
+    "name": "Enriched Entities",
+    "notable": true,
+    "image_name": "MapBossnotable1",
+    "text": [
+      "Map Bosses drop an additional Basic Currency Item",
+      "Map Bosses have 20% chance to be Duplicated if possible"
+    ]
+  },
+  "Fated Conflict": {
+    "name": "Fated Conflict",
+    "notable": true,
+    "image_name": "MapBossnotable2",
+    "text": [
+      "Map Bosses have 3% chance to drop an additional Unique Item",
+      "Map Bosses have 80% increased chance to drop a Fated Unique Item"
+    ]
+  },
+  "Magic Breach Monster Chance": {
+    "name": "Magic Breach Monster Chance",
+    "notable": false,
+    "image_name": "BreachNode2",
+    "text": ["Breaches in Areas spawn 8% increased Magic Monsters"]
+  },
+  "Probing for Weaknesses": {
+    "name": "Probing for Weaknesses",
+    "notable": true,
+    "image_name": "BreachNotable5",
+    "text": ["Areas have +4% chance to contain Breaches"]
+  },
+  "Breach Chest Splinter Quantity": {
+    "name": "Breach Chest Splinter Quantity",
+    "notable": false,
+    "image_name": "BreachNode2",
+    "text": [
+      "10% increased Quantity of Breach Splinters found in Breach Hands in Areas"
+    ]
+  },
+  "Gatekeepers": {
+    "name": "Gatekeepers",
+    "notable": true,
+    "image_name": "BreachNotable3",
+    "text": [
+      "Breaches in Areas have 70% increased chance to contain a Boss",
+      "Breach Bosses in Areas drop double Breach Splinters"
+    ]
+  },
+  "Breach Boss Chance": {
+    "name": "Breach Boss Chance",
+    "notable": false,
+    "image_name": "BreachNode2",
+    "text": ["Breaches in Areas have 8% increased chance to contain a Boss"]
+  },
+  "Within Their Grasp": {
+    "name": "Within Their Grasp",
+    "notable": true,
+    "image_name": "BreachNotable2",
+    "text": [
+      "Breach Bosses Defeated in Areas have 8% chance to drop a Breachstone",
+      "Breachstones dropped by Breach Bosses in Areas have 9% chance to be Charged",
+      "Breachstones dropped by Breach Bosses in Areas have 3% chance to be Enriched",
+      "Breachstones dropped by Breach Bosses in Areas have 1% chance to be Pure"
+    ]
+  },
+  "Breach Chance": {
+    "name": "Breach Chance",
+    "notable": false,
+    "image_name": "BreachNode2",
+    "text": ["Areas have +1% chance to contain Breaches"]
+  },
+  "Flash Breach": {
+    "name": "Flash Breach",
+    "notable": true,
+    "image_name": "BreachNotable6",
+    "text": [
+      "Breaches in Areas have 30% increased Area of Effect",
+      "Breaches in Areas have 30% increased Monster density",
+      "Breaches in Areas open and close 50% faster"
+    ]
+  },
+  "Xoph Breach Chance": {
+    "name": "Xoph Breach Chance",
+    "notable": false,
+    "image_name": "BreachNode2",
+    "text": [
+      "Breaches in Areas have 100% increased chance to belong to Xoph",
+      "Areas have +1% chance to contain Breaches"
+    ]
+  },
+  "Tul Breach Chance": {
+    "name": "Tul Breach Chance",
+    "notable": false,
+    "image_name": "BreachNode2",
+    "text": [
+      "Breaches in Areas have 100% increased chance to belong to Tul",
+      "Areas have +1% chance to contain Breaches"
+    ]
+  },
+  "Esh Breach Chance": {
+    "name": "Esh Breach Chance",
+    "notable": false,
+    "image_name": "BreachNode2",
+    "text": [
+      "Breaches in Areas have 100% increased chance to belong to Esh",
+      "Areas have +1% chance to contain Breaches"
+    ]
+  },
+  "Uul-Netol Breach Chance": {
+    "name": "Uul-Netol Breach Chance",
+    "notable": false,
+    "image_name": "BreachNode2",
+    "text": [
+      "Breaches in Areas have 60% increased chance to belong to Uul-Netol",
+      "Areas have +1% chance to contain Breaches"
+    ]
+  },
+  "Chayula Breach Chance": {
+    "name": "Chayula Breach Chance",
+    "notable": false,
+    "image_name": "BreachNode2",
+    "text": [
+      "Areas have +1% chance to contain Breaches",
+      "Breaches in Areas have 30% increased chance to belong to Chayula"
+    ]
+  },
+  "Call of Xesht-Ula": {
+    "name": "Call of Xesht-Ula",
+    "notable": true,
+    "image_name": "BreachNotable4",
+    "text": [
+      "Breaches in Areas have 2% chance to contain Xesht-Ula, the Open Hand",
+      "Breaches in Areas have 20% chance to contain a Hand of Xesht-Ula"
+    ]
+  },
+  "Searing Exarch Item Chance": {
+    "name": "Searing Exarch Item Chance",
+    "notable": false,
+    "image_name": "TheCleansingFireNode",
+    "text": [
+      "Monsters Influenced by The Searing Exarch in Areas have 0.2% chance to drop an Item with a Searing Exarch Implicit Modifier"
+    ]
+  },
+  "Searing Exarch Influence Pack Size": {
+    "name": "Searing Exarch Influence Pack Size",
+    "notable": false,
+    "image_name": "TheCleansingFireNode",
+    "text": ["Influenced Monster Packs in Areas have 5% increased Pack Size"]
+  },
+  "Baptised by Fire": {
+    "name": "Baptised by Fire",
+    "notable": true,
+    "image_name": "TheCleansingFire1",
+    "text": [
+      "Maps have 10% chance to award double progress towards encountering The Searing Exarch"
+    ]
+  },
+  "Liberated Knowledge": {
+    "name": "Liberated Knowledge",
+    "notable": true,
+    "image_name": "TheCleansingFire2",
+    "text": [
+      "The Searing Exarch has 10% chance to drop an additional Exceptional Eldritch Ember",
+      "The Searing Exarch has 25% increased chance to drop Forbidden Flame",
+      "The Black Star has 10% chance to drop an additional Grand Eldritch Ember"
+    ]
+  },
+  "The Light of Dawn": {
+    "name": "The Light of Dawn",
+    "notable": true,
+    "image_name": "TheCleansingFire3",
+    "text": [
+      "+20% chance to spawn a Searing Exarch Altar when the Influence of The Searing Exarch first appears in Areas",
+      "Eldritch Embers found have 10% chance to be Duplicated for each Searing Exarch Altar used in the Area",
+      "Players take 10% increased Damage for each Searing Exarch Altar used in the Area"
+    ]
+  },
+  "Word of the Exarch": {
+    "name": "Word of the Exarch",
+    "notable": true,
+    "image_name": "TheCleansingFire4",
+    "text": [
+      "Eldritch Embers found in Areas influenced by The Searing Exarch have 10% chance to be Duplicated",
+      "Monster Packs Influenced by The Searing Exarch in Areas have 2% chance to contain an additional Possessing Flame Wraith"
+    ]
+  },
+  "Conqueror Influenced Item Drop Chance": {
+    "name": "Conqueror Influenced Item Drop Chance",
+    "notable": false,
+    "image_name": "ConquerorNode1",
+    "text": [
+      "Items found in Conqueror Maps have 5% increased chance to be Influenced"
+    ]
+  },
+  "Martial Forces": {
+    "name": "Martial Forces",
+    "notable": true,
+    "image_name": "ConquerorNotable1",
+    "text": [
+      "20% increased Quantity of Items found in Conqueror Maps",
+      "Conqueror Maps have 20% increased Pack Size",
+      "Eldritch Bosses have 20% chance to drop a Conqueror Map"
+    ]
+  },
+  "Conquered Conquerors": {
+    "name": "Conquered Conquerors",
+    "notable": true,
+    "image_name": "ConquerorNotable3",
+    "text": [
+      "Conquerors have 25% increased chance to drop a Conqueror's Exalted Orb",
+      "Map Bosses have 25% increased chance to drop a Conqueror Map",
+      "Sirus has 10% chance to drop an Awakened Support Gem"
+    ]
+  },
+  "Additional Delirium Reward Chance": {
+    "name": "Additional Delirium Reward Chance",
+    "notable": false,
+    "image_name": "DeliriumNode1",
+    "text": [
+      "Delirium Encounters in Areas have 4% chance to generate an additional Reward type"
+    ]
+  },
+  "That Which You Seek": {
+    "name": "That Which You Seek",
+    "notable": true,
+    "image_name": "DeliriumNotable1",
+    "text": ["Areas have +4% chance to contain a mirror of Delirium"]
+  },
+  "Delirium Chance": {
+    "name": "Delirium Chance",
+    "notable": false,
+    "image_name": "DeliriumNode1",
+    "text": ["Areas have +1% chance to contain a mirror of Delirium"]
+  },
+  "Delirium Simulacrum Splinters": {
+    "name": "Delirium Simulacrum Splinters",
+    "notable": false,
+    "image_name": "DeliriumNode1",
+    "text": ["4% increased Stack size of Simulacrum Splinters found in Areas"]
+  },
+  "Descent Into Madness": {
+    "name": "Descent Into Madness",
+    "notable": true,
+    "image_name": "DeliriumNotable4",
+    "text": [
+      "Delirium in Areas increases 50% faster with distance from the mirror"
+    ]
+  },
+  "The Singular Eternity": {
+    "name": "The Singular Eternity",
+    "notable": true,
+    "image_name": "DeliriumNotable5",
+    "text": [
+      "Delirium Fog in Areas dissipates 25% slower",
+      "Delirium Fog in Areas lasts 10 additional seconds before dissipating"
+    ]
+  },
+  "Delirium Fog Dissipation Speed": {
+    "name": "Delirium Fog Dissipation Speed",
+    "notable": false,
+    "image_name": "DeliriumNode1",
+    "text": ["Delirium Fog in Areas dissipates 5% slower"]
+  },
+  "Cluster Jewel Chance": {
+    "name": "Cluster Jewel Chance",
+    "notable": false,
+    "image_name": "DeliriumNode1",
+    "text": [
+      "Delirium Monsters in Areas have 5% increased chance to drop Cluster Jewels"
+    ]
+  },
+  "Pathological": {
+    "name": "Pathological",
+    "notable": true,
+    "image_name": "DeliriumNotable6",
+    "text": ["Maps found in Areas have 3% chance to have layers of Delirium"]
+  },
+  "Compulsive Hoarder": {
+    "name": "Compulsive Hoarder",
+    "notable": true,
+    "image_name": "DeliriumNotable2",
+    "text": [
+      "Delirium Encounters in Areas have 8% chance to generate three additional Reward types"
+    ]
+  },
+  "Delusions of Persecution": {
+    "name": "Delusions of Persecution",
+    "notable": true,
+    "image_name": "DeliriumNotable3",
+    "text": [
+      "Delirium Encounters in Areas are 100% more likely to spawn Unique Bosses",
+      "Delirium Bosses in Areas drop 50% increased Simulacrum Splinters",
+      "Delirium Bosses in Areas have 50% increased chance to drop Unique Cluster Jewels"
+    ]
+  },
+  "Delve Sulphite Quantity": {
+    "name": "Delve Sulphite Quantity",
+    "notable": false,
+    "image_name": "DelveNode",
+    "text": [
+      "Voltaxic Sulphite Veins and Chests in Areas contain 3% increased Sulphite"
+    ]
+  },
+  "Mad Devotion": {
+    "name": "Mad Devotion",
+    "notable": true,
+    "image_name": "DelveNotable6",
+    "text": [
+      "Areas have 4% chance to grant an additional Niko Mission on Completion"
+    ]
+  },
+  "Delve Mission Chance": {
+    "name": "Delve Mission Chance",
+    "notable": false,
+    "image_name": "DelveNode2",
+    "text": [
+      "Areas have 1% chance to grant an additional Niko Mission on Completion"
+    ]
+  },
+  "Guarded Hoards": {
+    "name": "Guarded Hoards",
+    "notable": true,
+    "image_name": "DelveNotable1",
+    "text": [
+      "Voltaxic Sulphite Veins and Chests in Areas have 5% chance to contain double Sulphite",
+      "Sulphite Veins and Chests in Areas are guarded by Sulphite-hoarding Monsters"
+    ]
+  },
+  "Packed with Energy": {
+    "name": "Packed with Energy",
+    "notable": true,
+    "image_name": "DelveNotable2",
+    "text": [
+      "+1% to all maximum Elemental Resistances for each Voltaxic Sulphite Vein or Chest found in Areas",
+      "35% increased Damage for each Voltaxic Sulphite Vein or Chest found in Areas",
+      "15% increased Movement Speed for each Voltaxic Sulphite Vein or Chest found in Areas"
+    ]
+  },
+  "Sulphite Infusion": {
+    "name": "Sulphite Infusion",
+    "notable": true,
+    "image_name": "DelveNotable3",
+    "text": [
+      "White Tier Maps grant 200 additional Voltaxic Sulphite on Completion",
+      "Yellow Tier Maps grant 350 additional Voltaxic Sulphite on Completion",
+      "Red Tier Maps grant 500 additional Voltaxic Sulphite on Completion"
+    ]
+  },
+  "Mining Byproducts": {
+    "name": "Mining Byproducts",
+    "notable": true,
+    "image_name": "DelveNotable4",
+    "text": [
+      "Sulphite Veins and Chests in Areas have 10% chance to also contain an equal amount of Azurite"
+    ]
+  },
+  "Domination Shrine Duration": {
+    "name": "Domination Shrine Duration",
+    "notable": false,
+    "image_name": "ShrinesNode",
+    "text": ["25% increased Duration of Shrine Effects on Players in Areas"]
+  },
+  "Supplication": {
+    "name": "Supplication",
+    "notable": true,
+    "image_name": "ShrinesNode",
+    "text": ["Areas contain an additional Shrine"]
+  },
+  "Domination Shrine Chance": {
+    "name": "Domination Shrine Chance",
+    "notable": false,
+    "image_name": "ShrinesNode",
+    "text": ["Areas have a 10% chance to contain an additional Shrine"]
+  },
+  "Drawn to Power": {
+    "name": "Drawn to Power",
+    "notable": true,
+    "image_name": "Shrines",
+    "text": [
+      "Shrines in Areas have 50% chance to be guarded by an additional Pack of Monsters",
+      "Shrines in Areas are guarded by at least one Magic Pack"
+    ]
+  },
+  "Domination Shrine Effect": {
+    "name": "Domination Shrine Effect",
+    "notable": false,
+    "image_name": "ShrinesNode",
+    "text": ["20% increased Effect of Shrine Effects on Players in Areas"]
+  },
+  "Syncretism": {
+    "name": "Syncretism",
+    "notable": true,
+    "image_name": "Shrines",
+    "text": [
+      "30% increased Effect of Shrine Effects on Players in Areas",
+      "Shrines in Areas grant a random additional Shrine Effect"
+    ]
+  },
+  "All That Glitters": {
+    "name": "All That Glitters",
+    "notable": true,
+    "image_name": "GreedShrinenoteble",
+    "text": ["Shrines in Areas have 10% chance to be a Covetous Shrine"]
+  },
+  "Shaper, Elder and Guardian Influenced Item Chance": {
+    "name": "Shaper, Elder and Guardian Influenced Item Chance",
+    "notable": false,
+    "image_name": "ElderShaperNode1",
+    "text": [
+      "The Shaper, The Elder and their Guardians have a 20% chance to drop an Influenced Item"
+    ]
+  },
+  "Remnants of the Past": {
+    "name": "Remnants of the Past",
+    "notable": true,
+    "image_name": "ElderShaperNotable1",
+    "text": [
+      "Map Bosses have 2% chance to drop an Elder Guardian Map (Tier 14+)",
+      "Map Bosses have 2% chance to drop a Shaper Guardian Map (Tier 14+)"
+    ]
+  },
+  "Gaze into the Abyss": {
+    "name": "Gaze into the Abyss",
+    "notable": true,
+    "image_name": "ElderShaperNotable2",
+    "text": [
+      "Map Bosses have 1% chance to drop an Elder Guardian Map (Tier 14+)",
+      "The Elder has +10% chance to drop a Watcher's Eye",
+      "The Shaper drops 3 additional Shaper Items"
+    ]
+  },
+  "Guardian's Aid": {
+    "name": "Guardian's Aid",
+    "notable": true,
+    "image_name": "ElderShaperNotable3",
+    "text": [
+      "Map Bosses have 1% chance to drop a Shaper Guardian Map (Tier 14+)",
+      "Shaper and Elder Guardians are healed and joined by an ally on first reaching 33% LifeAllies have a chance to drop their Fragments"
+    ]
+  },
+  "Essence Rare Chance": {
+    "name": "Essence Rare Chance",
+    "notable": false,
+    "image_name": "EssenceNode2",
+    "text": [
+      "Imprisoned Monsters in Areas have 25% chance to drop an additional Rare Item with an Essence Modifier"
+    ]
+  },
+  "Prolific Essence": {
+    "name": "Prolific Essence",
+    "notable": true,
+    "image_name": "EssenceNotable1",
+    "text": ["Areas contain an additional Essence"]
+  },
+  "Essence Chance": {
+    "name": "Essence Chance",
+    "notable": false,
+    "image_name": "EssenceNode2",
+    "text": ["Areas have 5% chance to contain an additional Essence"]
+  },
+  "Amplified Energies": {
+    "name": "Amplified Energies",
+    "notable": true,
+    "image_name": "EssenceNotable3",
+    "text": ["Essences found in Areas are a tier higher"]
+  },
+  "Imprisoned Monster Additional Essence Chance": {
+    "name": "Imprisoned Monster Additional Essence Chance",
+    "notable": false,
+    "image_name": "EssenceNode2",
+    "text": [
+      "Imprisoned Monsters in Areas have 5% chance to have an additional Essence"
+    ]
+  },
+  "Remnant of Corruption Essence Chance": {
+    "name": "Remnant of Corruption Essence Chance",
+    "notable": false,
+    "image_name": "EssenceNode2",
+    "text": [
+      "Monsters Imprisoned by Essences have a 10% chance to contain a Remnant of Corruption"
+    ]
+  },
+  "Crystal Resonance": {
+    "name": "Crystal Resonance",
+    "notable": true,
+    "image_name": "EssenceNotable2",
+    "text": [
+      "Monsters Imprisoned by a Shrieking Essence in Areas will be Duplicated when released",
+      "Corrupting Imprisoned Monsters in Areas cannot release them"
+    ]
+  },
+  "Crystal Lattice": {
+    "name": "Crystal Lattice",
+    "notable": true,
+    "image_name": "EssenceNode2",
+    "text": [
+      "Imprisoned Monsters in Areas have 15% chance to have 3 additional Essences"
+    ]
+  },
+  "Expedition Artifact Quantity": {
+    "name": "Expedition Artifact Quantity",
+    "notable": false,
+    "image_name": "ExpeditionNode1",
+    "text": ["4% increased quantity of Artifacts dropped by Monsters"]
+  },
+  "Hunt for Answers": {
+    "name": "Hunt for Answers",
+    "notable": true,
+    "image_name": "ExpeditionNode1",
+    "text": ["Areas have +4% chance to contain an Expedition Encounter"]
+  },
+  "Distinguished Demolitionist": {
+    "name": "Distinguished Demolitionist",
+    "notable": true,
+    "image_name": "ExpeditionNotable2",
+    "text": [
+      "35% increased Explosive Radius in Areas",
+      "20% increased number of Explosives in Areas"
+    ]
+  },
+  "Expedition Chance": {
+    "name": "Expedition Chance",
+    "notable": false,
+    "image_name": "ExpeditionNode1",
+    "text": ["Areas have +1% chance to contain an Expedition Encounter"]
+  },
+  "Expedition Vendor Reroll Currency Chance": {
+    "name": "Expedition Vendor Reroll Currency Chance",
+    "notable": false,
+    "image_name": "ExpeditionNode1",
+    "text": [
+      "5% increased Quantity of Vendor Refresh Currencies dropped by Monsters in Areas"
+    ]
+  },
+  "Ancient Writings": {
+    "name": "Ancient Writings",
+    "notable": true,
+    "image_name": "ExpeditionNotable3",
+    "text": [
+      "Remnants in Areas have 30% chance to have an additional Suffix Modifier",
+      "Expeditions in Areas have +2 Remnants"
+    ]
+  },
+  "Explosive Placement Distance": {
+    "name": "Explosive Placement Distance",
+    "notable": false,
+    "image_name": "ExpeditionNode1",
+    "text": ["20% increased Explosive Placement Range in Areas"]
+  },
+  "Buried Knowledge": {
+    "name": "Buried Knowledge",
+    "notable": true,
+    "image_name": "ExpeditionNotable1",
+    "text": [
+      "50% increased Quantity of Expedition Logbooks dropped by Runic Monsters in Areas",
+      "Areas contain 20% increased number of Runic Monster Markers"
+    ]
+  },
+  "Additional Harbinger Shards": {
+    "name": "Additional Harbinger Shards",
+    "notable": false,
+    "image_name": "HarbingerNode1",
+    "text": [
+      "Harbingers in Areas have 20% chance to drop an additional Currency Shard"
+    ]
+  },
+  "Ominous Arrival": {
+    "name": "Ominous Arrival",
+    "notable": true,
+    "image_name": "HarbingerNotable1",
+    "text": ["Areas contain an additional Harbinger"]
+  },
+  "Additional Harbinger Chance": {
+    "name": "Additional Harbinger Chance",
+    "notable": false,
+    "image_name": "HarbingerNode1",
+    "text": ["Areas have a 5% chance to contain an additional Harbinger"]
+  },
+  "First Wave": {
+    "name": "First Wave",
+    "notable": true,
+    "image_name": "HarbingerNotable3",
+    "text": [
+      "Harbingers in Areas have 25% chance to be replaced by a powerful Harbinger boss"
+    ]
+  },
+  "Unspeakable Offensive": {
+    "name": "Unspeakable Offensive",
+    "notable": true,
+    "image_name": "HarbingerNode1",
+    "text": [
+      "Harbingers in Areas have 60% increased Cooldown Recovery Rate",
+      "Harbingers in Areas summon 60% more Minions",
+      "Currency Shards dropped by Harbingers in Areas can drop as Currency Items instead"
+    ]
+  },
+  "Additional Harvest Crafting Chance": {
+    "name": "Additional Harvest Crafting Chance",
+    "notable": false,
+    "image_name": "HarvestNode",
+    "text": [
+      "Plants Harvested in Areas have 3% chance to give an additional Crafting option"
+    ]
+  },
+  "Call of the Grove": {
+    "name": "Call of the Grove",
+    "notable": true,
+    "image_name": "HarvestNotable3",
+    "text": ["Areas have +4% chance to contain The Sacred Grove"]
+  },
+  "Harvest Chance": {
+    "name": "Harvest Chance",
+    "notable": false,
+    "image_name": "HarvestNode",
+    "text": ["Areas have +1% chance to contain The Sacred Grove"]
+  },
+  "Bountiful Harvest": {
+    "name": "Bountiful Harvest",
+    "notable": true,
+    "image_name": "HarvestNotable2",
+    "text": [
+      "Harvest Monsters in Areas grant 200% increased Experience",
+      "Harvested Plants in Areas have 50% chance to spawn an additional Monster"
+    ]
+  },
+  "Heart of the Grove": {
+    "name": "Heart of the Grove",
+    "notable": true,
+    "image_name": "HarvestNotable6",
+    "text": [
+      "Harvest Bosses in Areas always drop a Sacred Blossom",
+      "Harvests in Areas have 10% chance for the unchosen Crop to not wilt"
+    ]
+  },
+  "Bumper Crop": {
+    "name": "Bumper Crop",
+    "notable": true,
+    "image_name": "HarvestNotable1",
+    "text": ["The Sacred Grove in Areas contains an additional Harvest"]
+  },
+  "Heist Marker Stack Size": {
+    "name": "Heist Marker Stack Size",
+    "notable": false,
+    "image_name": "HeistNode1",
+    "text": ["8% increased Stack size of Rogue's Markers found in Areas"]
+  },
+  "Heist Blueprint Chance": {
+    "name": "Heist Blueprint Chance",
+    "notable": false,
+    "image_name": "HeistNode1",
+    "text": ["8% more Blueprints found in Areas"]
+  },
+  "Secret Stash": {
+    "name": "Secret Stash",
+    "notable": true,
+    "image_name": "HeistNotable1",
+    "text": ["Areas have +4% chance to contain a Smuggler's Cache"]
+  },
+  "Heist Smuggler's Cache Chance": {
+    "name": "Heist Smuggler's Cache Chance",
+    "notable": false,
+    "image_name": "HeistNotable1",
+    "text": ["Areas have +1% chance to contain a Smuggler's Cache"]
+  },
+  "Casing the Joint": {
+    "name": "Casing the Joint",
+    "notable": true,
+    "image_name": "HeistNotable2",
+    "text": [
+      "Smuggler's Caches in Areas have 100% increased chance to drop Blueprints",
+      "Blueprints that drop in Areas have 10% chance to be fully Revealed"
+    ]
+  },
+  "Smuggling Routes": {
+    "name": "Smuggling Routes",
+    "notable": true,
+    "image_name": "HeistRobot",
+    "text": ["Areas have 10% chance to contain a Bounty Target Pack"]
+  },
+  "Betrayal Syndicate Reinforcement Chance": {
+    "name": "Betrayal Syndicate Reinforcement Chance",
+    "notable": false,
+    "image_name": "JunNode1",
+    "text": [
+      "Immortal Syndicate Members in Areas are 5% morelikely to be accompanied by reinforcements"
+    ]
+  },
+  "Focused Investigation": {
+    "name": "Focused Investigation",
+    "notable": true,
+    "image_name": "JunNotable2",
+    "text": [
+      "Areas have 4% chance to grant an additional Jun Mission on Completion"
+    ]
+  },
+  "Betrayal Mission Chance": {
+    "name": "Betrayal Mission Chance",
+    "notable": false,
+    "image_name": "JunNode2",
+    "text": [
+      "Areas have 1% chance to grant an additional Jun Mission on Completion"
+    ]
+  },
+  "Effective Leadership": {
+    "name": "Effective Leadership",
+    "notable": true,
+    "image_name": "JunNotable5",
+    "text": [
+      "Immortal Syndicate Members in Areas are 100% more likely to be accompanied by their Leader",
+      "Immortal Syndicate Leaders in Areas drop an additional Veiled Item"
+    ]
+  },
+  "Betrayal Veiled Item Chance": {
+    "name": "Betrayal Veiled Item Chance",
+    "notable": false,
+    "image_name": "JunNode1",
+    "text": [
+      "Immortal Syndicate Members have 15% chance to drop an additional Veiled Item"
+    ]
+  },
+  "Bribery": {
+    "name": "Bribery",
+    "notable": true,
+    "image_name": "JunNotable4",
+    "text": [
+      "Immortal Syndicate Members in Areas are 200% morelikely to offer to Bargain for Items",
+      "Immortal Syndicate Members in Areas drop 200% moreItems when Bargained with for Items"
+    ]
+  },
+  "Test of Loyalty": {
+    "name": "Test of Loyalty",
+    "notable": true,
+    "image_name": "JunNotable1",
+    "text": [
+      "Immortal Syndicate Members Executed in Areas have 100% chance to gain an additional Rank"
+    ]
+  },
+  "Intelligence Gathering": {
+    "name": "Intelligence Gathering",
+    "notable": true,
+    "image_name": "JunNotable6",
+    "text": [
+      "Completing Maps grants 10 Intelligence for a random Immortal Syndicate Safehouse"
+    ]
+  },
+  "Labyrinth Trial Chance": {
+    "name": "Labyrinth Trial Chance",
+    "notable": false,
+    "image_name": "AscendancyNode",
+    "text": ["Areas have +2% chance to contain a Trial of Ascendancy"]
+  },
+  "Trial of Glory": {
+    "name": "Trial of Glory",
+    "notable": true,
+    "image_name": "Ascendancy",
+    "text": [
+      "Labyrinth Trials in Areas have 20% chance to award an Improved Offering to the Goddess",
+      "Areas have +4% chance to contain a Trial of Ascendancy"
+    ]
+  },
+  "Legion Duplicate Splinter Chance": {
+    "name": "Legion Duplicate Splinter Chance",
+    "notable": false,
+    "image_name": "LegionNode1",
+    "text": [
+      "Splinters dropped by Legion Monsters or contained in Legion Chests in Areas have 4% chance to be Duplicated"
+    ]
+  },
+  "Monumental": {
+    "name": "Monumental",
+    "notable": true,
+    "image_name": "LegionNotable1",
+    "text": ["Areas have +4% chance to contain a Legion Encounter"]
+  },
+  "Legion Monolith Chance": {
+    "name": "Legion Monolith Chance",
+    "notable": false,
+    "image_name": "LegionNode1",
+    "text": ["Areas have +1% chance to contain a Legion Encounter"]
+  },
+  "Legion Duration": {
+    "name": "Legion Duration",
+    "notable": false,
+    "image_name": "LegionNode1",
+    "text": ["Legion Encounters in Areas have 10% increased Duration"]
+  },
+  "Chain of Command": {
+    "name": "Chain of Command",
+    "notable": true,
+    "image_name": "LegionNotable5",
+    "text": [
+      "Legions in Areas contains 2 additional Sergeants",
+      "Legion Sergeants in Areas have 20% additional chance to have Rewards"
+    ]
+  },
+  "Protracted Battle": {
+    "name": "Protracted Battle",
+    "notable": true,
+    "image_name": "LegionNotable3",
+    "text": [
+      "Legion Encounters in Areas have 40% increased Duration",
+      "Legion Monsters in Areas take 50% increased Damage while in Stasis"
+    ]
+  },
+  "Karui Legion Chance": {
+    "name": "Karui Legion Chance",
+    "notable": false,
+    "image_name": "LegionNode1",
+    "text": [
+      "Areas have +1% chance to contain a Legion Encounter",
+      "Legion Encounters in Areas have 100% increased chance to include a Karui army"
+    ]
+  },
+  "Eternal Legion Chance": {
+    "name": "Eternal Legion Chance",
+    "notable": false,
+    "image_name": "LegionNode1",
+    "text": [
+      "Areas have +1% chance to contain a Legion Encounter",
+      "Legion Encounters in Areas have 100% increased chance to include an Eternal Empire army"
+    ]
+  },
+  "Vaal Legion Chance": {
+    "name": "Vaal Legion Chance",
+    "notable": false,
+    "image_name": "LegionNode1",
+    "text": [
+      "Areas have +1% chance to contain a Legion Encounter",
+      "Legion Encounters in Areas have 80% increased chance to include a Vaal army"
+    ]
+  },
+  "Templar Legion Chance": {
+    "name": "Templar Legion Chance",
+    "notable": false,
+    "image_name": "LegionNode1",
+    "text": [
+      "Areas have +1% chance to contain a Legion Encounter",
+      "Legion Encounters in Areas have 60% increased chance to include a Templar army"
+    ]
+  },
+  "Maraketh Legion Chance": {
+    "name": "Maraketh Legion Chance",
+    "notable": false,
+    "image_name": "LegionNode1",
+    "text": [
+      "Areas have +1% chance to contain a Legion Encounter",
+      "Legion Encounters in Areas have 40% increased chance to include a Maraketh army"
+    ]
+  },
+  "Emblematic": {
+    "name": "Emblematic",
+    "notable": true,
+    "image_name": "LegionNotable6",
+    "text": [
+      "Timeless Splinters dropped in Areas have 0.6% chance to drop as Timeless Emblems instead"
+    ]
+  },
+  "Legion Timeless Emblem Chance": {
+    "name": "Legion Timeless Emblem Chance",
+    "notable": false,
+    "image_name": "LegionNode1",
+    "text": [
+      "Timeless Splinters dropped in Areas have 0.2% chance to drop as Timeless Emblems instead"
+    ]
+  },
+  "Face Off": {
+    "name": "Face Off",
+    "notable": true,
+    "image_name": "LegionNotable2",
+    "text": [
+      "Legion Encounters in Areas are 60% more likely to include a General",
+      "Legion Encounters with a General in Areas have both Generals"
+    ]
+  },
+  "War Supplies": {
+    "name": "War Supplies",
+    "notable": true,
+    "image_name": "LegionNotable4",
+    "text": ["Each Legion in Areas contains an additional War Hoard"]
+  },
+  "Higher Map Tier Chance": {
+    "name": "Higher Map Tier Chance",
+    "notable": false,
+    "image_name": "Mapnode",
+    "text": ["Maps dropped in Areas have 5% chance to be 1 tier higher"]
+  },
+  "Shaping the Mountains": {
+    "name": "Shaping the Mountains",
+    "notable": true,
+    "image_name": "Mapnotable1",
+    "text": [
+      "10% chance on Completing Areas to gain a free use of a random Map crafting option",
+      "Maps dropped in Areas have 15% chance to be 1 tier higher"
+    ]
+  },
+  "Shaping the Skies": {
+    "name": "Shaping the Skies",
+    "notable": true,
+    "image_name": "Mapnotable2",
+    "text": [
+      "3% chance on Completing Areas to gain a free use of a special Map crafting option",
+      "Maps dropped in Areas have 15% chance to be 1 tier higher"
+    ]
+  },
+  "Shaping the Seas": {
+    "name": "Shaping the Seas",
+    "notable": true,
+    "image_name": "Mapnotable3",
+    "text": [
+      "Maps found in Areas have 25% increased chance to be Favoured Maps",
+      "Maps dropped in Areas have 15% chance to be 1 tier higher"
+    ]
+  },
+  "Shaping the Valleys": {
+    "name": "Shaping the Valleys",
+    "notable": true,
+    "image_name": "Mapnotable4",
+    "text": [
+      "10% increased Quantity of Items found in Areas affected by Fortune Favours the Brave",
+      "10% increased Rarity of Items found in Areas affected by Fortune Favours the Brave",
+      "10% increased Pack Size of Areas affected by Fortune Favours the Brave",
+      "Maps dropped in Areas have 15% chance to be 1 tier higher"
+    ]
+  },
+  "Additional Metamorph Sample Reward": {
+    "name": "Additional Metamorph Sample Reward",
+    "notable": false,
+    "image_name": "MetamorphNode1",
+    "text": ["+1 Metamorph Monster Samples in Areas have Rewards"]
+  },
+  "Intrinsic Darkness": {
+    "name": "Intrinsic Darkness",
+    "notable": true,
+    "image_name": "MetamorphNotable1",
+    "text": ["Areas have +4% chance to contain a Metamorph Encounter"]
+  },
+  "Metamorph Chance": {
+    "name": "Metamorph Chance",
+    "notable": false,
+    "image_name": "MetamorphNode1",
+    "text": ["Areas have +1% chance to contain a Metamorph Encounter"]
+  },
+  "Replicated Results": {
+    "name": "Replicated Results",
+    "notable": true,
+    "image_name": "MetamorphNotable2",
+    "text": [
+      "You can assemble an additional Metamorph in Areas after the first is Dead"
+    ]
+  },
+  "Fine Specimens": {
+    "name": "Fine Specimens",
+    "notable": true,
+    "image_name": "MetamorphNotable4",
+    "text": [
+      "Metamorphs in Areas deal 15% more Damage",
+      "Metamorphs in Areas have 150% more Life",
+      "30% chance for Rewards from Metamorphs in Areas to be Doubled"
+    ]
+  },
+  "Metamorph Double Reward Chance": {
+    "name": "Metamorph Double Reward Chance",
+    "notable": false,
+    "image_name": "MetamorphNode1",
+    "text": ["3% chance for Rewards from Metamorphs in Areas to be Doubled"]
+  },
+  "Organ Donor": {
+    "name": "Organ Donor",
+    "notable": true,
+    "image_name": "MetamorphNotable6",
+    "text": [
+      "Metamorph Bosses which drop an Itemised Sample drop an additional Itemised Sample",
+      "Metamorph Vat Meters in Areas require 25% less Power to fill"
+    ]
+  },
+  "Rogue Metamorph Chance": {
+    "name": "Rogue Metamorph Chance",
+    "notable": false,
+    "image_name": "MetamorphNode1",
+    "text": ["Areas have 4% chance to contain a rogue Metamorph"]
+  },
+  "Escaped Experiment": {
+    "name": "Escaped Experiment",
+    "notable": true,
+    "image_name": "MetamorphNotable3",
+    "text": ["Areas have 20% chance to contain a rogue Metamorph"]
+  },
+  "Rare Monster Duplication": {
+    "name": "Rare Monster Duplication",
+    "notable": false,
+    "image_name": "RareMonstersnode",
+    "text": ["1 Rare Monster in Areas are Duplicated"]
+  },
+  "Spoils of War": {
+    "name": "Spoils of War",
+    "notable": true,
+    "image_name": "RareMonstersnotable",
+    "text": [
+      "Rare Monsters in Areas have 1% chance to drop an additional Basic Currency Item",
+      "Rare Monsters in Areas have 5% chance to drop an additional Rare Jewellery Item"
+    ]
+  },
+  "Ritual Tribute Quantity": {
+    "name": "Ritual Tribute Quantity",
+    "notable": false,
+    "image_name": "RitualNode1",
+    "text": [
+      "Monsters Sacrificed at Ritual Altars in Areas grant 4% increased Tribute"
+    ]
+  },
+  "Sacred Lands": {
+    "name": "Sacred Lands",
+    "notable": true,
+    "image_name": "RitualNotable1",
+    "text": ["Areas have +4% chance to contain Ritual Altars"]
+  },
+  "Ritual Chance": {
+    "name": "Ritual Chance",
+    "notable": false,
+    "image_name": "RitualNode1",
+    "text": ["Areas have +1% chance to contain Ritual Altars"]
+  },
+  "Occult Devotion": {
+    "name": "Occult Devotion",
+    "notable": true,
+    "image_name": "Ritual",
+    "text": ["Areas with Ritual Altars always have four Ritual Altars"]
+  },
+  "Ritual Special Reward Chance": {
+    "name": "Ritual Special Reward Chance",
+    "notable": false,
+    "image_name": "RitualNode1",
+    "text": ["25% increased chance of Ritual Altars with Special Rewards"]
+  },
+  "Ritual Reroll Cost": {
+    "name": "Ritual Reroll Cost",
+    "notable": false,
+    "image_name": "RitualNode1",
+    "text": [
+      "Rerolling Favours at Ritual Altars in Areas costs 15% less Tribute"
+    ]
+  },
+  "Profitable Prayers": {
+    "name": "Profitable Prayers",
+    "notable": true,
+    "image_name": "RitualNotable2",
+    "text": [
+      "Ritual Altars in Areas allow rerolling Favours 2 additional times"
+    ]
+  },
+  "Sacrificial Due": {
+    "name": "Sacrificial Due",
+    "notable": true,
+    "image_name": "RitualNode1",
+    "text": [
+      "Completing the final Ritual Altar in Areas has 10% chance to drop a Blood-filled Vessel"
+    ]
+  },
+  "Atlas Scarab Chance": {
+    "name": "Atlas Scarab Chance",
+    "notable": false,
+    "image_name": "ScarabNode1",
+    "text": ["Map Bosses have 1% chance to drop an additional Scarab"]
+  },
+  "Subtle Manipulations": {
+    "name": "Subtle Manipulations",
+    "notable": true,
+    "image_name": "ScarabNotable1",
+    "text": ["Map Device has 10% chance not to consume Scarabs"]
+  },
+  "Atlas Currency Chance": {
+    "name": "Atlas Currency Chance",
+    "notable": false,
+    "image_name": "Sextantnode1",
+    "text": ["Map Bosses have 1% chance to drop additional Map Currency Items"]
+  },
+  "Enduring Influence": {
+    "name": "Enduring Influence",
+    "notable": true,
+    "image_name": "Sextantnotable1",
+    "text": ["Sextant Modifiers have 1 additional use"]
+  },
+  "Twice Tempted": {
+    "name": "Twice Tempted",
+    "notable": true,
+    "image_name": "StrongboxNotable1",
+    "text": ["Areas contain an additional Strongbox"]
+  },
+  "Strongbox Additional Pack Chance": {
+    "name": "Strongbox Additional Pack Chance",
+    "notable": false,
+    "image_name": "StrongboxNode1",
+    "text": [
+      "Strongboxes in Areas have 15% chance to be guarded by an additional Pack of Monsters"
+    ]
+  },
+  "Tamper-Proof": {
+    "name": "Tamper-Proof",
+    "notable": true,
+    "image_name": "StrongboxNotable2",
+    "text": [
+      "Strongboxes in Areas are Corrupted",
+      "Strongboxes in Areas are at least Rare"
+    ]
+  },
+  "Strongbox Chance to be Reopenable ": {
+    "name": "Strongbox Chance to be Reopenable ",
+    "notable": false,
+    "image_name": "StrongboxNode1",
+    "text": ["Strongboxes opened in Areas have 2% chance to be openable again"]
+  },
+  "Secret Operations": {
+    "name": "Secret Operations",
+    "notable": true,
+    "image_name": "StrongboxScarab",
+    "text": [
+      "Strongboxes in Areas have 6% chance to be an Operative's Strongbox"
+    ]
+  },
+  "Strongbox Item Quantity": {
+    "name": "Strongbox Item Quantity",
+    "notable": false,
+    "image_name": "StrongboxNode1",
+    "text": ["10% increased Quantity of Items dropped by Strongboxes in Areas"]
+  },
+  "Arcanist's Strongbox Chance": {
+    "name": "Arcanist's Strongbox Chance",
+    "notable": false,
+    "image_name": "StrongboxNode1",
+    "text": [
+      "Strongboxes in Areas have 30% increased chance to be an Arcanist's Strongbox"
+    ]
+  },
+  "Cartographer's Strongbox Chance": {
+    "name": "Cartographer's Strongbox Chance",
+    "notable": false,
+    "image_name": "StrongboxNode1",
+    "text": [
+      "Strongboxes in Areas have 30% increased chance to be a Cartographer's Strongbox"
+    ]
+  },
+  "Diviner's Strongbox Chance": {
+    "name": "Diviner's Strongbox Chance",
+    "notable": false,
+    "image_name": "StrongboxNode1",
+    "text": [
+      "Strongboxes in Areas have 30% increased chance to be a Diviner's Strongbox"
+    ]
+  },
+  "Backup Cache": {
+    "name": "Backup Cache",
+    "notable": true,
+    "image_name": "StrongboxCurrency",
+    "text": ["Strongboxes in Areas contain Duplicated Currency Items"]
+  },
+  "Concealed Logistics": {
+    "name": "Concealed Logistics",
+    "notable": true,
+    "image_name": "StrongboxCelestial",
+    "text": ["Strongboxes in Areas contain Duplicated Map Items"]
+  },
+  "Vault of Mysteries": {
+    "name": "Vault of Mysteries",
+    "notable": true,
+    "image_name": "StrongboxDiviner",
+    "text": ["Strongboxes in Areas contain Duplicated Divination Cards"]
+  },
+  "Neural Pathways": {
+    "name": "Neural Pathways",
+    "notable": true,
+    "image_name": "SynthesisNotable2",
+    "text": [
+      "+0.5% chance for a Synthesis Map to drop from Map Bosses (Tier 11+)",
+      "Monsters in Synthesis Maps have 2% chance to drop Synthesised Items"
+    ]
+  },
+  "Vivid Memories": {
+    "name": "Vivid Memories",
+    "notable": true,
+    "image_name": "SynthesisNotable3",
+    "text": [
+      "+0.5% chance for a Synthesis Map to drop from Map Bosses (Tier 11+)",
+      "100% increased effect of Additional Modifiers on Unique Synthesis Maps"
+    ]
+  },
+  "Synaptic Impulses": {
+    "name": "Synaptic Impulses",
+    "notable": true,
+    "image_name": "SynthesisNotable1",
+    "text": [
+      "+0.5% chance for a Synthesis Map to drop from Map Bosses (Tier 11+)",
+      "Synthesised Unique Items dropped in Areas have 3 Synthesised Implicit Modifiers"
+    ]
+  },
+  "Synthesis Monster Pack Size": {
+    "name": "Synthesis Monster Pack Size",
+    "notable": false,
+    "image_name": "SynthesisNode1",
+    "text": ["4% increased Synthesised Monster Pack size"]
+  },
+  "Eater of Worlds Item Chance": {
+    "name": "Eater of Worlds Item Chance",
+    "notable": false,
+    "image_name": "TheTangleNode",
+    "text": [
+      "Monsters Influenced by The Eater of Worlds in Areas have 0.2% chance to drop an item with an Eater of Worlds Implicit Modifier"
+    ]
+  },
+  "Eater of Worlds Pack Size": {
+    "name": "Eater of Worlds Pack Size",
+    "notable": false,
+    "image_name": "TheTangleNode",
+    "text": ["Influenced Monster Packs in Areas have 5% increased Pack Size"]
+  },
+  "Etched by Acid": {
+    "name": "Etched by Acid",
+    "notable": true,
+    "image_name": "TheTangle1",
+    "text": [
+      "Maps have 10% chance to award double progress towards encountering The Eater of Worlds"
+    ]
+  },
+  "Regurgitated Relics": {
+    "name": "Regurgitated Relics",
+    "notable": true,
+    "image_name": "TheTangle2",
+    "text": [
+      "Eldritch Currency Items dropped by The Infinite Hunger or The Eater of Worlds have 25% chance to be Duplicated",
+      "The Eater of Worlds has 25% increased chance to drop Forbidden Flesh"
+    ]
+  },
+  "The Shadow of Hunger": {
+    "name": "The Shadow of Hunger",
+    "notable": true,
+    "image_name": "TheTangle3",
+    "text": ["50% increased chance to find Eater of Worlds Altars in Areas"]
+  },
+  "Rampant Growth": {
+    "name": "Rampant Growth",
+    "notable": true,
+    "image_name": "TheTangle4",
+    "text": [
+      "Monster Packs Influenced by The Eater of Worlds in Areas have 2% chance to contain an additional Touching Tentacle Mass",
+      "Eldritch Ichor found in Areas influenced by The Eater of Worlds have 10% chance to be Duplicated"
+    ]
+  },
+  "Tormented Monster Item Quantity": {
+    "name": "Tormented Monster Item Quantity",
+    "notable": false,
+    "image_name": "TormentNode1",
+    "text": [
+      "20% increased Quantity of Items dropped by Possessed or Touched Monsters in Areas"
+    ]
+  },
+  "Seance": {
+    "name": "Seance",
+    "notable": true,
+    "image_name": "TormentNotable1",
+    "text": [
+      "Up to 5 Rare Monsters in Areas are Possessed and their Minions are Touched"
+    ]
+  },
+  "Tormented Spirit Duration": {
+    "name": "Tormented Spirit Duration",
+    "notable": false,
+    "image_name": "TormentNode1",
+    "text": ["Tormented Spirits in Areas have 50% increased Duration"]
+  },
+  "Tormented Spirit Chance": {
+    "name": "Tormented Spirit Chance",
+    "notable": false,
+    "image_name": "TormentNode1",
+    "text": [
+      "Areas have a 10% chance to contain an additional Tormented Spirit"
+    ]
+  },
+  "Unrelenting Torment": {
+    "name": "Unrelenting Torment",
+    "notable": true,
+    "image_name": "TormentNode1",
+    "text": [
+      "Map Bosses have 10% chance to be surrounded by Tormented Spirits",
+      "30% more Quantity of Items dropped by Possessed Monsters in Areas"
+    ]
+  },
+  "Unique Map Chance": {
+    "name": "Unique Map Chance",
+    "notable": false,
+    "image_name": "UniqueMapsNode",
+    "text": [
+      "Map Items have a 0.2% chance to drop as a random Unique Map instead in Areas"
+    ]
+  },
+  "Deadly Nightmare": {
+    "name": "Deadly Nightmare",
+    "notable": true,
+    "image_name": "UniqueMaps",
+    "text": ["Unique maps have +2 to Monster Level"]
+  },
+  "Vaal Side Area Chance": {
+    "name": "Vaal Side Area Chance",
+    "notable": false,
+    "image_name": "VaalsideareasNode",
+    "text": ["Areas have +2% chance to contain a Vaal Side Area"]
+  },
+  "For Love of the Queen": {
+    "name": "For Love of the Queen",
+    "notable": true,
+    "image_name": "Vaalsideareas",
+    "text": [
+      "Vaal Side Areas in Areas have 20% chance to be an Alluring Vaal Side Area",
+      "Areas have +4% chance to contain a Vaal Side Area"
+    ]
+  },
+  "Kirac Map Quality": {
+    "name": "Kirac Map Quality",
+    "notable": false,
+    "image_name": "KiracNode",
+    "text": ["+5% to Quality of Maps offered by Kirac Missions in Areas"]
+  },
+  "Commissioned Officer": {
+    "name": "Commissioned Officer",
+    "notable": true,
+    "image_name": "KiracNode",
+    "text": [
+      "Gain 1 additional Kirac Mission each day",
+      "Areas have 3% chance to grant an additional Kirac Mission on Completion"
+    ]
+  },
+  "Expect the Unexpected": {
+    "name": "Expect the Unexpected",
+    "notable": true,
+    "image_name": "KiracNotable3",
+    "text": [
+      "5% chance for Scouting Reports in Areas to drop as Blighted Scouting Reports instead",
+      "5% chance for Scouting Reports in Areas to drop as Delirious Scouting Reports instead",
+      "5% chance for Scouting Reports in Areas to drop as Otherworldly Scouting Reports instead"
+    ]
+  },
+  "Expert Reconnaissance": {
+    "name": "Expert Reconnaissance",
+    "notable": true,
+    "image_name": "KiracNotable1",
+    "text": ["60% increased Atlas Scouting Reports found in Areas"]
+  },
+  "Kirac Mission Chance": {
+    "name": "Kirac Mission Chance",
+    "notable": false,
+    "image_name": "KiracNode",
+    "text": [
+      "Areas have 1% chance to grant an additional Kirac Mission on Completion"
+    ]
+  },
+  "Planar Tactician": {
+    "name": "Planar Tactician",
+    "notable": true,
+    "image_name": "KiracNotable4",
+    "text": [
+      "20% increased Atlas Scouting Reports found in Areas",
+      "20% chance for Scouting Reports in Areas to drop as Comprehensive Scouting Reports instead"
+    ]
+  },
+  "Kirac Mission Pack Size": {
+    "name": "Kirac Mission Pack Size",
+    "notable": false,
+    "image_name": "KiracNode",
+    "text": ["Kirac Mission Areas have 5% increased Pack Size"]
+  },
+  "Solidarity": {
+    "name": "Solidarity",
+    "notable": true,
+    "image_name": "KiracNotable2",
+    "text": [
+      "20% increased Atlas Scouting Reports found in Areas",
+      "10% chance for Scouting Reports in Areas to drop as Operative's Scouting Reports instead"
+    ]
+  },
+  "Maven Invitation Item Quantity": {
+    "name": "Maven Invitation Item Quantity",
+    "notable": false,
+    "image_name": "TheMavenNode",
+    "text": ["3% increased Quantity of Items found in The Maven's Crucible"]
+  },
+  "The Most Toys": {
+    "name": "The Most Toys",
+    "notable": true,
+    "image_name": "TheMaven1",
+    "text": [
+      "Defeating a Map Boss while Witnessed by The Maven has 10% chance to count as also Witnessing an additional random Map Boss"
+    ]
+  },
+  "Pay for Play": {
+    "name": "Pay for Play",
+    "notable": true,
+    "image_name": "TheMaven2",
+    "text": [
+      "25% chance for Orbs of Conflict found in Areas to be duplicated",
+      "25% increased chance to drop an Awakened Support Gem on completing The Maven's Crucible or defeating The Maven"
+    ]
+  },
+  "Captivated Interest": {
+    "name": "Captivated Interest",
+    "notable": true,
+    "image_name": "TheMavenNode",
+    "text": [
+      "20% more Crescent Splinters found in The Maven's Crucible",
+      "The Maven's Crucible has +2 to Monster Level"
+    ]
+  },
+  "Adjacent Map Drop Chance": {
+    "name": "Adjacent Map Drop Chance",
+    "notable": false,
+    "image_name": "BossMapDrops",
+    "text": [
+      "2% chance for an additional connected Map to drop from Map Bosses"
+    ]
+  },
+  "Item Quantity": {
+    "name": "Item Quantity",
+    "notable": false,
+    "image_name": "ItemQuantity",
+    "text": ["1% increased Quantity of Items found in Areas"]
+  },
+  "Map Modifier Effect": {
+    "name": "Map Modifier Effect",
+    "notable": false,
+    "image_name": "ModifierTier",
+    "text": ["2% increased effect of Modifiers on Non-Unique Maps"]
+  },
+  "Map Drop Duplication": {
+    "name": "Map Drop Duplication",
+    "notable": false,
+    "image_name": "MapDuplication",
+    "text": ["0.5% chance for Map Drops to be Duplicated"]
+  },
+  "Item Quantity and Rarity": {
+    "name": "Item Quantity and Rarity",
+    "notable": false,
+    "image_name": "ItemQuantityandRarity",
+    "text": [
+      "1% increased Quantity of Items found in Areas",
+      "5% increased Rarity of Items found in Areas"
+    ]
+  }
+}

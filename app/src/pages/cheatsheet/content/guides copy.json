@@ -1,0 +1,160 @@
+{
+    "General": [
+        {
+            "name": "Maps Prep",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Atlas Progression & Master Missions",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Pricing, Selling, Tracking Gains",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Corruptions",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Upgraded Items",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Low Investment Flips",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Hideout is Lava",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Eldritch Crafting",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Endless Heist",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Early Map Progression",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Strongboxes",
+            "file": "earlyMapProgression"
+        }
+    ],
+    "Mechanics": [
+        {
+            "name": "Betrayal",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Delirium Orbs",
+            "file": "deliriumOrbs"
+        },
+        {
+            "name": "Expedition",
+            "file": "expedition"
+        },
+        {
+            "name": "Breachstone Farming",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Blighted Maps",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Heist",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Blight",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Essences",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Legion Emblem Farming",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Metamorph",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Harvest",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Beast Farming",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Deli Mirror Farming",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Juicing",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Lab Farming",
+            "file": "earlyMapProgression"
+        },
+        {
+            "name": "Boss Farming",
+            "file": "earlyMapProgression"
+        }
+    ],
+    "Leveling": [
+        {
+            "name": "Leveling Tips",
+            "file": "act1"
+        },
+        {
+            "name": "Act 1",
+            "file": "act1"
+        },
+        {
+            "name": "Act 2",
+            "file": "act1"
+        },
+        {
+            "name": "Act 3",
+            "file": "act1"
+        },
+        {
+            "name": "Act 4",
+            "file": "act1"
+        },
+        {
+            "name": "Act 5",
+            "file": "act1"
+        },
+        {
+            "name": "Act 6",
+            "file": "act1"
+        },
+        {
+            "name": "Act 7",
+            "file": "act1"
+        },
+        {
+            "name": "Act 8",
+            "file": "act1"
+        },
+        {
+            "name": "Act 9",
+            "file": "act1"
+        },
+        {
+            "name": "Act 10",
+            "file": "act1"
+        }
+    ]
+}

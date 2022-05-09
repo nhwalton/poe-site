@@ -43,8 +43,8 @@ const Home = () => {
 							<p >Path of Exile's leagues feature complex mechanics and the tools below are designed to help navigate particularly burdensome ones.</p>
 						</div>
 						<div className="homeSection">
-							<h2>Syndicate Cheatsheet 3.17</h2>
-							<p>The Syndicate cheatsheet is updated for Path of Exile 3.17 and shows all Immortal Syndicate members and their safehouse rewards based on their location.</p>
+							<h2>Syndicate Cheatsheet 3.18</h2>
+							<p>The Syndicate cheatsheet is updated for Path of Exile 3.18 and shows all Immortal Syndicate members and their safehouse rewards based on their location.</p>
 
 							<p>The relative value of each reward is denoted in varying colors and can be changed by clicking on a cell. Scarab are priced automaticall by default, though you can toggle them on the top to set manual values. Auto scarab rankings are updated every 6 hours from <a className="homeLink" href="https://poe.ninja">Poe Ninja</a>.</p>
 							<p>An "overlay" version of the page can be found in the menu for use with tools like <a className="homeLink" href="https://github.com/PoE-Overlay-Community/PoE-Overlay-Community-Fork">POE-Overlay</a>.</p>
@@ -52,10 +52,15 @@ const Home = () => {
 							<PageModuleButton href="/syndicate" text="Syndicate Cheat Sheet" />
 						</div>
 						<div className="homeSection">
-							<h2>Archnemesis</h2>
-							<p>The Archnemesis tool allows you to view all craftable modifiers, all six league challenge combinations for "Defeat Archnemesis III", as well as custom modifier combinations.</p>
-							<p>A fullscreen mode is available for navigating the tree of larger recipes and each item can be collapsed to remove it from view.</p>
-							<PageModuleButton href="/archnemesis" text="Archnemesis" />
+							<h2>Chromatic Calculator</h2>
+							<p>A port of <a href="https://siveran.github.io/calc.html">Siveran's Chromatic Calculator</a>, this tool allows you copy and paste an item from in-game or from the trade site to view the odds of obtaining certain socket colors given the item's requirements. </p>
+							<p>Note: Item paste only supports items copied from the game or trade site as Path of Building does not provide attribute requirements on copy. If copying from game, please remember to remove all gems from the item as they will affect the reported requirements.</p>
+							<PageModuleButton href="/chromatic" text="Chromatic Calculator" />
+						</div>
+						<div className="homeSection">
+							<h2>Leveling Guide</h2>
+							<p>This leveling guide utilizes Path of Building to import all of the required gems for your build and helps track when they are available. Additionally, all passive skill points and lab trial locations are noted to help ensure you do not miss and key items while leveling.</p>
+							<PageModuleButton href="/passives" text="Leveling Guide" />
 						</div>
 						<div className="homeSection">
 							<h4>Notice of Non-Affiliation</h4>

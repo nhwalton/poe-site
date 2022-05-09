@@ -330,7 +330,7 @@ const CustomTheme = createTheme({
           }
         },
         {
-          props: { variant: "modal" },
+          props: { variant: "archModal" },
           style: {
             color: "#e0e0e0 !important",
             border: "1px solid #222",

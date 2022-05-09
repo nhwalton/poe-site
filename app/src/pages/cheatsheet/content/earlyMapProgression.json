@@ -1,0 +1,427 @@
+{
+    "type": "guide",
+    "name": "Early Map Progression",
+    "image": "AtlasPassiveMasteryMap",
+    "steps": [
+        {
+            "type": "text",
+            "text": "## Early Map Progression"
+        },
+        {
+            "type": "text",
+            "text": "In the early stages of the game, your character will be pretty weak and overall, \"juicing\" maps has little to no value as your clear speed will greatly suffer."
+        },
+        {
+            "type": "text",
+            "text": "**The first three sections will cover the core objectives as your start progressing your atlas:**"
+        },
+        {
+            "type": "numbered list",
+            "items": [
+                "Not to run out of maps.",
+                "Focus on Atlas completion in order to unlock as many passives as possible, as fast as possible.",
+                "Try and focus on guaranteed rewards with little to no investment"
+            ]
+        },
+        {
+            "type": "text",
+            "text": "### Map Sustain"
+        },
+        {
+            "type": "text",
+            "text": "As mentioned above, we need to make sure we *never* run out of maps."
+        },
+        {
+            "type": "text",
+            "text": "The best way to guarantee map sustain is Kirac missions. This is due to the fact whenever you start a Kirac mission, his entire shop will reset, providing you with a significant amount of maps. With this in mind, you will want to make sure to always empty out Kirac's shop of uncompleted maps as well as the highest possible map tier he is offering"
+        },
+        {
+            "type": "text",
+            "text": "In order to obtain Kirac missions, we will want to rush towards the `Commissioned Officer` on our Atlas by passing through `Expert Reconnaissance`."
+        },
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Expert Reconnaissance"
+                },
+                {
+                    "type": "arrow"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Commissioned Officer"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "text": "### Progressing Through Map Tiers"
+        },
+        {
+            "type": "text",
+            "text": "#### [Atlas Passive Tree](https://www.pathofexile.com/fullscreen-atlas-skill-tree/AAAABgAAHB_EKoQ-X0m8Wn1gIWa1d7V7p30dgHiD3YUniZGNKZF9l0WdOK4CuhfIYMof1Ifhi-Kn5yjvrvowAAA=)"
+        },
+        {
+            "type": "text",
+            "text": "In order to guarantee progression, we will want to prioritize `Maps dropped in Areas have % chance to be 1 tier higher` as well as `% chance for an additional connected Map to drop from Unique Map Bosses` on our atlas passive tree."
+        },
+        {
+            "type": "text",
+            "text": "You will want to path to one of the following passives as fast as possible and grab a 2nd one of them around the time you are reaching yellow maps. This should cover your bases for progression along side Kirac's shop."
+        },
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Shaping the Mountains"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Shaping the Skies"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Shaping the Valleys"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Shaping the Seas"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "text": "### Guaranting Rewards While Mapping"
+        },
+        {
+            "type": "text",
+            "text": "This will help with early gearing our character and buying any mapping supplies we might need."
+        },
+        {
+            "type": "text",
+            "text": "We have a few options and we certainly aren't limited to only one of them."
+        },
+        {
+            "type": "text",
+            "text": "### Essences"
+        },
+        {
+            "type": "text",
+            "text": "#### [Atlas Passive Tree](https://www.pathofexile.com/fullscreen-atlas-skill-tree/AAAABgAAMQgbCj0WxB_EJMso6SqENIg-X0m8TfxafWAhZrVmxnErdsJ3tXunfR2AeIPdhSeH-4htiZGNKZF9l0WdOKSsrgK6F8bZyGDKH8560U3Uh9jQ2ZDf-OGL4qflj-co767y6PowAAA=)"
+        },
+        {
+            "type": "text",
+            "text": "Essences can be quite good early on as the Dread Essence is always in high demand and many others can be used by crafters."
+        },
+        {
+            "type": "text",
+            "text": "Grabbing the following passives can help out with buying your necessary upgrades to allow for a smoother progression."
+        },
+        {
+            "type": "text",
+            "text": "* `Prolific Essence` will guarantee a free Essence every map."
+        },
+        {
+            "type": "text",
+            "text": "* `Amplified Energies` will then increase the tier of these Essences."
+        },
+        {
+            "type": "text",
+            "text": "* `Crystal Resonance` will duplicate any monsters which are imprisoned by a Shrieking Essence, which is basically every single Essence you encounter due to Amplified Energies, resulting in twice the amount of Essences rewarded."
+        },
+        {
+            "type": "text",
+            "text": "* `Crystal Lattice` will also add an extra 3 imprisoned monsters to your essences every 7 essences you encounter."
+        },
+        {
+            "type": "text",
+            "text": "The final result of this combination makes for quite a few Essences every map, with high chance of them being of the 3 highest tiers."
+        },
+        {
+            "type": "text",
+            "text": "**Remember to always sell your Essences in bulk, as we previously saw in the 'Pricing, Selling and Tracking Gains' chapter.**"
+        },
+        {
+            "type": "text",
+            "text": "It can be a good idea to invest slightly into this strategy with the Essence map mod (when available)."
+        },
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Prolific Essence"
+                },
+                {
+                    "type": "arrow"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Amplified Energies"
+                },
+                {
+                    "type": "arrow"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Crystal Resonance"
+                },
+                {
+                    "type": "arrow"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Crystal Lattice"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "text": "### Strongboxes"
+        },
+        {
+            "type": "text",
+            "text": "#### [Atlas Passive Tree](https://www.pathofexile.com/fullscreen-atlas-skill-tree/AAAABgAASAgbCfgKPRbEH8QkyyjQKOkqhDSIPkI-Xz80SbxN_E9hT9hT-1hFWn1gIWO1ZrVmxmfpbElxK3OLdsJ3tXunfR2AeIPdhSeH-4gZiG2JkYrRjSmRfZdFnCudOKSsrBCsH64Cr8G6F8bZyGDI5cofznrQUNFN1IfY0NmQ3_jhi-Kn5Y_nKOrV767y6Pj6-jD9yQAA)"
+        },
+        {
+            "type": "text",
+            "text": "Stronboxes are another mechanic which require almost no time investment and can be quite rewarding."
+        },
+        {
+            "type": "text",
+            "text": "Grabbing the following passives can help out with buying your necessary upgrades to allow for a smoother progression."
+        },
+        {
+            "type": "text",
+            "text": "* `Twice Tempted` will guarantee a free Strongbox in every single map."
+        },
+        {
+            "type": "text",
+            "text": "* `Tamper-Proof` will make it so you do not need to spend the time or currency to roll the Strongboxes as they will always be rare and corrupted. The fact they are corrupted also means they have increased chances of dropping 6-Links, which can be quite valuable early on."
+        },
+        {
+            "type": "text",
+            "text": "* `Secret Operations` will give you a 6% chance for your Strongbox to contain Scarabs, which are always very desirable."
+        },
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Twice Tempted"
+                },
+                {
+                    "type": "arrow"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Tamper-Proof"
+                },
+                {
+                    "type": "arrow"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Secret Operations"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "text": "Finally, the `Backup Cache`, `Vault of Mysteries` and `Concealed Logistics` will duplicate the content of your Strongboxes with either Currency, Divination Cards or Maps."
+        },
+        {
+            "type": "text",
+            "text": "The nodes leading up to those also greatly increases your chances at these type of Strongboxes, which also increases the value of these passives."
+        },
+        {
+            "type": "text",
+            "text": "It can be a very good idea to invest slightly into this strategy with Ambush map mod (when available) or Ambush Scarabs."
+        },
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Backup Cache"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Vault of Mysteries"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Concealed Logistics"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "text": "### Altars are unlocked sometime in yellow or early red maps."
+        },
+        {
+            "type": "text",
+            "text": "#### [Atlas Passive Tree](https://www.pathofexile.com/fullscreen-atlas-skill-tree/AAAABgAAXwgbCD8J-Ao9DOAU2hbEF8seWx_EJMso0CjpKoQwAzSIPkI-Xz80SbxKX038T2FP2FGCU_tYRVp9Ws5b814qYCFjtWa1ZsZn6WxJbf1xK3OLdsJ3tXunfR2AeIPdhSeH-4gZiG2JkYrRjSmRTZF9kYyXRZwrnTidXp2HoF2krKwQrB-uAq_Btf23K7oXxtDG2chgyOXKH856zpHQUNFN1IfY0NmQ3E3f-OGL4qfjfOWP5yjq1e-u8uj4-vow_ckAAA==)"
+        },
+        {
+            "type": "text",
+            "text": "While mapping, the influence of the Searing Exarch or the Eater of Worlds will appear at random."
+        },
+        {
+            "type": "text",
+            "text": "Upon defeating the map boss of the influenced map, a beacon will drop that will allow the two new bosses to witness your maps."
+        },
+        {
+            "type": "quest items"
+        },
+        {
+            "type": "text",
+            "text": "From there on, you will need to progress you maps tiers in order to spawn The Black Star and the Infinite Hunger (mini bosses)."
+        },
+        {
+            "type": "text",
+            "text": "You will only be able to witness a map tier once for each influence until you reach the bosses. After you've killed them, you will be able to witness any map of tier 14+ for any of the bosses."
+        },
+        {
+            "type": "text",
+            "text": "Since you can only witness a map tier once for each of the new bosses, you will mostly want to have Maven witness your maps since she doesn't care about map tier at the start, only different map bosses."
+        },
+        {
+            "type": "text",
+            "text": "Since you can only witness a map tier once for each of the new bosses, you will mostly want to have Maven witness your maps since she doesn't care about map tier at the start, only different map bosses."
+        },
+        {
+            "type": "text",
+            "text": "Whenever you drop a map of a higher tier, you will want to have the Searing Exarch or the Eater of Worlds witness it, basically ping-ponging which boss is witnessing your maps based on your progression, but making sure you always have one of the three bosses (Maven, Searing Exarch or Eater of Worlds) witnessing every single map you do."
+        },
+        {
+            "type": "text",
+            "text": " *Consider using Orbs of Horizon if Maven has already witnessed the map you are about to run.*"
+        },
+        {
+            "type": "text",
+            "text": "**Example:**"
+        },
+        {
+            "type": "text",
+            "text": "`T11 Searing Exarch` ⇢ `T11 Eater of Worlds` ⇢ `T11 Maven` ⇢ `T11 Maven` ⇢ `T11 Maven`"
+        },
+        {
+            "type": "text",
+            "text": "`T12 Searing Exarch` ⇢ `T12 Eater of Worlds` ..."
+        },
+        {
+            "type": "text",
+            "text": "The idea is to progress all three bosses at once until you've reached the Searing Exarch, the Eater of Worlds and your first 10 Boss Fight invitation from Maven. From there, we will focus on a single influence at once."
+        },
+        {
+            "type": "text",
+            "text": "Once you've decided on which influence you want to focus on, you'll want to pick up the Atlas Passives for it. These are basically the same but for different influences."
+        },
+        {
+            "type": "text",
+            "text": "The following passives will simply reward you with slightly more Eldritch currencies."
+        },
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Rampant Growth"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Word of the Exarch"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "text": "However, the passives leading up to them are quite strong and apply to both influences simultaneously, so you want to pick up both!"
+        },
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Eater of Worlds Pack Size"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Searing Exarch Influence Pack Size"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "text": "On the side of the Eater of Worlds, The Shadow of Hunger will greatly increase your odds of finding Altars, which are ultimately where most of your currency earned will come from."
+        },
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "The Shadow of Hunger"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "text": "On the side of the Searing Exarch, you aren't getting much. **However**, the modifiers on his Influence are more valuable, and therefore so are his Eldritch currency drops. You still get some additional Altars and more currency drops."
+        },
+        {
+            "type": "text",
+            "text": "*Note that the 10% increased damage does stack which can make the maps extremely dangerous.*"
+        },
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "The Light of Dawn"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "text": "### What are Altars & what to look for?"
+        },
+        {
+            "type": "text",
+            "text": "PLACEHOLDER FOR IMAGE."
+        },
+        {
+            "type": "text",
+            "text": "Here's the list of modifiers to look out for in order of importance:"
+        },
+        {
+            "type": "numbered list",
+            "items": [
+                "(1–3)% chance to drop an additional Scarab",
+                "(0.5–1.5)% chance to drop an additional Eldritch Ichor / Ember Currency Item",
+                "Scarabs dropped by slain Enemies have (10–15)% chance to be Duplicated (if you have the % Scarabs)",
+                "Maps dropped by slain Enemies have (10–15)% chance to be Duplicated (for Map sustain)",
+                "(10–30)% increased Quantity of Items found in this Area ",
+                "Boss Drops: Drops (1–2) additional Eldritch Ichor / Ember Currency Item",
+                "Boss Drops: Drops (1–3) additional Scarab",
+                "Basic Currency Items dropped by slain Enemies have (10–15)% chance to be Duplicated (not very good)",
+                "Boss Drops: Drops (1–3) additional Basic Currency Item"
+            ]
+        },
+        {
+            "type": "text",
+            "text": "### Final Tree"
+        },
+        {
+            "type": "text",
+            "text": "#### [Atlas Passive Tree](https://www.pathofexile.com/fullscreen-atlas-skill-tree/AAAABgAAaggbCD8J-Ao9DOAU2hbEF8seWx_EJMso0CjpKoQwAzFrNIg0pD5CPl8_NEm8Sl9N_E5vT2FP2FGCU_tYRVp9Ws5b814qYCFjtWa1ZsZn6WxJbf1xK3OLdsJ3tXunfR2AeIPdhSeH-4gZiG2JkYrRjSmRTZF9kYyXRZwrnTidXp2HoF2krKwQrB-uAq_Btf23K7oXw6rG0MbZyGDI5cofznrOkdBQ0U3TXtSH2NDZkNxN3_jhi-Kn43zlj-co6tXsTOzl7lzvrvLo9-T4-vkO-jD6sv3JAAA=)"
+        },
+        {
+            "type": "text",
+            "text": "Grab the Guardian passives at the top, which will add up to quite a bit of currency overtime."
+        }
+    ]
+}

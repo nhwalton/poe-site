@@ -18,6 +18,7 @@ flask-api/crawler.py
 flask-api/items.json
 
 app/poe-syn.psd
+app/package-lock.json
 
 gem_image_getter.py
 missing_gem_script.py
@@ -34,3 +35,5 @@ init-letsencrypt.sh
 /data/*
 /site/*
 site/size-plugin.json
+
+python-utils/*

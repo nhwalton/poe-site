@@ -1,0 +1,232 @@
+{
+    "type": "guide",
+    "name": "Delirium Orbs",
+    "image": "AtlasPassiveMasteryMap",
+    "steps":[
+        "## Delirium Orbs",
+        "In this chapter of the series, I want to talk about Delirium and how to farm Unique Cluster Jewels and Simulacrums.",
+        "Before going further, I would like to shoutout [Fyregrass](https://www.youtube.com/channel/UCLSvRMVdMRIgFwiMmtz5sVg) for his help testing out this strategy.",
+        "The idea behind this strategy is that Unique Cluster Jewels are worth *a lot* in league start scenarios as some of them are outright building enabling, here are some price examples from 3.15!",
+        "### Reward Value Per 'Layer' of Delirium Per Orb",
+        {
+            "type": "price import",
+            "items": [
+                {
+                    "name": "Amorphous Delirium Orb",
+                    "index": "23"
+                },
+                {
+                    "name": "Blighted Delirium Orb",
+                    "index": "24"
+                },
+                {
+                    "name": "Imperial Delirium Orb",
+                    "index": "25"
+                },
+                {
+                    "name": "Cartographer's Delirium Orb",
+                    "index": "26"
+                },
+                {
+                    "name": "Fragmented Delirium Orb",
+                    "index": "27"
+                },
+                {
+                    "name": "Whispering Delirium Orb",
+                    "index": "28"
+                },
+                {
+                    "name": "Fossilised Delirium Orb",
+                    "index": "29"
+                },
+                {
+                    "name": "Obscured Delirium Orb",
+                    "index": "30"
+                },
+                {
+                    "name": "Thaumaturge Delirium Orb",
+                    "index": "31"
+                },
+                {
+                    "name": "Timeless Delirium Orb",
+                    "index": "32"
+                },
+                {
+                    "name": "Foreboding Delirium Orb",
+                    "index": "33"
+                },
+                {
+                    "name": "Fine Delirium Orb",
+                    "index": "34"
+                },
+                {
+                    "name": "Diviner's Delirium Orb",
+                    "index": "35"
+                },
+                {
+                    "name": "Skittering Delirium Orb",
+                    "index": "36"
+                }
+            ]
+        },
+        "### Notes",
+        "* These prices account for bulk selling the rewards, such as Fossils and Essences.",
+        "* The `Thaumaturge Delirium Orb` accounts for selling the Quality Gems for GCPs. It's extremely misleading and in large quantity is actually one of the better orbs, though it is not very good in small quantities.",
+        "-----------------------------------------------",
+        "### The Math Behind the Data",
+        "In addition to the rewards from layers of delirium, you will also drop Cluster Jewels, Unique Cluster Jewels, and Simulacrum Splinters.",
+        "On average, `a 40% delirious T11 map will net you 30 Splinters`, and `a 60% Delirious T11 Map will net you around 50 Splinters`.",
+        "Given this and the price of Delirium Orbs, it means that Simulacrum Splinters by themselves will pay for the entirety of the investment cost, thus everything else is profit.",
+        "After doing the math on every cluster jewel at the start of the 3.17 Archnemesis League, the value of any given Unique Cluster Jewel on average was around 50-55 chaos.",
+        "With the odds of dropping a Unique Cluster Jewel being roughly `1/9`, or one jewel per 9 bosses killed, and assuming 2 Bosses every map, you should get one jewel every 4.5 maps.",
+        "These Unique Cluster Jewels plus regular Cluster Jewels, random Delirium rewards, and any additional loot from Delirious monsters can all be considered profit.",
+        "### How much Delirium is enough Delirium?",
+        "The idea here is to **\"force\"** double bosses every map without actually investing any real currency or without needing a crazy powerful or expensive build. More on this later.",
+        "The two recommended options for achieving this are to run maps that are either `40% Delirious` or `60% Delirious` (2 or 3 Delirium Orbs).",
+        "Results of running these options:",
+        {
+            "type": "custom table",
+            "headers": [
+                "Delirious Level",
+                "Starting Orbs",
+                "Orbs Per Map",
+                "Total Maps",
+                "Bosses Per Map",
+                "Estimated Total Bosses"
+            ],
+            "rows": [
+                [
+                    "40% Delirious",
+                    "60",
+                    "2",
+                    "30",
+                    "1.33",
+                    "48"
+                ],
+                [
+                    "60% Delirious",
+                    "60",
+                    "3",
+                    "20",
+                    "2",
+                    "40"
+                ]
+            ]
+        },
+        "At `40% Delirious`, you will run 30 maps, as it's 2 Orbs per map. From those 30 maps, you will get roughly 48 Bosses, as you will **not** get double bosses every map, but you will ~80% of the time.",
+        "Using the data above, this amounts to ~720 Simulacrum Splinters and ~6 Unique Clusters.",
+        "At `60% Delirious`, you will only get 20 maps. From those maps, encountering two bosses every map, you will get a total of 40 bosses.",
+        "Results: ~600 Simulacrum Splinters and ~5 Unique Clusters.",
+        "In total, you can expect roughly the following using a `Simulacrum price of 100c` and `Unique Jewel price of 50c`:",
+        {
+            "type": "custom table",
+            "headers": [
+                "Delirious Level",
+                "Total Splinters",
+                "Full Simulacrums",
+                "Chaos Value",
+                "Unique Clusters",
+                "Chaos Value",
+                "Total Value"
+            ],
+            "rows": [
+                [
+                    "40% Delirious",
+                    "720",
+                    "2.4",
+                    "240c",
+                    "6",
+                    "50c",
+                    "540c"
+                ],
+                [
+                    "60% Delirious",
+                    "600",
+                    "2",
+                    "200",
+                    "5",
+                    "200c",
+                    "400c"
+                ]
+            ]
+        },
+        "As you can see, it's a lot more efficient to run 40% Delirious maps for this strategy. If you are able to run the maps at the same speed in 40% and 60%, using the data above, 60% Delirious maps allows you to run 50% more maps compared to the 40% strategy.",
+        "This would amount to ~675c in the same amount of time it takes to run 40% maps, though, of course, the investment would also be an increase in 30 Delirium Orbs.",
+        "### The Setup & Requirements",
+        "This strategy is fairly simple, all you need are Delirium Orbs. Any Delirium Orbs will do, the cheaper the better. We want to simply Alch & Go, meaning we will not be pushing for many reward tiles.",
+        "When it comes to the Altas Passives, you want to focus on everything which is adding additional monsters to your map for little to no investment.",
+        "The only mandatory node for this strategy is `Delusions of Persecution` which will double the likelyhood of a boss spawning on your map. The base rate is roughly the same chance as the the amount of delirium on your map, meaning a 20% Delirious map has a 20% chance for the bosses to spawn.",
+        "This passive doubles it, meaning we can run a 40% delirium map with 80% chance for each of the bosses to spawn (treated independently). This is where we get the maximum value out of this strategy!",
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Delusions of Persecution"
+                }
+            ]
+        },
+        "If you have unlocked Voidstones, the following sextant is incredibly powerful when using the better Delirium Orbs. This is not something you care about when using the cheap delirium orbs with bad rewards.",
+        "In simple terms, **only use this with Skittering Delirium orbs**.",
+        "#### [Link to purchase these Sextants](https://www.pathofexile.com/trade/search/Archnemesis/vPm0nlZSE)",
+        {
+            "type": "custom item",
+            "customItems": [
+                {
+                    "name": "Charged Compass",
+                    "identifier": "chargedCompass",
+                    "text": [
+                        "Delirium Reward Bars fill 100% faster in Areas",
+                        "4 uses remaining"
+                    ],
+                    "rarity": "normal"
+                }
+            ]
+
+        },
+        "-----------------------------------------------",
+        "### Additional Passives to Consider",
+        "The Abyss nodes add a ridiculous amount of monsters to your map and can be taken advantage of via a cheap map mod (when available), Scarabs or even Sextants.",
+        "`Abyssal Army` paired with the nodes leading up to `Underground Kingdom` and `Lightless Legion` will make for a 160% increase in monsters spawning from Abyss. This is ***insane*** levels of juice for extremely minimal investment.",
+        "#### [Link to purchase Abyss Scarabs](https://www.pathofexile.com/trade/exchange/Archnemesis/pona4bdH0)",
+        "#### [Sextants with additional Abyss](https://www.pathofexile.com/trade/search/Archnemesis/2r4bdedsk)",
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Abyssal Army"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Underground Kingdom"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Lightless Legion"
+                }
+            ]
+        },
+        "The Harbinger node `Ominous Arrival` will guarantee a Harbinger and `First Wave` will give a 25% chance for any Harbinger to become a powerful Harbinger boss, adding loads of monsters to your maps",
+        "The value of this can be further increased via the Harbinger map mod (when available) and Harbinger Scarabs.",
+        "`The Unspeakable Offensive` will also add an extra 60% more minions per Harbinger, which is again, insane value for little to no investment.",
+        "#### [Link to purchase Harbinger Scarabs](https://www.pathofexile.com/trade/exchange/Archnemesis/JyQLlWil)",
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Ominous Arrival"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "First Wave"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Unspeakable Offensive"
+                }
+            ]
+        }
+    ]
+}

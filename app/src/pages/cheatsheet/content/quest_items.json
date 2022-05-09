@@ -1,0 +1,17 @@
+{
+    "The Maven's Beacon": {
+        "name": "The Maven's Beacon",
+        "image_name": "MavenOrb",
+        "text": ["Allows you to call the Maven to a map from your Map Device."]
+      },
+      "Flesh Compass": {
+        "name": "Flesh Compass",
+        "image_name": "FleshCompass",
+        "text": ["Allows you to pursue The Eater of Worlds by adding its influence to a map from your Map Device."]
+      },
+      "Luminous Astrolabe": {
+        "name": "Luminous Astrolabe",
+        "image_name": "LuminousAstrolabe",
+        "text": ["Allows you to pursue The Searing Exarch by adding its influence to a map from your Map Device."]
+      }    
+}

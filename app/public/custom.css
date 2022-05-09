@@ -1,0 +1,264 @@
+:root {
+    --card-background: rgba(24, 24, 24,.8);
+    --table-odd: #292929;
+    --table-even: #333333;
+    --guideCardBackground: #222222;
+    --text-color: #e0e0e0;
+    --text-color: #e0e0e0 !important;
+    --bs-pink: #d63384;
+    /* --bs-body-font-size: 0.9rem !important; */
+}
+
+body {
+    background-color: #111111;
+    /* background-image: url(./src/assets/elder_shaper.png); */
+}
+
+h3::before {
+    content: "⛶ ";
+}
+
+a {
+    color: var(--bs-yellow-alt);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--bs-yellow);
+    text-decoration: underline;
+}
+
+a.externalLink {
+    color: var(--bs-teal);
+}
+
+li p {
+    margin-bottom:0;
+}
+
+.list-group > div:not(:first-child) {
+    margin-top: 0.5rem;
+}
+
+code {
+    color: var(--bs-yellow-alt);
+}
+
+.col {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+    --bs-gutter-x: 0rem;
+}
+
+.card {
+    background: var(--card-background);
+    border-radius: 7px;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    text-align: left;
+}
+
+.page {
+    padding: 1em;
+    min-height: 100%;
+    width: 100%;
+    /* font-family: Roboto, sans-serif; */
+}
+
+.list-group-item {
+    background: var(--table-odd);
+    color: var(--text-color);
+}
+
+.list-group-item-guideNav.active {
+    background: var(--guideCardBackground);
+}
+
+.list-group-item-guideNav.active:hover {
+    background: var(--guideCardBackground);
+    color: var(--bs-yellow);
+}
+
+.list-group-item-guideNav {
+    background: transparent;
+    border: none;
+    padding-left: 1.5em !important;
+    cursor: pointer;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.list-group-item-guideNav:hover {
+    background: #2222229d;
+    text-decoration: underline;
+}
+
+.list-group-item-guideNav > a {
+    color: var(--text-color);
+}
+
+.list-group-item-guideNav.active > a {
+    color: var(--bs-yellow);
+}
+
+.list-group-item-level:nth-of-type(odd) {
+    background-color: var(--table-odd);
+}
+
+.list-group-item-level:nth-of-type(even) {
+    background-color: var(--table-even);
+}
+
+.list-group-item-level {
+    padding:1rem;
+}
+
+.arrow-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-right::before {
+    content: "⇢";
+    font-size: 36px;
+}
+
+code {
+    margin: 0em;
+    font-size: .9em;
+    background-color:#292929;
+    padding: 0.125em 0.5em;
+    border-radius: .325em;
+    line-break: strict;
+}
+
+.card.guideCard {
+    background-color: #222222;
+}
+
+.groupSection li:last-child {
+    margin-bottom: 1em;
+}
+
+.groupSection > h3 {
+    color: #aaaaaa;
+}
+
+nav.justify-end > ol {
+    justify-content: center;
+}
+
+.table-custom {
+    --bs-table-bg: #333333;
+    --bs-table-striped-bg: #292929;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #373b3e;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: var(--bs-yellow-alt);
+    --bs-table-hover-color: #fff;
+    color: #fff;
+    border-color: #222;
+    border-width: 2px;
+    border-radius: 7px;
+  }
+
+.table-custom thead tr th {
+    background-color: #111;
+    color: var(--bs-table-color);
+    border-width: 0;
+}
+
+.table-custom td {
+    border-width: 2px;
+}
+
+.table-custom tbody tr td {
+    border-top-color: rgba(0, 0, 0, 0);
+}
+
+.nav {
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: column;
+}
+
+.nav-link {
+    overflow: hidden;
+    color: #e0e0e0;
+    margin-bottom:0.5em;
+    padding: 0;
+    border:none;
+    border-radius: 0;
+    background: transparent;
+}
+
+.nav-link:hover {
+    background: #121212;
+    color: #fff;
+    box-shadow: 0 2px var(--colorMain);
+    text-decoration: none;
+}
+
+.bottom.nav-link {
+    margin-top: auto;
+}
+
+.nav-link > img {
+    opacity: .5;
+}
+
+.nav-link:hover > img {
+    opacity: 1;
+}
+
+.offcanvas {
+    background-color: #1a1a1a;
+}
+
+.offcanvas-body {
+    padding: 1rem 0;
+}
+
+.btn-headerBar {
+    font-weight: bold;
+    color: #bbb;
+    border-radius: 0px !important;
+    padding: 1.1em 3em;
+    overflow: display;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.btn:focus,.btn-close:focus {
+    box-shadow: none;
+}
+
+.btn-close {
+    color: #fff;
+}
+
+.btn-headerBar:hover {
+    color: #fff;
+    box-shadow: 0 2px var(--colorMain);
+    background-color: #222222;
+    text-decoration: none;
+}
+
+.btn-headerBar.active {
+    color: var(--colorMain);
+    background-color: #171717;
+    box-shadow: 0 2px #222;
+}
+
+.btn-headerBar.active:hover {
+    color: var(--colorMain);
+    box-shadow: 0 2px var(--colorMain);
+    background-color: #222222;

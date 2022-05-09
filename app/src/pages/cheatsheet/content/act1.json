@@ -1,0 +1,121 @@
+{
+    "type":"act",
+    "name":"Act 1",
+    "steps": [
+        {
+            "text":"Kill Hillock"
+        },
+        {
+            "text":"Check Nessa / Tarkleigh for your links, gems and movement speed boots"
+        },
+        {
+            "text":"Go Through `The Coast` and get the waypoint"
+        },
+        {
+            "text":"Continue onwards to `The Mud Flats`",
+            "substeps": [
+                "Get the 3 glyphs",
+                "Head into `The Submerged Passage` and grab the waypoint"
+            ]
+        },
+        {
+            "text":"Take that Waypoint back to `The Coast` and proceed to `The Tidal Island`"
+        },
+        {
+            "text":"Kill Hailrake",
+            "substeps": [
+                "***Exit to character selection***"
+            ]
+        },
+        {
+            "text":"Check Nessa / Tarkleigh for your Links, Gems and movement Speed boots (again)",
+            "substeps": [
+                "**Don't forget your movement ability for 2nd Tarkleigh Reward and Quicksilver from Nessa**"
+            ]
+        },
+        {
+            "text":"Go back to Submerged Passage until you find the Bridge",
+            "substeps": [
+                "**Open a portal**",
+                "Keep going towards `The Ledge`"
+            ]
+        },
+        {
+            "text":"Go through `The Ledge` and through `The Climb` until you reach the waypoint in the `Lower Prison`"
+        },
+        {
+            "text":"Take that waypoint back to town and enter your portal from earlier (to the `Submerged Passage`)."
+        },
+        {
+            "text":"Find `The Flooded Depths` and go kill the mini-boss Crab",
+            "substeps": [
+                "***Exit to character selection***"
+            ]
+        },
+        {
+            "text":"Check Nessa / Tarkleigh for any missing Links, Gems and movement Speed boots (again)",
+            "substeps": [
+                "Also grab your Skill point from Tarkleigh"
+            ]
+        },
+        {
+            "text":"Head back to `The Lower Prison` and find your Trial of ascendancy, complete it and keep going towards `The Upper Prison`"
+        },
+        {
+            "text":"Find and Kill Brutus",
+            "substeps": [
+                "Prioritize picking up Rare items since they sell for more Alteration Shards when identified, compared to magic items",
+                "Log out"
+            ]
+        },
+        {
+            "text":"Pick up upgraded Movement Ability from Tarkleigh",
+            "substeps": [
+                "Check Nessa / Tarkleigh for your Links, Gems and movement Speed boots"
+            ]
+        },
+        {
+            "text":"Take the waypoint to `Prisoner's Gate` and head over to `The Ship Graveyard`"
+        },
+        {
+            "text":"Find the Waypoint for `The Ship Graveyard`, it`s typically very close to the entrance"
+        },
+        {
+            "text":"Find and enter `The Ship Graveyard Cave`",
+            "substeps": [
+                "Rush the zone and find the Allflame"
+            ]
+        },
+        {
+            "text":"Come out of the Cave and keep going until you find the entrance to `The Cavern of Wrath`"
+        },
+        {
+            "text":"Take the waypoint from `The Cavern of Wrath` back to `The Ship Graveyard` waypoint and find Fairgraves"
+        },
+        {
+            "text":"Kill Fairgraves",
+            "substeps": [
+                "***Exit to character selection***"
+            ]
+        },
+        {
+            "text":"Talk to Bestel for your Skillpoint",
+            "substeps": [
+                "Have another quick look for any missing Links or movement speed boots from Tarkleigh"
+            ]
+        },
+        {
+            "text":"Take your waypoint back to `The Cavern of Wrath` and make your way to Merveil"
+        },
+        {
+            "text":"Kill Merveil"
+        },
+        {
+            "text":"Prioritize picking up Rare items once again",
+            "substeps": [
+                "Also Prioritize boots; early movement speed feels really good!"
+            ]
+        }
+
+    ]
+}

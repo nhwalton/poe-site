@@ -1,0 +1,5 @@
+.guideBox {
+    background-color: #292929;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 0.35rem;
+}

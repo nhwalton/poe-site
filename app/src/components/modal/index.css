@@ -1,4 +1,4 @@
-.container {
+.archModalWrapper {
     position: fixed;
     z-index: 1;
     padding-top: 15vh;
@@ -12,7 +12,7 @@
     backdrop-filter: blur(2px);
 }
 
-.modal {
+.archModal {
     width:50%;
     height:75%;
     margin: 0 auto;
@@ -31,19 +31,19 @@
     padding: 20px;
 }
 
-.modalContainer {
+.archModalContainer {
     display:grid;
     grid-template-columns: 1fr 1fr;
     height:90%;
 }
 
-.modalLeft {
+.archModalLeft {
     display: grid;
     grid-template-rows: auto 1fr;
     margin-right:25px;
 }
 
-.modalRight {
+.archModalRight {
     display: grid;
     grid-template-rows: auto 1fr;
     margin-left: 25px;
@@ -69,7 +69,7 @@
     color:#e0e0e0 !important;
 }
 
-.modalContainer > div > h2 {
+.archModalContainer > div > h2 {
     text-align:center;
 }
 

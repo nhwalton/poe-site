@@ -26,3 +26,11 @@
         <a className="moduleLink" href="/passives"><Button raised ripple>Leveling Guide</Button></a>
     </div>
 </Card>
+
+
+<div className="homeSection">
+    <h2>Archnemesis</h2>
+    <p>The Archnemesis tool allows you to view all craftable modifiers, all six league challenge combinations for "Defeat Archnemesis III", as well as custom modifier combinations.</p>
+    <p>A fullscreen mode is available for navigating the tree of larger recipes and each item can be collapsed to remove it from view.</p>
+    <PageModuleButton href="/archnemesis" text="Archnemesis" />
+</div>

@@ -60,8 +60,8 @@ code {
 }
 
 a {
-  text-decoration: underline;
-  color: var(--colorMain);
+  /* text-decoration: underline; */
+  /* color: var(--colorMain); */
 }
 
 html {
@@ -73,7 +73,7 @@ html, body {
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-family: 'Noto Sans', 'Helvetica Neue', arial, sans-serif;
 	font-weight: 400;
 	color: #ccc;
 	-webkit-font-smoothing: antialiased;
@@ -81,7 +81,7 @@ html, body {
 }
 
 h1 {
-  font-family: 'unineue-heavyitalic', 'Helvetica Neue', arial, sans-serif;
+  font-family: 'unineue-heavyitalic', 'Noto Sans', 'Helvetica Neue', arial, sans-serif;
   text-align:center;
   margin:10px auto 20px;
   font-size:3em;
@@ -90,15 +90,25 @@ h1 {
 }
 
 h2 {
-  font-family: 'unineue-heavyitalic', 'Helvetica Neue', arial, sans-serif;
+  font-family: 'Noto Sans', 'unineue-heavyitalic', 'Helvetica Neue', arial, sans-serif;
   font-size:2em;
+  font-weight:bold;
   /* text-align:center; */
 }
 
 h3 {
-  font-size:1.3em;
+  font-size:1.25em;
   color: #e0e0e0;
   text-align: left;
+  font-weight: bold;
+  /* text-align:center; */
+}
+
+h4 {
+  font-size:0.825em;
+  color: #e0e0e0;
+  text-align: left;
+  text-transform: uppercase;
   /* text-align:center; */
 }
 
@@ -164,9 +174,9 @@ h3 {
   grid-column-gap: 5px;
   justify-items:center;
   margin:auto;
-  margin-top: 1em;
+  margin: 1em auto;
   align-items:center;
-  min-height: 10em;
+  /* min-height: 5em; */
 }
 
 .titleWrapper > h2 {

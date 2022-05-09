@@ -1,0 +1,24 @@
+{
+    "General": [
+        {
+            "name": "Map Progression",
+            "file": "earlyMapProgression"
+        }
+    ],
+    "Mechanics": [
+        {
+            "name": "Delirium Orbs",
+            "file": "deliriumOrbs"
+        },
+        {
+            "name": "Expedition",
+            "file": "expedition"
+        }
+    ],
+    "Leveling": [
+        {
+            "name": "Act 1",
+            "file": "act1"
+        }
+    ]
+}
