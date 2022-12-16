@@ -6,7 +6,6 @@ import './App.css';
 import Footer from './components/footer';
 import Header from './components/header';
 import { CustomTheme } from "./customTheme";
-import Archnemesis from './pages/archnemesis/';
 import Home from './pages/home/';
 import Syndicate from './pages/syndicate/';
 import Passives from './pages/passives/';
@@ -25,8 +24,6 @@ function App() {
 			<Routes>
 				{/* Static Routes */}
 				<Route exact path="/" element={<Home />}>
-				</Route>
-				<Route exact path="/archnemesis" element={<Archnemesis />}>
 				</Route>
 				<Route exact path="/chromatic" element={<Chromatic />}>
 				</Route>

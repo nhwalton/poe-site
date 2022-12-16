@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListGroup } from 'react-bootstrap';
+import { ListGroup, Image } from 'react-bootstrap';
 import atlasPassives from './content/atlas_passives.json';
 import questItems from './content/quest_items.json';
 import { Col, Row } from 'react-bootstrap';
@@ -8,7 +8,10 @@ import itemPrices from './content/priceImport.json';
 import Table from 'react-bootstrap/Table';
 import POEItems from '../../assets/items.json';
 
-function parseGuide (data) {
+function parseGuide (data, guideValues) {
+
+    // console.log('guideValues', guideValues);
+
     function parseStep (step, index) {
         let html;
         if (typeof step !== 'string') {
@@ -142,7 +145,7 @@ function parseGuide (data) {
                                     return(
                                     <tr>
                                         <td>{item.name}</td>
-                                        <td>{itemPrices[item.index - 1]}</td>
+                                        <td>{guideValues[item.index - 1]}</td>
                                     </tr>
                                     )
                                 })}
@@ -179,6 +182,13 @@ function parseGuide (data) {
                         </Table>
                     )
                     break;
+                case 'image':
+                    html = (
+                        <div className="guide-image-wrapper">
+                            <Image fluid src={step.src} alt={step.alt} className="guide-image"/>
+                        </div>
+                    )
+                    break;
                 default:
                     html = (
                         <div>
@@ -201,22 +211,20 @@ function parseGuide (data) {
         }
         } else {
             html = (
-                <div>
-                    <ReactMarkdown
-                        linkTarget={'_blank'}
-                        components={{
-                            a: ({ node, children, ...props}) => {
-                                const linkProps = props;
-                                if (props.target === '_blank') {
-                                    linkProps['rel'] = 'noopener noreferrer';
-                                }
-                                return <a {...linkProps} className="externalLink">{children}</a>
+                <ReactMarkdown
+                    linkTarget={'_blank'}
+                    components={{
+                        a: ({ node, children, ...props}) => {
+                            const linkProps = props;
+                            if (props.target === '_blank') {
+                                linkProps['rel'] = 'noopener noreferrer';
                             }
-                        }}
-                    >
-                    {step}
-                    </ReactMarkdown>
-                </div>
+                            return <a {...linkProps} className="externalLink">{children}</a>
+                        }
+                    }}
+                >
+                {step}
+                </ReactMarkdown>
             )
         }
         return(html);
@@ -230,7 +238,9 @@ function parseGuide (data) {
             >
             {data.steps.map((step, index) => {
                 return(
-                    parseStep(step, index)
+                    <ListGroup.Item variant="guide" key={step + index}>
+                        {parseStep(step, index)}
+                    </ListGroup.Item>
                     )
                 })}
             </ListGroup>

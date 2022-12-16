@@ -5,7 +5,6 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import { useMediaQuery } from '@mui/material';
 import { Button, ListGroup, Nav, Offcanvas, Image } from 'react-bootstrap';
 import * as React from 'react';
-import Archnemesis from '../../assets/header/Archnemesis_League_Icon.png';
 import Passives from '../../assets/header/Book_of_Skill.png';
 import Cameria from '../../assets/header/Cameria_the_Coldblooded.png';
 import Exalted from '../../assets/header/Exalted_Orb.png';
@@ -97,10 +96,6 @@ export default function SwipeableTemporaryDrawer() {
                                 <Image fluid className="me-4" src={poeOverlay} alt="syndicate-overlay" />
                                 Syndicate-Overlay
                             </Nav.Link>
-                            <Nav.Link button className="ps-2" key="Archnemesis" as="a" href="/archnemesis" >
-                                <Image fluid className="me-4" src={Archnemesis} alt="archnemesis" />
-                                Archnemesis [Deprecated]
-                            </Nav.Link>
                         </Nav>
                     </Offcanvas.Body>
                 </Offcanvas>
@@ -114,8 +109,8 @@ export default function SwipeableTemporaryDrawer() {
             <div className="headerBar">
                 <div className="headerBarLeft">
                     <Button onClick={() => setShow(true)} variant="menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-list" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" className="bi bi-list" viewBox="0 0 16 16">
+                        <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                     </svg>
                     </Button>
                     <PageTitle />
@@ -123,12 +118,11 @@ export default function SwipeableTemporaryDrawer() {
                 <div className="headerBarCenter">
                     {pages.map((thisPage) => {
                         if (thisPage.url === page) {
-                          return(<Button disableRipple variant="headerBar active" component="a" href={`/${thisPage.url}`}>{thisPage.title}</Button>)
+                          return(<Button variant="headerBar active" component="a" href={`/${thisPage.url}`}>{thisPage.title}</Button>)
                       } else {
-                          return(<Button disableRipple variant="headerBar" component="a" href={`/${thisPage.url}`}>{thisPage.title}</Button>)
+                          return(<Button variant="headerBar" component="a" href={`/${thisPage.url}`}>{thisPage.title}</Button>)
                       }
                     })}
-                    {/* <Button disableRipple variant="headerBar" component="a" href="/archnemesis">Archnemesis</Button> */}
                 </div>
                 <div className="headerBarRight">
                 </div>

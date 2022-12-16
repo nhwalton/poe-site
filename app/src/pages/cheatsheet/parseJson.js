@@ -1,7 +1,7 @@
 import parseAct from './parseAct';
 import parseGuide from './parseGuide';
 
-function parseJson (data) {
+function parseJson (data, guideValues) {
     let html;
     switch(data.type) {
         case 'act':
@@ -11,7 +11,7 @@ function parseJson (data) {
         //     parseMechanic(data);
         //     break;
         case 'guide':
-            html = parseGuide(data);
+            html = parseGuide(data, guideValues);
             break;
     }
     return(html);

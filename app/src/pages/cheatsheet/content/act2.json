@@ -1,0 +1,210 @@
+{
+    "type":"act",
+    "name":"Act 2",
+    "steps": [
+        {
+            "text":"Make your way through `The Southern Forest` up to `The Forest Encampment`"
+        },
+        {
+            "text":"Vendor anything you don't need to Greust and head to the RIGHT side - `The Old Fields`"
+        },
+        {
+            "text":"Find the entrance to `The Den`",
+            "substeps": [
+                "**Open a portal**"
+            ]
+        },
+        {
+            "text":"Keep going through `The Old Fields` into `The Crossroads` and follow the road up to the waypoint"
+        },
+        {
+            "text":"Take that waypoint back to town and into your portal, enter `The Den` and find the mini-boss, kill him and Log out"
+        },
+        {
+            "text":"Talk to Yeena and grab your 2nd Quicksilver",
+            "substeps": [
+                "Identify and equip it",
+                "*Try to be as efficient as possible by clicking one and then other when the duration expires*",
+                "*The difference between good and bad Quicksilver uptime during the leveling process is INSANE*"
+            ]
+        },
+        {
+            "text":"Take your waypoint back to `The Crossroads` and head TOP LEFT, this will lead you to `The Chamber of Sins` "
+        },
+        {
+            "text":"Once in `The Chamber of Sins`, head over to the middle part and grab the waypoint",
+            "substeps": [
+                "This isn't necessary but in case of a crash or DC, it's very nice to have"
+            ]
+        },
+        {
+            "text":"From the waypoint, head in the direction of the hallway which the waypoint points towards, this will always be the Exit"
+        },
+        {
+            "text":"In `Chamber of Sins Level 2` find the Trial of Ascendancy, complete it and then find the end of the zone leading to the mini-boss Fidelitas"
+        },
+        {
+            "text":"Kill Fidelitas",
+            "substeps": [
+                "Click the Strange Device and pick up the gem",
+                "**Exit to character selection**"
+            ]
+        },
+        {
+            "text":"Talk to Greust and Grab your first Herald / Aura or whatever your build will use",
+            "substeps": [
+                "Talk to Yeena and buy the 2nd one (if your build will be using two)"
+            ] 
+        },
+        {
+            "text":"Take your waypoint back to `The Crossroads` and head DOWN RIGHT, this will lead to `The  Fellshrine Ruins`"
+        },
+        {
+            "text":"Follow along the road of `The Fellshrine Ruins` until you find `The Crypt`"
+        },
+        {
+            "text":"In `The Crypt`, your only goal is to complete the Trial of Ascendancy",
+            "substeps": [
+                "**Exit to character selection**"
+            ] 
+        },
+        {
+            "text":"Back in town, we are headhing LEFT now, over to `The Riverways`"
+        },
+        {
+            "text":"Follow the road until you find the waypoint",
+            "substeps": [
+                "Any movement ability WILL cross the gap in missing pieces on the road! Don't waste your time going around"
+            ] 
+        },
+        {
+            "text":"Once you have the waypoint, keep following the road until you reach `The Western Forest`"
+        },
+        {
+            "text":"In `The Western Forest`, follow the road once more until you find the waypoint"
+        },
+        {
+            "text":"Once you find the waypoint, head ACROSS the road from the waypoint and this will lead you to `Weaver's Chambers`"
+        },
+        {
+            "text":"Make your way to the Weaver and kill her",
+            "substeps": [
+                "*This is much easier at lvl 16 once you can equip your Aura / Herald / etc.*",
+                "Pick up her lil spike thingy",
+                "**Exit to character selection**"
+            ] 
+        },
+        {
+            "text":"Back in town, talk to Silk for your support gem reward and head back to `The Crossroads` waypoint"
+        },
+        {
+            "text":"Head straight forward from the waypoint over to `The Broken Bridge`"
+        },
+        {
+            "text":"Follow the road until you find Kraityn",
+            "substeps": [
+                "Kill Kraityn (you pretty much never help this guy)",
+                "Pick up his amulet",
+                "**Exit to character selection**"
+            ] 
+        },
+        {
+            "text":"Take your waypoint back to `The Riverways` and look for a broken paved road",
+            "substeps": [
+                "It's ALWAYS near the waypoint",
+                "Follow the broken pavement and this will lead you to `The Wetlands`"
+            ] 
+        },
+        {
+            "text":"Find Oak and kill him",
+            "substeps": [
+                "(We pretty much never help Oak either)",
+                "Pick up his amulet"
+            ] 
+        },
+        {
+            "text":"Head out of his camp and find the waypoint in `The Wetlands`",
+            "substeps": [
+                "It's almost always to the top left from Oak's camp"
+            ] 
+        },
+        {
+            "text":"Take this waypoint back to `The Western Forest` and head down the road to the very bottom left"
+        },
+        {
+            "text":"Kill the guard and put the seal back in place"
+        },
+        {
+            "text":"Head back up on the road until you find a lit torch on the side of the road",
+            "substeps": [
+                "Follow the broken pavement (like before) until you find Alira"
+            ] 
+        },
+        {
+            "text":"If your build kills Alira, do so, otherwise grab the Apex",
+            "substeps": [
+                "**Exit to character selection**"
+            ] 
+        },
+        {
+            "text":"Go back to Act one and talk to Bestel for your next skill point",
+            "substeps": [
+                "Take your waypoint back to `The Wetlands`"
+            ] 
+        },
+        {
+            "text":"Click the roots and head over into the `Vaal Ruins`",
+            "substeps": [
+                "*This layout sucks but the vast majority of the time it will be shaped like an S, otherwise it will be shaped like a U*"
+            ] 
+        },
+        {
+            "text":"Struggle for 2 and a half hours and finally find the ball",
+            "substeps": [
+                "Click the ball and head forward into the `Northern Forest`"
+            ] 
+        },
+        {
+            "text":"Make your way through all the way up to `The Caverns`"
+        },
+        {
+            "text":"Enter `The Caverns` and go through all the way up to the waypoint",
+            "substeps": [
+                "Grab the waypoint in case of a disconnect"
+            ] 
+        },
+        {
+            "text":"Struggle for another 2 hours trying to find the entrance to the `Ancient Pyramid`",
+            "substeps": [
+                "*Again this layout is aweful but the entrance will ALWAYS be in one of the three corners.*"
+            ] 
+        },
+        {
+            "text":"Make your way up the pyramid, the first floor is random and the exit will always be in one of the three corners"
+        },
+        {
+            "text":"After the first floor of the pyramid, the next 2 floors are easy. The exit will ALWAYS be across the starting point entrance"
+        },
+        {
+            "text":"Reach Vaal Oversoul and open a portal back to town",
+            "substeps": [
+                "*This is a great moment to do your wand craft recipe or physical weapon recipe as this boss is a joke with good damage.*",
+                "1.**Wand Recipe:** Magic Wand + Orb of Alteration + **rare** Topaz/Ruby/Sapphire Ring.`",
+                "- Use an essence to turn your topaz ring rare (don't waste an Alchemy)",
+                "- If you don't have a topaz ring, make one",
+                "2.**Ring Recipe:** Iron Ring + Skill Gem of Any Color",
+                "- Topaz = Green Gem | Sapphire = Blue Gem | Ruby = Red Gem",
+                "3.**Physical Weapon Recipe:** Weapon + Blacksmith Wetsone + **rare** Rustic Sash",
+                "- Use an essence to turn your rustic sash rare",
+                "- If you haven't found a Rustic Sash, buy one from the Vendor (Nessa or Yeena)"
+            ]
+        },
+        {
+            "text":"Head back through your portal",
+            "substeps": [
+                "Nuke the boss",
+                "**Exit to character selection**"
+            ] 
+        }
+    ]
+}

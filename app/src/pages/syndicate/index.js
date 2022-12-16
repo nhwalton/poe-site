@@ -214,12 +214,13 @@ const Syndicate = (props) => {
 	}, []);
 
 	function ResetColors() {
+		console.log('mastermindMode',mastermindMode)
 		const resetJson = useJson;
 		setSyndicate(resetJson);
 		const keyPrefix = (mastermindMode === true) ? "mastermind-" : "individual-";
 		for (var key in localStorage) {
-			console.log(keyPrefix, key, key.indexOf(keyPrefix));
 			if (key.indexOf(keyPrefix) === 0) {
+				console.log(key)
 				localStorage.removeItem(key);
 			}
 		}
@@ -285,7 +286,7 @@ const Syndicate = (props) => {
 	}
 
 	const TitleHeader = () => {
-		const useTitle = useMediaQuery('(min-width:1500px)') ? 'Syndicate Cheat Sheet 3.18' : 'Syndicate Cheat Sheet';
+		const useTitle = useMediaQuery('(min-width:1500px)') ? 'Syndicate Cheat Sheet 3.19' : 'Syndicate Cheat Sheet';
 		const title = <h1>{useTitle}</h1>
 			return (
 				title
@@ -417,7 +418,7 @@ const Syndicate = (props) => {
 				</div>
 				<Card variant="infoVariant">
 					{/* <div className="info"> */}
-					<p>The above table is a customizable Syndicate Cheat Sheet for the Betrayal league mechanic in POE 3.18. When in individual mode, it shows the possible rewards for running a Syndicate safehouse (Transportation, Fortification, Research and Intervention) with a given member in that safehouse.</p>
+					<p>The above table is a customizable Syndicate Cheat Sheet for the Betrayal league mechanic in POE 3.19. When in individual mode, it shows the possible rewards for running a Syndicate safehouse (Transportation, Fortification, Research and Intervention) with a given member in that safehouse.</p>
 					<p>For example, when running an Intervention safehouse while Cameria is present, one of the safehouse reward chests will contain Sulphite Scarabs. Each Syndicate member has tiers of rewards based on their rank: Sergeant, Lieutenant, or Captain. The default color associated with each member assumes they are ran at their highest rank (Captain) as certain members are less valuable at lower ranks. When you run their safehouse, there is a potential fourth tier achievable if the Mastermind is run while a member is Captain (Rank 3). For a more detailed list of rewards, visit the <a href="https://pathofexile.gamepedia.com/Immortal_Syndicate">Path of Exile Wiki</a>. </p>
 					<p>The Mastermind mode is meant for more advanced use cases and represents the relative value of selling/trading your Syndicate member's rewards/crafts. For more information on this use case and how to maximize profit, check out <a href="https://www.youtube.com/watch?v=u9EodNVlf6Q">Daykun's 3.17 Youtube Guide</a>.</p>
 					<p>Starting cell colors are based around Softcore Trade League and you can change the color of any reward by simply clicking on it's cell. It is important to note that the default ratings are only a starting point and each player will value certain combinations over others. Some of the default values are based on worth to the player OR the relative worth when selling the member's rewards to other players. With this in mind, Solo Self Found and Hardcore players will find less value in certain rewards due to not being in Softcore Trade League.</p>

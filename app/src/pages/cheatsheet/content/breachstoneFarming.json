@@ -1,0 +1,131 @@
+{
+    "type": "guide",
+    "name": "Delirium Orbs",
+    "image": "AtlasPassiveMasteryMap",
+    "steps":[
+        "## Breachstone Farming",
+        "In this Chapter of the Series, I want to talk about Breach and how to mass farm Breachstones.",
+        "First off, in Siege of the Atlas and new passive tree, breach has been incredibly lackluster.",
+        "However, there are some new sextants and map enchantments which have made mass farming breachstones possible, this is what we will be focusing on for this strategy.",
+        "-----------------------------------------------",
+        "### Reward Value Per Breach with Sextants",
+        {
+            "type": "price import",
+            "items": [
+                {
+                    "name": "1 Breach with Chayula Sextant",
+                    "index": "39"
+                },
+                {
+                    "name": "1 Breach with Uul-Nethol Sextant",
+                    "index": "40"
+                }
+            ]
+        },
+        "### Notes",
+        "* Values are from running the particular Breachlord sextant from a sample of 430 Breaches each.",
+        "-----------------------------------------------",
+        "### Getting Breach on Maps",
+        "Breach happens to have quite a few different sources available!",
+        "The first method is going to be the Map device (when available). This is typically quite cheap and pretty good value for this strategy.",
+        "The second method is Scarabs, which will guarantee between 1 and 5 additional Breaches on your map.",
+        "I would buy the ones which add the highest amount of Breaches per map but stay within reason of Chaos per Breach!",
+        "#### [Link to purchase Breach Scarabs](https://www.pathofexile.com/trade/exchange/Archnemesis/vZg934LSE)",
+        "The third method is going to be Sextants, this will add an extra Breach to your map as well.",
+        "#### [Link to purchase Breach Sextants](https://www.pathofexile.com/trade/search/Archnemesis/kj6KX65I5)",
+        "The final method of getting Breaches on your map is the map enchantment from It that Fled in Fortification. This can range between 1 to 5 additional breaches. It's pretty nuts!",
+        "#### [Link to purchase maps with this enchantment](https://www.pathofexile.com/trade/search/Archnemesis/eJk6ne4cL)",
+        "Note that you can use Orb of Horizons to change the map to a more desirable one and Harbinger Orbs to increase the map tier as well. These options entirely depend on the price of the Orbs vs. the maps vs. other options.",
+        "-----------------------------------------------",
+        "### Guaranteeing Chayula or Uul-Netol",
+        "Guaranteeing the desired Breachlords can be done using the following sextants:",
+        {
+            "type": "custom item",
+            "customItems": [
+                {
+                    "name": "Charged Compass",
+                    "identifier": "chayulaChargedCompass",
+                    "text": [
+                        "Breaches in Areas belong to Chayula",
+                        "Breaches in Areas contain 3 additional Clasped Hands",
+                        "3 uses remaining"
+                    ],
+                    "rarity": "normal"
+                },
+                {
+                    "name": "Charged Compass",
+                    "identifier": "uul-netolChargedCompass",
+                    "text": [
+                        "Breaches in Areas belong to Uul-Netol",
+                        "Breaches in Areas contain 3 additional Clasped Hands",
+                        "3 uses remaining"
+                    ],
+                    "rarity": "normal"
+                }
+            ]
+        },
+        "#### [Link to purchase sextants for Chayula](https://www.pathofexile.com/trade/search/Archnemesis/zoKWMqmT4)",
+        "#### [Link to purchase sextants for Uul-Netol](https://www.pathofexile.com/trade/search/Archnemesis/EdJr9bKt5)",
+        "-----------------------------------------------",
+        "### Juicing Breaches",
+        "`Flash Breach` will make breaches significantly harder but also way more rewarding. This is mandatory to juice up the amount of Splinters we will be receiving.",
+        "`Within Their Grasp` by itself isn't great but due to the sheer amount of breaches and the fact they are all owned by either Uul-Nethol or Chayula, this nodes adds a ton of value to our farming strategy.",
+        "`Gatekeepers` will increase the value of `Within Their Grasp` by increasing the chances to spawn bosses but also will double the splinters dropped by these bosses, which will amount to quite a bit of splinters overtime and many additional breachstones as well. The nodes leading up to it are however pretty much entirely wasted since we guarantee the Breachlord via the sextant mentioned earlier. Simply grab Uul-Nethol on the way.",
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Flash Breach"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Within Their Grasp"
+                },
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Gatekeepers"
+                }
+            ]
+        },
+        "While we do not particularly care for either `Probing for Weaknesses` or `Call of Xesht-Ula`, we do want all the nodes leading up to both, since they add quite a bit of juice to our breaches! You may consider grabbing `Probing for Weaknesses` as it will give use one extra breach every so often.",
+        {
+            "type": "atlas passive group",
+            "passives": [
+                {
+                    "type": "atlas passive",
+                    "passiveName": "Probing for Weaknesses"
+                }
+            ]
+        },
+        "-----------------------------------------------",
+        "### Grasping Mail Recipe",
+        "Since we are farming such a large amount of Breaches, the `Grasping Mail` recipe will be rather easy to complete.",
+        "The recipe is similar to the `Loreweave`, where you need to vendor 60 unique rings. However, `Grasping Mail` will require you to vendor 60 Breach rings, so make sure to show these on your filter!",
+        "There aren't very many modifiers to look out for on these, but here's a list of a couple good ones:",
+        {
+            "type": "numbered list",
+            "items": [
+                "% increased Global Defences",
+                "% increased Attack Speed per 25 Dexterity"
+            ]
+        },
+        {
+            "type": "custom item",
+            "customItems": [
+                {
+                    "name": "Grasping Mail",
+                    "identifier": "graspingMail",
+                    "text": [
+                        "Armour: (217-250)",
+                        "Evasion: (217-250)",
+                        "Energy Shield: (44-51)",
+                        "Movement Speed: -3%",
+                        "Requires Level 70, 60 Str, 60 Dex, 60 Int"
+                    ],
+                    "rarity": "normal"
+                }
+            ]
+        }
+    ]
+}

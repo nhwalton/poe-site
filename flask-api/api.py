@@ -15,7 +15,7 @@ from flask import jsonify, request, send_file
 from flask_cors import CORS, cross_origin
 from waitress import serve
 
-from functions import return_info, get_gem_info, get_current_league, get_use_time
+from functions import return_info, get_gem_info, get_current_league, get_use_time, get_guide_values
 from chrom import calculate
 
 app = flask.Flask(__name__)
@@ -43,6 +43,9 @@ conn.commit()
 
 scarab_cache = ExpiringDict(max_len=2, max_age_seconds=21600)
 scarab_timing = {'last_updated': datetime.datetime.now()}
+
+guide_values_cache = ExpiringDict(max_len=1, max_age_seconds=21600)
+guide_values_timing = {'last_updated': datetime.datetime.now()}
 
 current_league = None
 
@@ -191,6 +194,23 @@ def chromatic_calculator():
     total_sockets = int(request.json['sockets'])
     
     response = calculate(strength_requirement, dexterity_requirement, intelligence_requirement, desired_red, desired_green, desired_blue, total_sockets)
+    return(jsonify(response))
+
+@app.route('/api/guide_values', methods=['GET'])
+@cross_origin()
+def guide_values():
+    guide_values = guide_values_cache.get('guide_values')
+    if guide_values is not None and "#DIV/0!" not in guide_values:
+        use_time = get_use_time(guide_values_timing)
+        response = guide_values_cache.get('guide_values')
+        print(f"\n* Cache Exists: Using guide values from [{use_time}].\n")
+    else:
+        if guide_values is not None and "#DIV/0!" in guide_values:
+            print(f"\n* Cache Exists: Contains bad values. Attempting to get updated guide values. \n")
+        else:
+            print(f"\n* Cache Does Not Exist: Attempting to get updated guide values. \n")
+        response = get_guide_values()
+        guide_values_cache['guide_values'] = response
     return(jsonify(response))
     
     

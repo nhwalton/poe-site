@@ -390,8 +390,9 @@
             "text": "### What are Altars & what to look for?"
         },
         {
-            "type": "text",
-            "text": "PLACEHOLDER FOR IMAGE."
+            "type": "image",
+            "src": "/images/guides/earlyMapProgression_altars.jpg",
+            "alt": "Altar example"
         },
         {
             "type": "text",

@@ -7,8 +7,11 @@ import zlib
 from urllib.request import Request
 
 import defusedxml.ElementTree as ET
+import gspread
 import requests
 from bs4 import BeautifulSoup
+from oauth2client.service_account import ServiceAccountCredentials
+
 
 class CaptchaError(Exception):
     def __init__(self, message):
@@ -95,8 +98,11 @@ def _parse_skills(xml_skills):
 def return_info(pastebin):
     try:
         raw = get_as_xml(pastebin)
+        print("raw")
         xml = decode_to_xml(raw)
+        print(xml)
         gems = _parse_skills(xml.find('Skills'))
+        print("gems")
         class_name = xml.find('Build').attrib['className']
         print(f"\n* Success: Got build [{pastebin}] of class [{class_name}].\n")
         return(gems,class_name)
@@ -158,13 +164,24 @@ def get_use_time(scarab_timing):
     diff_hours = diff.seconds / 3600
     diff_minutes = diff.seconds / 60
     if diff_hours > 1:
-        use_time = f'{diff_hours} hours ago'
+        use_time = f'{diff_hours:,.0f} hours ago'
     elif 2 > diff_hours > 1:
-        use_time = f'{diff_hours} hour ago'
+        use_time = f'{diff_hours:,.0f} hour ago'
     elif diff_minutes > 1:
-        use_time = f'{diff_minutes} minutes ago'
+        use_time = f'{diff_minutes:,.0f} minutes ago'
     elif 2 > diff_minutes > 1:
-        use_time = f'{diff_minutes} minute ago'
+        use_time = f'{diff_minutes:,.0f} minute ago'
     else:
-        use_time = f'{diff.seconds} seconds ago'
+        use_time = f'{diff.seconds:,.0f} seconds ago'
     return(use_time)
+
+def get_guide_values():
+    # use the key in ./keys/poesyn-guide-values.json to get the values from this google sheet https://docs.google.com/spreadsheets/d/1WCOQfO4rrnJ64xjtuIweO5SSpYdwab6REVZ-zQS52Ho/edit#gid=0
+    scope = ['https://spreadsheets.google.com/feeds']
+    creds = ServiceAccountCredentials.from_json_keyfile_name('./keys/poesyn-guide-values-key.json', scope)
+    client = gspread.authorize(creds)
+    doc = client.open_by_url('https://docs.google.com/spreadsheets/d/1WCOQfO4rrnJ64xjtuIweO5SSpYdwab6REVZ-zQS52Ho')
+    # print(doc)
+    worksheet = doc.worksheet('Sheet1')
+    values_list = worksheet.col_values(1)
+    return values_list

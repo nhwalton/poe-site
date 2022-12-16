@@ -6,7 +6,6 @@ const Footer = () => {
             <div className="footerBar">
                 <div>
                     <div className="siteMap">
-                        <a href="/archnemesis">Archnemesis</a>
                         <a href="/chromatic">Chromatic Calculator</a>
                         <a href="/passives">Leveling Guide</a>
                         <a href="/syndicate">Syndicate Cheatsheet</a>

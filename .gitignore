@@ -24,6 +24,7 @@ gem_image_getter.py
 missing_gem_script.py
 gem_availabilities.csv
 flask-api/gem_availability_backup.csv
+flask-api/keys/*
 
 gem_images/*
 

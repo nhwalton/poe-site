@@ -13,12 +13,36 @@
         {
             "name": "Expedition",
             "file": "expedition"
+        },
+        {
+            "name": "Breachstone Farming",
+            "file": "breachstoneFarming"
+        },
+        {
+            "name": "Blighted Maps",
+            "file": "blightedMaps"
+        },
+        {
+            "name": "Heist Farming",
+            "file": "heistFarming"
         }
     ],
     "Leveling": [
         {
+            "name": "Leveling Tips",
+            "file": "levelingTips"
+        },
+        {
             "name": "Act 1",
             "file": "act1"
+        },
+        {
+            "name": "Act 2",
+            "file": "act2"
+        },
+        {
+            "name": "Maps Prep",
+            "file": "mapsPrep"
         }
     ]
 }

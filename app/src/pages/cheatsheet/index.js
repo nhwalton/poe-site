@@ -4,6 +4,7 @@ import parseJson from './parseJson';
 import guides from './content/guides.json';
 import './style.css';
 import { useParams, Link } from 'react-router-dom';
+import ReactGA from "react-ga";
 
 const CheatSheet = () => {
 
@@ -13,19 +14,52 @@ const CheatSheet = () => {
     const [currentGroup, setCurrentGroup] = useState('');
     const [guideIndex, setGuideIndex] = useState(0);
     const [groupLength, setGroupLength] = useState(0);
+
+    const defGuideValues = []
+    for (let i = 0; i < 76; i++) {
+        defGuideValues.push('N/A')
+    }
+
+    const [guideValues, setGuideValues] = React.useState(defGuideValues);
     
+    async function fetchGuideValues() {
+        const response = await fetch('/api/guide_values');
+        return response.json();
+    };
+
+    useEffect(() => {
+        fetchGuideValues().then(result => {
+            if (result !== 'Error') {
+                setGuideValues(result)
+            }
+            else {
+                setGuideValues(defGuideValues)
+                if (window.location.hostname !== 'localhost') {
+                    const eventDetails = {
+                        category: 'Error',
+                        action: 'Guide-Fetch-Values',
+                        label: 'None',
+                    }
+                    ReactGA.event(eventDetails);
+                }
+                }
+            }
+        )
+    }, []);
+
     const handleGuideChange = (name, file, group) => {
         setCurrentGuide(name);
         import(`./content/${file}.json`).then(data => {
-            setMarkHtml(parseJson(data));
+            setMarkHtml(parseJson(data, guideValues));
         });
         setCurrentGroup(group);
     }
 
     let { guide } = useParams();
 
-    console.log('guide', guide);
-    console.log('useParams', useParams());
+    // console.log('guide', guide);
+    // console.log('useParams', useParams());
+    console.log('guideValues', guideValues);
 
     useEffect(() => {
         if (guide === undefined) {
@@ -43,7 +77,7 @@ const CheatSheet = () => {
                 }
             }
         }
-    }, []);
+    }, [guideValues]);
 
     return(
         <div className={`cheatsheet page ${display}`}>
