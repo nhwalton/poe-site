@@ -142,8 +142,14 @@ def scarabs():
             print(f"\n* Cache Exists: Using [{scarab_type}] scarab pricing from [{use_time}].\n")
         else:
             print(f"\n* Cache Does Not Exist: Attempting to get updated pricing for [{scarab_type}] scarabs. \n")
-            current_league = get_current_league()
+            try:
+                current_league = get_current_league()
+            except Exception as e:
+                print(e)
+                return jsonify("Error: Could not get current league.")
+            print(1)
             r = requests.get('https://poe.ninja/api/data/itemoverview?league={}&type=Scarab&language=en'.format(current_league)).json()
+            print(2)
             scarabs = []
             if scarab_type == 'Gilded':
                 regex = r"(?:Gilded\s)(.*)"
@@ -157,6 +163,7 @@ def scarabs():
                     continue
                 value = scarab["chaosValue"]
                 scarabs.append({"name":name,"value":value})
+            print(3)
             df = pd.DataFrame(scarabs)
             df['rank'] = df['value'].rank(method='max', ascending=False)
             if 6 in df['rank'].values:

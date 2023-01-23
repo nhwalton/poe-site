@@ -42,6 +42,8 @@
 .pasteForm {
     width: 50%;
     margin: 1em auto !important;
+    background-color: #d8be75cc !important;
+    border-radius: 5px;
 }
 
 .pasteField {
@@ -57,6 +59,7 @@
     border-radius: 4px;
     border: 2px solid #333;
     background-color: #333;
+    color: #fff;
     padding: 10px 15px !important;
 }
 
@@ -100,7 +103,7 @@
 }
 
 .recipeTable {
-    margin: 1em 0 0 0;
+    margin: 1em 0;
 }
 
 .tableContainer {
@@ -134,10 +137,21 @@
 }
 
 .additionalInfo {
-    margin-top: 3em;
+    margin-top: 1em;
 }
 
 .tableContainer.calcInfo {
     width:60% !important;
     margin: 0 auto;
+}
+
+#voriciAlert {
+    border-radius: 5px;
+    margin: 1em 0;
+    display:flex;
+    justify-content: center;
+}
+
+#voriciAlert > .MuiAlert-action {
+    visibility: hidden;
 }

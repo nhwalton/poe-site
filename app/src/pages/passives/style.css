@@ -221,6 +221,12 @@ label, input, button {
 
 #build {
     padding: 0.5em 1em !important;
+    background-color: #e3e3e3;
+    border-radius: 5px;
+}
+
+#build:hover {
+    border: none !important;
 }
 
 #acts > div > h2 {

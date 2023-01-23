@@ -18,15 +18,11 @@ class CaptchaError(Exception):
         self.message = message
 
 def get_current_league():
-    soup = BeautifulSoup(requests.get('https://poe.ninja').text,'html.parser')
-    challenge = soup.find(string=re.compile("challenge"))
-    challenge = re.findall(r'(\[.*\])',challenge)
-    challenge = challenge[0].split(';')[0]
-    challenge = json.loads(challenge)
-    for k in challenge:
-        if k['url'] == 'challenge':
-            current_league = k['name']
-            return current_league
+    import requests
+    r = requests.get('https://poe.ninja/api/data/getindexstate')
+    r_json = r.json()
+    league = next(x for x in r_json['economyLeagues'] if x['url'] == 'challenge')['name']
+    return league
 
 def get_raw_data(url):
     q = Request(url)
@@ -80,19 +76,29 @@ def get_attrib_if_exists(xml_elem, key):
 def _parse_skills(xml_skills):
     gems = []
     # parse skills and the supported gems
-    for skill in xml_skills:
+    for equipment_piece in xml_skills:
         try:
-            if "swap" in skill.attrib['slot']:
+            if "swap" in equipment_piece.attrib['slot'].lower():
+                print(equipment_piece.attrib['slot'])
                 swap = True
+                print("swap")
             else:
                 swap = False
+                print("no swap")
         except:
             swap = False
+            print("no swap for real")
         if swap == False:
-            for gem in skill:
-                gems.append({'name':gem.attrib['nameSpec'],'level':gem.attrib['level']})
+            print("no swap")
+            for gem in equipment_piece:
+                try:
+                    print("gem")
+                    gems.append({'name':gem.attrib['nameSpec'],'level':gem.attrib['level']})
+                except:
+                    continue
         else:
             continue
+    print(gems)
     return gems
  
 def return_info(pastebin):
@@ -101,7 +107,7 @@ def return_info(pastebin):
         print("raw")
         xml = decode_to_xml(raw)
         print(xml)
-        gems = _parse_skills(xml.find('Skills'))
+        gems = _parse_skills(xml.find('Skills').find('SkillSet'))
         print("gems")
         class_name = xml.find('Build').attrib['className']
         print(f"\n* Success: Got build [{pastebin}] of class [{class_name}].\n")

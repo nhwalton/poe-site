@@ -98,12 +98,12 @@ function parseGuide (data, guideValues) {
                     )
                     break;
                 case 'custom item':
-                    console.log('custom item: ', step.customItems);
+                    // console.log('custom item: ', step.customItems);
                     html = (
                         <div className="guideBox pt-2 mb-4">
                             <Row className="mt-2 mb-4" style={{justifyContent: "center"}}>
                                 {step.customItems.map((item, index) => {
-                                    console.log('item: ', item.text);
+                                    // console.log('item: ', item.text);
                                     return(
                                         <Col md="auto" key={item + index}>
                                             <poe-item

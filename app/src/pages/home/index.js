@@ -43,8 +43,8 @@ const Home = () => {
 							<p >Path of Exile's leagues feature complex mechanics and the tools below are designed to help navigate particularly burdensome ones.</p>
 						</div>
 						<div className="homeSection">
-							<h2>Syndicate Cheatsheet 3.19</h2>
-							<p>The Syndicate cheatsheet is updated for Path of Exile 3.19 and shows all Immortal Syndicate members and their safehouse rewards based on their location.</p>
+							<h2>Syndicate Cheatsheet 3.20</h2>
+							<p>The Syndicate cheatsheet is updated for Path of Exile 3.20 and shows all Immortal Syndicate members and their safehouse rewards based on their location.</p>
 
 							<p>The relative value of each reward is denoted in varying colors and can be changed by clicking on a cell. Scarab are priced automaticall by default, though you can toggle them on the top to set manual values. Auto scarab rankings are updated every 6 hours from <a className="homeLink" href="https://poe.ninja">Poe Ninja</a>.</p>
 							<p>An "overlay" version of the page can be found in the menu for use with tools like <a className="homeLink" href="https://github.com/PoE-Overlay-Community/PoE-Overlay-Community-Fork">POE-Overlay</a>.</p>

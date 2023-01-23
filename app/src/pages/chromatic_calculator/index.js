@@ -11,6 +11,21 @@ const RecipeTable = (props) => {
 
     const rows = props.rows
 
+    const [voriciAlert, setVoriciAlert] = useState(false);
+
+    useEffect(() => {rows.map((row, index) => {
+        if (row.cheapest === true) {
+            console.log(row.average_cost)
+            console.log(parseFloat(row.average_cost.replace(/,/g, '')) > 100)
+            if (parseFloat(row.average_cost.replace(/,/g, '')) > 100) {
+                console.log("vorici alert")
+                setVoriciAlert(true)
+            } else {
+                setVoriciAlert(false)
+            }
+        }
+    })})
+
     let thAlign = "center"
     let costWeight = "bold"
 
@@ -72,37 +87,42 @@ const RecipeTable = (props) => {
       }));
 
     return (
-        <div className="recipeTable">
-            <TableContainer component={Paper} className="tableContainer">
-                <Table sx={{ minWidth: 700, tableLayout: "fixed" }} aria-label="customized table">
-                    <TableHead>
-                    <TableRow>
-                        <StyledTableCell key="Recipe">Craft Type</StyledTableCell>
-                        <StyledTableCell align="right" key="Average Cost">Average Cost</StyledTableCell>
-                        <StyledTableCell align="right" key="Success Chance">Success Chance</StyledTableCell>
-                        <StyledTableCell align="right" key="Average Attempts">Average Attempts</StyledTableCell>
-                        <StyledTableCell align="right" key="Cost Per Try">Cost Per Try</StyledTableCell>
-                        <StyledTableCell align="right" key="Standard Deviation">Standard Deviation</StyledTableCell>
-                    </TableRow>
-                    </TableHead>
-                    <TableBody>
-                    {rows.map((row, index) => {
-                        const cheapestClass = row.cheapest ? "cheapest" : ""
-                        return(
-                            <StyledTableRow key={`${row.recipe_name} header ${index}`} className={cheapestClass}>
-                                <StyledTableCell component="th" scope="row" key={`${row.recipe_name} header ${index}`}>{row.recipe_name}</StyledTableCell>
-                                <StyledTableCell align="right" key={`${row.recipe_name} avg_cost ${index}`}>{row.average_cost}</StyledTableCell>
-                                <StyledTableCell align="right" key={`${row.recipe_name} chance ${index}`}>{row.chance}</StyledTableCell>
-                                <StyledTableCell align="right" key={`${row.recipe_name} avg_tries ${index}`}>{row.average_tries}</StyledTableCell>
-                                <StyledTableCell align="right" key={`${row.recipe_name} recipe_cost ${index}`}>{row.recipe_cost}</StyledTableCell>
-                                <StyledTableCell align="right" key={`${row.recipe_name} std_dev ${index}`}>{row.std_dev}</StyledTableCell>
-                            </StyledTableRow>
-                        )
-                        })}
-                    </TableBody>
-                </Table>
-            </TableContainer>
-        </div>
+        <React.Fragment>
+            <div className="recipeTable">
+                <TableContainer component={Paper} className="tableContainer">
+                    <Table sx={{ minWidth: 700, tableLayout: "fixed" }} aria-label="customized table">
+                        <TableHead>
+                        <TableRow>
+                            <StyledTableCell key="Recipe">Craft Type</StyledTableCell>
+                            <StyledTableCell align="right" key="Average Cost">Average Cost</StyledTableCell>
+                            <StyledTableCell align="right" key="Success Chance">Success Chance</StyledTableCell>
+                            <StyledTableCell align="right" key="Average Attempts">Average Attempts</StyledTableCell>
+                            <StyledTableCell align="right" key="Cost Per Try">Cost Per Try</StyledTableCell>
+                            <StyledTableCell align="right" key="Standard Deviation">Standard Deviation</StyledTableCell>
+                        </TableRow>
+                        </TableHead>
+                        <TableBody>
+                        {rows.map((row, index) => {
+                            const cheapestClass = row.cheapest ? "cheapest" : ""
+                            return(
+                                <StyledTableRow key={`${row.recipe_name} header ${index}`} className={cheapestClass}>
+                                    <StyledTableCell component="th" scope="row" key={`${row.recipe_name} header ${index}`}>{row.recipe_name}</StyledTableCell>
+                                    <StyledTableCell align="right" key={`${row.recipe_name} avg_cost ${index}`}>{row.average_cost}</StyledTableCell>
+                                    <StyledTableCell align="right" key={`${row.recipe_name} chance ${index}`}>{row.chance}</StyledTableCell>
+                                    <StyledTableCell align="right" key={`${row.recipe_name} avg_tries ${index}`}>{row.average_tries}</StyledTableCell>
+                                    <StyledTableCell align="right" key={`${row.recipe_name} recipe_cost ${index}`}>{row.recipe_cost}</StyledTableCell>
+                                    <StyledTableCell align="right" key={`${row.recipe_name} std_dev ${index}`}>{row.std_dev}</StyledTableCell>
+                                </StyledTableRow>
+                            )
+                            })}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </div>
+            <Collapse in={voriciAlert}>
+                <Alert id="voriciAlert" severity="error" onClose={() => {setVoriciAlert(false);}}>This craft seems expensive. You may want to consider using the <a href="https://www.youtube.com/watch?v=j4heddzdrNw">Jeweller's Orb method</a> if it makes sense. </Alert>
+            </Collapse>
+        </React.Fragment>
       );
 }
 
@@ -119,7 +139,7 @@ const ItemInfo = (props) => {
     const [itemRed, setItemRed] = useState(0);
     const [itemGreen, setItemGreen] = useState(0);
     const [itemBlue, setItemBlue] = useState(0);
-    const [itemSockets, setItemSockets] = useState(0);
+    const [itemSockets, setItemSockets] = useState(null);
 
     // const [item, setItem] = useState({
     //     strength: null,
@@ -145,6 +165,7 @@ const ItemInfo = (props) => {
 
         Object.keys(item).forEach(function(key) {
             if (key !== "sockets") {
+                // console.log(key)
                 if(item[key] === null || isNaN(item[key])) {
                     item[key] = 0;
                 }
@@ -152,27 +173,30 @@ const ItemInfo = (props) => {
         });
 
         const desiredSocketCount = item['red'] + item['green'] + item['blue'];
+        // console.log(desiredSocketCount)
+        // console.log(item)
 
         if (item['sockets'] > 6) {
+            // console.log("too many sockets")
             setDesiredSocketsAlert(false);
-            setRequirementsAlert(false);
             setDesiredTotalAlert(false);
-            setTotalSocketsAlert(true);
+            setRequirementsAlert(false);
+            setTotalSocketsAlert(true); // too many sockets
         } else if (item['strength'] === 0 && item['dexterity'] === 0 && item['intelligence'] === 0 ) {
-            setTotalSocketsAlert(false);
             setDesiredSocketsAlert(false);
             setDesiredTotalAlert(false);
-            setRequirementsAlert(true);
-        } else if (desiredSocketCount > 6) {
+            setRequirementsAlert(true); // no requirements
             setTotalSocketsAlert(false);
-            setRequirementsAlert(false);
-            setDesiredTotalAlert(false);
-            setDesiredSocketsAlert(true);
         } else if (item['sockets'] !== null && desiredSocketCount > item['sockets']) {
-            setTotalSocketsAlert(false);
-            setRequirementsAlert(false);
             setDesiredSocketsAlert(false);
-            setDesiredTotalAlert(true);
+            setDesiredTotalAlert(true); // desired total greater than total sockets
+            setRequirementsAlert(false);
+            setTotalSocketsAlert(false);
+        } else if (desiredSocketCount > 6) {
+            setDesiredSocketsAlert(true); // too many desired sockets
+            setDesiredTotalAlert(false);
+            setRequirementsAlert(false);
+            setTotalSocketsAlert(false);
         } else {
             if (item['sockets'] === null || item['sockets'] < desiredSocketCount || isNaN(item['sockets'])) {
                 item['sockets'] = desiredSocketCount;
@@ -211,6 +235,7 @@ const ItemInfo = (props) => {
 	const [showcaseItemImage, setShowcaseItemImage] = useState();
 
     function pasteRequirements (text) {
+        // console.log(text)
         const dex = text.match(/Dex: (\d+)/);
         const str = text.match(/Str: (\d+)/);
         const int = text.match(/Int: (\d+)/);
@@ -287,9 +312,10 @@ const ItemInfo = (props) => {
         const paste = document.querySelector("#paste");
         paste.blur();
 		let text = e.clipboardData.getData('text');
-		console.log(text);
-		const re = /(?:Rarity:\s[A-Za-z]*\r\n)(.*)\r\n(.*)/g;
+		// console.log(text);
+		const re = /(?:Rarity:\s[A-Za-z]*\n)(.*)\n(.*)/g;
         const match = re.exec(text);
+        // console.log(match)
         if (match !== null) {
             setShowcaseItem(text);
             const long_match = match[1] + ' ' + match[2];
@@ -428,7 +454,7 @@ const ItemInfo = (props) => {
                         autoComplete: 'off',
                         },
                     }}
-                    autocomplete="off"
+                    autoComplete="off"
                     placeholder='Paste Item'
                     onPaste={pasteHandler}
                 >

@@ -59,7 +59,7 @@ const CheatSheet = () => {
 
     // console.log('guide', guide);
     // console.log('useParams', useParams());
-    console.log('guideValues', guideValues);
+    // console.log('guideValues', guideValues);
 
     useEffect(() => {
         if (guide === undefined) {
